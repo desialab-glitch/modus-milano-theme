@@ -18,6 +18,7 @@
 - Multicolumn outer border: removed via `.multicolumn .multicolumn-list__wrapper { border: none !important; }`
 - Multicolumn side padding: removed via `.multicolumn .multicolumn-card__wrapper { padding-left: 0 !important; padding-right: 0 !important; }` (top/bottom untouched)
 - Inter-card divider lines (.border-item .multicolumn-card::before / .border-item::after): already fixed separately, don't confuse with the outer-border fix above
+- Mobile CTAs (≤749px), sitewide via `.button--cta` in modus-design-system.css: full width, 48px min-height, no radius, centered (the Rich Text + CTA look). snippets/button.liquid adds the class whenever rendered with `layout:`; hand-written section CTAs carry it in markup. New sections with their own `<a class="button">` CTA must add `button--cta`; don't write per-section mobile button-width CSS. If a wrapper shrink-wraps the button, add it to the wrapper list in the same rule.
 - @import for Antonio Google Font in modus-design-system.css MUST be the literal first rule in the file (CSS spec requirement) — any edit near the top of this file must verify @import still comes first, this broke silently once already
 
 ## Dead/orphaned files (do not edit, don't assume they're live)

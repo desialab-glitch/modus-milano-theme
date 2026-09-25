@@ -399,6 +399,17 @@ burger-drawer .burger_menu a, burger-drawer .burger_menu span,
   letter-spacing: 0.15em !important;
   text-transform: uppercase !important;
 }
+/* Mobile menu drawer (header-drawer, shown below 1150px): top-level links
+   bumped to 25px (2026-09-25) -- at the inherited ~16px they read as small
+   print in the full-height drawer. Top-level items only; submenu links and
+   the desktop navbar keep their current size. */
+@media screen and (max-width: 1149px) {
+  .menu-drawer__navigation > .menu-drawer__menu > li > .menu-drawer__menu-item,
+  .menu-drawer__navigation > .menu-drawer__menu > li > .menu-drawer__menu-item-wrapper > .menu-drawer__menu-item {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+  }
+}
 
 /* Footer */
 .shopify-section-group-footer-group footer,
@@ -1202,17 +1213,40 @@ burger-drawer .burger_menu a, burger-drawer .burger_menu span,
   }
 }
 
+/* Section CTAs on mobile (2026-09-25): every CTA a section renders from
+   its own settings fills the section width at one size, the one the
+   Rich Text + CTA section introduced. .button--cta is added by
+   snippets/button.liquid whenever it's rendered with layout: (section or
+   block settings), and by hand on the sections that write their own
+   <a class="button">. Card-listing, cart, form, header and footer buttons
+   don't carry it and are unaffected. Override per section only if really
+   needed. */
 @media screen and (max-width: 749px) {
-  .rich-text-cta-section .rt-cta__right .button {
-    border-radius: 0 !important;
-    min-height: 48px !important;
+  .button--cta {
     display: flex !important;
+    width: 100% !important;
+    min-height: 48px !important;
     align-items: center !important;
     justify-content: center !important;
+    text-align: center !important;
+    border-radius: 0 !important;
     box-sizing: border-box !important;
   }
-  .rich-text-cta-section .rt-cta__right {
+  /* Wrappers that shrink to their content on mobile and would otherwise
+     cap the CTA at label width. */
+  .rich-text-cta-section .rt-cta__right,
+  .section-header__btn-top,
+  .split-hero__content-col,
+  .split-hero__buttons,
+  .slideshow-slide_full-screen_text,
+  .slideshow-slide__text,
+  .product-popup-modal__content-buttons {
     width: 100% !important;
+  }
+  /* Two-button rows stack, one full-width CTA per line (Hero Split's
+     "Make buttons full width" otherwise splits them 50/50 via flex: 1). */
+  .split-hero__buttons .button--cta {
+    flex-basis: 100% !important;
   }
 }
 

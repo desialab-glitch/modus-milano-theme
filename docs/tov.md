@@ -2,7 +2,6 @@
 
 ## Absolute bans (any language, any page)
 - Negation-framing construction: "X non è Y, ma Z" / "non si dichiara, si assaggia" / any "not X, Y" shape. State directly what something IS. No exceptions, including on quotes attributed to the client (Paolo) — these get edited as marketing copy too.
-- "Autentico" / "autentica" as an empty superlative — banned everywhere, has required repeated sweeps to catch, check every new paragraph for it
 - "Eccezionali"
 - "Intatto"
 - Negative claims ("senza coloranti, aromi né conservanti", "senza pesticidi", "non X") — banned UNLESS the producer's own site states that exact claim (e.g. Maida: "senza aggiunta di conservanti o additivi"). Then use the producer's wording, never a stronger one. Default: say what the product IS, not what it lacks.
@@ -21,9 +20,9 @@
 - Hero body texts: about half their previous length, one or two sentences.
 - Filiera producer cards: ~250–350 characters, with the story (people, years, places, Presidi), no practical info.
 
-## Open conflicts with Notion (ask client before touching)
-- "L'essenza più autentica del Cilento" is listed as approved hero headline in Notion ToV §5, but "autentico" is banned. Draft theme currently has "L'ESSENZA DEL CILENTO" (changed 25 Sep).
-- "La qualità non si dichiara, si assaggia/si respira" and "Ci sono sapori che non si inventano, si ereditano" are listed as fixed formulas in Notion, but are negation-framing.
+## Client decisions (25 Sep)
+- "Autentico"/"autentica" is allowed again. "L'essenza più autentica del Cilento" is the approved homepage hero headline — needs a concrete fact behind it, not a bare superlative on its own. Draft theme heading currently reads "L'ESSENZA DEL CILENTO" — client may want it restored to the "più autentica" version; flag before changing.
+- "La qualità non si dichiara, si assaggia/si respira" and "Ci sono sapori che non si inventano, si ereditano" are REVOKED, permanently — they're negation-framing. Never appeared live on the site (checked Olio and Miele, the two collections the pattern doc referenced).
 
 Notion "Tone of Voice" page, section 0, mirrors this file (synced 25 Sep 2026). Keep both in sync when a rule changes.
 

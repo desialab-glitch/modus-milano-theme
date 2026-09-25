@@ -91,7 +91,7 @@ Static check of all 46 section types in use + the 3 AI blocks against the 9-poin
 **Open — needs a decision or a browser check** (not changed):
 - [!] main-article (desktop, article with image): image → title gap is 0 and the title starts 32px left of the body column. Needs a visual check before changing the layout.
 - [!] main-product (desktop): the buy column is centred inside its half (max 412px) → ~160px between media and text at 1440px. Moving it next to the media (40px gutter) changes the PDP layout noticeably — client decision.
-- [!] main-blog / search / related articles: blog listing cards use 14px grey excerpts + 13px dates, while the homepage "Featured blogs" cards use 16px/1.6 + standard eyebrow date. Unify on the homepage style? (design decision)
+- [x] Blog cards unified on the homepage style (client, 2026-09-25): excerpt 16px/1.6 text colour, date = standard 15px eyebrow, everywhere (journal, search, related articles).
 - [!] collection list page: cards sit with no horizontal gap between them (template-collection-list.css sets none) — check in the browser.
 - [!] newsletter AI block on mobile: ends flush with its image (no bottom padding), next section starts 12px later — intended?
 - [!] fornitori-list "Scopri" link is a text link, not a full-width CTA on mobile; location line uses line-height 1.1 (can wrap on mobile) — keep as design details or standardise?
@@ -99,4 +99,7 @@ Static check of all 46 section types in use + the 3 AI blocks against the 9-poin
 - [!] products-grid / popular-products card descriptions now 16px (were 15px) — confirm visually on the collection grids.
 - [!] slider-with-info pagination may be a 10px number counter (JS not inspectable here); simple-slider on sott-olio uses a 55% image width on desktop (looks deliberate).
 - [!] rich-text-cta "In tre passi" (no text/button): 12px under the heading may be doing the job of the gap to the next section — check before removing.
-- [!] Content: 17 PDPs have no producer image in the Image with Text 2 section (now text-only instead of a placeholder); cart "Altri prodotti dal Cilento" needs products picked (hidden until then); collection.json FAQ image layout has no image; cart empty-state text in it.json ("Non perdere le migliori offerte!…") is generic marketing copy.
+- [x] Empty-cart copy (it.json): "Il tuo carrello è vuoto. Esplora i prodotti dei nostri produttori del Cilento e scopri il mondo Modus." + button "Esplora i prodotti" (cart page, cart drawer, account page); the unused "Non perdere le migliori offerte!" strings rewritten too.
+- [x] The 17 PDP templates without a producer image are NOT assigned to any product (dead duplicates: cavatelli, erba-luisa, farina-*-caputo, farina-*-marino, fusilli-cilento, kleos-aglianico, kratos, lagane, le-ghiandaie, limoncello, piscriddi, spaghettone, thumos, valentina; live products use pasta-*/vino-*/liquore-* templates). Nothing to fill; candidates for deletion (client decision). Some also hold wrong producer data (le-ghiandaie → Frantoio Muraglia, piscriddi → Pastificio Cilento).
+- [!] Cart "Altri prodotti dal Cilento": the section only shows hand-picked products and the list is empty (hidden until filled) — pick products or make it automatic.
+- [!] collection.json (generic collection template) FAQ image layout has no image.

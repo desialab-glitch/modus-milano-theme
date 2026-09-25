@@ -1,0 +1,849 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Più di 20 produttori del Cilento",
+        "subheading_tag": "p",
+        "subheading_color": "",
+        "heading": "La filiera Modus",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Dal Cilento a Milano, ogni prodotto porta il nome di chi lo ha fatto crescere: più di 20 produttori che Paolo conosce di persona, scelti uno per uno. Qui trovi le loro storie.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-22.jpg",
+        "hide_image_mobile": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "fornitori-intro": {
+      "type": "rich-text-cta",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "subheading": "Conosciuti uno per uno",
+        "heading": "CHI C'È DIETRO OGNI PRODOTTO",
+        "text": "<p>Il 90% degli ingredienti che arrivano a Milano nasce nel Cilento, terra della dieta mediterranea. Paolo De Simone ha scelto ogni produttore andando a trovarlo nei campi, negli oliveti e nei laboratori.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "xs"
+      }
+    },
+    "fornitori-filter": {
+      "type": "fornitori-filter",
+      "blocks": {
+        "fa01": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Antonio Cavalieri",
+            "products": "Fagioli di Controne, Miele"
+          }
+        },
+        "fa02": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Aura",
+            "products": "Tonno rosso, Alalunga"
+          }
+        },
+        "fa03": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Cantine Rotolo",
+            "products": "Le Ghiandaie, Valentina"
+          }
+        },
+        "fa04": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Cardone",
+            "products": "Infilatelle di fichi"
+          }
+        },
+        "fa05": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Cobellis",
+            "products": "Piscriddi, Thumos"
+          }
+        },
+        "fa06": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Fattoria Ambrosio",
+            "products": "ALFA, CRUX, RISERVA, IDRA"
+          }
+        },
+        "fa07": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Ferrante",
+            "products": "Ceci di Cicerale, Ciccimaritati"
+          }
+        },
+        "fa08": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Gioi Società Agricola",
+            "products": "Soppressata, Capicollo, Salsiccia"
+          }
+        },
+        "fa09": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Iannicelli",
+            "products": "Progresso, Avanzamento"
+          }
+        },
+        "fa10": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Erbe Cilento",
+            "products": "Tisane, Box erbe"
+          }
+        },
+        "fa11": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Luigi Maffini",
+            "products": "Kleos Aglianico, Kratos"
+          }
+        },
+        "fa12": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Madonna dell’Olivo",
+            "products": "Olio EVO blend"
+          }
+        },
+        "fa13": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Maida",
+            "products": "Pomodoro pelato, Passata"
+          }
+        },
+        "fa14": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Marino",
+            "products": "Alici di Menaica, Colatura"
+          }
+        },
+        "fa15": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Pastificio Gentile",
+            "products": "Paccheri, Candele, Spaghettone"
+          }
+        },
+        "fa16": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Salella",
+            "products": "Olive ammaccate"
+          }
+        },
+        "fa17": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "San Felice",
+            "products": "Farro decorticato"
+          }
+        },
+        "fa18": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Storie di Pane",
+            "products": "Pane, Cantucci, Biscotti"
+          }
+        },
+        "fa19": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Tenuta Principe Mazzacane",
+            "products": "Cacioricotta di capra"
+          }
+        },
+        "fa20": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Terra Dura",
+            "products": "Fusilli, Cavatelli, Pasta di carrube"
+          }
+        },
+        "fa21": {
+          "type": "fornitore_link",
+          "settings": {
+            "name": "Theodora",
+            "products": "Liquore al limone, Erba luisa, Fichi"
+          }
+        }
+      },
+      "block_order": [
+        "fa01",
+        "fa02",
+        "fa03",
+        "fa04",
+        "fa05",
+        "fa06",
+        "fa07",
+        "fa08",
+        "fa09",
+        "fa10",
+        "fa11",
+        "fa12",
+        "fa13",
+        "fa14",
+        "fa15",
+        "fa16",
+        "fa17",
+        "fa18",
+        "fa19",
+        "fa20",
+        "fa21"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "carousel_mode": true
+      }
+    },
+    "fornitori-list": {
+      "type": "fornitori-list",
+      "blocks": {
+        "cavalieri": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-221115.jpg",
+            "location": "ROCCAGLORIOSA, CILENTO, CAMPANIA",
+            "heading": "Antonio Cavalieri",
+            "logo": "shopify://shop_images/francescantonio-cavalieri-logo-transparent.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>A Roccagloriosa la famiglia Cavalieri alleva api dagli anni '80: il miele si estrae dai favi e si lascia decantare. Da loro arrivano anche i fagioli di Controne.</p>",
+            "pill_1_label": "Fagioli di Controne",
+            "pill_1_link": "/products/fagioli-di-controne",
+            "pill_2_label": "Miele di castagno",
+            "pill_2_link": "/products/miele-di-castagno",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i prodotti",
+            "cta_link": "/collections/legumi-e-cereali"
+          }
+        },
+        "aura": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-8207393.jpg",
+            "location": "PALINURO, CILENTO, CAMPANIA",
+            "heading": "Aura",
+            "logo": "shopify://shop_images/Aura-Cilento-Logo-1.png",
+            "logo_width_mobile": 30,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Luca Cella è cresciuto tra mare e terra. Nel 2015 ha aperto il suo laboratorio a Palinuro: il tonno è cotto in acqua e conservato in olio extravergine cilentano, con le ricette di casa delle donne del posto.</p>",
+            "pill_1_label": "Tonno rosso",
+            "pill_1_link": "/products/tonno-di-palinuro-rosso",
+            "pill_2_label": "",
+            "pill_2_link": "",
+            "pill_3_label": "Tonno alalunga",
+            "pill_3_link": "/products/tonno-di-palinuro-ala-lunga",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri il tonno di Palinuro",
+            "cta_link": "/collections/sott-olio-e-sotto-sale"
+          }
+        },
+        "rotolo": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/Vini-del-Cilento-vitigni-1.jpg",
+            "location": "RUTINO, CILENTO, CAMPANIA",
+            "heading": "Cantine Rotolo",
+            "logo": "shopify://shop_images/aziende_rotolo_2018-1024x289-1024x289.png",
+            "logo_width_mobile": 45,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>A Rutino la famiglia Rotolo coltiva la vite dal 1938. Negli anni '90 Alfonso è stato tra i primi a puntare sul Fiano: Valentina è il suo Fiano, Le Ghiandaie il suo Aglianico.</p>",
+            "pill_1_label": "Le Ghiandaie rosso",
+            "pill_1_link": "/products/vino-le-ghiandaie",
+            "pill_2_label": "Valentina bianco",
+            "pill_2_link": "/products/vino-valentina",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i vini",
+            "cta_link": "/collections/vini"
+          }
+        },
+        "cardone": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-10060235_dcb3b56b-5dcf-42db-a958-77f1075fa960.jpg",
+            "location": "PRIGNANO CILENTO, CAMPANIA",
+            "heading": "Cardone",
+            "logo": "shopify://shop_images/logo-light-1.png",
+            "logo_width_mobile": 45,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Alla fine degli anni '90 Nicolina pianta alla Tenuta Marchese Cardone il fico bianco del Cilento DOP, oggi 1.600 piante. I fichi si essiccano al sole, si infilano con l'alloro e passano in forno.</p>",
+            "pill_1_label": "Infilatella classica",
+            "pill_1_link": "/products/fichi-infilatella-classica",
+            "pill_2_label": "Infilatella alle noci",
+            "pill_2_link": "/products/fichi-infilatella-alle-noci",
+            "pill_3_label": "Infilatella alle mandorle",
+            "pill_3_link": "/products/fichi-infilatella-alle-mandorle",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i fichi",
+            "cta_link": "/collections/fichi"
+          }
+        },
+        "cobellis": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/Vini-del-Cilento-vitigni-1.jpg",
+            "location": "VALLO DELLA LUCANIA, CILENTO, CAMPANIA",
+            "heading": "Cobellis",
+            "logo": "shopify://shop_images/tenuta-cobellis-logo-transparent.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>A Vallo della Lucania Massimo Cobellis ha dedicato alla vite parte dei terreni di famiglia. Il Piscriddi nasce nella Vigna dei Russi, il Thumos, Greco in purezza, nella Vigna delle Starze.</p>",
+            "pill_1_label": "Piscriddi rosso",
+            "pill_1_link": "/products/vino-piscriddi",
+            "pill_2_label": "Thumos bianco",
+            "pill_2_link": "/products/vino-thumos",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i vini",
+            "cta_link": "/collections/vini"
+          }
+        },
+        "ambrosio": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/olive-oil-salad-dressing-cooking-olive.jpg",
+            "location": "SALENTO, CILENTO, CAMPANIA",
+            "heading": "Fattoria Ambrosio",
+            "logo": "shopify://shop_images/logo-fattoria-ambrosio_2x_d14daf67-5764-4d3f-b0f2-4af5ca6f99cf.png",
+            "logo_width_mobile": 25,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Fattoria Ambrosio lavora l'olio a Salento dal 1938 ed è guidata da Massimo Ambrosio, terza generazione. Nel 2025 Flos Olei l'ha nominata Azienda dell'Anno.</p>",
+            "pill_1_label": "ALFA",
+            "pill_1_link": "/products/olio-alfa",
+            "pill_2_label": "CRUX",
+            "pill_2_link": "/products/olio-crux",
+            "pill_3_label": "RISERVA",
+            "pill_3_link": "/products/olio-riserva",
+            "pill_4_label": "IDRA",
+            "pill_4_link": "/products/olio-idra",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri l’olio",
+            "cta_link": "/collections/olio"
+          }
+        },
+        "ferrante": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/LegumiCereali-5cereali-1-1_jpg.webp",
+            "location": "CONTRONE, CILENTO, CAMPANIA",
+            "heading": "Ferrante",
+            "logo": "shopify://shop_images/logo_ferrante.png",
+            "logo_width_mobile": 30,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Dagli anni '80 Michele Ferrante recupera a Controne le varietà locali che si stavano perdendo, oggi insieme ai tre figli. Da lui arrivano i cicci maritati e i ceci.</p>",
+            "pill_1_label": "Ceci di Cicerale",
+            "pill_1_link": "/products/ceci-di-cicerale",
+            "pill_2_label": "Ciccimaritati",
+            "pill_2_link": "/products/cicci-maritati",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri legumi e cereali",
+            "cta_link": "/collections/legumi-e-cereali"
+          }
+        },
+        "gioi": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-8250417_98aef59e-9f92-40aa-97e1-6bb31616f27d.jpg",
+            "location": "GIOI, CILENTO, CAMPANIA",
+            "heading": "Gioi Società Agricola",
+            "logo": "shopify://shop_images/gioi-logo-transparent.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Nel 2007 Raffaello Palladino e Marco Infante fondano a Gioi un salumificio artigianale per la soppressata del paese, l'unico salame campano lardellato e Presidio Slow Food.</p>",
+            "pill_1_label": "Soppressata di Gioi",
+            "pill_1_link": "/products/soppressata-di-gioi",
+            "pill_2_label": "Salsiccia",
+            "pill_2_link": "/products/salsiccia",
+            "pill_3_label": "Capicollo",
+            "pill_3_link": "/products/capicollo",
+            "pill_4_label": "Pancetta arrotolata",
+            "pill_4_link": "/products/pancetta-arrotolata",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i salumi",
+            "cta_link": "/collections/salumi"
+          }
+        },
+        "erbe": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-6287223.jpg",
+            "location": "GIOI, CILENTO, CAMPANIA",
+            "heading": "Erbe Cilento",
+            "logo": "shopify://shop_images/erbe-cilento-logo-transparent.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Nel 2018 Eleonora e Tony lasciano Milano per fondare Erbe Cilento a Gioi. Raccolgono a mano le erbe officinali e le essiccano sulle «graddecedde», le grate tradizionali cilentane.</p>",
+            "pill_1_label": "Box tisane 5 confezioni",
+            "pill_1_link": "/products/box-tisane",
+            "pill_2_label": "Tisane sfuse",
+            "pill_2_link": "/products/tisane-erbe-cilento",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri le erbe",
+            "cta_link": "/collections/erbe"
+          }
+        },
+        "maffini": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/Vini-del-Cilento-vitigni-1.jpg",
+            "location": "CASTELLABATE, CILENTO, CAMPANIA",
+            "heading": "Luigi Maffini",
+            "logo": "shopify://shop_images/1598708050768vSpWZHU5tg-LuigiMaffini_logo-2.webp",
+            "logo_width_mobile": 50,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Nel 1996 Luigi Maffini e la moglie Raffaella imbottigliano il primo Kratos, il loro Fiano. I vigneti biologici sono a Castellabate, vicino al mare, e a Giungano, in collina.</p>",
+            "pill_1_label": "Kleos Aglianico",
+            "pill_1_link": "/products/vino-kleos-aglianico",
+            "pill_2_label": "Kratos Fiano",
+            "pill_2_link": "/products/vino-kratos",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i vini",
+            "cta_link": "/collections/vini"
+          }
+        },
+        "madonna": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/fresh-olive-oil-nature-healthy-cooking-ingredient-in-a-wooden-bottle-generated-by-ai-photo.webp",
+            "location": "SERRE, CILENTO, CAMPANIA",
+            "heading": "Madonna dell’Olivo",
+            "logo": "shopify://shop_images/ChatGPT_Image_Jun_30_2026_11_18_39_AM.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 20,
+            "product_type": "",
+            "description": "<p>A Serre Antonino Mennella e la sua famiglia coltivano oltre duemila olivi. Le olive arrivano al frantoio entro quattro ore dalla raccolta e ogni cultivar si lavora separatamente.</p>",
+            "pill_1_label": "Olio EVO blend",
+            "pill_1_link": "/products/olio-evo-madonna",
+            "pill_2_label": "",
+            "pill_2_link": "",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri l’olio",
+            "cta_link": "/collections/olio"
+          }
+        },
+        "maida": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/gallery_maida_02.jpg",
+            "location": "PAESTUM, CILENTO, CAMPANIA",
+            "heading": "Maida",
+            "logo": "shopify://shop_images/ChatGPT_Image_Jul_12_2026_10_24_17_PM.png",
+            "logo_width_mobile": 60,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Francesco Vastola ha fondato l’azienda agricola Maida a Paestum. È stato il primo a rimpiantare in zona il pomodoro giallo di Capaccio, varietà quasi abbandonata.</p>",
+            "pill_1_label": "Pomodoro pelato bio",
+            "pill_1_link": "/products/pomodoro-pelato-biologico",
+            "pill_2_label": "Passata bio",
+            "pill_2_link": "/products/passata-pomodoro-biologico",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri le conserve",
+            "cta_link": "/collections/conserve"
+          }
+        },
+        "marino": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-8287401_b8658f81-a97f-4609-b220-b24999aeafad.jpg",
+            "location": "PISCIOTTA, CILENTO, CAMPANIA",
+            "heading": "Marino",
+            "logo": "shopify://shop_images/donatella_marino_1024x1024_eb76b13a-0c81-4d4d-9a76-76e28bece1b5.webp",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Negli anni '90 Vittorio Rambaldo torna a pescare con la rete menaica e la moglie Donatella Marino trasforma le alici in conserve. Le alici di Menaica sono state il primo Presidio Slow Food della Campania.</p>",
+            "pill_1_label": "Alici sott'olio",
+            "pill_1_link": "/products/alici-di-menaica",
+            "pill_2_label": "Alici sotto sale",
+            "pill_2_link": "/products/alici-di-menaica-sotto-sale",
+            "pill_3_label": "Colatura di alici",
+            "pill_3_link": "/products/colatura-di-alici-di-menaica",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri le alici di Menaica",
+            "cta_link": "/collections/sott-olio-e-sotto-sale"
+          }
+        },
+        "iannicelli": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-12474258.jpg",
+            "location": "CERASO, CILENTO, CAMPANIA",
+            "heading": "Iannicelli",
+            "logo": "shopify://shop_images/iannicelli-logo-transparent.png",
+            "logo_width_mobile": 50,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>La famiglia Iannicelli coltiva olivi a Ceraso dal 1898, oggi in biologico. In etichetta tornano Progresso e Avanzamento, i marchi con cui Enrico Iannicelli esportava olio in Sud America.</p>",
+            "pill_1_label": "Progresso",
+            "pill_1_link": "/products/olio-progress",
+            "pill_2_label": "Avanzamento",
+            "pill_2_link": "/products/olio-avanzamento",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri l’olio",
+            "cta_link": "/collections/olio"
+          }
+        },
+        "gentile": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/0083_candele_13-3.jpg",
+            "location": "GRAGNANO, CAMPANIA",
+            "heading": "Pastificio Gentile",
+            "logo": "shopify://shop_images/ChatGPT_Image_Jul_12_2026_10_23_04_PM.png",
+            "logo_width_mobile": 50,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Il marchio Gentile nasce a Gragnano nel 1876 e dagli anni '80 è della famiglia Zampino. La pasta essicca in tre o quattro giorni con il metodo Cirillo e si confeziona a mano.</p>",
+            "pill_1_label": "Paccheri",
+            "pill_1_link": "/products/pasta-paccheri",
+            "pill_2_label": "Candele lunghe",
+            "pill_2_link": "/products/pasta-candele-lunghe",
+            "pill_3_label": "Fusilli a mano",
+            "pill_3_link": "/products/pasta-fusilli-lavorati-a-mano",
+            "pill_4_label": "Spaghettone",
+            "pill_4_link": "/products/pasta-spaghettone",
+            "pill_5_label": "Bucatini",
+            "pill_5_link": "/products/pasta-bucatini",
+            "cta_label": "Scopri la pasta di Gragnano",
+            "cta_link": "/collections/pasta"
+          }
+        },
+        "salella": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-4039704.jpg",
+            "location": "SALENTO, CILENTO, CAMPANIA",
+            "heading": "Salella",
+            "logo": "shopify://shop_images/logo-salella_1.png",
+            "logo_width_mobile": 30,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Attiva a Salento dalla prima metà dell'Ottocento, Salella coltiva in biologico oltre 3.000 olivi. Le olive si ammaccano una a una e si conservano in olio extravergine con alloro, origano e finocchietto selvatico.</p>",
+            "pill_1_label": "Olive ammaccate",
+            "pill_1_link": "/products/olive-ammaccate",
+            "pill_2_label": "",
+            "pill_2_link": "",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i prodotti sott'olio",
+            "cta_link": "/collections/sott-olio-e-sotto-sale"
+          }
+        },
+        "sanfelice": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/LegumiCereali-5cereali-1-1_jpg.webp",
+            "location": "CICERALE, CILENTO, CAMPANIA",
+            "heading": "San Felice",
+            "logo": "shopify://shop_images/insegna.gif",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Anna Astone è la referente dell'azienda agricola San Felice, a Cicerale, a 450 metri nel Parco Nazionale del Cilento. Da qui arriva il farro decorticato, un cereale antico.</p>",
+            "pill_1_label": "Farro decorticato",
+            "pill_1_link": "/products/farro-decorticato",
+            "pill_2_label": "",
+            "pill_2_link": "",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri legumi e cereali",
+            "cta_link": "/collections/legumi-e-cereali"
+          }
+        },
+        "sdp": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/storie-di-pane-forno-e-pane.jpg",
+            "location": "VALLO DELLA LUCANIA, CILENTO, CAMPANIA",
+            "heading": "Storie di Pane",
+            "logo": "shopify://shop_images/sdp_logo_transparent.png",
+            "logo_width_mobile": 35,
+            "logo_width_desktop": 20,
+            "product_type": "",
+            "description": "<p>Paolo De Simone ha aperto Storie di Pane a Vallo della Lucania nel 2010, dopo aver imparato dalla nonna la lievitazione naturale. I grani antichi coltivati in Cilento si macinano a pietra, a chicco intero.</p>",
+            "pill_1_label": "Pane biscottato",
+            "pill_1_link": "/products/pane-biscottato",
+            "pill_2_label": "Biscotti malfatti",
+            "pill_2_link": "/products/biscotti-malfatti",
+            "pill_3_label": "Cantucci",
+            "pill_3_link": "/products/biscotti-cantucci",
+            "pill_4_label": "Biscotti al miele",
+            "pill_4_link": "/products/biscotti-al-miele",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i prodotti da forno",
+            "cta_link": "/collections/prodotti-da-forno"
+          }
+        },
+        "mazzacani": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-14653319_1e00edab-e318-47b3-80ac-1a166ca2d703.jpg",
+            "location": "OMIGNANO, CILENTO, CAMPANIA",
+            "heading": "Tenuta Principe Mazzacane",
+            "logo": "shopify://shop_images/tenuta-principe-mazzacane-logo-transparent.png",
+            "logo_width_mobile": 40,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Nel 2018 Annacarla Tredici e Andrea Giuliano lasciano i loro lavori per allevare in biologico la capra cilentana, razza quasi scomparsa. Dal latte nasce il cacioricotta.</p>",
+            "pill_1_label": "Cacioricotta di capra",
+            "pill_1_link": "/products/cacioricotta-di-capra",
+            "pill_2_label": "",
+            "pill_2_link": "",
+            "pill_3_label": "",
+            "pill_3_link": "",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i formaggi",
+            "cta_link": "/collections/formaggi"
+          }
+        },
+        "terra-dura": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-9821782_ceea7c3a-9b68-4ffb-8907-e53eef7cf9e7.jpg",
+            "location": "VALLO DELLA LUCANIA, CILENTO, CAMPANIA",
+            "heading": "Terra Dura",
+            "logo": "shopify://shop_images/ChatGPT_Image_Jun_30_2026_11_14_54_AM_7ee27c2c-ba11-4ea5-98b6-dc073937ce53.png",
+            "logo_width_mobile": 45,
+            "logo_width_desktop": 30,
+            "product_type": "",
+            "description": "<p>Da Terra Dura arrivano i formati della cucina contadina cilentana: fusilli, cavatelli, lagane e pasta di carrube, fatta con grano duro e farina di carruba.</p>",
+            "pill_1_label": "Fusilli",
+            "pill_1_link": "/products/pasta-fusilli-cilento",
+            "pill_2_label": "Cavatelli",
+            "pill_2_link": "/products/pasta-cavatelli",
+            "pill_3_label": "Lagane",
+            "pill_3_link": "/products/pasta-lagane",
+            "pill_4_label": "Pasta di carrube",
+            "pill_4_link": "/products/pasta-di-carrube",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri la pasta",
+            "cta_link": "/collections/pasta"
+          }
+        },
+        "theodora": {
+          "type": "fornitore",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-30816582.jpg",
+            "location": "CENTOLA, CILENTO, CAMPANIA",
+            "heading": "Theodora",
+            "logo": "shopify://shop_images/ChatGPT_Image_Jun_30_2026_11_14_54_AM.png",
+            "logo_width_mobile": 25,
+            "logo_width_desktop": 20,
+            "product_type": "",
+            "description": "<p>Theodora, liquorificio artigianale di Centola, fa i suoi liquori con le erbe e i frutti del posto: erba luisa, fico bianco Dottato e limoni della Costiera Cilentana sbucciati a mano.</p>",
+            "pill_1_label": "Liquore al limone",
+            "pill_1_link": "/products/liquore-al-limone",
+            "pill_2_label": "Erba luisa",
+            "pill_2_link": "/products/liquore-erba-luisa",
+            "pill_3_label": "Liquore di fichi",
+            "pill_3_link": "/products/liquore-fichi-secchi",
+            "pill_4_label": "",
+            "pill_4_link": "",
+            "pill_5_label": "",
+            "pill_5_link": "",
+            "cta_label": "Scopri i liquori",
+            "cta_link": "/collections/liquori"
+          }
+        }
+      },
+      "block_order": [
+        "cavalieri",
+        "aura",
+        "rotolo",
+        "cardone",
+        "cobellis",
+        "ambrosio",
+        "ferrante",
+        "gioi",
+        "erbe",
+        "maffini",
+        "madonna",
+        "maida",
+        "marino",
+        "iannicelli",
+        "gentile",
+        "salella",
+        "sanfelice",
+        "sdp",
+        "mazzacani",
+        "terra-dura",
+        "theodora"
+      ],
+      "settings": {}
+    },
+    "cta-banner": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "#faf1e4",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/gastronomia.jpg",
+        "hide_image_mobile": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "hide_image_desktop": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "heading_tag": "h1"
+      }
+    }
+  },
+  "order": [
+    "hp-hero",
+    "fornitori-intro",
+    "fornitori-filter",
+    "fornitori-list",
+    "cta-banner",
+    "main"
+  ]
+}

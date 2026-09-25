@@ -16,5 +16,7 @@
 ## Open questions, unresolved
 - Whether Cammarano flours are used in pizzeria dough or only Coltivatori Custodi ancient grains (asked to Simona, 24 Sep) — until answered, Pizzerie page keeps grani antichi dei Coltivatori Custodi; Farine collection stays limited to the 2 Cammarano products only
 
+- **For Simona (open, 25 Sep): which Madonna dell'Olivo oil do we sell?** The product sheet ("E Commerce new SDP", row 50) only says "Olio EVO -", 500 ml, €23, producer "Madonna dell'Ulivo". The producer makes separate single-cultivar oils (Rotondella, Carpellese, Itrana, Ravece). Until confirmed, the product text names no cultivar, and the image may not match the oil we sell.
+
 ## Source of truth for product data
 Google Drive sheet "E Commerce new SDP.doc (1).xlsx" (file id 1KKqGowF2Z6dYwtvR5Iy0yGESnbMqY7OU), tab "Margine" — weights, sale prices, purchase prices, producers. Margin figures on that sheet are internal only, never flag or question them. A price of 0 is worth flagging; any non-zero price on that sheet is treated as correct.

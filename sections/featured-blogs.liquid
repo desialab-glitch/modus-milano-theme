@@ -10,27 +10,26 @@
 {% style %}
 	{% render 'section-margin' %}
 	{% render 'section-padding' %}
-	/* Card rhythm, matched 1:1 to the Events Carousel card (2026-09-25):
-	     image -> date      2.4rem  (= .collection-card gap in events)
-	     date  -> heading   0.4rem  (= .event-card__date margin-bottom)
-	     heading -> excerpt 1.2rem  (= sitewide h3 margin-bottom token)
-	     excerpt -> CTA     1.2rem  (sitewide rhythm, unchanged)
-	   Previously every step was a flat 1.2rem, so the date floated halfway
-	   between image and heading instead of reading as the heading's eyebrow.
-	   The 0.4rem date->heading gap only applies when the date/tags block is
-	   actually rendered (:has), otherwise image->heading keeps 2.4rem. */
+	/* Card rhythm (2026-09-25, rev 2): ONE gap between every element,
+	   image -> date -> heading -> excerpt -> CTA, all var(--modus-space-xs)
+	   (1.2rem). Rev 1 used the Events Carousel values (2.4rem / 0.4rem) but
+	   the first two steps read too big: image->date at 2.4rem, and
+	   date->heading actually rendered ~1.6rem because the date wrapper
+	   (.article-card__block-wrapper, which also carries .badge) picks up a
+	   hidden 1.2rem margin-bottom on top of the flex gap. That margin, and
+	   any bottom margin on the excerpt, are zeroed below so the flex gaps
+	   are the only source of spacing in the card. */
 	#shopify-section-{{ section.id }} .article-card-default .artcile-card_wrapper,
 	#shopify-section-{{ section.id }} .article-card-reverse .artcile-card_wrapper {
-		gap: var(--modus-space-m) !important;
-	}
-	#shopify-section-{{ section.id }} .article-card-default .artcile-card_wrapper:has(.article-card__block),
-	#shopify-section-{{ section.id }} .article-card-reverse .artcile-card_wrapper:has(.article-card__block) {
-		gap: 0.4rem !important;
+		gap: var(--modus-space-xs) !important;
 	}
 	#shopify-section-{{ section.id }} .article-card-default .article-card__block,
 	#shopify-section-{{ section.id }} .article-card-reverse .article-card__block {
-		padding-top: var(--modus-space-m) !important;
+		padding-top: var(--modus-space-xs) !important;
 		margin-bottom: 0 !important;
+	}
+	#shopify-section-{{ section.id }} .article-card__block .article-card__block-wrapper {
+		margin: 0 !important;
 	}
 	/* Date: same eyebrow treatment as .event-card__date in the Events
 	   Carousel (Lora italic 15px / 26px, rgba(61,61,61,.6)) instead of the
@@ -60,6 +59,7 @@
 		letter-spacing: 0 !important;
 		color: rgb(var(--color-foreground)) !important;
 		margin-top: var(--modus-space-xs) !important;
+		margin-bottom: 0 !important;
 	}
 	#shopify-section-{{ section.id }} .article-card_content {
 		gap: 1.2rem !important;

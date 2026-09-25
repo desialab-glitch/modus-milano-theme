@@ -49,14 +49,14 @@ Editor padding/margin settings silently do nothing or don't exist here.
 - Newsletter popup promises a gift / discount code by email → verify the discount + automation exist.
 - [x] "Contattaci" button inside "Spedizioni e resi" had no link (29 product templates) — FIXED: links to the Contatti page (shopify://pages/contatti).
 - Product popups "Details" / "Care" enabled with empty text on 8 product templates; popup labels in English.
-- Article sticky CTA "Scopri i prodotti" never renders (block needs an image).
-- Tabs (Olio, Vini): full sentences in the subheading field render as an italic eyebrow → belong in description.
+- [x] Article sticky CTA "Scopri i prodotti" — FIXED: renders without an image as a compact button (sticky beside the article ≥1150px, full width on mobile).
+- [x] Tabs (Olio, Vini, homepage): short subheading phrases, full sentences in the description (checked 2026-09-25; rewritten in the copy session).
 - Slider with Info on Pizzerie: 2 empty image slides show placeholders.
 - [x] Cart page: English "Shop All" with empty link → "VEDI TUTTI I PRODOTTI" → /collections (same as product pages). Cart UI strings all come from locales/it.json (store primary language it; en installed but unpublished — when English is published, the same keys come from en.default.json and section texts get translated in Translate & Adapt, so no hardcoded Italian was added). Three machine-translated cart strings fixed in it.json: Aggiorna, Rimuovi, Istruzioni per l'ordine. Still marketing-y and unsourced in it.json: cart empty-state "Non perdere le migliori offerte!…" — flag for client.
-- Colour scheme "background-2" referenced by many sections but doesn't exist.
-- Password page doesn't load modus-design-system.css (only matters if password protection is enabled).
-- Rich Text + CTA second button never renders (parameter names).
-- Product recommendations CSS for grid mode never loads (malformed tag).
+- [x] Colour scheme "background-2" (73 references: image with text, slideshow slides, grid banners) — FIXED in snippets/vars.liquid: aliased to background-1, which is what those elements already inherited (no visual change). Skipped automatically if a real background-2 scheme is ever created.
+- [x] Password page now loads modus-design-system.css (only matters if password protection is enabled).
+- [x] Rich Text + CTA second button — FIXED (render 'button', index: 2). No template uses a second button yet.
+- [x] Product recommendations malformed <script> tag — FIXED; the swallowed stylesheet (section-products-grid.css) only targets .products-grid, which this section never outputs, so it was removed rather than loaded.
 
 ## CSS clean-up (only provably dead / redundant code removed, no visual change)
 - [x] Batch 1: per-section `.section-header__title-item { gap: 0 }` in collection-carousel, events-carousel, tabs, simple-slider (duplicates the sitewide `!important` rule; every title-item comes from snippets/section-header.liquid inside `.section-header__line`); list-collections' `gap: var(--modus-space-xs)` (always lost to that rule); tabs' mobile `.section-header__btn-top` margin (identical to the sitewide rule).

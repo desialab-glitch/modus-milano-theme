@@ -1,0 +1,364 @@
+{%- style -%}
+  {% render 'section-margin' %}
+  {% render 'section-padding' %}
+
+  .awards-{{ section.id }} {
+    background: #f5f0e8;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .awards-header-{{ section.id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* Tokenized to var(--modus-space-xs) (2026-09-07, was hardcoded 1.2rem). */
+    margin-bottom: var(--modus-space-xs);
+  }
+
+  .awards-eyebrow-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #4d4d4d;
+    margin: 0;
+  }
+
+  .awards-heading-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #c28342;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .awards-logos-{{ section.id }} {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* Tokenized to var(--modus-space-xs) (2026-09-07, was hardcoded 1.2rem). */
+    margin-bottom: var(--modus-space-xs);
+  }
+
+  .awards-logos-{{ section.id }} img {
+    height: 68px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .awards-logos-mobile-{{ section.id }} {
+    display: none;
+  }
+
+  .awards-list-{{ section.id }} {
+    display: flex;
+    gap: 152px;
+    align-items: flex-start;
+  }
+
+  .awards-col-{{ section.id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .awards-row-{{ section.id }} {
+    display: flex;
+    align-items: baseline;
+    padding: 8px 0;
+    /* Horizontal gap between the year and the source/description block
+       (2026-08-30; dialed back to 15px per follow-up request — 24px was
+       too much). Previously 0, the year's own fixed 64px width column was
+       the only separation. Everything else in this row is unchanged.
+       Intentionally NOT part of the sitewide vertical-rhythm token --
+       this is a horizontal gap tuned to this exact layout. */
+    gap: 15px;
+  }
+
+  .awards-year-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d16a14;
+    width: 64px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .awards-info-{{ section.id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .awards-source-{{ section.id }} {
+    margin: 0 !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    letter-spacing: 4px !important;
+  }
+
+  .awards-desc-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: #4d4d4d;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 989px) {
+    .awards-list-{{ section.id }} {
+      flex-direction: column;
+      gap: 0;
+    }
+    .awards-col-{{ section.id }} {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .awards-logos-desktop-{{ section.id }} {
+      display: none;
+    }
+
+    .awards-logos-mobile-{{ section.id }} {
+      display: block;
+      overflow: hidden;
+      width: 100%;
+      /* Bottom value tokenized to var(--modus-space-xs) (2026-09-07, was
+         hardcoded 1.2rem); the -1rem side values are the marquee's own
+         edge-bleed, unrelated to the vertical rhythm. */
+      margin: 0 -1rem var(--modus-space-xs);
+      padding: 4px 0;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+      mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+    }
+
+    .awards-marquee-track-{{ section.id }} {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: max-content;
+      animation: awards-marquee-{{ section.id }} 20s linear infinite;
+    }
+
+    .awards-marquee-track-{{ section.id }} img {
+      height: 44px;
+      width: auto;
+      flex-shrink: 0;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    @keyframes awards-marquee-{{ section.id }} {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .awards-marquee-track-{{ section.id }} {
+        animation: none;
+      }
+    }
+  }
+{%- endstyle -%}
+
+<div class="awards-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="container">
+
+    <div class="awards-header-{{ section.id }}">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="awards-eyebrow-{{ section.id }}">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="awards-heading-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+    </div>
+
+    <!-- Logo strip: desktop / tablet (static, wraps) -->
+    <div class="awards-logos-{{ section.id }} awards-logos-desktop-{{ section.id }}">
+      {%- for i in (1..10) -%}
+        {%- assign logo_key = 'logo_' | append: i -%}
+        {%- assign logo = section.settings[logo_key] -%}
+        {%- if logo != blank -%}
+          <img
+            src="{{ logo | image_url: height: 136 }}"
+            alt="{{ logo.alt | escape }}"
+            loading="lazy"
+            height="68"
+            width="{{ logo.width | times: 68 | divided_by: logo.height }}"
+          >
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <!-- Logo strip: mobile (single line, looping marquee) -->
+    <div class="awards-logos-mobile-{{ section.id }}">
+      <div class="awards-marquee-track-{{ section.id }}" aria-hidden="false">
+        {%- for dup in (1..2) -%}
+          {%- for i in (1..10) -%}
+            {%- assign logo_key = 'logo_' | append: i -%}
+            {%- assign logo = section.settings[logo_key] -%}
+            {%- if logo != blank -%}
+              <img
+                src="{{ logo | image_url: height: 88 }}"
+                alt="{{ logo.alt | escape }}"
+                loading="lazy"
+                height="44"
+                width="{{ logo.width | times: 44 | divided_by: logo.height }}"
+                {% if dup == 2 %}aria-hidden="true"{% endif %}
+              >
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <!-- Awards list: 2 columns -->
+    <div class="awards-list-{{ section.id }}">
+
+      <div class="awards-col-{{ section.id }}">
+        {%- for i in (1..8) -%}
+          {%- assign year_key = 'left_year_' | append: i -%}
+          {%- assign source_key = 'left_source_' | append: i -%}
+          {%- assign desc_key = 'left_desc_' | append: i -%}
+          {%- assign year_val = section.settings[year_key] -%}
+          {%- if year_val != blank -%}
+            <div class="awards-row-{{ section.id }}">
+              <span class="awards-year-{{ section.id }}">{{ year_val }}</span>
+              <div class="awards-info-{{ section.id }}">
+                {%- assign source_val = section.settings[source_key] -%}
+                {%- if source_val != blank -%}
+                  <p class="awards-source-{{ section.id }} h5">{{ source_val }}</p>
+                {%- endif -%}
+                {%- assign desc_val = section.settings[desc_key] -%}
+                {%- if desc_val != blank -%}
+                  <p class="awards-desc-{{ section.id }}">{{ desc_val }}</p>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="awards-col-{{ section.id }}">
+        {%- for i in (1..8) -%}
+          {%- assign year_key = 'right_year_' | append: i -%}
+          {%- assign source_key = 'right_source_' | append: i -%}
+          {%- assign desc_key = 'right_desc_' | append: i -%}
+          {%- assign year_val = section.settings[year_key] -%}
+          {%- if year_val != blank -%}
+            <div class="awards-row-{{ section.id }}">
+              <span class="awards-year-{{ section.id }}">{{ year_val }}</span>
+              <div class="awards-info-{{ section.id }}">
+                {%- assign source_val = section.settings[source_key] -%}
+                {%- if source_val != blank -%}
+                  <p class="awards-source-{{ section.id }} h5">{{ source_val }}</p>
+                {%- endif -%}
+                {%- assign desc_val = section.settings[desc_key] -%}
+                {%- if desc_val != blank -%}
+                  <p class="awards-desc-{{ section.id }}">{{ desc_val }}</p>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Awards",
+  "tag": "section",
+  "class": "spaced-section awards-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Riconoscimenti" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "COSA HANNO DETTO DI NOI" },
+    { "type": "header", "content": "Loghi (stessa altezza, larghezza auto)" },
+    { "type": "image_picker", "id": "logo_1", "label": "Logo 1" },
+    { "type": "image_picker", "id": "logo_2", "label": "Logo 2" },
+    { "type": "image_picker", "id": "logo_3", "label": "Logo 3" },
+    { "type": "image_picker", "id": "logo_4", "label": "Logo 4" },
+    { "type": "image_picker", "id": "logo_5", "label": "Logo 5" },
+    { "type": "image_picker", "id": "logo_6", "label": "Logo 6" },
+    { "type": "image_picker", "id": "logo_7", "label": "Logo 7" },
+    { "type": "image_picker", "id": "logo_8", "label": "Logo 8" },
+    { "type": "image_picker", "id": "logo_9", "label": "Logo 9" },
+    { "type": "image_picker", "id": "logo_10", "label": "Logo 10" },
+    { "type": "header", "content": "Colonna sinistra" },
+    { "type": "text", "id": "left_year_1", "label": "Anno 1", "default": "2017" },
+    { "type": "text", "id": "left_source_1", "label": "Fonte 1", "default": "ELEMENTI" },
+    { "type": "text", "id": "left_desc_1", "label": "Descrizione 1", "default": "Miglior Pizzaiolo d’Italia — competizione Elementi" },
+    { "type": "text", "id": "left_year_2", "label": "Anno 2", "default": "2022" },
+    { "type": "text", "id": "left_source_2", "label": "Fonte 2", "default": "50 TOP PIZZA" },
+    { "type": "text", "id": "left_desc_2", "label": "Descrizione 2", "default": "42° posto · Premio Pizzeria Novità dell’Anno" },
+    { "type": "text", "id": "left_year_3", "label": "Anno 3", "default": "2023" },
+    { "type": "text", "id": "left_source_3", "label": "Fonte 3", "default": "GAMBERO ROSSO" },
+    { "type": "text", "id": "left_desc_3", "label": "Descrizione 3", "default": "Tre Spicchi — Guida Gambero Rosso 2025" },
+    { "type": "text", "id": "left_year_4", "label": "Anno 4", "default": "2024" },
+    { "type": "text", "id": "left_source_4", "label": "Fonte 4", "default": "50 TOP PIZZA" },
+    { "type": "text", "id": "left_desc_4", "label": "Descrizione 4", "default": "65ª nel mondo · 29ª in Italia" },
+    { "type": "text", "id": "left_year_5", "label": "Anno 5" },
+    { "type": "text", "id": "left_source_5", "label": "Fonte 5" },
+    { "type": "text", "id": "left_desc_5", "label": "Descrizione 5" },
+    { "type": "text", "id": "left_year_6", "label": "Anno 6" },
+    { "type": "text", "id": "left_source_6", "label": "Fonte 6" },
+    { "type": "text", "id": "left_desc_6", "label": "Descrizione 6" },
+    { "type": "text", "id": "left_year_7", "label": "Anno 7" },
+    { "type": "text", "id": "left_source_7", "label": "Fonte 7" },
+    { "type": "text", "id": "left_desc_7", "label": "Descrizione 7" },
+    { "type": "text", "id": "left_year_8", "label": "Anno 8" },
+    { "type": "text", "id": "left_source_8", "label": "Fonte 8" },
+    { "type": "text", "id": "left_desc_8", "label": "Descrizione 8" },
+    { "type": "header", "content": "Colonna destra" },
+    { "type": "text", "id": "right_year_1", "label": "Anno 1", "default": "2024" },
+    { "type": "text", "id": "right_source_1", "label": "Fonte 1", "default": "MUSEO DIETA MED." },
+    { "type": "text", "id": "right_desc_1", "label": "Descrizione 1", "default": "Ambasciatore della Dieta Mediterranea — Museo Vivente Ancel Keys" },
+    { "type": "text", "id": "right_year_2", "label": "Anno 2", "default": "2025" },
+    { "type": "text", "id": "right_source_2", "label": "Fonte 2", "default": "IDENTITÀ GOLOSE" },
+    { "type": "text", "id": "right_desc_2", "label": "Descrizione 2", "default": "Premio Biodiversità d’Italia — Pizza & Cocktail by Identità Golose" },
+    { "type": "text", "id": "right_year_3", "label": "Anno 3", "default": "2025" },
+    { "type": "text", "id": "right_source_3", "label": "Fonte 3", "default": "PIZZA AWARDS" },
+    { "type": "text", "id": "right_desc_3", "label": "Descrizione 3", "default": "37° in Pizza Awards Italia · 28° in 50 Top Pizza Italia" },
+    { "type": "text", "id": "right_year_4", "label": "Anno 4" },
+    { "type": "text", "id": "right_source_4", "label": "Fonte 4" },
+    { "type": "text", "id": "right_desc_4", "label": "Descrizione 4" },
+    { "type": "text", "id": "right_year_5", "label": "Anno 5" },
+    { "type": "text", "id": "right_source_5", "label": "Fonte 5" },
+    { "type": "text", "id": "right_desc_5", "label": "Descrizione 5" },
+    { "type": "text", "id": "right_year_6", "label": "Anno 6" },
+    { "type": "text", "id": "right_source_6", "label": "Fonte 6" },
+    { "type": "text", "id": "right_desc_6", "label": "Descrizione 6" },
+    { "type": "text", "id": "right_year_7", "label": "Anno 7" },
+    { "type": "text", "id": "right_source_7", "label": "Fonte 7" },
+    { "type": "text", "id": "right_desc_7", "label": "Descrizione 7" },
+    { "type": "text", "id": "right_year_8", "label": "Anno 8" },
+    { "type": "text", "id": "right_source_8", "label": "Fonte 8" },
+    { "type": "text", "id": "right_desc_8", "label": "Descrizione 8" },
+    { "type": "header", "content": "Spaziatura" },
+    { "type": "select", "id": "margin_top", "default": "no-indent", "label": "Margin top", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "margin_bottom", "default": "no-indent", "label": "Margin bottom", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "padding_top", "default": "no-indent", "label": "Padding top", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "padding_bottom", "default": "no-indent", "label": "Padding bottom", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] }
+  ],
+  "presets": [{ "name": "Awards" }]
+}
+{% endschema %}

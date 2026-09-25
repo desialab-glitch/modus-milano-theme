@@ -12,3 +12,10 @@ trimmed to balance with Terra Dura. Cart: English "Recommended" placeholder
 replaced with Italian heading/subheading.
 
 To roll back, upload before/<file> over templates/<file> on the draft.
+
+Follow-up 12:59: another session re-uploaded index.json from an older copy at
+12:47, which reverted the Storie di Pane tab subheading. Re-applied on top of
+the draft's current file. list-collections: slide subheading shortened to fit
+the 40-character rule, and the same fix applied to the hidden duplicate
+image-with-text section. *.before-reapply.json = the draft state just before
+this follow-up.

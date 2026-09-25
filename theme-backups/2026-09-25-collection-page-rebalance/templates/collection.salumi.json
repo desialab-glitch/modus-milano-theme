@@ -1,0 +1,476 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Il salumificio di Gioi",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "I SALUMI TRA ALENTO E CALORE",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Gioi la soppressata si fa solo nella stagione fredda. Nel 2007 Raffaello Palladino e Marco Infante hanno aperto un piccolo salumificio artigianale per portare avanti questa tradizione.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_salumi",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Salumificio-Gioi-i-prodotti-e1443427477570-jpg-webp.webp",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/gioi-dalla-montagna-serra.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il laboratorio",
+        "heading_tag": "h2",
+        "heading": "TRA QUERCE, CASTAGNI E ULIVETI",
+        "text": "<p>Il laboratorio sorge a quasi 700 metri, tra colline di querce, castagni e uliveti, nel cuore del Parco Nazionale del Cilento. I salumi sono conditi con sale e spezie, senza conservanti.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_salumi": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "salumi",
+        "product_list": [
+          "soppressata-di-gioi",
+          "salsiccia",
+          "capicollo",
+          "pancetta-arrotolata"
+        ],
+        "anchor_id": "products_grid_salumi",
+        "subheading": "Dal borgo di Gioi",
+        "heading": "IL SALUMIFICIO DI GIOI",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>La soppressata lardellata, la salsiccia al finocchietto, il capicollo e la pancetta arrotolata: i salumi del tagliere cilentano, conditi con sale e spezie e fatti a mano a Gioi.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 10,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_MNxpfC": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_salumi": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/gioi-dalla-montagna-serra.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo": "shopify://shop_images/gioi-logo-transparent.png",
+        "producer_logo_width_mobile": 50,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Raffaello Palladino e Marco Infante",
+        "heading_tag": "h2",
+        "heading": "",
+        "text": "<p>Raffaello Palladino e Marco Infante sono rimasti a Gioi e nel 2007 hanno fondato il salumificio del paese, per dare un futuro alla soppressata. Oggi sono uno dei due produttori del Presidio Slow Food.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "m",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/rigatoni-con-salsiccia-semi-di-finocchio-e-sugo_b24b3807-0bcc-42ef-a3a8-06e46f389666.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come si serve",
+            "heading": "AL NATURALE, SU UN TAGLIERE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>I salumi di Gioi si gustano al naturale, affettati sottili, in antipasto o come spuntino, su un tagliere con formaggi e pane.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/La-respensa-antipasti-1-e1722688594947.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come si abbina",
+            "heading": "PANE BISCOTTATO, AGLIANICO E CACIORICOTTA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il tagliere del Cilento: salumi di Gioi, cacioricotta semistagionato e pane biscottato. Da bere, un Aglianico del Cilento come il Kleos di Maffini.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Soppessata_gioi-e1586621455534_1_22033f54-7709-4485-8583-95a5d2d1bd60.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il prodotto simbolo",
+            "heading": "LA SOPPRESSATA LARDELLATA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Al centro della soppressata di Gioi c'è un filetto di lardo del collo: è l'unico salame lardellato della Campania. Al taglio mostra un occhio bianco nel rosso.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Come si gustano",
+        "heading": "IL BORGO DI GIOI, FETTA DOPO FETTA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos'è la Soppressata di Gioi e perché è Presidio Slow Food",
+            "heading_tag": "h2",
+            "description": "<p>Salume antico, prodotto solo nella stagione fredda a Gioi e dintorni; già nell'Ottocento Columella Onorati lo metteva tra le soppressate eccellenti del Cilento. È Presidio Slow Food perché la lavorazione era quasi solo familiare: oggi i produttori sono due.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Ingredienti della soppressata",
+            "heading_tag": "h2",
+            "description": "<p>La parte più magra della coscia del suino, mondata di cartilagini e nervetti e sminuzzata, un filetto di lardo del collo, sale marino artigianale e pepe nero in grani. Lista completa in etichetta.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si riconosce la soppressata di Gioi",
+            "heading_tag": "h2",
+            "description": "<p>Dalla forma e dal taglio. Ha la forma di una piccola pagnotta, divisa al centro dalla legatura. Al taglio mostra un occhio di lardo bianco al centro della carne rossa.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come abbinare la soppressata",
+            "heading_tag": "h2",
+            "description": "<p>Al naturale, in antipasto o su un tagliere con formaggi e altri salumi. Da bere, un vino rosso come un Aglianico del Cilento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-5"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUI SALUMI DI GIOI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/soppressata-ttre-scaled.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "cacioricotta-di-capra",
+          "vino-kleos-aglianico",
+          "pane-biscottato",
+          "olio-evo-madonna"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "I SALUMI DI GIOI, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Per un tagliere cilentano",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-paolo-de-simone-img-2079_bf1ef0b4-0d12-450d-afac-a8f6fb0343f8.jpg",
+            "desktop_width_percent": 100,
+            "disclaimer_size": 14,
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "image_with_text_Nh4pWr",
+    "products_grid_salumi",
+    "banner_MNxpfC",
+    "produttore_salumi",
+    "practical",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

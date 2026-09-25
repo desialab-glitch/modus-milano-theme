@@ -1,0 +1,518 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Le erbe di Gioi",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "ERBE DEL PARCO NAZIONALE DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Gioi, nel Parco Nazionale del Cilento, Eleonora e Tony raccolgono a mano le erbe officinali al mattino presto e le fanno asciugare sulle «graddecedde», le grate tradizionali.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_yp98c9",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/daisies-1536x1020.jpg",
+        "hide_image_mobile": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "products_grid_yp98c9": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "erbe",
+        "product_list": [],
+        "anchor_id": "products_grid_yp98c9",
+        "subheading": "Il cofanetto e le tisane singole",
+        "heading": "IL BOX E LA SINGOLA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Il Box raccoglie cinque erbe cilentane in confezioni bidose: dieci infusioni per conoscere il Parco una tazza alla volta. Le tisane singole sono per chi ha già trovato la sua erba preferita.</p>",
+        "alignment": "left",
+        "columns_per_row": 2,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "video_raccolte_cotte": {
+      "type": "video-with-text",
+      "settings": {
+        "video_position": "video_left",
+        "color_scheme": "background-1",
+        "video_url": "",
+        "video": "shopify://files/videos/5_22 giu.mp4",
+        "video_ratio": "portrait",
+        "video_loop": true,
+        "show_video_controls": true,
+        "video_autoplay": true,
+        "subheading": "Le erbe spontanee",
+        "heading": "RACCOLTE E COTTE",
+        "heading_tag": "h2",
+        "text": "<p>Nicola Di Novella, custode della tradizione erboristica cilentana, raccoglie ogni giorno con il figlio Riccardo le erbe spontanee della dieta mediterranea che Modus usa ancora oggi. Cicoria, borragine, bietola selvatica: appena colte, finiscono in minestra.</p>",
+        "button_label": "",
+        "button_style": "primary",
+        "button_link": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/cc759674-f7be-43b9-82f0-7c5abd326a1a.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Le nostre garanzie",
+        "heading_tag": "h2",
+        "heading": "LE ERBE DEL PARCO NAZIONALE DEL CILENTO",
+        "text": "<p>Il Parco Nazionale del Cilento ospita oltre 1.800 specie di piante autoctone in 181.000 ettari, Patrimonio Mondiale UNESCO dal 1998 e Riserva della Biosfera MAB dal 1997. Il microclima mediterraneo produce piante con concentrazioni di principi attivi irriproducibili in pianura o in serra.</p><p>Erbe Cilento nasce a Gioi, nel cuore del Parco, con un mandato preciso: coltivare, raccogliere a mano ed essiccare le erbe officinali del territorio senza perderne le proprietà. Borragine, cicorie, finocchietto selvatico e molte altre specie hanno fatto parte per generazioni dell’alimentazione delle comunità del Cilento, sono la parte più importante della Dieta Mediterranea. Biologiche per scelta, premiate dal Parco per coerenza.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "banner_erbe_top": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_erbe": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/passeggiate-botaniche-4.png",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo": "shopify://shop_images/erbe-cilento-logo-transparent.png",
+        "producer_logo_width_mobile": 45,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Due mestieri tra le colline di Gioi",
+        "heading_tag": "h2",
+        "heading": "",
+        "text": "<p>Nel 2018 Eleonora, farmacista, e Tony, perito agrario, lasciano Milano per Gioi e fondano Erbe Cilento. Ogni mattina raccolgono a mano le erbe officinali e le essiccano sulle «graddecedde», come si è sempre fatto su queste colline.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "m",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/chi-siamo-erbe-cilento.png",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "La scelta di Paolo",
+            "heading": "PERCHÉ ERBE CILENTO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Paolo conosce Eleonora e Tony di persona e sa come coltivano, raccolgono ed essiccano le loro erbe a Gioi: per questo le loro tisane sono nella dispensa di Modus.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cc759674-f7be-43b9-82f0-7c5abd326a1a.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Riconoscimento",
+            "heading": "PREMIATE DAL PARCO NAZIONALE DEL CILENTO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>I prodotti di Erbe Cilento hanno ricevuto il riconoscimento del Parco Nazionale del Cilento, uno dei territori più ricchi di biodiversità d'Italia.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cilento-national-park-waterfall.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Territorio",
+            "heading": "IL PARCO NAZIONALE DEL CILENTO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il Parco è Patrimonio Mondiale UNESCO dal 1998 e Riserva della Biosfera MAB dal 1997, con oltre 1.800 specie vegetali: ogni erba porta nella tazza il suo luogo.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa contiene il Box Tisane",
+            "heading_tag": "h2",
+            "description": "<p>Contiene 5 confezioni bidose di erbe officinali cilentane. Ogni confezione è sufficiente per 2 infusioni: dieci infusioni totali per scoprire cinque profili diversi dello stesso territorio.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come preparare la tisana",
+            "heading_tag": "h2",
+            "description": "<p>Tra 2 e 3 grammi per 200 ml d'acqua, tra 90 e 95°C: il bollore troppo forte distrugge parte degli oli essenziali. Coprire e lasciare in infusione tra 7 e 10 minuti. Assaggiatela prima al naturale: le erbe cilentane hanno spesso dolcezze naturali.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Biologiche certificate: cosa significa",
+            "heading_tag": "h2",
+            "description": "<p>Materie prime 100% naturali, con il riconoscimento del Parco Nazionale del Cilento. Prima dei farmaci moderni, queste erbe erano il rimedio delle famiglie contadine cilentane.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Le stesse erbe in cucina",
+            "heading_tag": "h2",
+            "description": "<p>Mirto: nelle marinature, con la selvaggina. Menta: sui carciofi, nelle insalate di legumi. Finocchio: sulle alici, con il maiale. Le tisane stesse si usano come liquido di cottura per cereali e legumi.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Tisana, infuso, decotto: la differenza",
+            "heading_tag": "h2",
+            "description": "<p>L'infuso si ottiene versando acqua calda su foglie o fiori. Il decotto è per parti dure (radici, cortecce) con ebollizione prolungata. «Tisana» è il termine popolare, i prodotti di Erbe Cilento sono principalmente infusi.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come conservarle",
+            "heading_tag": "h2",
+            "description": "<p>In luogo fresco, asciutto, al riparo dalla luce diretta. In confezione chiusa: fino alla data in etichetta. Sfuse: tra 12 e 18 mesi. Il frigorifero introduce umidità, il vero nemico delle erbe secche.</p>"
+          }
+        },
+        "faq-7": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Il Box come regalo",
+            "heading_tag": "h2",
+            "description": "<p>Cinque erbe in monoporzione doppia: scopri l'intera gamma. Si spedisce a temperatura ambiente. Racconta il Cilento in modo immediato a chi non lo conosce.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6",
+        "faq-7"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SULLE ERBE CILENTANE",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/flowers-garden-1536x1024.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "miele-di-castagno",
+          "fichi-infilatella-classica",
+          "biscotti-al-miele",
+          "biscotti-cantucci"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "LE ERBE CILENTANE, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Da gustare con la tisana",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "l"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-paolo-de-simone-img-2079_bf1ef0b4-0d12-450d-afac-a8f6fb0343f8.jpg",
+            "desktop_width_percent": 100,
+            "disclaimer_size": 14,
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#f5f5f5",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "products_grid_yp98c9",
+    "video_raccolte_cotte",
+    "image_with_text_Nh4pWr",
+    "banner_erbe_top",
+    "produttore_erbe",
+    "practical",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

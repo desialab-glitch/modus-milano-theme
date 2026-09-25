@@ -33,7 +33,7 @@
         "heading": "IL POMODORO DELLA PIANA DEL SELE",
         "heading_tag": "h1",
         "heading_color": "",
-        "text": "<p>Il pomodoro ha una stagione di poche settimane. A Capaccio Paestum Francesco Vastola e il figlio Fabrizio lo raccolgono a mano nei campi biologici e lo lavorano subito dopo la raccolta.</p>",
+        "text": "<p>Il pomodoro ha una stagione di poche settimane. Nei campi biologici di Capaccio Paestum viene raccolto a mano e lavorato subito dopo la raccolta.</p>",
         "button_label": "SCOPRI I PRODOTTI ↓",
         "button_link": "#products_grid_yp98c9",
         "button_style": "primary",
@@ -161,7 +161,7 @@
         "subheading_secondary": "Pomodoro biologico a Capaccio Paestum",
         "heading_tag": "h2",
         "heading": "",
-        "text": "<p>Francesco Vastola ha fondato Maida a Capaccio Paestum. È stato il primo a rimpiantare in zona il pomodoro giallo di Capaccio, varietà quasi abbandonata che ha fatto inserire nel Registro Regionale delle Risorse Genetiche.</p><p>In barattolo ci sono solo pomodoro biologico, basilico e sale.</p>",
+        "text": "<p>Francesco Vastola guida l'azienda agricola Maida a Capaccio Paestum e lavora con il figlio Fabrizio. Coltivano pomodori biologici nei campi di Capaccio Paestum e li trasformano in pelati e passata quando arriva la stagione. Un lavoro che comincia dal raccolto e prosegue fino al barattolo.</p>",
         "cta_1_label": "",
         "cta_1_link": "",
         "cta_1_style": "primary",
@@ -197,10 +197,10 @@
             "image_ratio": "portrait",
             "overlay_opacity": 0,
             "subheading": "La filiera",
-            "heading": "FRANCESCO VASTOLA, DAL CAMPO AL BARATTOLO",
+            "heading": "IL POMODORO DI MAIDA NELLE NOSTRE CUCINE",
             "heading_size": "h3",
             "heading_tag": "h3",
-            "text": "<p>Tutto nasce nel campo biologico di Capaccio Paestum dove Francesco Vastola coltiva, raccoglie e trasforma i suoi pomodori.</p>",
+            "text": "<p>Nelle pizzerie Modus il pelato di Maida entra sulla pizza; nelle gastronomie la passata diventa la base dei sughi. Paolo porta entrambi dal Cilento alle cucine di Milano.</p>",
             "text_2": "",
             "button_label": "",
             "button_link": "",
@@ -369,7 +369,7 @@
           "settings": {
             "heading": "Il pelato sulla pizza",
             "heading_tag": "h2",
-            "description": "<p>Schiaccia il pelato a mano direttamente sulla base cruda: pezzi irregolari, succo che si rilascia lentamente in cottura. La pizza resta asciutta. È il metodo delle pizzerie napoletane serie, e funziona perché il pomodoro è buono.</p>"
+            "description": "<p>Schiaccia il pelato a mano direttamente sulla base cruda, distribuendo i pezzi irregolari e un po' del loro succo prima di infornare.</p>"
           }
         },
         "faq-5": {
@@ -383,9 +383,9 @@
         "faq-6": {
           "type": "text-block",
           "settings": {
-            "heading": "Allergeni",
+            "heading": "Dove trovo le informazioni sugli allergeni?",
             "heading_tag": "h2",
-            "description": "<p>Pelato: pomodoro, succo di pomodoro, basilico e sale. Passata: pomodoro, basilico e sale.</p>"
+            "description": "<p>Controlla l'etichetta del barattolo per gli allergeni e la lista completa degli ingredienti del prodotto che hai acquistato.</p>"
           }
         }
       },

@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": "",
+            "heading_tag": "h3"
+          }
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_variant_name": false,
+            "show_size_guide": false,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_quantity": true,
+            "show_gift_card_recipient": true,
+            "notification_modal": false,
+            "modal_button_label": "",
+            "heading": "",
+            "heading_tag": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "text_bottom": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {}
+        },
+        "popup-details": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Details",
+            "heading": "Dettagli prodotto",
+            "heading_tag": "h4",
+            "text": "",
+            "text_bottom": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "popup-care": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Care",
+            "heading": "Conservazione",
+            "heading_tag": "h4",
+            "text": "",
+            "text_bottom": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "popup-shipping": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Shipping & Returns",
+            "heading": "Spedizioni e resi",
+            "heading_tag": "h4",
+            "text": "<p>Spedizione in 48h lavorative in tutta Italia. Gratuita sopra €57. Resi entro 14 giorni per prodotti non aperti. Scrivici a info@modusmilano.it.</p>",
+            "text_bottom": "",
+            "button_label": "Contattaci",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant-picker",
+        "buy-buttons",
+        "inventory",
+        "popup-details",
+        "popup-care",
+        "popup-shipping"
+      ],
+      "settings": {
+        "image_gallery_collage": "grid",
+        "desktop_alignment": "left",
+        "mobile_alignment": "left",
+        "image_fit": "cover",
+        "enable_autoheight": false,
+        "content_centered": false,
+        "variant_media_display": "show_all",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "178077970268245efa": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_hqTihV": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_hqTihV"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product_picks_M8faVx": {
+      "type": "product-picks",
+      "name": "Product Picks",
+      "settings": {
+        "product_handles": "miele-di-castagno, cofanetto-tisane, fichi-infilatella-classica, liquore-fichi-secchi",
+        "per_row": 4,
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "I preferiti Modus Milano",
+        "heading": "LA GIFT CARD, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-dropdowns": {
+      "type": "collapsible-content",
+      "blocks": {
+        "drop-ricevi": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come arriva la gift card?",
+            "heading_tag": "h2",
+            "description": "<p>La gift card è digitale: dopo l'acquisto arriva subito via email, pronta all'uso. Puoi indicare direttamente l'indirizzo di chi la riceve e aggiungere un tuo messaggio, così il regalo parte da te fino a lui.</p>"
+          }
+        },
+        "drop-uso": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Dove si può usare?",
+            "heading_tag": "h2",
+            "description": "<p>È valida su tutto il catalogo del negozio online Modus, dall'olio ai vini, dalla pasta ai prodotti da forno, ed è sempre valida. Basta inserire il codice al momento del pagamento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "drop-ricevi",
+        "drop-uso"
+      ],
+      "settings": {
+        "faqs_heading": "Domande frequenti",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": true,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "l"
+      }
+    },
+    "pdp-cards-carousel": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_3fK7gt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true,
+            "rating_display": "default"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_3fK7gt"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "178077970268245efa",
+    "product_picks_M8faVx",
+    "pdp-dropdowns",
+    "pdp-cards-carousel"
+  ]
+}

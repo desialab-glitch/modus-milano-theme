@@ -1,0 +1,543 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_variant_name": false,
+            "show_size_guide": false,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "Notify Me",
+            "heading": "Some heading",
+            "heading_tag": "h4",
+            "text": "<p>Drawer heading</p>",
+            "button_label": "PRENOTA QUESTA SETTIMANA",
+            "button_link": "",
+            "text_bottom": "<p>Drawer text</p>",
+            "button_label_2": "SCOPRI IL MENU DI QUESTA SETTIMANA",
+            "button_link_2": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": "",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant-picker",
+        "buy-buttons",
+        "description"
+      ],
+      "settings": {
+        "image_gallery_collage": "grid",
+        "desktop_alignment": "left",
+        "mobile_alignment": "left",
+        "image_fit": "cover",
+        "enable_autoheight": false,
+        "content_centered": false,
+        "variant_media_display": "show_all",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "il-perche-wave": {
+      "type": "banner",
+      "name": "Wave top",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "il-perche": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-perche": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": true,
+            "color_scheme": "background-2",
+            "subheading": "Il perché",
+            "heading": "Un rituale, non un acquisto.",
+            "heading_tag": "h2",
+            "text": "<p>Ogni settimana selezioniamo tre prodotti della cucina cilentana, tra pane, pasta e antipasti. Preparati il venerdì, pronti da lunedì nelle gastronomie.</p><p><em>Ordini quando vuoi, salti quando vuoi.</em></p>",
+            "button_label": "PRENOTA QUESTA SETTIMANA",
+            "button_link": "/products/prodotti-freschi",
+            "button_style": "tertiary",
+            "button_arrow": true,
+            "overlay_opacity": 0,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-perche"
+      ],
+      "name": "Il perché",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "flex-end",
+        "container_size": "small",
+        "transition_effect": "slide",
+        "is_autoplay": false,
+        "show_pagination": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "ingredienti": {
+      "type": "grid-banner",
+      "blocks": {
+        "tile1": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "La filiera",
+            "heading": "ORIGINE GARANTITA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Ogni ingrediente proviene direttamente dai produttori cilentani, tra Presìdi Slow Food, prodotti DOP e coltivazioni biologiche certificate. Zero intermediari tra il Cilento e la tua tavola.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "tile2": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "La selezione",
+            "heading": "MENU CHE CAMBIA OGNI LUNEDÌ",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Non due settimane uguali. La selezione segue la stagione e il meglio di quello che il Cilento produce. Sempre fresco, mai surgelato.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "tile3": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "La trasparenza",
+            "heading": "FILIERA CORTA E TRASPARENTE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Conosciamo ogni produttore di persona. Sappiamo da dove viene ogni ingrediente e vogliamo raccontartelo.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "tile1",
+        "tile2",
+        "tile3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "color_scheme": "background-2",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "Direttamente dai nostri produttori",
+        "heading": "INGREDIENTI DAL CILENTO.",
+        "heading_tag": "h2",
+        "description": "<p>Ogni settimana piatti freschi, preparati con ingredienti selezionati direttamente dai nostri produttori del Parco Nazionale del Cilento. La stagione guida la selezione.</p>",
+        "button_label": "↳ SCOPRI LA NOSTRA FILIERA",
+        "button_link": "/pages/la-nostra-storia",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_cta_ffEfeB": {
+      "type": "rich-text-cta",
+      "name": "Rich Text + CTA",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "full_width": true,
+        "subheading": "Come funziona",
+        "heading": "In tre passi",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "come-funziona": {
+      "type": "multicolumn",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "subheading": "01",
+            "heading": "SCEGLI LE PORZIONI",
+            "heading_size": "h3",
+            "text": "<p>3, 4 o 5 porzioni. Ordini entro venerdì ore 18:00. Paghi subito, conferma via email.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "subheading": "02",
+            "heading": "PREPARIAMO PER TE",
+            "heading_size": "h3",
+            "text": "<p>Dal venerdì sera cuciniamo, confezioniamo e teniamo in fresco il tuo ordine.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "subheading": "03",
+            "heading": "RITIRI IN GASTRONOMIA",
+            "heading_size": "h3",
+            "text": "<p>Da lunedì a sabato, nelle gastronomie Modus a Milano. Mostra la conferma email.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "multicolumn_to_show": 3,
+        "buton_show": "left",
+        "img_size": "small",
+        "swipe_on_mobile": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "dove-ritiri": {
+      "type": "grid-banner",
+      "blocks": {
+        "loc1": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "La prima sede, a Porta Romana",
+            "heading": "MODUS VIA MAFFEI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il primo punto Modus. Colazione, pausa pranzo e asporto con ingredienti cilentani freschi ogni mattina.</p><p>Via Andrea Maffei, 5 · 20135 Milano<br/>Da lunedì a sabato, dalle 10.00 alle 20.00</p>",
+            "text_2": "",
+            "button_label": "PRENOTA",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "loc2": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "Nel cuore di Isola",
+            "heading": "MODUS CORSO COMO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Nel cuore di Isola. I prodotti sono in esposizione: puoi vederli, toccarli e assaggiarli. Menu aggiornato ogni settimana.</p><p>Corso Como 12, 20154 Milano<br/>Da martedì a domenica, dalle 10.00 alle 21.00</p>",
+            "text_2": "",
+            "button_label": "PRENOTA",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "loc3": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 20,
+            "subheading": "Nel quartiere Tortona",
+            "heading": "MODUS VIA SOLARI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Nel quartiere Tortona. Banco gastronomia con ingredienti dal Cilento e pausa pranzo di qualità ogni giorno.</p><p>Via Solari 18, 20144 Milano<br/>Da lunedì a sabato, dalle 9.00 alle 19.30</p>",
+            "text_2": "",
+            "button_label": "PRENOTA",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "loc1",
+        "loc2",
+        "loc3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "color_scheme": "background-2",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "I nostri luoghi a Milano",
+        "heading": "LE NOSTRE GASTRONOMIE A MILANO.",
+        "heading_tag": "h2",
+        "description": "<p>Il banco della gastronomia ti permette di vedere da vicino i prodotti del Cilento. Tre indirizzi a Milano.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "landscape",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner-wave-line": {
+      "type": "banner",
+      "name": "Wave line",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Fino a quando posso ordinare?",
+            "heading_tag": "h2",
+            "description": "<p>Entro venerdì alle 18:00 per il ritiro della settimana successiva. Nessun ordine accettato dopo la chiusura.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "I prodotti sono surgelati?",
+            "heading_tag": "h2",
+            "description": "<p>No. Tutto viene preparato il venerdì e tenuto in fresco fino al ritiro. Mai surgelato.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Posso modificare o cancellare l'ordine?",
+            "heading_tag": "h2",
+            "description": "<p>Scrivici entro venerdì ore 18:00 a info@modusmilano.it con il numero d'ordine. Passato questo termine non è possibile intervenire sulla preparazione.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa succede se non riesco a ritirare?",
+            "heading_tag": "h2",
+            "description": "<p>Contattaci prima del lunedì mattina per trovare insieme una soluzione. In assenza di comunicazione, l'ordine non può essere rimborsato perché già preparato su prenotazione.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "cta-banner": {
+      "type": "hero-section",
+      "blocks": {
+        "slide": {
+          "type": "column",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "color_scheme": "background-dark",
+        "content_alignment": "left",
+        "image_size": "medium",
+        "overlay_opacity": 60,
+        "eyebrow": "Preferisci la consegna a domicilio?",
+        "heading": "I PRODOTTI DEL CILENTO, \nA CASA TUA IN 48H.",
+        "heading_tag": "h2",
+        "text": "<p>Conserve, vini, olio EVO, salumi. Tutto quello che ami del Cilento, spedito ovunque in Italia.</p>",
+        "button_label": "ESPLORA LO SHOP",
+        "button_link": "/collections/all",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "il-perche-wave",
+    "il-perche",
+    "ingredienti",
+    "rich_text_cta_ffEfeB",
+    "come-funziona",
+    "dove-ritiri",
+    "banner-wave-line",
+    "faqs",
+    "cta-banner"
+  ]
+}

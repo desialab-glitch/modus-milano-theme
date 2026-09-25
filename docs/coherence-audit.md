@@ -57,3 +57,8 @@ Editor padding/margin settings silently do nothing or don't exist here.
 - Password page doesn't load modus-design-system.css (only matters if password protection is enabled).
 - Rich Text + CTA second button never renders (parameter names).
 - Product recommendations CSS for grid mode never loads (malformed tag).
+
+## CSS clean-up (only provably dead / redundant code removed, no visual change)
+- [x] Batch 1: per-section `.section-header__title-item { gap: 0 }` in collection-carousel, events-carousel, tabs, simple-slider (duplicates the sitewide `!important` rule; every title-item comes from snippets/section-header.liquid inside `.section-header__line`); list-collections' `gap: var(--modus-space-xs)` (always lost to that rule); tabs' mobile `.section-header__btn-top` margin (identical to the sitewide rule).
+- [x] Batch 2 (modus-design-system.css): selectors whose classes exist in no Liquid file and no JS asset — `.tabs__tab`, `.footer__heading`/`.footer__block-heading` rule, `.footer__inner`, `.footer__divider`, `.footer__copyright-content`, `.footer__heading-link` (rule entry only; the `:not()` guard stays), `.footer__block--store-info` entries, `.breadcrumb__sep`, `.product__submit`, `.product-form__payment-info`, `.product__trust-row`, `.rich-text-section .rich-text__content/.rich-text__cta`. Selector-list entries removed only; the remaining selectors in each list are unchanged.
+- Kept on purpose (not provably dead): popular-products mobile header margin patch (also zeroes top/bottom margins), products-grid header padding (its padding-top 0 still applies), product-picks mobile CTA move (deliberate behaviour).

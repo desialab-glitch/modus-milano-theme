@@ -8,7 +8,7 @@
 ## Known live bugs, not yet fixed (check before assuming these are new findings)
 - Gift Card product: all 4 variants (€30/50/75/100) show sold out, unpurchasable
 - Conserve collection: both products (Passata pomodoro biologico, Pomodoro pelato biologico) priced at €0,00
-- Conserve producer bio (Maida) still contains the revoked phrase "Nessun intermediario, solo la terra e il momento giusto" live, despite Notion saying it was cut
+- ~~Conserve producer bio (Maida) still contains the revoked phrase "Nessun intermediario, solo la terra e il momento giusto" live~~ — checked 25 Sep, not present in the live `templates/collection.conserve.json`. Stale, resolved.
 - "Modus nella stampa" homepage block pulls the 4 most recent Journal posts automatically instead of 4 curated press articles (Pignataro/De Gustare/Gambero Rosso/ScattiDiGusto) — article_block settings are empty, likely misconfigured
 - Formaggi article "formaggi-cilentani-caciocavallo" has literal "test" as its entire body — placeholder, not real copy
 - Gastronomie's Prodotti Freschi / menu settimanale button has no real link yet (link is coming)

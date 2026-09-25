@@ -1,0 +1,342 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'main-blog.js' | asset_url }}" defer="defer"></script>
+
+{% style %}
+	{% render 'section-padding' %}
+	{% render 'section-margin' %}
+
+	/* ── Journal tag filter ──
+	   Restyled (2026-08-30) to match the "Fornitori filter" pill look used
+	   on /pages/filiera (sections/fornitori-filter.liquid's .ff__item):
+	   transparent bg, thick 3px solid brand-orange border, Antonio bold
+	   uppercase orange text, sharp corners (no border-radius), filling
+	   solid orange with cream text on hover/active. Values (padding,
+	   font-size, letter-spacing, mobile downsize) copied directly from
+	   .ff__item rather than approximated, so the two match exactly.
+	   Border thinned 3px -> 2px (2026-09-04), matching .ff__item's own
+	   actual rendered width (a later sitewide override already thins
+	   .ff__item itself from its inline 3px down to 2px), and matching
+	   every other tag/filter pill on the site that was brought to 2px
+	   the same day. */
+	.blog-tag-filter {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.2rem 1.6rem;
+		margin-bottom: 3.2rem;
+	}
+	.blog-tag-filter__link {
+		display: inline-block;
+		padding: 1.05rem 1.7rem;
+		border: 2px solid #D16A14;
+		border-radius: 0;
+		font-family: 'Antonio', sans-serif;
+		font-weight: 700;
+		font-size: 1.225rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #D16A14;
+		white-space: nowrap;
+		background: transparent;
+		transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+	}
+	.blog-tag-filter__link:hover,
+	.blog-tag-filter__link.is-active {
+		background-color: #D16A14;
+		color: #f5e8d5;
+		border-color: #D16A14;
+	}
+	@media screen and (max-width: 749px) {
+		.blog-tag-filter__link {
+			padding: 0.85rem 1.25rem;
+			font-size: 1.05rem;
+		}
+	}
+
+	/* ── 3-column grid override ── */
+	.blog-articles.journal-grid {
+		--per-row: 3;
+	}
+	@media (max-width: 989px) {
+		.blog-articles.journal-grid { --per-row: 2; }
+	}
+	@media (max-width: 599px) {
+		.blog-articles.journal-grid { --per-row: 1; }
+	}
+
+	/* ── Load more button ── */
+	.journal-load-more {
+		display: flex;
+		justify-content: center;
+		margin-top: 4rem;
+	}
+	.journal-load-more__btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.8rem;
+		padding: 1.2rem 3.2rem;
+		background: transparent;
+		color: #01473e;
+		border: 2px solid #01473e;
+		border-radius: 4px;
+		font-family: var(--font-button-family, var(--font-heading-family));
+		font-size: 1.4rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+		transition: background 0.2s ease, color 0.2s ease;
+		font-weight: 700;
+	}
+	.journal-load-more__btn:hover {
+		background: #01473e;
+		color: #faf1e4;
+	}
+	.journal-load-more__btn.is-loading {
+		opacity: 0.6;
+		pointer-events: none;
+	}
+	.journal-load-more[hidden] { display: none !important; }
+
+	/* ── Mobile: 2 cards per row (2026-08-30) ──
+	   section-main-blog.css hardcodes grid-template-columns: repeat(1, 1fr)
+	   below 750px (the --per-row variable above is only read at 990px+), so
+	   this override is scoped to the same <750px range and only applies
+	   when the "Mobile: show 2 cards per row" setting is enabled. */
+	{% if section.settings.mobile_columns_2 %}
+		@media screen and (max-width: 749px) {
+			#shopify-section-{{ section.id }} .blog-articles {
+				grid-template-columns: repeat(2, 1fr) !important;
+				gap: 2rem 1.2rem;
+			}
+		}
+	{% endif %}
+{% endstyle %}
+
+<div class="main-blog">
+	<div class="container">
+
+		{% if section.settings.show_tag_filter and blog.all_tags.size > 0 %}
+			<nav class="blog-tag-filter" aria-label="Filtra per categoria">
+				<a
+					href="{{ blog.url }}"
+					class="blog-tag-filter__link{% unless current_tags %} is-active{% endunless %}"
+				>Tutti</a>
+				{% for tag in blog.all_tags %}
+					<a
+						href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+						class="blog-tag-filter__link{% if current_tags contains tag %} is-active{% endif %}"
+					>{{ tag }}</a>
+				{% endfor %}
+			</nav>
+		{% endif %}
+
+		{% paginate blog.articles by 6 %}
+			<div class="blog-articles__wrapper">
+				<ul
+					class="blog-articles journal-grid load-more-grid list-unstyled"
+					id="journal-grid"
+				>
+					{% for article in blog.articles %}
+						{% liquid
+							for block in section.blocks
+								if block.settings.exception_article.id == article.id
+									assign exception = true
+									break
+								else
+									assign exception = false
+								endif
+							endfor
+							if exception
+								continue
+							endif
+						%}
+						<li>
+							{% render 'article-card',
+								article: article,
+								show_image: section.settings.show_image,
+								show_tags: section.settings.show_tags,
+								show_date: section.settings.show_date,
+								show_excerpt: section.settings.show_excerpt,
+								show_author: section.settings.show_author,
+								image_fit: section.settings.image_fit,
+								image_ratio: section.settings.image_ratio,
+								card_type: section.settings.card_type,
+								heading_size: 'h3',
+								show_btn: false,
+								hover_effect: section.settings.hover_effect
+							%}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			{% if paginate.pages > 1 %}
+				<div class="journal-load-more" id="journal-load-more-wrapper">
+					<a
+						href="{{ paginate.next.url }}"
+						class="journal-load-more__btn"
+						id="journal-load-more-btn"
+						aria-label="Carica altri articoli"
+					>
+						<span class="btn-text">Mostra altri articoli</span>
+						<span class="btn-loading" style="display:none">&hellip;</span>
+					</a>
+				</div>
+			{% endif %}
+		{% endpaginate %}
+
+	</div>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('journal-load-more-btn');
+  var wrapper = document.getElementById('journal-load-more-wrapper');
+  var grid = document.getElementById('journal-grid');
+  if (!btn || !grid) return;
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var nextUrl = btn.getAttribute('href');
+    if (!nextUrl) return;
+
+    btn.classList.add('is-loading');
+    btn.querySelector('.btn-text').style.display = 'none';
+    btn.querySelector('.btn-loading').style.display = 'inline';
+
+    fetch(nextUrl)
+      .then(function (res) { return res.text(); })
+      .then(function (html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var newItems = doc.querySelectorAll('#journal-grid li');
+        newItems.forEach(function (item) { grid.appendChild(item); });
+        var nextBtn = doc.getElementById('journal-load-more-btn');
+        if (nextBtn) {
+          btn.setAttribute('href', nextBtn.getAttribute('href'));
+          btn.classList.remove('is-loading');
+          btn.querySelector('.btn-text').style.display = 'inline';
+          btn.querySelector('.btn-loading').style.display = 'none';
+        } else {
+          wrapper.setAttribute('hidden', '');
+        }
+      })
+      .catch(function () {
+        btn.classList.remove('is-loading');
+        btn.querySelector('.btn-text').style.display = 'inline';
+        btn.querySelector('.btn-loading').style.display = 'none';
+        window.location.href = nextUrl;
+      });
+  });
+})();
+</script>
+
+{% schema %}
+{
+	"name": "t:sections.main-blog.name",
+	"tag": "section",
+	"class": "section-main-blog",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_tag_filter",
+			"default": true,
+			"label": "Show tag filter bar"
+		},
+		{
+			"type": "select",
+			"id": "card_type",
+			"options": [
+				{ "value": "default", "label": "t:sections.all.article_card.card_type.options.option__1" },
+				{ "value": "reverse", "label": "t:sections.all.article_card.card_type.options.option__5" },
+				{ "value": "overlay", "label": "t:sections.all.article_card.card_type.options.option__2" }
+			],
+			"default": "default",
+			"label": "t:sections.all.article_card.card_type.label"
+		},
+		{
+			"type": "select",
+			"id": "hover_effect",
+			"label": "t:sections.all.hover_effect.label",
+			"default": "zoom",
+			"options": [
+				{ "value": "blur", "label": "t:sections.all.hover_effect.options.option_1" },
+				{ "value": "zoom", "label": "t:sections.all.hover_effect.options.option_2" },
+				{ "value": "shrink", "label": "t:sections.all.hover_effect.options.option_3" }
+			]
+		},
+		{
+			"type": "select",
+			"id": "image_ratio",
+			"options": [
+				{ "value": "landscape", "label": "t:sections.all.image.ratio.options__1.label" },
+				{ "value": "portrait", "label": "t:sections.all.image.ratio.options__2.label" },
+				{ "value": "square", "label": "t:sections.all.image.ratio.options__3.label" }
+			],
+			"default": "landscape",
+			"label": "t:sections.all.image.ratio.label"
+		},
+		{
+			"type": "select",
+			"id": "image_fit",
+			"label": "t:sections.all.image.fit.label",
+			"options": [
+				{ "value": "contain", "label": "t:sections.all.image.fit.options__1.label" },
+				{ "value": "cover", "label": "t:sections.all.image.fit.options__2.label" }
+			],
+			"default": "cover"
+		},
+		{ "type": "checkbox", "id": "show_image", "default": true, "label": "t:sections.main-blog.settings.show_image.label" },
+		{ "type": "checkbox", "id": "show_tags", "default": true, "label": "t:sections.main-blog.settings.show_tags.label" },
+		{ "type": "checkbox", "id": "show_date", "default": true, "label": "t:sections.main-blog.settings.show_date.label" },
+		{ "type": "checkbox", "id": "show_excerpt", "default": true, "label": "t:sections.main-blog.settings.show_excerpt.label" },
+		{ "type": "checkbox", "id": "show_author", "default": false, "label": "t:sections.main-blog.settings.show_author.label" },
+		{
+			"type": "checkbox",
+			"id": "mobile_columns_2",
+			"default": true,
+			"label": "Mobile: show 2 cards per row",
+			"info": "Shows 2 article cards side by side on mobile instead of 1."
+		},
+		{ "type": "paragraph", "content": "t:sections.main-blog.settings.paragraph.content" },
+		{ "type": "header", "content": "t:sections.all.section-margin.header.content" },
+		{
+			"type": "select", "id": "margin_top",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			],
+			"default": "no-indent",
+			"label": "t:sections.all.section-margin.margin_top.label"
+		},
+		{
+			"type": "select", "id": "margin_bottom",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			],
+			"default": "l",
+			"label": "t:sections.all.section-margin.margin_bottom.label"
+		}
+	],
+	"blocks": [
+		{
+			"type": "exception",
+			"name": "t:sections.main-blog.blocks.exception.name",
+			"limit": 12,
+			"settings": [
+				{ "type": "article", "id": "exception_article", "label": "t:sections.all.article_card.label" },
+				{ "type": "paragraph", "content": "t:sections.main-blog.blocks.exception.paragraph" }
+			]
+		}
+	]
+}
+{% endschema %}

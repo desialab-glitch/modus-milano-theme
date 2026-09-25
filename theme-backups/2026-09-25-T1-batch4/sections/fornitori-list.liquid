@@ -1,0 +1,237 @@
+<style>
+  .fl-{{ section.id }} .fl-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    border-top: 1px solid rgba(194,131,66,0.2);
+  }
+  .fl-{{ section.id }} .fl-entry.fl--img-right { direction: rtl; }
+  .fl-{{ section.id }} .fl-entry.fl--img-right > * { direction: ltr; }
+  .fl-{{ section.id }} .fe__img {
+    width: 100%; height: 100%; min-height: 420px; overflow: hidden; display: block;
+  }
+  .fl-{{ section.id }} .fe__img img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .fl-{{ section.id }} .fe__placeholder {
+    width: 100%; height: 100%; min-height: 420px; background: #e8dcc8;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .fl-{{ section.id }} .fe__content {
+    padding: 5rem 5.6rem; display: flex; flex-direction: column;
+    justify-content: center; gap: 2rem;
+  }
+  .fl-{{ section.id }} .fe__location {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin: 0;
+  }
+  .fl-{{ section.id }} .fe__location svg {
+    width: 14px; height: 14px; flex-shrink: 0;
+    fill: none; stroke: var(--modus-gold, #C28342); stroke-width: 1.5;
+  }
+  .fl-{{ section.id }} .fe__heading {
+    font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 3.2rem;
+    letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.1;
+    margin: 0; color: rgb(var(--color-foreground));
+  }
+  .fl-{{ section.id }} .fe__logo {
+    display: block;
+    width: var(--fe-logo-width-mobile, 100%);
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .fl-{{ section.id }} .fe__logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+  @media screen and (min-width: 990px) {
+    .fl-{{ section.id }} .fe__logo {
+      width: var(--fe-logo-width-desktop, 30%);
+    }
+  }
+  .fl-{{ section.id }} .fe__product-type {
+    font-family: 'Lora', serif !important; font-style: italic !important; font-size: 1.5rem;
+    color: rgba(61,61,61,0.6); margin: -0.8rem 0 0;
+  }
+  .fl-{{ section.id }} .fe__desc {
+    font-family: 'Lora', serif; font-size: 1.5rem;
+    line-height: 1.75; color: #3d3d3d; margin: 0;
+  }
+  .fl-{{ section.id }} .fe__pills {
+    display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 0;
+  }
+  .fl-{{ section.id }} .fe__pill {
+    display: inline-block; font-family: 'Antonio', sans-serif; font-weight: 700;
+    font-size: 1.0625rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--modus-green, #01473e); border: 2px solid var(--modus-green, #01473e);
+    padding: 0.5625rem 1.25rem; text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+  .fl-{{ section.id }} .fe__pill:hover {
+    background: var(--modus-green, #01473e); color: #f5e8d5;
+    border-color: var(--modus-green, #01473e);
+  }
+  .fl-{{ section.id }} .fe__cta {
+    font-family: 'Antonio', sans-serif; font-weight: 700; font-size: 1.1rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--modus-green, #01473e); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    border-bottom: 1px solid var(--modus-green, #01473e);
+    padding-bottom: 1px; width: fit-content; margin-top: 0.4rem;
+  }
+  .fl-{{ section.id }} .fe__cta:hover {
+    color: var(--modus-gold, #C28342); border-color: var(--modus-gold, #C28342);
+  }
+  .fl-{{ section.id }} .fl-bg-1 { background: rgb(var(--color-background)); }
+  .fl-{{ section.id }} .fl-bg-2 { background: var(--color-background-2, #faf1e4); }
+  @media screen and (max-width: 989px) {
+    .fl-{{ section.id }} .fl-entry { grid-template-columns: 1fr; direction: ltr; }
+    .fl-{{ section.id }} .fl-entry.fl--img-right > * { direction: ltr; }
+    .fl-{{ section.id }} .fe__img { min-height: 300px; }
+    .fl-{{ section.id }} .fe__content { padding: 3.2rem 2.4rem; }
+    .fl-{{ section.id }} .fe__heading { font-size: 2.6rem; }
+  }
+</style>
+
+{%- capture accent_map -%}à:a|á:a|â:a|ä:a|è:e|é:e|ê:e|ë:e|ì:i|í:i|î:i|ï:i|ò:o|ó:o|ô:o|ö:o|ù:u|ú:u|û:u|ü:u|ñ:n|ç:c{%- endcapture -%}
+
+<div class="fl-{{ section.id }}">
+{%- for block in section.blocks -%}
+  {%- if block.type == 'fornitore' -%}
+    {%- assign is_even = forloop.index0 | modulo: 2 -%}
+    {%- assign img_right = false -%}
+    {%- if is_even == 1 -%}{%- assign img_right = true -%}{%- endif -%}
+    {%- assign bg_class = 'fl-bg-1' -%}
+    {%- if is_even == 1 -%}{%- assign bg_class = 'fl-bg-2' -%}{%- endif -%}
+
+    {%- comment -%}Build clean anchor ID: replace accented chars, then handleize{%- endcomment -%}
+    {%- assign clean_heading = block.settings.heading
+      | replace: 'à', 'a' | replace: 'á', 'a' | replace: 'â', 'a' | replace: 'ä', 'a'
+      | replace: 'è', 'e' | replace: 'é', 'e' | replace: 'ê', 'e' | replace: 'ë', 'e'
+      | replace: 'ì', 'i' | replace: 'í', 'i' | replace: 'î', 'i' | replace: 'ï', 'i'
+      | replace: 'ò', 'o' | replace: 'ó', 'o' | replace: 'ô', 'o' | replace: 'ö', 'o'
+      | replace: 'ù', 'u' | replace: 'ú', 'u' | replace: 'û', 'u' | replace: 'ü', 'u'
+      | replace: 'ñ', 'n' | replace: 'ç', 'c'
+      | replace: '–', '-' | replace: '—', '-' | replace: '’', "'" | replace: "‘", "'"
+    -%}
+    {%- assign anchor_id = clean_heading | handleize -%}
+
+    <div class="fl-entry{% if img_right %} fl--img-right{% endif %}" id="fornitore-{{ anchor_id }}" {{ block.shopify_attributes }}>
+      <div class="fe__img">
+        {%- if block.settings.image != blank -%}
+          {%- assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio -%}
+          {{ block.settings.image | image_url: width: 1800 | image_tag:
+            loading: 'lazy',
+            width: block.settings.image.width,
+            height: image_height,
+            sizes: '(min-width: 990px) 50vw, 100vw',
+            widths: '375, 550, 750, 1100, 1500, 1800'
+          }}
+        {%- else -%}
+          <div class="fe__placeholder">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+        {%- endif -%}
+      </div>
+      <div class="fe__content {{ bg_class }}">
+        {%- if block.settings.location != blank -%}
+          <p class="fe__location" style="font-family: var(--font-heading-family) !important; font-style: var(--font-heading-style) !important; font-weight: var(--font-heading-weight) !important; font-size: calc(var(--font-heading-h5-scale)*1.5rem) !important; letter-spacing: calc(var(--font-heading-letter-spacing)*.1) !important; text-transform: var(--font-heading-text-transform) !important; color: rgb(var(--color-foreground-title)) !important; line-height: var(--font-heading-line-height) !important; margin: 0 !important;">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            {{ block.settings.location }}
+          </p>
+        {%- endif -%}
+        {%- if block.settings.logo != blank -%}
+          <div class="fe__logo" style="--fe-logo-width-mobile: {{ block.settings.logo_width_mobile }}%; --fe-logo-width-desktop: {{ block.settings.logo_width_desktop }}%;">
+            {{ block.settings.logo | image_url: width: 600 | image_tag:
+              loading: 'lazy',
+              alt: block.settings.heading,
+              widths: '150, 250, 350, 500, 600'
+            }}
+          </div>
+        {%- elsif block.settings.heading != blank -%}
+          <h2 class="fe__heading">{{ block.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if block.settings.product_type != blank -%}
+          <p class="fe__product-type">{{ block.settings.product_type }}</p>
+        {%- endif -%}
+        {%- if block.settings.description != blank -%}
+          <div class="fe__desc">{{ block.settings.description }}</div>
+        {%- endif -%}
+        {%- assign has_pills = false -%}
+        {%- if block.settings.pill_1_label != blank or block.settings.pill_2_label != blank or block.settings.pill_3_label != blank or block.settings.pill_4_label != blank or block.settings.pill_5_label != blank -%}
+          {%- assign has_pills = true -%}
+        {%- endif -%}
+        {%- if has_pills -%}
+          <div class="fe__pills">
+            {%- if block.settings.pill_1_label != blank -%}
+              {%- if block.settings.pill_1_link != blank -%}<a href="{{ block.settings.pill_1_link }}" class="fe__pill">{{ block.settings.pill_1_label }}</a>{%- else -%}<span class="fe__pill">{{ block.settings.pill_1_label }}</span>{%- endif -%}
+            {%- endif -%}
+            {%- if block.settings.pill_2_label != blank -%}
+              {%- if block.settings.pill_2_link != blank -%}<a href="{{ block.settings.pill_2_link }}" class="fe__pill">{{ block.settings.pill_2_label }}</a>{%- else -%}<span class="fe__pill">{{ block.settings.pill_2_label }}</span>{%- endif -%}
+            {%- endif -%}
+            {%- if block.settings.pill_3_label != blank -%}
+              {%- if block.settings.pill_3_link != blank -%}<a href="{{ block.settings.pill_3_link }}" class="fe__pill">{{ block.settings.pill_3_label }}</a>{%- else -%}<span class="fe__pill">{{ block.settings.pill_3_label }}</span>{%- endif -%}
+            {%- endif -%}
+            {%- if block.settings.pill_4_label != blank -%}
+              {%- if block.settings.pill_4_link != blank -%}<a href="{{ block.settings.pill_4_link }}" class="fe__pill">{{ block.settings.pill_4_label }}</a>{%- else -%}<span class="fe__pill">{{ block.settings.pill_4_label }}</span>{%- endif -%}
+            {%- endif -%}
+            {%- if block.settings.pill_5_label != blank -%}
+              {%- if block.settings.pill_5_link != blank -%}<a href="{{ block.settings.pill_5_link }}" class="fe__pill">{{ block.settings.pill_5_label }}</a>{%- else -%}<span class="fe__pill">{{ block.settings.pill_5_label }}</span>{%- endif -%}
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {%- if block.settings.cta_label != blank -%}
+          <a href="{{ block.settings.cta_link }}" class="fe__cta">
+            {{ block.settings.cta_label }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+{%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Fornitori list",
+  "tag": "section",
+  "class": "fornitori-list-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "fornitore",
+      "name": "Fornitore",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Immagine" },
+        { "type": "text", "id": "location", "label": "Location", "placeholder": "Vallo della Lucania, Cilento" },
+        { "type": "text", "id": "heading", "label": "Nome produttore" },
+        { "type": "header", "content": "Logo (sostituisce il nome se presente)" },
+        { "type": "image_picker", "id": "logo", "label": "Logo produttore" },
+        { "type": "range", "id": "logo_width_mobile", "min": 10, "max": 100, "step": 5, "unit": "%", "label": "Larghezza logo (mobile)", "default": 35 },
+        { "type": "range", "id": "logo_width_desktop", "min": 10, "max": 100, "step": 5, "unit": "%", "label": "Larghezza logo (desktop)", "default": 30 },
+        { "type": "text", "id": "product_type", "label": "Tipo prodotto (italic)", "placeholder": "Pasta artigianale & grani antichi" },
+        { "type": "richtext", "id": "description", "label": "Descrizione" },
+        { "type": "header", "content": "Prodotti (pills)" },
+        { "type": "text", "id": "pill_1_label", "label": "Prodotto 1" },
+        { "type": "url", "id": "pill_1_link", "label": "Link 1" },
+        { "type": "text", "id": "pill_2_label", "label": "Prodotto 2" },
+        { "type": "url", "id": "pill_2_link", "label": "Link 2" },
+        { "type": "text", "id": "pill_3_label", "label": "Prodotto 3" },
+        { "type": "url", "id": "pill_3_link", "label": "Link 3" },
+        { "type": "text", "id": "pill_4_label", "label": "Prodotto 4" },
+        { "type": "url", "id": "pill_4_link", "label": "Link 4" },
+        { "type": "text", "id": "pill_5_label", "label": "Prodotto 5" },
+        { "type": "url", "id": "pill_5_link", "label": "Link 5" },
+        { "type": "header", "content": "CTA" },
+        { "type": "text", "id": "cta_label", "label": "CTA label" },
+        { "type": "url", "id": "cta_link", "label": "CTA link" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Fornitori list" } ]
+}
+{% endschema %}

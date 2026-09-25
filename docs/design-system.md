@@ -29,6 +29,7 @@
   | M | 40px | 52px | 64px |
   | L | 60px | 80px | 100px |
 - Any section that isn't built on these settings (AI-generated blocks, custom sections, app sections) must still take its vertical spacing from these tokens — no hardcoded px/rem section spacing anywhere.
+- AI-generated blocks (blocks/ai_gen_block_*.liquid) sit in Shopify's built-in Apps section, which has no settings of its own, so each block carries its own "Padding top/bottom" selects (same none/XS/S/M/L options, read through snippets/section-space-value.liquid) and a "Color scheme" setting (`color-<scheme> background` classes), never px ranges or colour pickers for backgrounds/text. Done for Newsletter signup (5d63f6c, M/M), Gallery ticker (7f2a91d, S/S) and Divider (a1b887d: colour = brand gold or subtle, no spacing of its own).
 
 ## Per-section checklist (run on every new or edited section, on mobile AND desktop)
 1. Section top/bottom spacing comes from the editor settings → `--modus-section-space-*` tokens. No hardcoded section padding/margin.
@@ -54,4 +55,5 @@
 - assets/modus-iwt-spacing-fix.css — superseded, dead
 - assets/modus-paragraph-global.css — superseded, dead
 - sections/image-with-text-OLIO-PATCH-placeholder-not-used.liquid — harmless orphan, renders nowhere
+- AI blocks not placed anywhere: blocks/ai_gen_block_1a0de42, _338605c, _9d3827b. Placed but disabled: _5e19610 (index.json banner), _ba27474 (footer group). Not brought into the spacing/scheme system — do that before enabling them.
 - templates/page.journal.json IS legitimate (not dead — confirmed separate real page from blog.journal.json, has its own documented CTA banner content)

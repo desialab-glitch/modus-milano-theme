@@ -26,7 +26,7 @@ No design decision needed; each restores the documented rule.
 Editor padding/margin settings silently do nothing or don't exist here.
 
 - [x] (product page: forced 40/60px CSS removed, all 80 product templates now use editor settings M top / L bottom — client, 2026-09-25) Timeline (64px), Awards (64px), Ambasciatore (40/24), SDP bridge (72/48), Slideshow (60/80px, padding settings dead), product page `[id^="MainProduct-"]` (40/60px, settings ignored), gallery block ID rule (24px + 30px), newsletter block (60/36px), fornitori filter (32/24), main-page title/body (20px + 32/64px), cart (32/68px), 404 (40px), hero-section content padding.
-- [ ] AI blocks: add top/bottom spacing selects using the same tokens; replace colour pickers with the page colour scheme.
+- [x] AI blocks: add top/bottom spacing selects using the same tokens; replace colour pickers with the page colour scheme. → Newsletter (padding M/M = unchanged, colour scheme instead of background picker, standard eyebrow, xs rhythm, `button--cta`), Gallery (20px px margins → S token padding, colour scheme drives background + fade), Divider (picker → brand gold / subtle). Disabled/unused AI blocks listed in design-system.md.
 
 ## Tier 2 — design decisions for the client
 - [x] D1 Footer menu columns are hidden below 1150px (only logo + store info on mobile/tablet). Show them? (verify in browser first) → DECIDED: show the footer menus on mobile/tablet.

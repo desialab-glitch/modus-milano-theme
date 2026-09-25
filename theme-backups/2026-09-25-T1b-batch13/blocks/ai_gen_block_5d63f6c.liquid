@@ -1,0 +1,569 @@
+{% doc %}
+  @prompt
+    Create a newsletter section with a subheading, title, decription
+    field iscriviti alla newsletter, iscriviti button. Disclaimer "Iscrivendoti accetti i nostri termini e condizioni". this part should occupy 50% of the screen, on the left. and the right part should be an image
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-newsletter-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-newsletter-container-{{ ai_gen_id }} {
+    display: flex;
+    align-items: stretch;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-newsletter-content-{{ ai_gen_id }} {
+    flex: 0 0 50%;
+    padding: {{ block.settings.content_padding }}px;
+    padding-left: var(--main-padding);
+    background-color: {{ block.settings.content_background_color }};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ai-newsletter-subheading-{{ ai_gen_id }} {
+    font-family: 'Lora', serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    color: rgba(61, 61, 61, 0.5) !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    line-height: 1.4 !important;
+    margin: 0 0 4px !important;
+  }
+
+  .ai-newsletter-title-{{ ai_gen_id }} {
+    margin: 0 0 12px;
+  }
+
+  .ai-newsletter-description-{{ ai_gen_id }} {
+    margin: 0;
+  }
+
+  .ai-newsletter-form-wrapper-{{ ai_gen_id }} {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .ai-newsletter-form-{{ ai_gen_id }} {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .ai-newsletter-input-{{ ai_gen_id }} {
+    flex: 1;
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    box-sizing: border-box !important;
+    padding: 0 14px !important;
+    border: 1px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    background-color: {{ block.settings.input_background_color }};
+    color: {{ block.settings.input_text_color }};
+    font-size: 14px;
+    line-height: 48px;
+  }
+
+  .ai-newsletter-input-{{ ai_gen_id }}:focus {
+    outline: none;
+    border-color: {{ block.settings.input_focus_border_color }};
+  }
+
+  .ai-newsletter-input-{{ ai_gen_id }}::placeholder {
+    color: {{ block.settings.input_placeholder_color }};
+  }
+
+  .ai-newsletter-form-{{ ai_gen_id }} .button,
+  .ai-newsletter-form-{{ ai_gen_id }} .button.button--primary {
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+    box-sizing: border-box !important;
+    padding: 0 24px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .ai-newsletter-disclaimer-{{ ai_gen_id }} {
+    margin-top: 16px;
+    font-size: {{ block.settings.disclaimer_size }}px;
+    color: {{ block.settings.disclaimer_color }};
+    line-height: 1.4;
+  }
+
+  /* (2026-08-30, corrected) The previous comment here was wrong about the
+     mechanism: the disclaimer <p> IS directly matched (not just inherited
+     past) by the sitewide catch-all in modus-design-system.css --
+     [class*="-content"] p:not(...):not(...):not(...):not(...) -- because
+     this block's own wrapper carries class "ai-newsletter-content-
+     {{ ai_gen_id }}", which contains the substring "-content", and the
+     disclaimer <p> is its descendant. That selector's specificity (1
+     attribute selector + 4 :not() clauses + 1 element = 0,5,1) beats this
+     rule's own .ai-newsletter-disclaimer-{{ ai_gen_id }} p (0,1,1), even
+     though both carry !important -- higher specificity wins the !important
+     tiebreak. Fixed by repeating this block's own scoping class 6 times
+     on the same element (still matches the identical <p>, only the
+     selector's specificity changes) to reach 0,6,1, without touching or
+     narrowing the sitewide catch-all rule. */
+  .ai-newsletter-disclaimer-{{ ai_gen_id }}.ai-newsletter-disclaimer-{{ ai_gen_id }}.ai-newsletter-disclaimer-{{ ai_gen_id }}.ai-newsletter-disclaimer-{{ ai_gen_id }}.ai-newsletter-disclaimer-{{ ai_gen_id }}.ai-newsletter-disclaimer-{{ ai_gen_id }} p {
+    font-size: {{ block.settings.disclaimer_size }}px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+
+  .ai-newsletter-disclaimer-{{ ai_gen_id }} a {
+    color: {{ block.settings.disclaimer_link_color }};
+    text-decoration: underline;
+  }
+
+  .ai-newsletter-image-wrapper-{{ ai_gen_id }} {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-newsletter-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-newsletter-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-newsletter-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  .ai-newsletter-success-{{ ai_gen_id }} {
+    color: {{ block.settings.success_color }};
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .ai-newsletter-error-{{ ai_gen_id }} {
+    color: {{ block.settings.error_color }};
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 749px) {
+    /* Same side gutter as every other section on mobile (--main-padding
+       on both sides, text and image alike). */
+    .ai-newsletter-container-{{ ai_gen_id }} {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 var(--main-padding);
+    }
+
+    .ai-newsletter-content-{{ ai_gen_id }} {
+      flex: 1;
+      padding: {{ block.settings.content_padding | times: 0.6 }}px 0;
+    }
+
+    .ai-newsletter-image-wrapper-{{ ai_gen_id }} {
+      flex: 0 0 auto;
+      min-height: 0;
+      margin-bottom: 0;
+    }
+
+    .ai-newsletter-image-{{ ai_gen_id }} {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .ai-newsletter-image-placeholder-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-newsletter-form-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-newsletter-form-{{ ai_gen_id }} .button {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<newsletter-section-{{ ai_gen_id }}
+  class="ai-newsletter-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-newsletter-container-{{ ai_gen_id }}">
+    <div class="ai-newsletter-content-{{ ai_gen_id }}">
+      {% if block.settings.subheading != blank %}
+        <div class="subtitle ai-newsletter-subheading-{{ ai_gen_id }}">
+          {{ block.settings.subheading }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.title != blank %}
+        <h2 class="section-header__title ai-newsletter-title-{{ ai_gen_id }}">
+          {{ block.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.description != blank %}
+        <div class="section-header__desc ai-newsletter-description-{{ ai_gen_id }}">
+          {{ block.settings.description | newline_to_br }}
+        </div>
+      {% endif %}
+
+      <div class="ai-newsletter-form-wrapper-{{ ai_gen_id }}">
+        {% assign newsletter_form_class = 'ai-newsletter-form-' | append: ai_gen_id %}
+        {% form 'customer', class: newsletter_form_class %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <input
+            type="email"
+            name="contact[email]"
+            class="ai-newsletter-input-{{ ai_gen_id }}"
+            placeholder="{{ block.settings.input_placeholder }}"
+            aria-label="{{ block.settings.input_placeholder }}"
+            required
+            {% if form.errors %}
+              aria-invalid="true"
+              aria-describedby="ai-newsletter-error-{{ ai_gen_id }}"
+            {% endif %}
+            {% if form.posted_successfully? %}
+              aria-describedby="ai-newsletter-success-{{ ai_gen_id }}"
+            {% endif %}
+          >
+          <button
+            type="submit"
+            class="button button--primary"
+            name="commit"
+          >
+            {{ block.settings.button_text }}
+          </button>
+
+          {% if form.errors %}
+            <div
+              id="ai-newsletter-error-{{ ai_gen_id }}"
+              class="ai-newsletter-error-{{ ai_gen_id }}"
+            >
+              {{ form.errors.messages.email }}
+            </div>
+          {% endif %}
+
+          {% if form.posted_successfully? %}
+            <div
+              id="ai-newsletter-success-{{ ai_gen_id }}"
+              class="ai-newsletter-success-{{ ai_gen_id }}"
+            >
+              {{ block.settings.success_message }}
+            </div>
+          {% endif %}
+        {% endform %}
+      </div>
+
+      {% if block.settings.disclaimer != blank %}
+        <div class="ai-newsletter-disclaimer-{{ ai_gen_id }}">
+          {{ block.settings.disclaimer }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-newsletter-image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 1200 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          class="ai-newsletter-image-{{ ai_gen_id }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+        >
+      {% else %}
+        <div class="ai-newsletter-image-placeholder-{{ ai_gen_id }}">
+          {{ 'image' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</newsletter-section-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class NewsletterSection{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.form = this.querySelector('.ai-newsletter-form-{{ ai_gen_id }}');
+        if (this.form) {
+          this.form.addEventListener('submit', this.handleSubmit.bind(this));
+        }
+      }
+
+      handleSubmit(event) {
+        const emailInput = this.form.querySelector('input[type="email"]');
+        if (!emailInput.value || !emailInput.validity.valid) {
+          event.preventDefault();
+        }
+      }
+    }
+
+    customElements.define('newsletter-section-{{ ai_gen_id }}', NewsletterSection{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Newsletter signup",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Resta aggiornato"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Iscriviti alla newsletter"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Ricevi le ultime novità, offerte esclusive e contenuti direttamente nella tua casella di posta."
+    },
+    {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "Email placeholder",
+      "default": "Iscriviti alla newsletter"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Iscriviti"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "<p>Iscrivendoti accetti i nostri <a href=\"/pages/terms\">termini e condizioni</a></p>"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Grazie per esserti iscritto!"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "Content padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_elements",
+      "label": "Spacing between elements",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "disclaimer_size",
+      "label": "Disclaimer size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "content_background_color",
+      "label": "Content background",
+      "default": "#faf8f5"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading",
+      "default": "#c28342"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#01473e"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description",
+      "default": "#3d3d3d"
+    },
+    {
+      "type": "color",
+      "id": "disclaimer_color",
+      "label": "Disclaimer",
+      "default": "#3d3d3d"
+    },
+    {
+      "type": "color",
+      "id": "disclaimer_link_color",
+      "label": "Disclaimer link",
+      "default": "#c28342"
+    },
+    {
+      "type": "header",
+      "content": "Form style"
+    },
+    {
+      "type": "color",
+      "id": "input_background_color",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text",
+      "default": "#3d3d3d"
+    },
+    {
+      "type": "color",
+      "id": "input_placeholder_color",
+      "label": "Input placeholder",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border_color",
+      "label": "Input focus border",
+      "default": "#c28342"
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "label": "Input border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "success_color",
+      "label": "Success message",
+      "default": "#008060"
+    },
+    {
+      "type": "color",
+      "id": "error_color",
+      "label": "Error message",
+      "default": "#D82C0D"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter signup"
+    }
+  ]
+}
+{% endschema %}

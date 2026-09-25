@@ -1,0 +1,22 @@
+/* Featured Blogs mobile CTA — full-width, no radius */
+@media screen and (max-width: 989px) {
+  .section-featured-blogs .section-header_btn,
+  .section-featured-blogs .section-header__btn-top {
+    margin-top: 2.4rem !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .section-featured-blogs .section-header_btn .button,
+  .section-featured-blogs .section-header_btn a.button,
+  .section-featured-blogs .section-header__btn-top .button,
+  .section-featured-blogs .section-header__btn-top a.button {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 0 !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+}

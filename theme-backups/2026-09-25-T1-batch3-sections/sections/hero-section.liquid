@@ -1,0 +1,509 @@
+{{ 'hero-section.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'hero-section.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+	{% render 'section-padding' %}
+	{% render 'section-margin' %}
+	#shopify-section-{{ section.id }} .have-overlay {
+		--overlay-alpha : {{ section.settings.overlay_opacity }}%;
+	}
+	#shopify-section-{{ section.id }} .hero_wrapper {
+		position: relative;
+	}
+	#shopify-section-{{ section.id }} .hero_content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		width: 100%;
+		text-align: center;
+	}
+	#shopify-section-{{ section.id }} .hero_content .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+    width: 100% !important;
+    max-width: 1000px !important;
+    padding: 0 5% !important;
+	}
+	/* Left/bottom aligned variant: the content block anchors to the
+	   bottom-left corner of the section, offset by the same
+	   --main-padding gutter every other section's .container uses for
+	   its left/right side margins — applied here as both the left and
+	   the bottom offset. */
+	#shopify-section-{{ section.id }} .hero_content--left {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		transform: none;
+		text-align: left;
+		padding: 0 var(--main-padding) var(--main-padding) var(--main-padding);
+		box-sizing: border-box;
+	}
+	#shopify-section-{{ section.id }} .hero_content--left .container {
+		align-items: flex-start;
+		text-align: left;
+		margin: 0 !important;
+		padding: 0 !important;
+		max-width: 1000px !important;
+	}
+	#shopify-section-{{ section.id }} .hero_content--left .hero_buttons {
+		justify-content: flex-start;
+	}
+	/* Eyebrow -> heading -> description gaps below tokenized to the
+	   sitewide var(--modus-space-xs) (currently 1.2rem) instead of a
+	   hardcoded value repeated per rule/breakpoint (2026-09-07). */
+	#shopify-section-{{ section.id }} .hero_eyebrow {
+		margin: 0 0 var(--modus-space-xs);
+		font-family: 'Lora', serif;
+		font-style: italic;
+		font-size: calc(var(--font-subtitle-scale) * 1rem);
+		line-height: 1.4;
+		letter-spacing: 0;
+		text-transform: none;
+		opacity: 0.8;
+	}
+	#shopify-section-{{ section.id }} .hero_heading {
+		font-family: 'Antonio', sans-serif;
+		font-weight: 700;
+		font-size: 58px;
+		line-height: 1.2 !important;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		max-width: 1000px !important;
+		margin: 0 0 var(--modus-space-xs) !important;
+	}
+	#shopify-section-{{ section.id }} .hero_text,
+	#shopify-section-{{ section.id }} .hero_text p {
+		font-family: var(--font-body-family);
+		font-style: var(--font-body-style);
+		font-weight: var(--font-body-weight);
+		font-size: calc(var(--font-body-scale) * 1rem);
+		line-height: var(--font-body-line-height);
+		letter-spacing: calc(var(--font-body-letter-spacing) * 0.1);
+		margin: 0 0 var(--modus-space-xs) !important;
+		width: 600px !important;
+		max-width: 100% !important;
+	}
+	#shopify-section-{{ section.id }} .hero_text p {
+		margin: 0 !important;
+		width: auto !important;
+	}
+	#shopify-section-{{ section.id }} .hero_buttons {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .hero_heading {
+      font-size: 35px !important;
+      letter-spacing: 0.02em;
+      margin: 0 0 var(--modus-space-xs) !important;
+    }
+    #shopify-section-{{ section.id }} .hero_eyebrow {
+      margin: 0 0 var(--modus-space-xs);
+    }
+    #shopify-section-{{ section.id }} .hero_buttons {
+      width: 100%;
+    }
+  }
+{%- endstyle -%}
+
+{% liquid
+	assign image_size = section.settings.image_size
+	case image_size
+		when 'small'
+			assign section_size = '30%'
+		when 'medium'
+			assign section_size = '49%'
+		when 'large'
+			assign section_size = '70%'
+	endcase
+%}
+{% style %}
+	#shopify-section-{{ section.id }} .hero_wrapper {
+		--slide-height : {{ section_size }};
+	}
+{% endstyle %}
+<div
+	data-per-row="{{ section.blocks.size }}"
+	data-id="shopify-section-{{ section.id }}"
+	class="hero color-{{ section.settings.color_scheme }} background"
+>
+	<div class="hero__cursor"></div>
+
+	<div class="hero_wrapper overlay-header-paddings have-overlay">
+		<div class="hero_content{% if section.settings.content_alignment == 'left' %} hero_content--left{% endif %}">
+			<div class="container">
+				{% if section.settings.eyebrow != blank %}
+					<p class="hero_eyebrow">{{ section.settings.eyebrow }}</p>
+				{% endif %}
+				{% if section.settings.heading != blank %}
+					{% capture hero_section_heading_inner %}
+						{{ section.settings.heading | newline_to_br }}
+					{% endcapture %}
+					{% render 'heading-element',
+						tag: section.settings.heading_tag,
+						default_tag: 'h1',
+						class: 'hero_heading',
+						content: hero_section_heading_inner
+					%}
+				{% endif %}
+				{% if section.settings.text != blank %}
+					<div class="hero_text">
+						{{ section.settings.text }}
+					</div>
+				{% endif %}
+				<div class="hero_buttons">
+					{% render 'button', layout: section %}
+					{% if section.settings.button_label_2 != blank %}
+						{% render 'button', layout: section, index: 2 %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div class="hero_block">
+			{%- for block in section.blocks -%}
+				<div class="hero_img" data-id="{{ block.id }}">
+					{%- if block.settings.video != blank -%}
+						{% liquid
+							assign video_height = block.settings.video.sources[0].width | divided_by: block.settings.video.aspect_ratio
+						%}
+						{{
+							block.settings.video
+							| video_tag:
+								width: block.settings.video.sources[0].width,
+								height: video_height,
+								autoplay: true,
+								loop: true,
+								controls: false,
+								muted: true
+						}}
+					{%- elsif block.settings.image != blank or block.settings.mobile_image != blank -%}
+						{% liquid
+							assign image_height = ''
+							assign mobile_image_height = ''
+							assign hide_show_toggle = ''
+							assign hide_show_mobile_toggle = ''
+							assign auto_mobile_crop = false
+
+							if block.settings.image != blank
+								assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio
+							endif
+
+							if block.settings.mobile_image != blank
+								assign mobile_image_height = block.settings.mobile_image.width | divided_by: block.settings.mobile_image.aspect_ratio
+							endif
+
+							if block.settings.image != blank and block.settings.mobile_image != blank
+								assign hide_show_toggle = 'hero_desktop_image'
+								assign hide_show_mobile_toggle = 'hero_mobile_image'
+							endif
+
+							# Auto mobile crop (2026-08-30, FIX 2026-08-30 take 2 -- upscale
+							# guard): when a desktop image is set but no manual "Mobile image"
+							# was uploaded, force the same desktop/mobile toggle classes used
+							# above and generate the mobile version's crop automatically from
+							# the SAME photo, server-side. Clamps both the requested width AND
+							# height to the source image's own native dimensions at every
+							# breakpoint, so the crop can never ask Shopify's CDN for more
+							# pixels than the photo actually has -- a naive fixed ~1:2.05
+							# portrait target forces an UPSCALE (re-introducing the exact blur
+							# this exists to fix) on any photo that isn't already tall/high-res
+							# enough to supply that much real detail. See the full rationale in
+							# sections/hero-split.liquid.
+							if block.settings.image != blank and block.settings.mobile_image == blank
+								assign hide_show_toggle = 'hero_desktop_image'
+								assign auto_mobile_crop = true
+								assign mobile_crop_widths = '375,550,750,1100' | split: ','
+								assign mobile_crop_ratio = 2.05
+								assign src_w = block.settings.image.width
+								assign src_h = block.settings.image.height
+								assign mobile_crop_srcset = ''
+								for w in mobile_crop_widths
+									assign w_num = w | plus: 0
+									assign ideal_h = w_num | times: mobile_crop_ratio
+									assign safe_w = w_num | at_most: src_w
+									assign safe_h = ideal_h | at_most: src_h | round
+									assign entry = block.settings.image | image_url: width: safe_w, height: safe_h, crop: 'center'
+									assign entry = entry | append: ' ' | append: w | append: 'w'
+									if forloop.first
+										assign mobile_crop_srcset = entry
+									else
+										assign mobile_crop_srcset = mobile_crop_srcset | append: ', ' | append: entry
+									endif
+								endfor
+								assign mobile_crop_fallback_ideal_h = 750 | times: mobile_crop_ratio
+								assign mobile_crop_fallback_w = 750 | at_most: src_w
+								assign mobile_crop_fallback_h = mobile_crop_fallback_ideal_h | at_most: src_h | round
+							endif
+						%}
+						{% if block.settings.image != blank %}
+							{{
+							block.settings.image
+							| image_url: width: 3840
+							| image_tag:
+								loading: 'lazy',
+								width: block.settings.image.width,
+								height: image_height,
+								class: hide_show_toggle,
+								sizes: '100vw',
+								widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+						}}
+						{% endif %}
+						{% if block.settings.mobile_image != blank %}
+							{{
+								block.settings.mobile_image
+								| image_url: width: 3840
+								| image_tag:
+									loading: 'lazy',
+									width: block.settings.mobile_image.width,
+									height: mobile_image_height,
+									class: hide_show_mobile_toggle,
+									sizes: '100vw',
+									widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+								}}
+						{% endif %}
+						{% if auto_mobile_crop %}
+							<img
+								src="{{ block.settings.image | image_url: width: mobile_crop_fallback_w, height: mobile_crop_fallback_h, crop: 'center' }}"
+								srcset="{{ mobile_crop_srcset }}"
+								sizes="100vw"
+								alt="{{ block.settings.image.alt | escape }}"
+								loading="lazy"
+								width="{{ mobile_crop_fallback_w }}"
+								height="{{ mobile_crop_fallback_h }}"
+								class="hero_mobile_image"
+							>
+						{% endif %}
+					{%- else -%}
+						{% assign image_index = forloop.index | modulo: 6 | plus: 1 %}
+						{{ 'collection-' | append: image_index | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+					{%- endif -%}
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+
+	{% schema %}
+	{
+		"name": "t:sections.hero-section.name",
+		"tag": "section",
+		"class": "hero-section spaced-section",
+		"enabled_on": {
+			"templates": ["*"]
+		},
+		"settings": [
+			{
+				"type": "color_scheme",
+				"id": "color_scheme",
+				"default": "background-1",
+				"label": "t:sections.all.color_scheme.label"
+			},
+			{
+				"type": "select",
+				"id": "content_alignment",
+				"label": "Content alignment",
+				"info": "Left aligns the text/buttons to the bottom-left corner of the section, using the same side-margin spacing as other sections for both the left and bottom offsets.",
+				"default": "center",
+				"options": [
+					{ "value": "center", "label": "Center" },
+					{ "value": "left", "label": "Left" }
+				]
+			},
+			{
+				"type": "select",
+				"id": "image_size",
+				"options": [
+					{ "value": "small", "label": "t:sections.all.image.size.options__2.label" },
+					{ "value": "medium", "label": "t:sections.all.image.size.options__3.label" },
+					{ "value": "large", "label": "t:sections.all.image.size.options__6.label" }
+				],
+				"default": "medium",
+				"label": "t:sections.all.image.size.full_label"
+			},
+			{
+				"type": "range",
+				"id": "overlay_opacity",
+				"min": 0,
+				"max": 100,
+				"default": 20,
+				"unit": "%",
+				"label": "t:sections.all.overlay_opacity.label"
+			},
+			{
+				"type": "text",
+				"id": "eyebrow",
+				"label": "Eyebrow text",
+				"placeholder": "NEW COLLECTION"
+			},
+			{
+				"type": "textarea",
+				"id": "heading",
+				"default": "t:sections.hero-section.settings.heading.default",
+				"label": "t:sections.all.heading.label",
+				"info": "Press Enter to break the heading onto a new line."
+			},
+			{
+				"type": "select",
+				"id": "heading_tag",
+				"label": "t:sections.all.heading.tag.label",
+				"info": "t:sections.all.heading.tag.info",
+				"options": [
+					{ "value": "h1", "label": "t:sections.all.heading.tag.options.h1.label" },
+					{ "value": "h2", "label": "t:sections.all.heading.tag.options.h2.label" },
+					{ "value": "h3", "label": "t:sections.all.heading.tag.options.h3.label" },
+					{ "value": "h4", "label": "t:sections.all.heading.tag.options.h4.label" },
+					{ "value": "h5", "label": "t:sections.all.heading.tag.options.h5.label" },
+					{ "value": "h6", "label": "t:sections.all.heading.tag.options.h6.label" },
+					{ "value": "div", "label": "t:sections.all.heading.tag.options.div.label" },
+					{ "value": "span", "label": "t:sections.all.heading.tag.options.span.label" },
+					{ "value": "p", "label": "t:sections.all.heading.tag.options.p.label" }
+				],
+				"default": "h1"
+			},
+			{
+				"type": "richtext",
+				"id": "text",
+				"default": "t:sections.hero-section.settings.text.default",
+				"label": "t:sections.all.description.label"
+			},
+			{
+				"type": "header",
+				"content": "t:sections.all.button.header.content"
+			},
+			{
+				"type": "text",
+				"id": "button_label",
+				"default": "t:sections.hero-section.settings.button_label.default",
+				"label": "Button 1 label",
+				"info": "t:sections.all.button.label.info"
+			},
+			{
+				"type": "url",
+				"id": "button_link",
+				"label": "Button 1 link",
+				"info": "To attach a PDF: click here, switch to the \"File\" tab in the picker, then choose an uploaded PDF (or upload a new one)."
+			},
+			{
+				"type": "select",
+				"id": "button_style",
+				"options": [
+					{ "value": "primary", "label": "t:sections.all.button.style.options__1.label" },
+					{ "value": "secondary", "label": "t:sections.all.button.style.options__2.label" },
+					{ "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" }
+				],
+				"default": "primary",
+				"label": "Button 1 style"
+			},
+			{
+				"type": "checkbox",
+				"id": "button_arrow",
+				"default": false,
+				"label": "t:sections.all.button.arrow.label"
+			},
+			{
+				"type": "header",
+				"content": "Second button (optional)"
+			},
+			{
+				"type": "text",
+				"id": "button_label_2",
+				"label": "Button 2 label",
+				"info": "Leave blank to hide the second button."
+			},
+			{
+				"type": "url",
+				"id": "button_link_2",
+				"label": "Button 2 link",
+				"info": "To attach a PDF: click here, switch to the \"File\" tab in the picker, then choose an uploaded PDF (or upload a new one)."
+			},
+			{
+				"type": "select",
+				"id": "button_style_2",
+				"options": [
+					{ "value": "primary", "label": "t:sections.all.button.style.options__1.label" },
+					{ "value": "secondary", "label": "t:sections.all.button.style.options__2.label" },
+					{ "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" }
+				],
+				"default": "secondary",
+				"label": "Button 2 style"
+			},
+			{
+				"type": "checkbox",
+				"id": "button_arrow_2",
+				"default": false,
+				"label": "Enable arrow"
+			},
+			{
+				"type": "header",
+				"content": "t:sections.all.section-margin.header.content"
+			},
+			{
+				"type": "select",
+				"id": "margin_top",
+				"options": [
+					{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+					{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+					{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+					{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+					{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+				],
+				"default": "no-indent",
+				"label": "t:sections.all.section-margin.margin_top.label"
+			},
+			{
+				"type": "select",
+				"id": "margin_bottom",
+				"options": [
+					{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+					{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+					{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+					{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+					{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+				],
+				"default": "no-indent",
+				"label": "t:sections.all.section-margin.margin_bottom.label"
+			}
+		],
+		"blocks": [
+			{
+				"type": "column",
+				"limit": 4,
+				"name": "t:sections.hero-section.blocks.name",
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "image",
+						"label": "t:sections.all.image.label"
+					},
+					{
+						"type": "image_picker",
+						"id": "mobile_image",
+						"label": "t:sections.hero-section.blocks.settings.mobile_image.label"
+					},
+					{
+						"type": "video",
+						"id": "video",
+						"label": "t:sections.all.video.label"
+					}
+				]
+			}
+		],
+		"presets": [
+			{
+				"name": "t:sections.hero-section.presets.name",
+				"blocks": [
+					{ "type": "column" },
+					{ "type": "column" },
+					{ "type": "column" },
+					{ "type": "column" }
+				]
+			}
+		]
+	}
+	{% endschema %}
+</div>

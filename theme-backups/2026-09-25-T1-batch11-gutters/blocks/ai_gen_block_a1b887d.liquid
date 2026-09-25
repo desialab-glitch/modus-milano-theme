@@ -1,0 +1,63 @@
+{% doc %}
+  @prompt
+    generate a divider of 1-2px height - fulll width
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-divider-{{ ai_gen_id }} {
+    width: 100%;
+    display: block;
+    padding: 0 var(--page-width-padding, 5rem);
+    max-width: var(--page-width, 1200px);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .ai-divider-line-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.divider_height }}px;
+    background-color: {{ block.settings.divider_color }};
+    border: none;
+    margin: 0;
+  }
+{% endstyle %}
+
+<div class="ai-divider-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <hr class="ai-divider-line-{{ ai_gen_id }}">
+</div>
+
+{% schema %}
+{
+  "name": "Divider",
+  "settings": [
+    {
+      "type": "select",
+      "id": "divider_height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "1",
+          "label": "1px"
+        },
+        {
+          "value": "2",
+          "label": "2px"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Color",
+      "default": "#3d3d3d1a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divider"
+    }
+  ]
+}
+{% endschema %}

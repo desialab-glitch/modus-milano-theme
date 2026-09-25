@@ -1,0 +1,157 @@
+.brands {
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+.brands.brands_gradient {
+  max-width: none;
+  width: auto;
+  margin-inline: calc(var(--main-padding) * -1);
+}
+
+.brands.brands_gradient::before,
+.brands.brands_gradient::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1150px) {
+  .brands.brands_gradient::before,
+  .brands.brands_gradient::after {
+    width: 160px;
+  }
+}
+
+/* Edge fade (smoothed 2026-09-24). The old gradient held the background
+   solid for 60% of the width and ended at 40% opacity on the inner edge,
+   which left a visible vertical step where the fade began. The stops below
+   follow a smoothstep curve from fully solid at the outer edge to fully
+   transparent at the inner edge, so there is no step at either end. */
+.brands.brands_gradient::after {
+  right: 0;
+  background: linear-gradient(-90deg,
+    rgba(var(--color-background), 1) 0%,
+    rgba(var(--color-background), 0.972) 10%,
+    rgba(var(--color-background), 0.896) 20%,
+    rgba(var(--color-background), 0.784) 30%,
+    rgba(var(--color-background), 0.648) 40%,
+    rgba(var(--color-background), 0.5) 50%,
+    rgba(var(--color-background), 0.352) 60%,
+    rgba(var(--color-background), 0.216) 70%,
+    rgba(var(--color-background), 0.104) 80%,
+    rgba(var(--color-background), 0.028) 90%,
+    rgba(var(--color-background), 0) 100%
+  );
+}
+
+.brands.brands_gradient::before {
+  left: 0;
+  background: linear-gradient(90deg,
+    rgba(var(--color-background), 1) 0%,
+    rgba(var(--color-background), 0.972) 10%,
+    rgba(var(--color-background), 0.896) 20%,
+    rgba(var(--color-background), 0.784) 30%,
+    rgba(var(--color-background), 0.648) 40%,
+    rgba(var(--color-background), 0.5) 50%,
+    rgba(var(--color-background), 0.352) 60%,
+    rgba(var(--color-background), 0.216) 70%,
+    rgba(var(--color-background), 0.104) 80%,
+    rgba(var(--color-background), 0.028) 90%,
+    rgba(var(--color-background), 0) 100%
+  );
+}
+
+/* ── Ticker (gradient) mode ── */
+.brands_gradient .brands-wrapper {
+  display: flex;
+  width: max-content;
+  animation: brands-scroll var(--speed, 30s) linear infinite;
+}
+
+.brands_gradient .brands-items {
+  display: flex;
+  align-items: center;
+  height: 60px; /* cap the row height — images scale inside this */
+  gap: 80px;
+  padding-right: 80px;
+  flex-shrink: 0;
+}
+
+/* Mobile: 80px between/after each logo left way too much dead space next
+   to the small ~60px-tall logos on narrow screens — tighten it down.
+   Desktop keeps the original 80px (paired with the wider 160px edge
+   gradient above), this only affects the ticker's own item spacing. */
+@media screen and (max-width: 749px) {
+  .brands_gradient .brands-items {
+    gap: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* ── Static mode ── */
+.brands_static .brands-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.brands_static .brands-items + .brands-items {
+  display: none; /* hide the duplicate set in static mode */
+}
+
+.brands_static .brands-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: auto;
+}
+
+/* ── Shared item styles ── */
+.brands__item {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity var(--duration-default) ease;
+}
+
+.brands__item img {
+  display: block;
+  height: 60px;  /* fixed height — width scales proportionally */
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.brands_static .brands__item img {
+  height: 50px;
+}
+
+.brands__image--hover {
+  display: none;
+}
+
+/* Only swap on hover when the item actually has a hover image configured.
+   Without this guard, every logo without a hover image would blink out
+   as it slides under the cursor in ticker mode. */
+.brands__item[data-has-hover]:hover .brands__image {
+  display: none;
+}
+
+.brands__item[data-has-hover]:hover .brands__image--hover {
+  display: block;
+}
+
+@keyframes brands-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

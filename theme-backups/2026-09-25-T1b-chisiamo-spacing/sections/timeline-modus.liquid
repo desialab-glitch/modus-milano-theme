@@ -1,0 +1,265 @@
+{%- style -%}
+  {% render 'section-margin' %}
+  {% render 'section-padding' %}
+
+  .timeline-{{ section.id }} {
+    /* 2026-09-06: background/text now driven by the section's color
+       scheme (set via the new "Color scheme" setting below) instead of a
+       hardcoded #faf8f5 + #4d4d4d, so this section can actually use the
+       Colors picker like every other section in the theme. --color-
+       background / --color-foreground are populated by the "color-{{
+       section.settings.color_scheme }}" class added to the wrapper div
+       below (same convention already used by featured-blogs, slideshow,
+       rich-text-cta, etc). */
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    padding-top: 64px;
+    padding-bottom: 64px;
+    /* Single source of truth for the vertical rhythm of this section:
+       eyebrow -> heading, heading -> year row, year -> dot/line (dot +
+       divider line count as ONE combined element), and dot/line ->
+       description all use this same gap, kept in one variable so they
+       can never drift apart again. Tokenized to the sitewide
+       var(--modus-space-xs) (2026-09-07, was hardcoded 1.2rem) so it
+       tracks the same eyebrow/heading/paragraph rhythm used sitewide
+       (hero-split, section-header, etc) instead of duplicating the value. */
+    --timeline-gap: var(--modus-space-xs);
+  }
+
+  .timeline-eyebrow-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(var(--color-foreground), 0.7);
+    margin: 0 0 var(--timeline-gap);
+    /* Rendered as a <span> below (inline by default), which silently
+       ignores vertical margin — same bug class fixed on the hero-split
+       subheading. display:block makes the margin actually take effect. */
+    display: block;
+  }
+
+  .timeline-heading-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 32px;
+    line-height: 1.2;
+    /* 2026-09-06: color removed (was hardcoded to
+       rgb(var(--color-foreground-title)), which on the default
+       background-1 scheme resolves to GOLD (#c28342), regardless of
+       which heading tag was actually selected). This heading can be
+       rendered as h1/h2/h3/h4 via the "Heading tag" setting below, and
+       must always match the sitewide per-tag color rule in
+       modus-design-system.css (h1 cream, h2 gold, h3 ORANGE #D16A14,
+       h4 green) -- not a fixed scheme color. Leaving color unset here
+       lets the bare h1-h4 tag rule apply naturally (this class no
+       longer has higher specificity fighting it), while the existing
+       .color-background-dark / .color-scheme-orange-bg-01473e-cta
+       !important overrides still correctly force cream on those two
+       schemes for contrast, exactly as they do for every other
+       heading on the site. */
+    margin: 0 0 var(--timeline-gap);
+  }
+
+  .timeline-track-{{ section.id }} {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .timeline-item-{{ section.id }} {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 1;
+  }
+
+  .timeline-year-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #d16a14;
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* Dot + divider line are treated as a single element: the line is
+     centered exactly on the dot (dot: 7px, line: 1px -> 3px offset).
+     Gap before this combined element (year -> dot/line) and after it
+     (dot/line -> description) both use the same rhythm as eyebrow ->
+     heading and heading -> year row above. */
+  .timeline-track-bottom-{{ section.id }} {
+    position: relative;
+    margin-top: var(--timeline-gap);
+  }
+
+  .timeline-track-bottom-{{ section.id }}::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 3px;
+    height: 1px;
+    background: #b89461;
+    z-index: 0;
+  }
+
+  .timeline-dot-{{ section.id }} {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #b89461;
+    flex-shrink: 0;
+    margin-bottom: var(--timeline-gap);
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-desc-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(var(--color-foreground), 0.75);
+    margin: 0;
+    white-space: pre-line;
+  }
+
+  @media screen and (max-width: 749px) {
+    .timeline-heading-{{ section.id }} {
+      font-size: 26px;
+    }
+
+    /* Horizontal scroll wrapper: bleeds to the screen edge, scrolls the
+       whole timeline (year row + divider + dot/desc row) together. */
+    .timeline-scroll-{{ section.id }} {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin: 0 calc(var(--main-padding) * -1);
+      padding: 0 var(--main-padding);
+    }
+    .timeline-scroll-{{ section.id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .timeline-scroll-inner-{{ section.id }} {
+      width: max-content;
+      min-width: 100%;
+    }
+
+    .timeline-track-{{ section.id }} {
+      justify-content: flex-start;
+      gap: 32px;
+    }
+
+    .timeline-item-{{ section.id }} {
+      flex: 0 0 150px;
+      min-width: 150px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="timeline-{{ section.id }} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
+  <div class="container">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="timeline-eyebrow-{{ section.id }}">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      {% capture timeline_heading_inner %}{{ section.settings.heading }}{% endcapture %}
+      {% assign timeline_heading_class = 'timeline-heading-' | append: section.id %}
+      {% render 'heading-element', tag: section.settings.heading_tag, default_tag: 'h2', class: timeline_heading_class, content: timeline_heading_inner %}
+    {%- endif -%}
+
+    <div class="timeline-scroll-{{ section.id }}">
+      <div class="timeline-scroll-inner-{{ section.id }}" style="position:relative;">
+
+        <div class="timeline-track-{{ section.id }}">
+          {%- for i in (1..8) -%}
+            {%- assign year_key = 'year_' | append: i -%}
+            {%- assign year_val = section.settings[year_key] -%}
+            {%- if year_val != blank -%}
+              <div class="timeline-item-{{ section.id }}">
+                <span class="timeline-year-{{ section.id }}">{{ year_val }}</span>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        <div class="timeline-track-{{ section.id }} timeline-track-bottom-{{ section.id }}">
+          {%- for i in (1..8) -%}
+            {%- assign year_key = 'year_' | append: i -%}
+            {%- assign desc_key = 'desc_' | append: i -%}
+            {%- assign year_val = section.settings[year_key] -%}
+            {%- assign desc_val = section.settings[desc_key] -%}
+            {%- if year_val != blank -%}
+              <div class="timeline-item-{{ section.id }}">
+                <div class="timeline-dot-{{ section.id }}"></div>
+                {%- if desc_val != blank -%}
+                  <p class="timeline-desc-{{ section.id }}">{{ desc_val }}</p>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Timeline",
+  "tag": "section",
+  "class": "spaced-section timeline-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [
+    { "type": "color_scheme", "id": "color_scheme", "default": "background-1", "label": "t:sections.all.color_scheme.label" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Dalle origini a oggi" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading" },
+    { "type": "select", "id": "heading_tag", "label": "Heading tag", "default": "h2", "options": [
+      { "value": "h1", "label": "H1" },
+      { "value": "h2", "label": "H2" },
+      { "value": "h3", "label": "H3" },
+      { "value": "h4", "label": "H4" },
+      { "value": "div", "label": "Div (no semantic heading)" }
+    ] },
+    { "type": "header", "content": "Tappa 1" },
+    { "type": "text", "id": "year_1", "label": "Anno", "default": "2010" },
+    { "type": "textarea", "id": "desc_1", "label": "Descrizione", "default": "Storie di Pane\nPisciotta, Cilento" },
+    { "type": "header", "content": "Tappa 2" },
+    { "type": "text", "id": "year_2", "label": "Anno", "default": "2022" },
+    { "type": "textarea", "id": "desc_2", "label": "Descrizione", "default": "Prima pizzeria\nMilano" },
+    { "type": "header", "content": "Tappa 3" },
+    { "type": "text", "id": "year_3", "label": "Anno", "default": "2023" },
+    { "type": "textarea", "id": "desc_3", "label": "Descrizione", "default": "Prima gastronomia\nurbana" },
+    { "type": "header", "content": "Tappa 4" },
+    { "type": "text", "id": "year_4", "label": "Anno", "default": "2024\u201325" },
+    { "type": "textarea", "id": "desc_4", "label": "Descrizione", "default": "Gambero Rosso\n50 Top Pizza" },
+    { "type": "header", "content": "Tappa 5" },
+    { "type": "text", "id": "year_5", "label": "Anno", "default": "2026" },
+    { "type": "textarea", "id": "desc_5", "label": "Descrizione", "default": "Hub modusmilano.it\nlancio luglio" },
+    { "type": "header", "content": "Tappa 6 (opzionale)" },
+    { "type": "text", "id": "year_6", "label": "Anno" },
+    { "type": "textarea", "id": "desc_6", "label": "Descrizione" },
+    { "type": "header", "content": "Tappa 7 (opzionale)" },
+    { "type": "text", "id": "year_7", "label": "Anno" },
+    { "type": "textarea", "id": "desc_7", "label": "Descrizione" },
+    { "type": "header", "content": "Tappa 8 (opzionale)" },
+    { "type": "text", "id": "year_8", "label": "Anno" },
+    { "type": "textarea", "id": "desc_8", "label": "Descrizione" },
+    { "type": "header", "content": "Spaziatura" },
+    { "type": "select", "id": "margin_top", "default": "no-indent", "label": "Margin top", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "margin_bottom", "default": "no-indent", "label": "Margin bottom", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "padding_top", "default": "no-indent", "label": "Padding top", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] },
+    { "type": "select", "id": "padding_bottom", "default": "no-indent", "label": "Padding bottom", "options": [{"value":"no-indent","label":"None"},{"value":"xs","label":"XS"},{"value":"s","label":"S"},{"value":"m","label":"M"},{"value":"l","label":"L"}] }
+  ],
+  "presets": [{ "name": "Timeline" }]
+}
+{% endschema %}

@@ -1,0 +1,1917 @@
+/* ============================================================
+   MODUS MILANO — Design System Override
+   Target: Eccentrics theme (Outsiders by Segment)
+   ============================================================ */
+
+/* ============================================================
+   ELEMENT-TO-ELEMENT SPACING — unified sitewide (2026-08-29)
+   Every subheading→heading, heading→paragraph/description, and
+   paragraph→button gap across the theme's content sections uses
+   ONE value: 1.2rem. Chosen because it was already the value
+   independently used in three unrelated places before this pass
+   (Hero Split's default "content gap" setting, Slider With Info's
+   heading→description margin, the Slideshow subheading fix) —
+   not a new number invented for this change.
+   Sections touched: Hero, Hero Split, Section Header (shared by
+   Slider With Info, Simple Slider, Featured Blogs, Collection
+   Carousel, Rich Text CTA), Multicolumn, Image With Text,
+   Slideshow, Slider With Info, Newsletter, FAQ/Collapsible.
+   Deliberately NOT touched: compact card-level UI (product card
+   collection-title, card description, article card date/tags)
+   — those are tight micro-labels on small card components, a
+   different visual category from full section rhythm, not part
+   of this unification.
+   UPDATE (2026-09-06): Simple Slider's per-item location/eyebrow
+   tag (.simple-slider_location) was originally listed alongside
+   those excluded micro-labels and kept at 0.8rem. On review this
+   read as too tight against the item image (e.g. "due-pizzerie"
+   on /pages/pizzerie), so it now joins the 1.2rem standard too —
+   see that rule further down, plus the matching heading→button
+   and location→heading gaps in sections/simple-slider.liquid,
+   so every gap inside one Simple Slider item block (image→
+   subheading, subheading→heading, heading→description,
+   description→button) is now the same 1.2rem.
+   ============================================================ */
+
+/* ============================================================
+   SPACING FORMULA — formalized as CSS custom properties (2026-09-07)
+   One shared vertical rhythm for the eyebrow/subheading → heading
+   → description → CTA pattern that repeats across every content
+   section (Hero, Hero Split, Section Header and everything that
+   shares it — Grid Banner, Tabs, Simple Slider, Slideshow, Multi-
+   column, Rich Text, Rich Text CTA, Image With Text, Slider With
+   Info, Featured Blogs, Collection/Events Carousel), plus the
+   image↔text-block gap used when a two-column section stacks on
+   mobile. Four values cover every case found across the theme:
+     --modus-space-xs      1.2rem (12px) — the default rhythm:
+       eyebrow→heading, heading→description, description→CTA.
+       This is the value to reach for by default.
+     --modus-space-s       1.6rem (16px) — image↔text-block gap
+       when a two-column section stacks vertically (mobile/tablet).
+     --modus-space-m       2.4rem (24px) — emphasized gap for a
+       bare image edge with no surrounding whitespace of its own
+       (currently only Simple Slider's image→eyebrow gap, an
+       explicit, approved exception to --modus-space-xs — see the
+       2026-09-06 update above for why it needed to be bigger).
+     --modus-space-column  4rem  (40px) — desktop column gutter
+       between an image and its text block in a side-by-side
+       (not stacked) layout.
+   Note on units: html is 10px = 1rem sitewide (see snippets/vars.liquid),
+   so every rem value here is exactly one tenth of its px equivalent —
+   1.2rem is 12px, not the browser-default 19.2px.
+   Every rule below that used to hardcode one of these four numbers
+   now reads from the matching variable instead, so changing the
+   rhythm sitewide (or for one gap type) is a one-line edit here
+   instead of hunting down every occurrence across this file and
+   the section-scoped {% style %} blocks that also consume it
+   (sections/grid-banner.liquid, tabs.liquid, simple-slider.liquid,
+   rich-text-cta.liquid, slideshow.liquid, image-with-text.liquid,
+   modus-fix-produttore-gap.css). Nothing about how any section
+   *looks* changes from this pass alone — only how the value is
+   stored. Where an actual visual fix piggybacked on this pass,
+   it's called out at the specific rule.
+   ============================================================ */
+
+/* @import MOVED HERE 2026-09-07 (font bug fix): per the CSS spec, an
+   @import rule is only valid if it's the very first rule in the
+   stylesheet (comments don't count, but any actual rule -- like the
+   :root block that used to sit here before this fix -- does). The
+   spacing-token :root block below had ended up ABOVE this @import,
+   which silently invalidated it in every browser: the Antonio Google
+   Font was never actually loading, and every heading was falling back
+   to the default sans-serif. Moved @import to precede all rules;
+   nothing else in this file changed. */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap');
+
+:root {
+  --modus-space-xs: 1.2rem;
+  --modus-space-s: 1.6rem;
+  --modus-space-m: 2.4rem;
+  --modus-space-column: 4rem;
+}
+
+/* ============================================================
+   SECTION SPACING TOKENS (2026-09-25)
+   The values behind every section's "Margin top/bottom" and
+   "Padding top/bottom" editor settings (none / XS / S / M / L).
+   snippets/section-margin.liquid and snippets/section-padding.liquid
+   read these (via snippets/section-space-value.liquid), so changing
+   a size here changes it on every section that uses it, on every
+   page. Per-section choices stay in the theme editor as before.
+   "none" is always 0. Blank/unknown settings fall back to S.
+   Values and breakpoints are exactly the ones the two snippets used
+   to hardcode, so moving them here changed nothing visually.
+   ============================================================ */
+:root {
+  --modus-section-space-xs: 1.2rem;
+  --modus-section-space-s: 3rem;
+  --modus-section-space-m: 4rem;
+  --modus-section-space-l: 6rem;
+}
+@media screen and (min-width: 990px) {
+  :root {
+    --modus-section-space-s: 3.2rem;
+    --modus-section-space-m: 5.2rem;
+    --modus-section-space-l: 8rem;
+  }
+}
+@media screen and (min-width: 1150px) {
+  :root {
+    --modus-section-space-m: 6.4rem;
+    --modus-section-space-l: 10rem;
+  }
+}
+
+:root {
+  --font-heading-family: 'Antonio', sans-serif;
+  --font-heading-weight: 700;
+  --font-heading-style: normal;
+  --font-header-menu-family: 'Antonio', sans-serif;
+  --font-header-menu-weight: 700;
+  --font-header-menu-style: normal;
+  --font-badge-family: 'Antonio', sans-serif;
+  --font-badge-weight: 700;
+  --font-button-family: 'Antonio', sans-serif;
+  --font-button-weight: 700;
+}
+
+/* NOTE (2026-09-10): letter-spacing removed from this combined selector —
+   it was dead weight. Every heading level (h1-h6) gets its own explicit
+   letter-spacing override a few lines below (h1: 0.06em, h2: 0.05em,
+   h3: 0.08em, h4: 0.10em, h5: 0.12em, h6: 0.14em), so this generic
+   0.08em never actually applied to anything; it only won by source-order
+   accident if a level's specific override was ever missing or reordered.
+   Removed to leave exactly one source of truth per heading level. */
+h1, h2, h3, h4, h5, h6,
+.h0, .h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8 {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  margin-bottom: var(--modus-space-xs) !important;
+}
+
+h1, .h1 { font-size: 60px !important; line-height: 1 !important; letter-spacing: 0.06em !important; } /* finalized 2026-09-10, was diagnostic 0.1em (originally 0.03em) */
+h2, .h2 { font-size: 35px !important; line-height: 1.25 !important; letter-spacing: 0.05em !important; }h3, .h3 { font-size: 25px !important; line-height: 1.2 !important; letter-spacing: 0.08em !important; }
+h4, .h4 { font-size: 20px !important; line-height: 1.1 !important; letter-spacing: 0.10em !important; }
+h1, .h1 { color: #faf1e4; }
+h2, .h2 { color: #C28342; }
+h3, .h3 { color: #D16A14; }
+h4, .h4 { color: #01473E; }
+h5, .h5 { font-size: 16px !important; line-height: 1.1 !important; letter-spacing: 0.12em !important; }
+h6, .h6 { font-size: 14px !important; line-height: 1.1 !important; letter-spacing: 0.14em !important; }
+
+.color-background-dark h1, .color-background-dark .h1,
+.color-background-dark h2, .color-background-dark .h2,
+.color-background-dark h3, .color-background-dark .h3,
+.color-background-dark h4, .color-background-dark .h4,
+.color-background-dark h5, .color-background-dark .h5,
+.color-background-dark h6, .color-background-dark .h6 {
+  color: #faf1e4 !important;
+}
+.color-background-dark p,
+.color-background-dark [class*="__text"],
+.color-background-dark [class*="__text"] p,
+.color-background-dark [class*="__desc"],
+.color-background-dark [class*="__desc"] p,
+.color-background-dark [class*="-desc"],
+.color-background-dark [class*="-desc"] p,
+.color-background-dark [class*="__description"],
+.color-background-dark [class*="__description"] p,
+.color-background-dark .richtext__content,
+.color-background-dark .richtext__content p {
+  color: #faf1e4 !important;
+}
+
+.color-scheme-orange-bg-01473e-cta h1, .color-scheme-orange-bg-01473e-cta .h1,
+.color-scheme-orange-bg-01473e-cta h2, .color-scheme-orange-bg-01473e-cta .h2,
+.color-scheme-orange-bg-01473e-cta h3, .color-scheme-orange-bg-01473e-cta .h3,
+.color-scheme-orange-bg-01473e-cta h4, .color-scheme-orange-bg-01473e-cta .h4,
+.color-scheme-orange-bg-01473e-cta h5, .color-scheme-orange-bg-01473e-cta .h5,
+.color-scheme-orange-bg-01473e-cta h6, .color-scheme-orange-bg-01473e-cta .h6 {
+  color: #faf1e4 !important;
+}
+.color-scheme-orange-bg-01473e-cta p,
+.color-scheme-orange-bg-01473e-cta [class*="__text"],
+.color-scheme-orange-bg-01473e-cta [class*="__text"] p,
+.color-scheme-orange-bg-01473e-cta [class*="__desc"],
+.color-scheme-orange-bg-01473e-cta [class*="__desc"] p,
+.color-scheme-orange-bg-01473e-cta [class*="-desc"],
+.color-scheme-orange-bg-01473e-cta [class*="-desc"] p,
+.color-scheme-orange-bg-01473e-cta [class*="__description"],
+.color-scheme-orange-bg-01473e-cta [class*="__description"] p,
+.color-scheme-orange-bg-01473e-cta .richtext__content,
+.color-scheme-orange-bg-01473e-cta .richtext__content p {
+  color: #faf1e4 !important;
+}
+/* Subheading/eyebrow/subtitle/badge text — scheme 5 brand-beige guarantee
+   (added 2026-09-22): the two blocks above already force headings and
+   body/description text to #faf1e4 under this scheme, but left the
+   smaller eyebrow-style label classes uncovered. Those classes get their
+   color from generic, scheme-agnostic rules elsewhere in this file (e.g.
+   the section-header subheading rule further down, which hardcodes
+   rgba(61,61,61,0.6) — a dark grey meant for light backgrounds), so on
+   this scheme's orange background they were rendering muted/off-brand
+   instead of the same light beige as every other text element. This
+   closes that gap explicitly, matching every subheading/eyebrow/subtitle/
+   badge class pattern used across the theme's sections (Section Header,
+   Grid Banner, Simple Slider, Multicolumn, Image With Text, Rich Text,
+   product card collection title, etc.), so scheme 5 text is always
+   light beige, everywhere, with no exceptions. */
+/* UPDATE 2026-09-25: the plain ".color-scheme-orange-bg-01473e-cta .subtitle"
+   form (0,2,0) was losing to section rules of equal or higher specificity
+   that come later (e.g. Multicolumn's ".multicolumn-card__subtitle.subtitle"
+   grey, section-scoped "#shopify-section-… .subtitle" rules), so eyebrows
+   stayed grey on this scheme (seen on the hp-trust Multicolumn). The
+   scheme wrapper is now matched through :is() with a never-matching
+   double-ID argument, which gives the selector ID-level weight (2,1,0)
+   without changing WHAT it matches — only elements inside the orange
+   scheme. It now beats any section's own eyebrow color, everywhere.
+   Product tags added (same badge treatment as the collection badge). */
+:is(.color-scheme-orange-bg-01473e-cta, #modus-scheme-weight#modus-scheme-weight) :is(
+  .subtitle,
+  [class*="subheading"],
+  [class*="subtitle"],
+  [class*="eyebrow"],
+  [class*="badge"],
+  .card__collection-title,
+  .product-tags__tag,
+  .simple-slider_location
+) {
+  color: #faf1e4 !important;
+}
+/* Buttons: .button--primary/.button--secondary are hardcoded
+   sitewide with !important and ignore color scheme entirely (see
+   rule below, ~line 909), which is why this scheme's own button
+   colors set in Theme settings never rendered. Scoped override
+   forces the CTA to this scheme's configured beige bg / dark-grey
+   label, with dark-green hover, matching Theme settings ▸ Colors
+   ▸ scheme 5 exactly. */
+.color-scheme-orange-bg-01473e-cta .button--primary,
+.color-scheme-orange-bg-01473e-cta .customer .button--primary,
+.color-scheme-orange-bg-01473e-cta .button--secondary,
+.color-scheme-orange-bg-01473e-cta .customer .button--secondary {
+  background-color: #faf1e4 !important;
+  border-color: #faf1e4 !important;
+  color: #3d3d3d !important;
+}
+.color-scheme-orange-bg-01473e-cta .button--primary:not([disabled]):not([aria-disabled=true]):hover,
+.color-scheme-orange-bg-01473e-cta .customer .button--primary:not([disabled]):not([aria-disabled=true]):hover,
+.color-scheme-orange-bg-01473e-cta .button--secondary:not([disabled]):not([aria-disabled=true]):hover,
+.color-scheme-orange-bg-01473e-cta .customer .button--secondary:not([disabled]):not([aria-disabled=true]):hover {
+  background-color: #01473e !important;
+  border-color: #01473e !important;
+  color: #faf1e4 !important;
+}
+
+.subtitle,
+[class*="subheading"],
+[class*="eyebrow"],
+[class*="badge"] {
+  margin-bottom: var(--modus-space-xs) !important;
+}
+.subtitle,
+[class*="subheading"],
+[class*="subtitle"],
+[class*="eyebrow"] {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+[class*="__text"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__desc"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="-desc"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]) {
+  margin-bottom: 0 !important;
+}
+.header-tabs,
+.list-menu--inline > li > a {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.185em !important;
+}
+
+:root {
+  --modus-green:      #01473e;
+  --modus-green-mid:  #23574f;
+  --modus-gold:       #c28342;
+  --modus-orange:     #D16A14;
+  --modus-cream:      #faf8f5;
+  --modus-cream-warm: #faf1e4;
+  --modus-cream-text: #f5e8d5;
+  --modus-text:       #3d3d3d;
+  --modus-text-mid:   #7a7a7a;
+  --ac-gap:           0.8rem;
+}
+
+.button,
+.button--primary,
+.button--secondary,
+.button--tertiary,
+.button--simple,
+.shopify-challenge__button,
+.shopify-challenge__button--primary,
+.shopify-challenge__button--secondary,
+.product-form__submit {
+  transition: none !important;
+  animation: none !important;
+}
+.button--primary,
+.shopify-challenge__button--primary,
+.product-form__submit {
+  background-color: var(--modus-green) !important;
+  color: var(--modus-cream-text) !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  border-radius: 2px !important;
+  border: none !important;
+}
+.button--secondary,
+.shopify-challenge__button--secondary {
+  background-color: var(--modus-green) !important;
+  color: var(--modus-cream-text) !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  border-radius: 2px !important;
+  border: none !important;
+}
+.button--tertiary,
+.button--simple {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: var(--modus-green) !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: none !important;
+}
+.button--tertiary:hover, .button--simple:hover { background: transparent !important; }
+.button--tertiary::before, .button--tertiary::after,
+.button--simple::before, .button--simple::after { display: none !important; }
+.cart-drawer .button--primary, #CartDrawer .button--primary {
+  background-color: var(--modus-green) !important;
+  color: var(--modus-cream-text) !important;
+}
+.tabs__tab { transition: none !important; }
+
+@media (max-width: 749px) {
+  h1, .h1 { font-size: 35px !important; letter-spacing: 0.08em !important; }
+  h2, .h2 { font-size: 29px !important; letter-spacing: 0.06em !important; }
+  h3, .h3 { font-size: 21px !important; } /* 2026-09-25: was 24px -> 22px -> 21px on client request */
+  h4, .h4 { font-size: 20px !important; }
+  h5, .h5 { font-size: 18px !important; }
+  h6, .h6 { font-size: 16px !important; }
+}
+
+/* Breadcrumb */
+.breadcrumb_margin {
+  margin: 0 !important;
+  background-color: var(--modus-cream) !important;
+  padding: 8px 0 !important;
+  border-bottom: 1px solid rgba(61, 61, 61, 0.08) !important;
+}
+/* Inline pills that carry a "badge" class (article meta date/tags,
+   article-card meta row and tag pills) sit in flex rows with their own
+   gap; the generic [class*="badge"] eyebrow margin (12px below) doesn't
+   belong on them. Article date: 13px floor, no stray top margin inside
+   its pill. 2026-09-25 */
+.article-template__meta .badge,
+.article-card__block-wrapper.badge,
+.article-card__tags .badge {
+  margin-bottom: 0 !important;
+}
+.article-template__meta .article-template__meta-date {
+  font-size: 1.3rem !important;
+  margin-top: 0 !important;
+}
+
+/* Body text standard (16px / line-height 1.6, 2026-09-25) for text that
+   the sitewide paragraph rule doesn't reach: basic page body (.rte was
+   14px / 1.75, 22px between paragraphs), 404 intro. Featured Product:
+   title -> description is the heading's own var(--modus-space-xs) only
+   (the title wrapper's 8px + the description's 8px used to stack). */
+.page-section .rte p,
+.page-section .rte li,
+.search__form-text-404 {
+  font-size: var(--modus-paragraph-size) !important;
+  line-height: 1.6 !important;
+}
+.page-section .rte p {
+  margin: 0 0 1.6rem !important;
+}
+.page-section .rte p:last-child {
+  margin-bottom: 0 !important;
+}
+.featured-product .product__info-container .product__title__wrapper {
+  margin-bottom: 0 !important;
+}
+
+/* Scrolling tickers (client decision D11, 2026-09-25): every ticker —
+   the awards/brands strip, the partner-logos mobile ticker and the
+   chi-siamo photo strip (AI gallery block) — stops at the content gutters
+   (var(--main-padding) each side, like all other content) and has the
+   same smooth edge fade, defined once here (moved from
+   section-brands.css; the gallery block's own harder fade was removed). */
+.brands.brands_gradient,
+[class*="ai-gallery-carousel-"].gc-ticker {
+  margin-inline: var(--main-padding) !important;
+}
+.partner-logos-grid__ticker,
+[class*="ai-gallery-carousel-"].gc-ticker {
+  position: relative;
+}
+.brands.brands_gradient::before,
+.partner-logos-grid__ticker::before,
+[class*="ai-gallery-carousel-"].gc-ticker::before,
+.brands.brands_gradient::after,
+.partner-logos-grid__ticker::after,
+[class*="ai-gallery-carousel-"].gc-ticker::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 40px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 1150px) {
+  .brands.brands_gradient::before,
+  .partner-logos-grid__ticker::before,
+  [class*="ai-gallery-carousel-"].gc-ticker::before,
+  .brands.brands_gradient::after,
+  .partner-logos-grid__ticker::after,
+  [class*="ai-gallery-carousel-"].gc-ticker::after {
+    width: 160px;
+  }
+}
+
+/* Edge fade (smoothed 2026-09-24). The old gradient held the background
+   solid for 60% of the width and ended at 40% opacity on the inner edge,
+   which left a visible vertical step where the fade began. The stops below
+   follow a smoothstep curve from fully solid at the outer edge to fully
+   transparent at the inner edge, so there is no step at either end. */
+.brands.brands_gradient::after,
+.partner-logos-grid__ticker::after,
+[class*="ai-gallery-carousel-"].gc-ticker::after {
+  right: 0;
+  background: linear-gradient(-90deg,
+    rgba(var(--color-background), 1) 0%,
+    rgba(var(--color-background), 0.972) 10%,
+    rgba(var(--color-background), 0.896) 20%,
+    rgba(var(--color-background), 0.784) 30%,
+    rgba(var(--color-background), 0.648) 40%,
+    rgba(var(--color-background), 0.5) 50%,
+    rgba(var(--color-background), 0.352) 60%,
+    rgba(var(--color-background), 0.216) 70%,
+    rgba(var(--color-background), 0.104) 80%,
+    rgba(var(--color-background), 0.028) 90%,
+    rgba(var(--color-background), 0) 100%
+  );
+}
+
+.brands.brands_gradient::before,
+.partner-logos-grid__ticker::before,
+[class*="ai-gallery-carousel-"].gc-ticker::before {
+  left: 0;
+  background: linear-gradient(90deg,
+    rgba(var(--color-background), 1) 0%,
+    rgba(var(--color-background), 0.972) 10%,
+    rgba(var(--color-background), 0.896) 20%,
+    rgba(var(--color-background), 0.784) 30%,
+    rgba(var(--color-background), 0.648) 40%,
+    rgba(var(--color-background), 0.5) 50%,
+    rgba(var(--color-background), 0.352) 60%,
+    rgba(var(--color-background), 0.216) 70%,
+    rgba(var(--color-background), 0.104) 80%,
+    rgba(var(--color-background), 0.028) 90%,
+    rgba(var(--color-background), 0) 100%
+  );
+}
+
+
+/* ============================================================
+   CLIENT RULES (2026-09-25)
+   RULE A — never centred text: every text block is left-aligned at every
+   width (only a button's own label is centred inside the button).
+   RULE B — on mobile / stacked layouts, content images fill the full
+   content width (between the side gutters, aligned with the text).
+   These override the theme's centred variants in one place.
+   ============================================================ */
+/* A: type1 (centred) section headers -> left (product recommendations,
+   product picks, popular products, grid-banner type1 ...) */
+.section-header__line .section-header__title__center .section-header__title-item {
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* A: page titles (basic pages, list collections, account pages) and
+   customer forms */
+.page-header { text-align: left !important; }
+.login-wrapper .login .page-header__inner {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.login-wrapper,
+.customer.reset-password form,
+.customer.activate form { margin-left: 0 !important; }
+.account h1 + a { text-align: left !important; }
+/* A + B: Image With Text "type1" (21 product pages): left text, stats,
+   and the image at full content width on stacked layouts (was a centred
+   280px image) */
+.image-with-text .image-with-text_type1 .image-with-text__image-block,
+.image-with-text .image-with-text_type1 .image-with-text__heading-block {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.image-with-text .image-with-text_type1 .image-with-text__heading-block { max-width: none !important; }
+.image-with-text .image-with-text_block {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.image-with-text .image-with-text_block .image-with-text_block_item {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+@media screen and (max-width: 989px) {
+  .image-with-text .image-with-text_type1 .image-with-text__image-block img,
+  .image-with-text .image-with-text_type1 .image-with-text__image-block svg {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important;
+  }
+  /* B (D7): orange Image With Text image aligned to the gutter, no extra
+     32px side frame */
+  .image-with-text-section .image-with-text__img {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+/* A: FAQ image overlay text (desktop) */
+.collapsible-content .collapsible-content__image-info {
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin: 0 !important;
+}
+.collapsible-content .collapsible-content__heading {
+  text-align: left !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+}
+/* A: search page empty state and page results */
+.template-search .title-wrapper.center,
+.template-search__page .card-wrapper .card-page { text-align: left !important; }
+/* B: Simple Slider images full content width on mobile, never centred */
+.simple-slider-section .simple-slider_image-wrapper { margin-left: 0 !important; }
+@media screen and (max-width: 749px) {
+  .simple-slider-section .simple-slider_image-wrapper { max-width: 100% !important; }
+}
+
+/* Side-by-side column gutter = var(--modus-space-column) everywhere
+   (2026-09-25): Featured Product media | info, FAQ image | questions,
+   Slider With Info slider | text (was 5.8 / 7.8 / 9.8rem). Slideshow text
+   uses the standard side gutter at every width (was 3rem / 6rem on
+   tablet). */
+.featured-product .featured-product__main .product__outer { gap: var(--modus-space-s) !important; }
+@media screen and (min-width: 990px) {
+  .featured-product .featured-product__main .product__outer { gap: var(--modus-space-column) !important; }
+  .featured-product .featured-product__main .product__media-wrapper {
+    width: calc(74% - var(--modus-space-column) / 2) !important;
+    flex: 0 0 calc(74% - var(--modus-space-column) / 2) !important;
+  }
+  .featured-product .featured-product__main .product__info-wrapper {
+    width: calc(26% - var(--modus-space-column) / 2) !important;
+    flex: 0 0 calc(26% - var(--modus-space-column) / 2) !important;
+  }
+  .slider-with-info .slider-with-info_swiper .slider-with-info_content {
+    margin-left: 0 !important;
+    padding-left: var(--modus-space-column) !important;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .collapsible-content .collapsible-content-wrapper_with-image .collapsible-content-box {
+    padding: 0 0 0 var(--modus-space-column) !important;
+  }
+}
+.slideshow .slideshow-slide_full-left {
+  padding-left: var(--main-padding) !important;
+  padding-right: var(--main-padding) !important;
+}
+
+/* Page-level wrappers whose own hardcoded margins bypassed the section
+   spacing settings (2026-09-25): basic pages (.page-header 2rem, .rte
+   3.2/6.4rem), cart (3.2/6.8rem), 404 title (4rem). Their space now comes
+   from the sections' editor settings -> --modus-section-space-* tokens;
+   title -> text keeps the heading's own var(--modus-space-xs). */
+.page-section .page-header,
+.template-404 .page-header { margin-top: 0 !important; margin-bottom: 0 !important; }
+.page-section .rte { margin-top: 0 !important; margin-bottom: 0 !important; }
+.main-cart__wrapper { margin-top: 0 !important; }
+
+/* 13px floor (2026-09-25): every text rule in this file that was set
+   below 13px (11-12px labels: breadcrumbs, footer, copyright, product
+   vendor/tax/payment lines, article/blog tags, popup small print, card
+   image button) now uses 1.3rem, per the per-section checklist in
+   docs/design-system.md. Exception: the store-map pin number (a single
+   digit inside a 2rem circle). */
+.breadcrumb_margin .breadcrumb {
+  font-family: 'Antonio', sans-serif !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  gap: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: left !important;
+  width: 100% !important;
+  row-gap: 6px !important;
+}
+.breadcrumb_margin .breadcrumb > *:not(:first-child)::before {
+  content: '/';
+  padding: 0 8px;
+  color: #b0b0b0 !important;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: 'Antonio', sans-serif;
+}
+.breadcrumb_margin .breadcrumb a,
+.breadcrumb_margin .breadcrumb .breadcrumb__link,
+.breadcrumb_margin .breadcrumb .breadcrumb__link span {
+  color: var(--modus-orange) !important;
+  text-decoration: none !important;
+}
+.breadcrumb_margin .breadcrumb a:hover,
+.breadcrumb_margin .breadcrumb .breadcrumb__link:hover,
+.breadcrumb_margin .breadcrumb .breadcrumb__link:hover span {
+  color: var(--modus-orange) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+.breadcrumb_margin .breadcrumb > div:last-child {
+  color: var(--modus-gold) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+}
+.breadcrumb_margin .breadcrumb__delimiter,
+.breadcrumb__sep {
+  display: none !important;
+}
+.template-collection .breadcrumb_margin,
+.template-list-collections .breadcrumb_margin {
+  display: none !important;
+}
+
+/* Navbar */
+.header, .header *,
+.header .header__heading, .header .header__heading-link,
+.header .header__menu-item,
+.header .list-menu--inline > li > a,
+.header .list-menu--inline > li > span,
+.header-tabs, .header-top__logo,
+burger-drawer .burger_menu a, burger-drawer .burger_menu span,
+.menu-drawer__menu a, .menu-drawer__menu span {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+}
+/* Mobile menu drawer (header-drawer, shown below 1150px): top-level links
+   bumped to 25px (2026-09-25) -- at the inherited ~16px they read as small
+   print in the full-height drawer. Top-level items only; submenu links and
+   the desktop navbar keep their current size. */
+@media screen and (max-width: 1149px) {
+  .menu-drawer__navigation > .menu-drawer__menu > li > .menu-drawer__menu-item,
+  .menu-drawer__navigation > .menu-drawer__menu > li > .menu-drawer__menu-item-wrapper > .menu-drawer__menu-item {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Awards section (sections/awards-modus.liquid, e.g. Chi siamo): award
+   source names (ELEMENTI, 50 TOP PIZZA...) and years were set to a fixed
+   letter-spacing: 4px at 22px (~0.18em), more than double every other
+   heading. Brought in line with the h3 ratio (0.08em) so the tracking
+   scales with the font size. (0,2,0) specificity beats the section's own
+   single-class !important rules. */
+.awards-section [class^="awards-source-"],
+.awards-section [class^="awards-year-"] {
+  letter-spacing: 0.08em !important;
+}
+
+/* Store map (sections/store-map.liquid, e.g. Contatti): map pins styled
+   like the numbered badges on the location cards below the map (green
+   #01473e, white text, no ring) instead of gold with a white border.
+   Identical to the badge: 2rem circle, 1.1rem number, no shadow. The
+   Leaflet icon box is still 28x28 with its anchor at the centre (set in
+   the section JS), so the 0.4rem margin keeps the smaller circle centred
+   on the exact map coordinate. The selected pin still turns orange
+   (#d16a14), same as the selected card's badge. */
+.store-map-section .store-map__pin-num {
+  background: #01473e !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  margin: 0.4rem !important;
+  font-size: 1.1rem !important;
+}
+.store-map-section .store-map__pin-num.is-active {
+  background: #d16a14 !important;
+}
+
+/* Footer */
+.shopify-section-group-footer-group footer,
+.shopify-section-group-footer-group .footer,
+.footer__inner { background-color: var(--modus-green) !important; }
+.footer__heading, .footer__block-heading {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: #faf8f5 !important;
+  margin-bottom: 1.6rem !important;
+}
+.footer__list a, .footer__list li a, .footer a:not(.footer__heading-link) {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #79998e !important;
+  text-decoration: none !important;
+  transition: none !important;
+  font-weight: 400 !important;
+}
+.footer__block--store-info p:first-child,
+.footer [data-block-type="store_info"] p:first-child {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 1.3rem !important;
+  line-height: 1.65 !important;
+  color: #edd0a1 !important;
+  font-weight: 400 !important;
+}
+.footer__block--store-info p:last-child,
+.footer [data-block-type="store_info"] p:last-child {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  color: #79998e !important;
+  margin-top: 1.6rem !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+.footer__divider, .footer hr {
+  border-color: #23574f !important;
+  background-color: #23574f !important;
+}
+.footer__copyright, .footer__copyright-content, .footer [class*="copyright"] {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.3rem !important;
+  color: #79998e !important;
+  border-top: 1px solid #23574f !important;
+}
+.footer__heading-link, .footer__logo {
+  color: var(--modus-cream-text) !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.8rem !important;
+  letter-spacing: 0.167em !important;
+  text-transform: uppercase !important;
+}
+.footer__payment, .footer__follow-on-shop, .footer__localization { display: none !important; }
+.footer__block--store-info + .footer__block--store-info p strong,
+[data-block-id="col-follow"] p strong {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  color: #faf8f5 !important;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+.footer__block--store-info + .footer__block--store-info p a,
+[data-block-id="col-follow"] p a {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  color: #79998e !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+/* Breadcrumb horizontal/vertical */
+.breadcrumb-vertical, .breadcrumb-horizontal, .breadcrumb {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+.breadcrumb-vertical > *:not(:first-child)::before,
+.breadcrumb-horizontal > *:not(:first-child)::before {
+  content: '/';
+  padding: 0 8px;
+  opacity: 0.45;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: 'Antonio', sans-serif;
+}
+.breadcrumb-vertical a, .breadcrumb-vertical div, .breadcrumb-vertical span,
+.breadcrumb-horizontal a, .breadcrumb-horizontal div, .breadcrumb-horizontal span {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+.breadcrumb-vertical > div, .breadcrumb-vertical > span:last-child { opacity: 0.55; }
+
+/* Hero */
+.hero .hero_wrapper::after { padding-bottom: 100vh !important; }
+.hero .hero_content .container { width: 100% !important; }
+.hero .hero_text { width: 100% !important; }
+.hero .hero_eyebrow {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  opacity: 0.8 !important;
+}
+.hero .hero_heading {
+  font-size: 44px !important;
+}
+@media screen and (max-width: 749px) {
+  .hero .hero_heading {
+    font-size: 35px !important;
+  }
+}
+
+.split-hero__subheading {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  opacity: 0.8 !important;
+}
+.split-hero__subheading {
+  margin-bottom: var(--split-hero-content-gap) !important;
+}
+.split-hero__heading {
+  font-size: 44px !important;
+}
+@media screen and (max-width: 749px) {
+  .split-hero__heading {
+    font-size: 35px !important;
+  }
+}
+.split-hero__heading {
+  margin-bottom: 0 !important;
+}
+
+/* Slideshow */
+.slideshow .slideshow_subheading {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  color: var(--modus-cream-text) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  margin-bottom: var(--modus-space-xs) !important;
+}
+.slideshow .slideshow-slide__desc,
+.slideshow .slideshow-slide__desc p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: var(--modus-cream-text) !important;
+  margin-bottom: var(--modus-space-xs) !important;
+}
+/* 2026-09-25: slide description paragraphs rendered dark grey on the
+   orange / photo slides, because the sitewide paragraph rule (0,5,1)
+   beat the cream colour above (0,2,1) whenever the slide's colour scheme
+   is light or missing ("background-2" doesn't exist). Colour only, at a
+   higher specificity; size/line-height/margins still come from the
+   sitewide paragraph rule as before. */
+.slideshow .slideshow-slide__desc p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]) {
+  color: var(--modus-cream-text) !important;
+}
+.slideshow .slideshow-slide__title {
+  font-size: 35px !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: var(--modus-space-xs) !important;
+}
+@media screen and (max-width: 749px) {
+  .slideshow h2.slideshow-slide__title { font-size: 29px !important; }
+  .slideshow h3.slideshow-slide__title { font-size: 21px !important; }
+}
+.slideshow .slideshow-slide__button { padding-top: var(--modus-space-xs) !important; }
+
+/* Product Page */
+[id^="MainProduct-"] {
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
+}
+.pdp-vendor-eyebrow {
+  font-family: 'Inter', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #7a7a7a !important;
+  margin-bottom: 12px !important;
+}
+.product__title__wrapper h1,
+.product__title__wrapper .h1 {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(35px, 4vw, 55px) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  line-height: 1.05 !important;
+  margin-bottom: 20px !important;
+}
+.product__info-container .product__title__wrapper {
+  margin-bottom: 8px !important;
+}
+.product__info-container .main-product-description-block {
+  margin-top: 0 !important;
+}
+.main-product-description-heading,
+.product__description p,
+.product__description {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  color: rgb(var(--color-foreground)) !important;
+  line-height: 1.6 !important;
+  font-style: normal !important;
+  margin-bottom: 20px !important;
+}
+.price-wrapper__content .price,
+.price-wrapper__content .price--large,
+.price__regular .price-item {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 3.6rem !important;
+  letter-spacing: 0.04em !important;
+}
+.product-form__input label, .product-parameters__item label {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: #3d3d3d !important;
+}
+.product-form__submit, .product__submit .button--primary {
+  width: 100% !important;
+  background-color: var(--modus-green) !important;
+  color: var(--modus-cream-text) !important;
+  height: 52px !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.19em !important;
+  text-transform: uppercase !important;
+  border-radius: 2px !important;
+}
+.product-parameters__quantity .quantity {
+  border-color: rgba(61,61,61,0.2) !important;
+  border-radius: 2px !important;
+}
+.quantity__button { color: var(--modus-green) !important; }
+.product-form__payment-info, .shopify-payment-button__button + * {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 1.3rem !important;
+  color: #7a7a7a !important;
+  text-align: center !important;
+}
+.product__pickup-availabilities, .product__trust-row {
+  display: flex !important;
+  gap: 24px !important;
+  margin-top: 16px !important;
+}
+.product__tax, .product__tax.caption {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-size: 1.3rem !important;
+  color: #01473e !important;
+}
+.product-about__accordion-title {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
+}
+.product-about__accordion-description {
+  font-family: 'Lora', serif !important;
+  font-size: 1.4rem !important;
+  color: #7a7a7a !important;
+  line-height: 1.65 !important;
+}
+[name="add"][disabled], .sold-out-message {
+  background-color: rgba(1,71,62,0.4) !important;
+  cursor: not-allowed !important;
+}
+
+/* FAQ */
+.collapsible-content .collapsible-content-box { max-width: 100% !important; margin: 0 !important; }
+.collapsible-content-block .collapsible-content-item__description { max-width: 100% !important; }
+.collapsible-content-block .collapsible-content-item__heading {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.collapsible-content-block .collapsible-content-item__description,
+.collapsible-content-block .collapsible-content-item__description p {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  color: #7a7a7a !important;
+  line-height: 1.65 !important;
+}
+.collapsible-content .faqs__title {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+.collapsible-content .faqs__header { border-bottom-color: rgba(194,131,66,0.2) !important; margin-bottom: var(--modus-space-xs) !important; }
+.collapsible-content .collapsible-content-block:not(:first-child) { border-top-color: rgba(194,131,66,0.2) !important; }
+.collapsible-content .collapsible-content-block:last-of-type { border-bottom-color: rgba(194,131,66,0.2) !important; }
+
+/* Section Header */
+.section-header__subheading, .section-header__line .subtitle {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  color: rgba(61, 61, 61, 0.6) !important;
+  text-transform: none !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+}
+.section-header__desc, .section-header__desc p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0 !important;
+  color: rgb(var(--color-foreground)) !important;
+  margin: 0 !important;
+}
+
+/* Collection Card */
+.collection-card__desc, .collection-card__desc p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  color: #3d3d3d !important;
+  margin: 0 !important;
+}
+.collection-card__img-btn .button {
+  background-color: var(--modus-green) !important;
+  color: var(--modus-cream-text) !important;
+  padding: 0.8rem 1.6rem !important;
+  border-radius: 2px !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.collection-card__img-btn .button::before,
+.collection-card__img-btn .button::after { display: none !important; }
+
+/* Simple Slider */
+.simple-slider_desc, .simple-slider_desc p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0 !important;
+  color: rgb(var(--color-foreground)) !important;
+  margin: 0 !important;
+}
+.simple-slider_location.badge,
+.simple-slider_location {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: rgba(61, 61, 61, 0.6) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: var(--modus-space-m) 0 0 0 !important;
+  display: block !important;
+  box-shadow: none !important;
+}
+.simple-slider-section .section-header__line .section-header__title-item {
+  max-width: 100% !important;
+}
+
+/* Multicolumn */
+.multicolumn-card__subtitle, .multicolumn-card__subtitle.subtitle {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  color: rgba(61, 61, 61, 0.6) !important;
+  text-transform: none !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+}
+.multicolumn_card-desc, .multicolumn_card-desc p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  color: #3d3d3d !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+}
+
+/* Rich Text */
+.rich-text__subheading, .rich-text__subheading.subtitle {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  color: rgba(61, 61, 61, 0.6) !important;
+  text-transform: none !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+}
+.rich-text__text, .rich-text__text p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  color: #3d3d3d !important;
+  margin: 0 !important;
+}
+.rich-text-section .rich-text__wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+}
+.rich-text-section .rich-text__content { flex: 3 !important; }
+.rich-text-section .rich-text__cta {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+.rt-cta__text p { margin: 0 !important; }
+
+/* Image With Text */
+.image-with-text__heading-block {
+  gap: var(--modus-space-xs) !important;
+  justify-content: flex-start !important;
+}
+.image-with-text__heading-block .image-with-text__heading,
+.image-with-text__heading-block .image-with-text__heading.h2 { margin: 0 !important; }
+.image-with-text__badge, .image-with-text__badge.subtitle,
+.image-with-text__subtitle, .image-with-text__subtitle.subtitle {
+  font-family: 'Lora', serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  line-height: 26px !important;
+  letter-spacing: 0 !important;
+  color: rgba(61, 61, 61, 0.6) !important;
+  text-transform: none !important;
+  margin: 0 !important;
+}
+.image-with-text__text, .image-with-text__text p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0 !important;
+  color: rgb(var(--color-foreground)) !important;
+  margin: 0 !important;
+}
+.image-with-text__text p:not(:last-child) {
+  margin-bottom: var(--modus-space-m) !important;
+}
+.image-with-text_type1 .image-with-text__heading,
+.image-with-text_type1 .image-with-text__text,
+.image-with-text_type1 .image-with-text__badge { margin: 0 !important; }
+.image-with-text_type2 .image-with-text__wrapper { gap: var(--modus-space-column) !important; }
+.image-with-text_type2 .image-with-text__heading-block {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  justify-content: flex-start !important;
+}
+.image-with-text_type2 .image-with-text__heading,
+.image-with-text_type2 .image-with-text__text,
+.image-with-text_type2 .image-with-text__subtitle { margin: 0 !important; }
+.image-with-text .image-with-text_type2 .image-with-text__text { max-width: 100% !important; }
+.image-with-text .image-with-text_type2 .image-with-text__heading-block {
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* Video With Text, stacked (below 990px), 2026-09-25: same layout as
+   Image With Text's stacked mobile layout. Text column left-aligned with
+   no extra side padding (the .container gutter is the only inset),
+   video -> text gap var(--modus-space-s), eyebrow -> heading -> text -> CTA
+   gaps var(--modus-space-xs) from each element's own sitewide margin-bottom
+   (flex gap zeroed so the two don't stack, and so the always-rendered
+   empty CTA wrapper adds no space), eyebrow in the same grey as every
+   other section's. */
+/* All widths (client decisions D2/D8, 2026-09-25): text always
+   left-aligned, no own padding, rhythm from the elements' margins, text
+   full column width. Desktop (>=990): video | var(--modus-space-column) |
+   text, text vertically centred next to the video like Image With Text. */
+.video-with-text__content {
+  padding: 0 !important;
+  gap: 0 !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.video-with-text__text { max-width: none !important; }
+.video-with-text__button-wrapper:has(.button) { margin-top: var(--modus-space-xs) !important; }
+@media screen and (max-width: 989px) {
+  .video-with-text__wrapper { gap: var(--modus-space-s) !important; }
+  .video-with-text__content { justify-content: flex-start !important; }
+}
+@media screen and (min-width: 990px) {
+  .video-with-text__wrapper { gap: var(--modus-space-column) !important; }
+  .video-with-text__content {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+  }
+}
+.video-with-text__subtitle { color: rgba(61, 61, 61, 0.6) !important; }
+
+/* Featured Product */
+.featured-product .product__info-container { padding-top: 0 !important; padding-bottom: 0 !important; }
+.featured-product .product__description { margin-top: 0 !important; margin-bottom: 0 !important; }
+.featured-product .product__media-wrapper-stacked { align-self: stretch !important; }
+.featured-product .featured-product__media-list__container--large { height: 100% !important; }
+.featured-product .product__media-item { height: 100% !important; }
+.featured-product .product__media-item .product__media { height: 100% !important; }
+.featured-product .product__media-item img {
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Multicolumn borders */
+.multicolumn .border-item .multicolumn-card::before,
+.multicolumn .border-item::after { background: transparent !important; }
+.multicolumn .multicolumn-list__wrapper {
+  border: none !important;
+}
+.multicolumn .multicolumn-card__wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.card--product {
+  position: relative !important;
+}
+.card--product:hover .quick-add,
+.quickview--hover:hover .card__link { opacity: 1 !important; }
+.card--product .quick-add {
+  position: absolute !important;
+  left: 1.2rem !important;
+  bottom: 1.2rem !important;
+  z-index: 13 !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.card--product .quick-add .card__link {
+  position: static !important;
+  opacity: 1 !important;
+  transform: none !important;
+  width: auto !important;
+  bottom: unset !important;
+  left: unset !important;
+}
+
+.card-information-block {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
+}
+
+.popup-newsletter .popup-text,
+.popup-newsletter .popup-text p {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  font-style: italic !important;
+  color: rgba(61, 61, 61, 0.55) !important;
+  line-height: 1.5 !important;
+  margin-top: 0.8rem !important;
+}
+
+.newsletter__title { margin-bottom: var(--modus-space-xs) !important; }
+.newsletter__information, .newsletter__information p {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #3d3d3d !important;
+  margin: 0 !important;
+}
+.newsletter .newsletter__information { margin-bottom: var(--modus-space-xs) !important; }
+.newsletter__text, .newsletter__text p {
+  font-family: 'Lora', serif !important;
+  font-size: 14px !important;
+  font-style: italic !important;
+  color: rgba(61, 61, 61, 0.5) !important;
+  margin-top: var(--modus-space-xs) !important;
+}
+.subtitle[class*="ai-newsletter-subheading"] {
+  font-size: 15px !important;
+  line-height: 26px !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+  color: rgba(var(--color-foreground), 0.6) !important;
+}
+/* Eyebrow colour standard (2026-09-25) for eyebrows that set their own
+   colour in their section file (#4d4d4d, 0.5, 0.7 alpha, or none): the
+   standard is the scheme's text colour at 60% — rgba(61,61,61,.6) on the
+   light schemes, light-on-dark on the dark scheme. The orange scheme's
+   beige override (higher specificity) still wins. Eyebrows over images
+   (hero, FAQ image overlay, slideshow) keep their own colour. */
+[class^="amb-eyebrow-"],
+[class^="sdp-eyebrow-"],
+[class^="awards-eyebrow-"],
+[class^="timeline-eyebrow-"],
+.modus-related__subheading,
+.cards-grid__info-item > .subtitle {
+  color: rgba(var(--color-foreground), 0.6) !important;
+}
+
+.button--primary, .customer .button--primary {
+  background-color: #D16A14 !important;
+  border-color: #D16A14 !important;
+  color: #ffffff !important;
+}
+.button--primary:not([disabled]):not([aria-disabled=true]):hover,
+.customer .button--primary:not([disabled]):not([aria-disabled=true]):hover {
+  background-color: #01473E !important;
+  border-color: #01473E !important;
+  color: #ffffff !important;
+}
+.button--secondary, .customer .button--secondary {
+  background-color: #C28342 !important;
+  border-color: #C28342 !important;
+  color: #ffffff !important;
+}
+.button--secondary:not([disabled]):not([aria-disabled=true]):hover,
+.customer .button--secondary:not([disabled]):not([aria-disabled=true]):hover {
+  background-color: #01473E !important;
+  border-color: #01473E !important;
+  color: #ffffff !important;
+}
+
+.image-with-text .image-with-text_type2 .image-with-text__heading-block {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: left !important;
+  align-items: flex-start !important;
+}
+
+.footer__layout { display: flex; flex-direction: row; align-items: flex-start; justify-content: space-between; width: 100%; }
+.footer__col-left { flex: 0 0 auto; max-width: 360px; display: flex; flex-direction: column; gap: 0; align-items: flex-start; }
+.footer__col-left .footer-block--logo, .footer__col-left .footer__logo-link { display: block !important; text-align: left !important; margin-left: 0 !important; }
+.footer__col-left .footer__logo { display: block !important; margin-left: 0 !important; margin-right: auto !important; }
+.footer__col-left .footer-block { padding: 0 !important; margin: 0 !important; }
+.footer__col-left .store-info__wrapper { text-align: left !important; margin-top: 10px !important; padding: 0 !important; }
+.footer__col-right { flex: 0 0 auto; display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-start; gap: 60px; }
+.footer__col-right .footer-block__heading { font-family: 'Antonio', sans-serif !important; font-weight: 700 !important; font-size: 20px !important; text-transform: uppercase !important; letter-spacing: 0.02em !important; color: rgb(var(--color-foreground)) !important; margin-bottom: 6px !important; padding: 0 !important; }
+.footer__col-right .footer-block--menu { min-width: 140px; }
+.footer__col-right .footer-block { padding: 0 !important; margin: 0 !important; }
+.footer__col-right .footer-block__details-content { display: flex; flex-direction: column; gap: 2px; padding: 0 !important; margin: 0 !important; }
+.footer__col-right .footer-block__details-content li { margin: 0 !important; padding: 0 !important; line-height: 1.6 !important; }
+.footer__col-right .footer--button, .footer__col-right .list-menu__item { font-size: 15px !important; color: rgb(var(--color-foreground)) !important; opacity: 0.85; line-height: 1.6 !important; padding: 0 !important; }
+.footer__col-right .footer--button:hover, .footer__col-right .list-menu__item:hover { opacity: 1; color: rgb(var(--color-foreground)) !important; }
+.footer__col-right .accordion { display: none; }
+
+/* Footer below 1150px (2026-09-25): the menu columns are shown (the theme
+   hid them below 1150px and the accordion fallback is hidden above), and
+   the footer stacks logo/info above the menus from 1149px down instead of
+   749px, so the menu row has room on tablets. */
+@media screen and (max-width: 1149px) {
+  .footer__col-right .footer-block--menu { display: block !important; }
+  .footer__layout { flex-direction: column !important; }
+  .footer__col-left { max-width: 100% !important; width: 100% !important; }
+  .footer__col-right { width: 100% !important; flex-wrap: wrap !important; justify-content: flex-start !important; gap: 3.2rem !important; margin-top: 2.4rem !important; }
+}
+
+.section-header__title-item .subtitle,
+.section-header__title-item .section-header__subheading { margin: 0 0 var(--modus-space-xs) !important; }
+.section-header__title-item .section-header__title { margin: 0 0 var(--modus-space-xs) !important; }
+.section-header__title-item .section-header__desc,
+.section-header__title-item .section-header__desc p,
+.section-header__title-item .richtext__content,
+.section-header__title-item .richtext__content p { margin: 0 !important; }
+.section-header__line .section-header__title-item,
+.section-header__line .section-header__title__block { padding-bottom: 0 !important; }
+.section-header__line .section-header__title__block.section_border_bottom,
+.section-header__line .section_border_bottom { padding-bottom: 20px !important; }
+.section_border_bottom { border-bottom-color: var(--modus-gold) !important; }
+/* Section header rhythm (2026-09-25), shared by every section built on
+   snippets/section-header.liquid: eyebrow -> heading -> description use
+   ONLY the elements' own var(--modus-space-xs) margins (the base theme's
+   0.6rem flex gap stacked on top of them, giving 18px), the last element
+   drops its margin, and the header -> section content gap is one token,
+   var(--modus-space-m), whether or not there's a description (was 20px
+   with one, 32px without). On stacked layouts (<990px) the header CTA
+   sits var(--modus-space-xs) below the text (was 0 in most sections). */
+.section-header__line .section-header__title-item { gap: 0 !important; }
+.section-header__line .section-header__title-item > :last-child { margin-bottom: 0 !important; }
+.section-header__line { padding-bottom: var(--modus-space-m) !important; }
+@media screen and (max-width: 989px) {
+  .section-header__line .section-header__btn-top { margin-top: var(--modus-space-xs) !important; }
+}
+.rich-text-cta-section .section-header__title__block.section_border_bottom { padding-bottom: 20px !important; }
+.rich-text-cta-section .section-header__title-item .section-header__title { margin: 0 0 var(--modus-space-xs) !important; }
+
+.card-information .card-type__hover { width: 100% !important; max-width: 100% !important; }
+.card__description {
+  font-family: 'Lora', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 23px !important;
+  letter-spacing: 0 !important;
+  color: #3d3d3d !important;
+  margin: 4px 0 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+}
+/* Product badges (2026-09-25): the one sitewide style for the collection
+   name shown on product cards ("show collection name") AND for product
+   tags (the "Tags" block in Featured Product / product page, e.g.
+   "Cilento" — these used to be a grey Inter pill).
+   Was defined only inside sections/popular-products.liquid with
+   line-height: 1, so two-line names (e.g. "Prodotti sott'olio e sotto
+   sale") had their lines touching; now line-height 1.4 and defined once
+   here for every section that shows product cards. Styled like the
+   primary button (Antonio, uppercase, orange), smaller, no arrow. The
+   orange scheme's beige text override above still wins (0,2,0). */
+.card__collection-title,
+.product-tags__tag {
+  display: inline-block !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  background-color: #D16A14 !important;
+  border: none !important;
+  padding: 5px 8px !important;
+  border-radius: 2px !important;
+  text-decoration: none !important;
+  margin: 0.6rem 0 0.8rem !important;
+  transition: none !important;
+}
+.card__collection-title:hover {
+  background-color: #01473E !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Tags sit in a row: badges 0.6rem apart, and the row keeps the sitewide
+   element rhythm (var(--modus-space-xs)) to whatever follows it. ul + both
+   classes (0,2,1) beats the sections' own .featured-product .product__tags
+   margins. Tag links (optional "enable tag link") inherit the badge look. */
+.product-tags__tag {
+  margin: 0 !important;
+}
+ul.product-tags.product__tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.6rem !important;
+  margin: 0 0 var(--modus-space-xs) !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+.product-tags__tag a {
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  text-decoration: none !important;
+}
+
+#shopify-section-dove-ritiri .cards-grid__info-item-btns { opacity: 1 !important; width: 100% !important; display: flex !important; flex-direction: column !important; gap: var(--modus-space-xs) !important; }
+#shopify-section-dove-ritiri .cards-grid__info-item-btns .button { width: 100% !important; justify-content: center !important; text-align: center !important; }
+#shopify-section-dove-ritiri .cards-grid__item-block:hover .cards-grid__info-item-btns { opacity: 1 !important; }
+#shopify-section-dove-ritiri .cards-grid-text a { color: #3d3d3d !important; text-decoration: underline !important; text-underline-offset: 2px !important; }
+#shopify-section-dove-ritiri .cards-grid-text a:hover { color: var(--modus-green) !important; }
+
+.article-card__excerpt, .article-card__excerpt p { color: var(--modus-text-mid) !important; font-family: 'Lora', serif !important; font-size: 1.4rem !important; line-height: 1.6 !important; font-style: normal !important; margin-top: var(--modus-space-xs) !important; }
+.article-card-default .artcile-card_wrapper { gap: var(--modus-space-xs) !important; }
+.article-card-default .artcile-card_image-wrapper { display: flex !important; flex-direction: column !important; gap: 0 !important; position: relative !important; }
+.article-card-default .artcile-card_image-wrapper .article-card__image { order: 0 !important; }
+.article-card-default .artcile-card_image-wrapper .article-card__block,
+.article-card-default .swiper-slide .article-card__block,
+.swiper-slide .article-card-default .artcile-card_image-wrapper .article-card__block { order: 1 !important; position: static !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important; justify-content: flex-start !important; gap: var(--ac-gap) !important; opacity: 1 !important; visibility: visible !important; transform: none !important; transition: none !important; padding: 1.2rem 0 0 0 !important; background: none !important; z-index: auto !important; width: 100% !important; max-width: 100% !important; top: auto !important; left: auto !important; }
+.article-card-default .article-card__block-wrapper.badge, .article-card-default .article-card__block-wrapper { background: none !important; border: none !important; box-shadow: none !important; padding: 0 !important; display: flex !important; flex-wrap: wrap !important; gap: 0.4rem !important; align-items: center !important; justify-content: flex-start !important; }
+.article-card-default .article-card__date, .article-card-default .article-card__date time { background: none !important; border: none !important; padding: 0 !important; color: var(--modus-text-mid) !important; font-family: 'Lora', serif !important; font-weight: 400 !important; font-style: italic !important; font-size: 1.3rem !important; letter-spacing: 0 !important; text-transform: none !important; text-shadow: none !important; line-height: 1.4 !important; }
+.article-card-default .article-card__tags { display: flex !important; flex-wrap: wrap !important; gap: 0.4rem !important; margin: 0 !important; align-items: center !important; justify-content: flex-start !important; }
+.article-card-default .article-card__tags .badge { display: inline-block !important; padding: 0.5rem 1.3rem !important; border-radius: 0 !important; border: 2px solid #D16A14 !important; background: transparent !important; color: #D16A14 !important; font-family: 'Antonio', sans-serif !important; font-weight: 700 !important; font-style: normal !important; font-size: 1.3rem !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; text-decoration: none !important; transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease !important; margin: 0 !important; }
+.article-card-default .article-card__tags .badge:hover { background-color: #D16A14 !important; border-color: #D16A14 !important; color: #f5e8d5 !important; }
+.article-card-default .article-card_content { gap: 0 !important; display: flex !important; flex-direction: column !important; }
+.article-card-default .article-card__title { margin: 0 !important; }
+.article-card-default .article-card_content-bottom { margin-top: var(--modus-space-xs) !important; order: 3 !important; }
+.article-card-default .article-card_content-top { order: 1 !important; flex: 0 1 auto !important; }
+
+.heading_content_subtitle.badge, .heading-content-block .heading_content_subtitle { font-family: 'Lora', serif !important; font-style: italic !important; font-weight: 400 !important; font-size: 15px !important; line-height: 26px !important; letter-spacing: 0 !important; color: rgba(61, 61, 61, 0.6) !important; text-transform: none !important; background: transparent !important; border: none !important; border-radius: 0 !important; padding: 0 !important; box-shadow: none !important; display: block !important; margin: 0 0 var(--modus-space-xs) !important; }
+.heading-content-block { display: flex !important; flex-direction: column !important; gap: 0 !important; margin-bottom: 2rem !important; }
+.heading-content-block .slider-with-info_heading { margin: 0 0 var(--modus-space-xs) !important; }
+.heading-content-block .slider-with-info_description, .heading-content-block .slider-with-info_description p { margin: 0 !important; }
+.heading-content-block .slider-with-info_description:not(:last-child) { margin-bottom: var(--modus-space-xs) !important; }
+
+
+@media screen and (max-width: 989px) {
+  .multicolumn-section .swiper--multicolumn,
+  .multicolumn-section .multicolumn-list { overflow: visible !important; }
+  .multicolumn-section .multicolumn-list__wrapper.swiper-wrapper { display: flex !important; flex-wrap: nowrap !important; }
+  .multicolumn-section .multicolumn-list__item.swiper-slide { width: 100% !important; min-width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box !important; }
+  .multicolumn-section .multicolumn__wrapper { overflow: hidden !important; }
+  .multicolumn-section .multicolumn-card__wrapper { padding-left: 0 !important; padding-right: 0 !important; }
+}
+
+@media screen and (max-width: 989px) {
+  .tabs-section .tabs_wrapper-type1 .tabs-thumb_wrapper,
+  .tabs-section .tabs_wrapper-type2 .tabs-thumb_wrapper {
+    overflow: hidden !important;
+    margin-left: calc(-1 * var(--main-padding, 1.6rem)) !important;
+    margin-right: calc(-1 * var(--main-padding, 1.6rem)) !important;
+  }
+  .tabs-section .tabs-thumb_wrapper .swiper-wrapper { display: flex !important; flex-wrap: nowrap !important; }
+  .tabs-section .tabs-thumb_wrapper .swiper-slide {
+    width: 100% !important;
+    min-width: 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+  .tabs-section .tab-thumb_item-wrapper {
+    padding-left: var(--main-padding, 1.6rem) !important;
+    padding-right: var(--main-padding, 1.6rem) !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .collection-grid-section .section-header__btn-top {
+    margin-top: var(--modus-space-xs) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+  .collection-grid-section .section-header__btn-top .button,
+  .collection-grid-section .section-header__btn-top a.button {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 0 !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+  .collection-grid-section .section-header__desc {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Section CTAs on mobile (2026-09-25): every CTA a section renders from
+   its own settings fills the section width at one size, the one the
+   Rich Text + CTA section introduced. .button--cta is added by
+   snippets/button.liquid whenever it's rendered with layout: (section or
+   block settings), and by hand on the sections that write their own
+   <a class="button">. Card-listing, cart, form, header and footer buttons
+   don't carry it and are unaffected. Override per section only if really
+   needed. */
+@media screen and (max-width: 749px) {
+  .button--cta {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 48px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+  }
+  /* Wrappers that shrink to their content on mobile and would otherwise
+     cap the CTA at label width. */
+  .rich-text-cta-section .rt-cta__right,
+  .section-header__btn-top,
+  .split-hero__content-col,
+  .split-hero__buttons,
+  .slideshow-slide_full-screen_text,
+  .slideshow-slide__text,
+  .product-popup-modal__content-buttons {
+    width: 100% !important;
+  }
+  /* Two-button rows stack, one full-width CTA per line (Hero Split's
+     "Make buttons full width" otherwise splits them 50/50 via flex: 1). */
+  .split-hero__buttons .button--cta {
+    flex-basis: 100% !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .section-featured-blogs .section-header_btn {
+    margin-top: var(--modus-space-xs) !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .section-featured-blogs .section-header_btn .button,
+  .section-featured-blogs .section-header_btn a.button {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 0 !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .image-with-text-section .image-with-text__ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: var(--modus-space-xs) !important;
+  }
+  .image-with-text-section .image-with-text__ctas .button {
+    display: flex !important;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 0 !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+}
+
+.color-background-dark .button--primary:not([disabled]):not([aria-disabled=true]):hover,
+.color-background-dark .customer .button--primary:not([disabled]):not([aria-disabled=true]):hover,
+.color-background-dark .button--secondary:not([disabled]):not([aria-disabled=true]):hover,
+.color-background-dark .customer .button--secondary:not([disabled]):not([aria-disabled=true]):hover {
+  background-color: #f5e8d5 !important;
+  border-color: #f5e8d5 !important;
+  color: #01473e !important;
+}
+
+:root {
+  --modus-paragraph-size: 1.6rem;
+}
+
+.richtext__content p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+.richtext__content li,
+[class*="__text"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__desc"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="-desc"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__description"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="_description"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__content"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="-content"] p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]) {
+  font-family: var(--font-body-family) !important;
+  font-style: var(--font-body-style) !important;
+  font-weight: var(--font-body-weight) !important;
+  font-size: var(--modus-paragraph-size) !important;
+  line-height: 1.6 !important;
+  color: rgb(var(--color-foreground)) !important;
+  margin: 0 !important;
+}
+
+.richtext__content p + p,
+[class*="__text"] p + p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__desc"] p + p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="-desc"] p + p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]),
+[class*="__content"] p + p:not([class*="subheading"]):not([class*="eyebrow"]):not([class*="badge"]):not([class*="subtitle"]) {
+  margin-top: 1.6rem !important;
+}
+
+.cards-grid-section .cards-grid-text p,
+.cards-grid-section .cards-grid__secondary-text,
+.cards-grid-section .cards-grid__secondary-text p {
+  font-family: var(--font-body-family) !important;
+  font-size: var(--modus-paragraph-size) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.footer .store-info__wrapper p,
+.footer [data-block-type="store_info"] p,
+.footer-block--store-info p,
+.footer__col-left p {
+  font-family: var(--font-body-family) !important;
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  word-break: break-word !important;
+  color: #79998e !important;
+}
+.footer .store-info__wrapper p:first-child,
+.footer [data-block-type="store_info"] p:first-child {
+  font-style: italic !important;
+  color: #faf1e4 !important;
+}
+
+.content-item__description,
+.content-item__description p {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #3d3d3d !important;
+  margin: 0 !important;
+}
+
+.rt-cta__text p {
+  font-family: 'Lora', serif !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Image With Text stacked (<990px), 2026-09-25: text rhythm back to
+   var(--modus-space-xs) (was s = 16px), and no extra padding-top on the
+   text block — the wrapper gap (var(--modus-space-s)) is the single
+   image <-> text gap (padding-top used to double it to 32px). */
+@media screen and (max-width: 989px) {
+  .image-with-text-section .image-with-text__heading-block {
+    gap: var(--modus-space-xs) !important;
+  }
+  .image-with-text-section .image-with-text_type1 .image-with-text__image-block {
+    gap: var(--modus-space-s) !important;
+  }
+  .image-with-text_type2 .image-with-text__wrapper {
+    gap: var(--modus-space-s) !important;
+  }
+  .image-with-text-section .image-with-text_type2 .image-with-text__heading-block {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.card--product {
+  position: relative !important;
+}
+.product-card .quick-add {
+  position: absolute !important;
+  left: 1.2rem !important;
+  bottom: 1.2rem !important;
+  right: auto !important;
+  top: auto !important;
+  z-index: 13 !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  display: flex !important;
+  margin: 0 !important;
+}
+.product-card .quick-add .card__link {
+  position: static !important;
+  opacity: 1 !important;
+  transform: none !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  bottom: unset !important;
+  left: unset !important;
+  pointer-events: all !important;
+}
+.product-card .card-type__hover {
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+:root {
+  --swiper-pagination-color: #D16A14;
+  --swiper-theme-color: #D16A14;
+}
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: currentColor !important;
+  opacity: 0.25 !important;
+  margin: 0 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #D16A14 !important;
+  opacity: 1 !important;
+}
+.swiper-pagination.swiper-pagination-default {
+  gap: 6px !important;
+}
+.cards-grid__dots button.is-active {
+  background-color: #D16A14 !important;
+  opacity: 1 !important;
+}
+
+.ff__item {
+  border-width: 2px !important;
+}
+
+[class*="media-list"] .swiper-btn,
+[class*="media--scroll"] .swiper-btn {
+  display: flex !important;
+}
+[class*="media-list"] .swiper-btn:not(.swiper-button-disabled) svg path,
+[class*="media--scroll"] .swiper-btn:not(.swiper-button-disabled) svg path {
+  fill: #D16A14 !important;
+  stroke: #D16A14 !important;
+  stroke-width: 1px !important;
+}
+
+.popup-desc--small,
+.popup-desc--small p {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important;
+  font-style: italic !important;
+  color: rgba(61, 61, 61, 0.55) !important;
+  line-height: 1.5 !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0 !important;
+}
+
+.article-template__header .article-template__tag.badge {
+  background: transparent !important;
+  border: 2px solid #D16A14 !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 1.3rem !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.article-template__header .article-template__tag.badge a {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: #D16A14 !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease;
+}
+.article-template__header .article-template__tag.badge:hover {
+  background-color: #D16A14 !important;
+}
+.article-template__header .article-template__tag.badge:hover a {
+  color: #f5e8d5 !important;
+}

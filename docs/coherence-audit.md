@@ -39,7 +39,7 @@ Editor padding/margin settings silently do nothing or don't exist here.
 - [ ] D8 Video with Text on desktop: text centered and spread over the full video height → left-aligned, vertically centered like Image with Text? → DECIDED: Video with Text always left-aligned and vertically centred like Image with Text. Mobile: images/videos fill the full content width (between the 20px margins, aligned with the text), text too.
 - [x] D9 Product description: italic or normal? (today <p> normal, lists italic — inconsistent) → DECIDED: normal (not italic).
 - [x] D10 Blog "load more" button: make it a standard button (full width on mobile)? → DECIDED: standard site button (secondary), full width on mobile.
-- [ ] D11 Two logo tickers look different → DECIDED: all tickers (awards strip, partner logos, chi-siamo photo strip) stop at the content gutters with the same fade edges.
+- [x] D11 Two logo tickers look different → DECIDED: all tickers (awards strip, partner logos, chi-siamo photo strip) stop at the content gutters with the same fade edges.
 - [ ] D12 Hardcoded "orange" variants (Simple Slider, Image with Text) → replace with the orange colour scheme so there's one orange look. → DECIDED: one orange only — hardcoded orange variants replaced by the orange colour scheme.
 
 ## Content / configuration (not CSS — flagged for the client, not changed)

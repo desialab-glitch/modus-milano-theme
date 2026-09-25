@@ -14,6 +14,31 @@
 - --modus-space-m: 2.4rem (Simple Slider exception)
 - --modus-space-column: 4rem (desktop gutter)
 
+## Section spacing (top/bottom of each section) — edited per section, values defined once
+- Every section keeps its own "Margin top/bottom" (outside its background) and "Padding top/bottom" (inside its background) settings in the theme editor: none / XS / S / M / L. Choose these per section as needed.
+- The sizes behind those options live ONLY in the `--modus-section-space-*` tokens in modus-design-system.css. snippets/section-margin.liquid and snippets/section-padding.liquid read them via snippets/section-space-value.liquid. To change what "M" means sitewide, edit the token, never a snippet or a section.
+- Current values (unchanged from before the tokens were introduced):
+
+  | Size | Mobile (<990px) | 990–1149px | Desktop (≥1150px) |
+  |---|---|---|---|
+  | none | 0 | 0 | 0 |
+  | XS | 12px | 12px | 12px |
+  | S (also blank) | 30px | 32px | 32px |
+  | M | 40px | 52px | 64px |
+  | L | 60px | 80px | 100px |
+- Any section that isn't built on these settings (AI-generated blocks, custom sections, app sections) must still take its vertical spacing from these tokens — no hardcoded px/rem section spacing anywhere.
+
+## Per-section checklist (run on every new or edited section, on mobile AND desktop)
+1. Section top/bottom spacing comes from the editor settings → `--modus-section-space-*` tokens. No hardcoded section padding/margin.
+2. Side gutter = the theme `.container` / `var(--main-padding)` (20px mobile, 80px ≥1150px), same on both sides. Nothing extra on top of it (no inner side padding that pushes text in further than other sections).
+3. Eyebrow → heading → text → CTA gaps = `var(--modus-space-xs)` (12px), applied once (element margin OR flex gap, never both). Stacked media ↔ text gap = `var(--modus-space-s)` (16px). Desktop side-by-side gutter = `var(--modus-space-column)`.
+4. Alignment: left-aligned text for editorial/content sections on mobile. Centered only for short overlay/banner moments (hero over image, one-line CTA).
+5. Typography: eyebrow = Lora italic 15px, grey rgba(61,61,61,0.6) on light schemes; H2 Antonio gold (29px mobile); body paragraphs 16px / line-height 1.6 via the sitewide paragraph rule. No text below 13px on mobile.
+6. CTAs: carry `button--cta` (automatic via snippets/button.liquid with `layout:`); on mobile they're full width, 48px tall, square. If the CTA doesn't fill the width, fix the shrink-wrapping wrapper in the shared rule, not per section.
+7. Empty elements (e.g. a CTA wrapper with no button) must not add space.
+8. Color scheme overrides (e.g. the orange scheme's beige text) still win — section rules must not use higher specificity than the scheme rules.
+9. After any theme push: no userErrors, and checksums on the draft match the local files.
+
 ## Known sitewide CSS fixes already applied (don't reintroduce these bugs)
 - Multicolumn outer border: removed via `.multicolumn .multicolumn-list__wrapper { border: none !important; }`
 - Multicolumn side padding: removed via `.multicolumn .multicolumn-card__wrapper { padding-left: 0 !important; padding-right: 0 !important; }` (top/bottom untouched)

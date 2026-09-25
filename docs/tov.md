@@ -2,14 +2,29 @@
 
 ## Absolute bans (any language, any page)
 - Negation-framing construction: "X non è Y, ma Z" / "non si dichiara, si assaggia" / any "not X, Y" shape. State directly what something IS. No exceptions, including on quotes attributed to the client (Paolo) — these get edited as marketing copy too.
-- "Autentico" / "autentica" as an empty superlative — banned everywhere, has required repeated sweeps to catch, check every new paragraph for it
 - "Eccezionali"
 - "Intatto"
+- Negative claims ("senza coloranti, aromi né conservanti", "senza pesticidi", "non X") — banned UNLESS the producer's own site states that exact claim (e.g. Maida: "senza aggiunta di conservanti o additivi"). Then use the producer's wording, never a stronger one. Default: say what the product IS, not what it lacks.
+- Comparisons between products — banned in any product or card text: "stesso pomodoro del pelato", "più delicato del tonno rosso", "la variante rigata del pacchero", "le stesse erbe del cofanetto", "la versione integrale della farina X". Each text talks about its own product only.
+- Product descriptions (and product cards) are for story and value only: who makes it, where, how, why it matters. Short and concise. Never obvious practical info there — storage ("dopo l'apertura in frigo…"), cooking times ("al dente in 11 minuti"), prep ("da sciacquare"), ingredient percentages. Practical data goes in the product page dropdowns/FAQ, never in the description.
+- Edit a page as a whole, never section by section. Each section must say something the others on the same page do not (e.g. homepage hero = what Modus is; "Tutto parte dal Cilento" = the story; tabs = the supply chain). Cutting length must not cut value: condense by removing repetition across sections first, not the story details. Quotes from Paolo are never paraphrased or condensed: verbatim, edited only to remove a banned construction above.
 - Hyphenated number ranges — always write "tra X e Y", never "X-Y"
 - The "tre X, tre Y" / numeric-parallelism formula (e.g. "Tre liquori, tre occasioni") — revoked, overused
 - "Nessun intermediario, solo la terra e il momento giusto" — revoked, overused
 - Slogan-style headlines built on numbers/number-words ("X, one Y", "4 properties, 1 brand") — titles state plainly what the thing is. Plain parallel-contrast without numbers is fine.
 - Section headings "COSA FARE CON…" / "COSA ABBINARE A…" — too flat, use more poetic phrasing per page
+
+## Length targets
+- Product descriptions (also shown on product cards): short and even, ~118–150 characters. Reference: FUSILLI (118).
+- Collection card descriptions: shorter than product descriptions and all the same length, ~110–125 characters.
+- Hero body texts: about half their previous length, one or two sentences.
+- Filiera producer cards: ~250–350 characters, with the story (people, years, places, Presidi), no practical info.
+
+## Client decisions (25 Sep)
+- "Autentico"/"autentica" is allowed again. "L'essenza più autentica del Cilento" is the approved homepage hero headline — needs a concrete fact behind it, not a bare superlative on its own. Draft theme heading currently reads "L'ESSENZA DEL CILENTO" — client may want it restored to the "più autentica" version; flag before changing.
+- "La qualità non si dichiara, si assaggia/si respira" and "Ci sono sapori che non si inventano, si ereditano" are REVOKED, permanently — they're negation-framing. Never appeared live on the site (checked Olio and Miele, the two collections the pattern doc referenced).
+
+Notion "Tone of Voice" page, section 0, mirrors this file (synced 25 Sep 2026). Keep both in sync when a rule changes.
 
 ## Confirmed NOT banned (don't over-correct)
 - "X incontra Y"

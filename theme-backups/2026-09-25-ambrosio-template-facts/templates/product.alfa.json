@@ -1,0 +1,625 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": "",
+            "heading_tag": "h3"
+          }
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_variant_name": false,
+            "show_size_guide": false,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "",
+            "heading": "",
+            "heading_tag": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "text_bottom": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {}
+        },
+        "judge_me_reviews_preview_badge_3eCYRA": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "popup-details": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Details",
+            "heading": "Dettagli prodotto",
+            "heading_tag": "h4",
+            "text": "",
+            "text_bottom": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "popup-care": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Care",
+            "heading": "Conservazione",
+            "heading_tag": "h4",
+            "text": "",
+            "text_bottom": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        },
+        "popup-shipping": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "label": "Shipping & Returns",
+            "heading": "Spedizioni e resi",
+            "heading_tag": "h4",
+            "text": "<p>Spedizione in 48h. Gratuita sopra €57. Resi entro 14 giorni per prodotti non aperti.</p>",
+            "text_bottom": "",
+            "button_label": "Contattaci",
+            "button_link": "",
+            "button_style": "primary",
+            "button_arrow": false,
+            "secondary_button_enable": false,
+            "secondary_button_label": "Button label",
+            "secondary_button_link": "",
+            "secondary_button_style": "primary",
+            "secondary_button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant-picker",
+        "buy-buttons",
+        "inventory",
+        "judge_me_reviews_preview_badge_3eCYRA",
+        "popup-details",
+        "popup-care",
+        "popup-shipping"
+      ],
+      "settings": {
+        "image_gallery_collage": "grid",
+        "desktop_alignment": "left",
+        "mobile_alignment": "left",
+        "image_fit": "cover",
+        "enable_autoheight": false,
+        "content_centered": false,
+        "variant_media_display": "show_all",
+        "padding_top": "s",
+        "padding_bottom": "l"
+      }
+    },
+    "pdp-dropdowns": {
+      "type": "collapsible-content",
+      "blocks": {
+        "drop-ingredients": {
+          "type": "text-block",
+          "settings": {
+            "heading": "CARATTERISTICHE",
+            "heading_tag": "h2",
+            "description": "<p>Produttore: Fattoria Ambrosio<br/>Cultivar: blend Coratina e Frantoio<br/>Spremitura: a freddo<br/>Profilo: fruttato medio, carciofo, foglia di pomodoro<br/>Formato: vedi variante</p>"
+          }
+        },
+        "drop-nutrition": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Informazioni nutrizionali",
+            "heading_tag": "h2",
+            "description": "<p>I valori nutrizionali medi per 100g di prodotto sono indicati sull'etichetta. Allergeni: vedi etichetta.</p>"
+          }
+        },
+        "drop-shipping": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Spedizioni e resi",
+            "heading_tag": "h2",
+            "description": "<p><strong>Spedizione:</strong> 48h lavorative. Gratuita sopra €57.</p><p><strong>Resi:</strong> entro 14 giorni per prodotti non aperti.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "drop-ingredients",
+        "drop-nutrition",
+        "drop-shipping"
+      ],
+      "settings": {
+        "faqs_heading": "",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "pdp-cards-carousel": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_3fK7gt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "filter_pinned": false,
+            "filter_featured": false,
+            "filter_custom_tags": "",
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true,
+            "rating_display": "default"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_3fK7gt"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_text_2_NPTGKA": {
+      "type": "image-with-text-2",
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "image_first": "shopify://shop_images/olive-oil-salad-dressing-cooking-olive.jpg",
+        "image_ratio": "landscape",
+        "producer_logo": "shopify://shop_images/logo-fattoria-ambrosio_2x_d14daf67-5764-4d3f-b0f2-4af5ca6f99cf.png",
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il produttore",
+        "heading": "",
+        "heading_tag": "h2",
+        "text": "<p>La Fattoria Ambrosio produce olio nel Cilento. Le etichette ALFA, CRUX, RISERVA e IDRA si distinguono per le cultivar: ALFA è un blend di Coratina e Frantoio, CRUX un monovarietale Coratina, RISERVA un blend di Itrana e Coratina, IDRA un monovarietale Itrana.</p>",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "s"
+      }
+    },
+    "pdp-banner-grid": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_21_06900501-d439-40e9-95f8-d9bea5b16af7.jpg",
+            "overlay_opacity": 0,
+            "image_ratio": "portrait",
+            "subheading": "L'olio",
+            "heading": "UN BLEND PER OGNI GIORNO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>ALFA è un blend quotidiano di Coratina e Frantoio: fruttato medio, con note di carciofo e foglia di pomodoro.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-22.jpg",
+            "overlay_opacity": 0,
+            "image_ratio": "portrait",
+            "subheading": "Il metodo",
+            "heading": "SPREMITURA A FREDDO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>ALFA è un olio ottenuto con spremitura a freddo.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/maffini-vigneto-a-giungano-e1416559469140.jpg",
+            "overlay_opacity": 0,
+            "image_ratio": "portrait",
+            "subheading": "La linea",
+            "heading": "LA LINEA AMBROSIO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>ALFA, CRUX, RISERVA e IDRA sono le etichette della Fattoria Ambrosio, ognuna con una diversa combinazione di cultivar.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "banner_0",
+        "banner_1",
+        "banner_2"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "LA FILIERA IN DETTAGLIO",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "product_picks_pWXHTD": {
+      "type": "product-picks",
+      "name": "Product Picks",
+      "settings": {
+        "product_handles": "pasta-fusilli-cilento, passata-pomodoro-biologico, ceci-di-cicerale, pane-biscottato",
+        "per_row": 4,
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Dal Cilento alla tavola",
+        "heading": "ABBINA CON CURA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "Scopri tutti i prodotti",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": true,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "mobile_carousel": true,
+        "mobile_carousel_columns": "2",
+        "mobile_carousel_nav": "dots",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-completa": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type2",
+        "subheading": "Dal Cilento alla tavola",
+        "heading": "ABBINA CON CURA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "mobile_carousel": true,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_ricetta": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": false,
+            "image": "shopify://shop_images/133405956-0af9755f-fb93-477a-8dd6-4206322871c0.jpg",
+            "color_scheme": "background-2",
+            "subheading": "Una ricetta da fare",
+            "heading": "Una ricetta semplice.",
+            "heading_tag": "h2",
+            "text": "<p>Un filo d'olio a crudo su bruschetta, su pasta, su verdure.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false,
+            "overlay_opacity": 30,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ricetta"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": false,
+        "show_pagination": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "pdp-related": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type2",
+        "subheading": "",
+        "heading": "POTREBBE PIACERTI.",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "VEDI TUTTI I PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "mobile_carousel": true,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "pfaq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come avviene la spedizione?",
+            "heading_tag": "h2",
+            "description": "<p>Spediamo in tutta Italia con corriere espresso in 48 ore lavorative dalla conferma dell’ordine. La spedizione è gratuita per ordini superiori a €57; al di sotto si applica un contributo calcolato al checkout.</p>"
+          }
+        },
+        "pfaq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "L'olio ALFA è biologico o certificato?",
+            "heading_tag": "h2",
+            "description": "<p>Le certificazioni sono indicate in etichetta per ogni olio della Fattoria Ambrosio.</p>"
+          }
+        },
+        "pfaq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conserva?",
+            "heading_tag": "h2",
+            "description": "<p>Luogo fresco, buio e asciutto, lontano da fonti di calore e luce diretta. Vedi le indicazioni in etichetta.</p>"
+          }
+        },
+        "pfaq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "L'olio ALFA è adatto per cucinare o per condire a crudo?",
+            "heading_tag": "h2",
+            "description": "<p>ALFA è pensato come olio da cucina di ogni giorno. Il fruttato medio si presta anche all'uso a crudo, su una bruschetta, su verdure o su un piatto già in tavola.</p>"
+          }
+        },
+        "pfaq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Che differenza c'è tra ALFA, CRUX, RISERVA e IDRA?",
+            "heading_tag": "h2",
+            "description": "<p>ALFA è un blend di Coratina e Frantoio, CRUX un monovarietale Coratina, RISERVA un blend di Itrana e Coratina, IDRA un monovarietale Itrana.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pfaq-2",
+        "pfaq-3",
+        "pfaq-4",
+        "pfaq-5",
+        "pfaq-1"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-dropdowns",
+    "pdp-cards-carousel",
+    "image_with_text_2_NPTGKA",
+    "pdp-banner-grid",
+    "product_picks_pWXHTD",
+    "pdp-completa",
+    "pdp-slideshow",
+    "pdp-related",
+    "pdp-faqs"
+  ]
+}
+

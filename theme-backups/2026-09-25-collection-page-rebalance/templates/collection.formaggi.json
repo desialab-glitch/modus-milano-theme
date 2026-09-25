@@ -1,0 +1,588 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Il cacioricotta della capra cilentana",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "I FORMAGGI DEL MONTE STELLA",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Nel 2018 Annacarla Tredici e Andrea Giuliano sono tornati tra Lustra e Omignano per riportare al pascolo la capra cilentana, una razza quasi scomparsa. Dal suo latte nasce il cacioricotta.</p>",
+        "button_label": "SCOPRI IL PRODOTTO ↓",
+        "button_link": "#shopify-section-featured_product_bzVcyF",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/images_12.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "featured_product_bzVcyF": {
+      "type": "featured-product",
+      "blocks": {
+        "tags_mkV8jT": {
+          "type": "tags",
+          "disabled": true,
+          "settings": {}
+        },
+        "title_iqpVhr": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_ybqq6D": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_84qiMh": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons_qcJ3jM": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": true,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "tags_mkV8jT",
+        "title_iqpVhr",
+        "price_ybqq6D",
+        "variant_picker_84qiMh",
+        "buy_buttons_qcJ3jM"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "cacioricotta-di-capra",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "s"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_WAwenQ": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/eu_organic_logo.png",
+            "heading": "",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_WAwenQ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/Tenuta-Principe-cacioricotta-semistagionato-e1615718769328.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Dal pascolo al laboratorio",
+        "heading_tag": "h2",
+        "heading": "LATTE DELLE PROPRIE CAPRE, BIOLOGICO CERTIFICATO",
+        "text": "<p>I formaggi che selezioniamo vengono da produttori che lavorano il latte delle proprie greggi, dal pascolo al laboratorio, tutto in azienda. La capra cilentana è una razza autoctona che era quasi scomparsa: allevarla significa tenere in vita un patrimonio genetico e culturale del territorio.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_formaggi": {
+      "type": "products-grid",
+      "disabled": true,
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "formaggi",
+        "product_list": [],
+        "anchor_id": "",
+        "subheading": "La selezione attuale",
+        "heading": "I FORMAGGI IN CATALOGO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Partiamo dal cacioricotta di capra semistagionato della Tenuta Principe Mazzacane: latte di capra, stagionatura di 15 giorni, lavorazione a Omignano. La selezione si espanderà con altri produttori e stagionature.</p>",
+        "alignment": "left",
+        "columns_per_row": 1,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": false,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "landscape",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_formaggi_top": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_formaggi": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/Tenuta-Principe-pascolando..-e1615718664932.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo": "shopify://shop_images/tenuta-principe-mazzacane-logo-transparent.png",
+        "producer_logo_width_mobile": 50,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Le capre di Annacarla e Andrea",
+        "heading_tag": "h2",
+        "heading": "",
+        "text": "<p>La Tenuta Principe Mazzacane prende il nome da Giulio Cesare Mazzacane, principe dal 1649, a cui appartenevano queste terre tra Lustra e Omignano. Qui Annacarla e Andrea allevano in biologico e al pascolo la capra cilentana Nera, Grigia e Fulva; nel laboratorio di Omignano Scalo il suo latte diventa cacioricotta.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "m",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/PHOTO-2020-04-17-17-31-09.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il piatto del Cilento",
+            "heading": "SUI FUSILLI AL SUGO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Nel Cilento il cacioricotta si sparge abbondante sui fusilli al sugo ed entra nelle verdure ripiene: è il formaggio di casa, quello dei piatti di tutti i giorni.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Crostini-con-acciughe-e-ricotta-22082024-buttalapasta.it.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "A fette, con il pane",
+            "heading": "CON L'OLIO, CON LE ALICI, CON IL MIELE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>A fette con pane, olio EVO e alici di Menaica: il tagliere cilentano. Con il miele delle colline, come consigliano a Mazzacane, e un Aglianico del Cilento.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/20250803_153548.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il pascolo nel formaggio",
+            "heading": "LA MACCHIA MEDITERRANEA SI SENTE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Al pascolo la capra cilentana cammina molto e sceglie ginestra, biancospino, foglie secche di fico: come racconta Annacarla, si ritrova tutto nel formaggio.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Come si gusta",
+        "heading": "IL CACIORICOTTA A TAVOLA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "landscape",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos'è il cacioricotta",
+            "heading_tag": "h2",
+            "description": "<p>È il formaggio simbolo del Cilento: il latte di capra viene portato ad alta temperatura prima del caglio, e insieme danno una pasta a metà tra ricotta e formaggio, da cui il nome. È riconosciuto come Prodotto Agroalimentare Tradizionale.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa significa semistagionato",
+            "heading_tag": "h2",
+            "description": "<p>Mazzacane fa il cacioricotta in più stagionature, dal fresco al duro da grattugia. Il semistagionato matura tra i 10 e i 15 giorni: sapore presente e pasta ancora morbida, da tagliare a fette.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Perché la razza cilentana fa la differenza",
+            "heading_tag": "h2",
+            "description": "<p>Al pascolo la capra cilentana sceglie cosa mangiare tra le piante della macchia mediterranea, e quella varietà si ritrova nel formaggio. Mazzacane alleva la razza in purezza e lavora solo il latte munto nei propri allevamenti.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Il latte è crudo?",
+            "heading_tag": "h2",
+            "description": "<p>Il latte viene termizzato, cioè scaldato a una temperatura moderata prima della lavorazione. Mazzacane lo ha scelto per eliminare i rischi da batteri nocivi, così i suoi formaggi possono mangiarli anche le donne in gravidanza.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conserva",
+            "heading_tag": "h2",
+            "description": "<p>In frigorifero, avvolto in carta da forno leggermente umida o in contenitore chiuso. Consumare entro 10 o 15 giorni dal taglio.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Lattosio e digeribilità",
+            "heading_tag": "h2",
+            "description": "<p>Il latte di capra è considerato più digeribile di quello vaccino, e spesso chi ha una lieve intolleranza al lattosio lo tollera meglio. La risposta varia da persona a persona: in caso di dubbi, chiedi al tuo medico.</p>"
+          }
+        },
+        "faq-7": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Fusilli cilentani e cacioricotta: il piatto",
+            "heading_tag": "h2",
+            "description": "<p>Fusilli di Terra Dura al sugo di pomodoro Maida, con il cacioricotta di Mazzacane sopra. Terra Dura, Maida e Mazzacane, tutti del Cilento, nello stesso piatto. Il formaggio va abbondante.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6",
+        "faq-7"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUI FORMAGGI DEL CILENTO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/images_10.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pasta-fusilli-cilento",
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "soppressata-di-gioi"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "I FORMAGGI DEL CILENTO, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Per un tagliere cilentano",
+        "description": "<p>Fusilli, olio, alici e soppressata: i prodotti del Cilento che si portano in tavola insieme al cacioricotta.</p>",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": false,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-milano-pizza-scaled.jpg",
+            "desktop_width_percent": 100,
+            "disclaimer_size": 14,
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "featured_product_bzVcyF",
+    "image_with_text_Nh4pWr",
+    "products_grid_formaggi",
+    "banner_formaggi_top",
+    "produttore_formaggi",
+    "practical",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

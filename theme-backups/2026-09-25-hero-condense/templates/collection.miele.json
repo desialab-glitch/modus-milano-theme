@@ -1,0 +1,565 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Tra le valli del Mingardo e del Bussento",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL MIELE DEL MONTE BULGHERIA",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Roccagloriosa, ai piedi del Monte Bulgheria, la famiglia Cavalieri alleva api dagli anni '80. Qui, tra la valle del Mingardo e quella del Bussento, le api trovano cisto, corbezzolo, ginestra e i castagni in fiore. Il miele si estrae dai favi, si lascia decantare e va nel vasetto così come l'hanno fatto le api.</p>",
+        "button_label": "SCOPRI IL PRODOTTO ↓",
+        "button_link": "#shopify-section-featured_product_xEQtfb",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/images_31.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "featured_product_xEQtfb": {
+      "type": "featured-product",
+      "blocks": {
+        "title_mwzwBH": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_heGjxc": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_WaTfYD": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons_xCBxxL": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": true,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_mwzwBH",
+        "price_heGjxc",
+        "variant_picker_WaTfYD",
+        "buy_buttons_xCBxxL"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "miele-di-castagno",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "s"
+      }
+    },
+    "image_with_text_garanzie": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_garanzie": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_garanzie"
+      ],
+      "disabled": true,
+      "name": "Le garanzie",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/miele.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Dal favo al vasetto",
+        "heading_tag": "h2",
+        "heading": "MIELE BIOLOGICO DEL PARCO NAZIONALE DEL CILENTO",
+        "text": "<p>Le api della famiglia Cavalieri lavorano nel Parco Nazionale del Cilento, ai piedi del Monte Bulgheria. Il miele si estrae per centrifugazione, si lascia decantare e si mette nei vasetti: nessun'altra lavorazione.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_miele": {
+      "type": "products-grid",
+      "disabled": true,
+      "name": "Prodotti miele",
+      "settings": {
+        "collection": "miele",
+        "product_list": [],
+        "anchor_id": "",
+        "subheading": "Dalle arnie di Roccagloriosa",
+        "heading": "IL MIELE DI CASTAGNO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Miele di castagno della famiglia Cavalieri, Roccagloriosa, nel Parco Nazionale del Cilento.</p>",
+        "alignment": "left",
+        "columns_per_row": 1,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": false,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "landscape",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_wave": {
+      "type": "banner",
+      "name": "Wave top",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_miele": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/apicoltori2.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo": "shopify://shop_images/francescantonio-cavalieri-logo-transparent.png",
+        "producer_logo_width_mobile": 60,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Api e famiglia a Roccagloriosa",
+        "heading_tag": "h2",
+        "heading": "",
+        "text": "<p>L'apicoltura Cavalieri nasce negli anni '80 a Roccagloriosa, un borgo millenario nel sud del Cilento, con il padre Salvatore. Oggi l'azienda è portata avanti dai figli e lavora in biologico, seguendo i ritmi delle stagioni e quelli delle api.</p><p>Intorno al miele ruotano propoli, pappa reale, polline e i dolci della tradizione del paese. Il lavoro resta semplice: il miele si estrae dai favi, decanta e va nel vasetto così come l'hanno fatto le api.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_32.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Profilo sensoriale",
+            "heading": "AMBRA SCURO, AMAROGNOLO, TANNICO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Colore ambra più o meno scuro. Aroma intenso e pungente, sapore poco dolce con un retrogusto amaro e persistente. Un miele dal carattere riconoscibile, per chi cerca un sapore deciso.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_34.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "In cucina",
+            "heading": "CON FORMAGGI, CARNI E PANE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Con i formaggi di capra e quelli stagionati, come il cacioricotta e il caciocavallo. Sulle carni arrosto. Sul pane rustico con un filo di burro, nella versione più semplice.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/rocca-gg.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il territorio",
+            "heading": "ROCCAGLORIOSA E IL MONTE BULGHERIA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Roccagloriosa guarda dal Monte Cervati al Monte Bulgheria, fino al mare di Palinuro e al Golfo di Policastro. Il clima è mite e la macchia mediterranea è ricca di fiori: cisto, corbezzolo, ferula, ginestra, origano, lavanda.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra miele di castagno e miele millefiori",
+            "heading_tag": "h2",
+            "description": "<p>Il millefiori ha un profilo più dolce e floreale, adatto a qualsiasi uso. Il miele di castagno ha un sapore più complesso: amarognolo, tannico, persistente. È un condimento con una personalità precisa.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Quando viene raccolto",
+            "heading_tag": "h2",
+            "description": "<p>Tra giugno e luglio, durante la fioritura dei castagni. È una finestra stagionale stretta: il miele di castagno si raccoglie solo in quel periodo.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Con quale formaggio abbinarlo",
+            "heading_tag": "h2",
+            "description": "<p>Il cacioricotta di capra cilentano è l'abbinamento più vicino al territorio. Funziona anche con caciocavallo e formaggi stagionati a pasta semidura, e con formaggi freschi come la ricotta, dove l'amaro del miele bilancia la dolcezza del latte.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Si cristallizza?",
+            "heading_tag": "h2",
+            "description": "<p>Il miele di castagno cristallizza lentamente. La cristallizzazione è un processo naturale e lascia invariati sapore e qualità. Per riportarlo liquido: bagnomaria a temperatura moderata.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conserva",
+            "heading_tag": "h2",
+            "description": "<p>A temperatura ambiente, lontano da fonti di calore e dalla luce diretta. Controllare la scadenza riportata in etichetta.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come viene lavorato",
+            "heading_tag": "h2",
+            "description": "<p>Il miele si preleva dai favi, si estrae per centrifugazione, si lascia decantare e si mette nei vasetti. Sono le uniche lavorazioni, per offrire il miele esattamente come lo hanno fatto le api.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUL MIELE DI CASTAGNO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/miele-millefiori-zavattarello.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_miele": {
+      "type": "popular-products",
+      "name": "Cosa abbinare",
+      "settings": {
+        "product_list": [
+          "cacioricotta-di-capra",
+          "pane-biscottato",
+          "liquore-fichi-secchi",
+          "liquore-erba-luisa"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "IL MIELE DI CASTAGNO, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Dal barattolo al tagliere",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "Wave line",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_newsletter": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_newsletter": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-paolo-de-simone-img-2079_bf1ef0b4-0d12-450d-afac-a8f6fb0343f8.jpg",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_newsletter"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_locali": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "featured_product_xEQtfb",
+    "image_with_text_garanzie",
+    "products_grid_miele",
+    "banner_wave",
+    "produttore_miele",
+    "practical",
+    "faqs",
+    "popular_products_miele",
+    "banner_wave_line",
+    "blocks_newsletter",
+    "hero_section_locali"
+  ]
+}

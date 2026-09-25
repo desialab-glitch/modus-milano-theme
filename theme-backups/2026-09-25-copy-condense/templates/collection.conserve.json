@@ -1,0 +1,527 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Da Capaccio Paestum",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL POMODORO DELLA PIANA DEL SELE",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Il pomodoro ha una stagione di poche settimane. A Capaccio Paestum Francesco Vastola e il figlio Fabrizio lo raccolgono a mano nei campi biologici e lo lavorano subito dopo la raccolta.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_yp98c9",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/gallery_maida_19.jpg",
+        "mobile_image": "shopify://shop_images/gallery_maida_19_1.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "products_grid_yp98c9": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "conserve",
+        "product_list": [],
+        "anchor_id": "products_grid_yp98c9",
+        "subheading": "Dallo stesso campo di Capaccio Paestum",
+        "heading": "IL PELATO E LA PASSATA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Dallo stesso campo nascono due barattoli. Il pelato resta intero, da schiacciare con le mani sulla pizza o nel tegame con l'olio. La passata è già pronta per il sugo: basta un soffritto leggero e un quarto d'ora sul fuoco.</p>",
+        "alignment": "left",
+        "columns_per_row": 2,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_WAwenQ": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/eu_organic_logo.png",
+            "heading": "",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_WAwenQ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/images_7.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Le nostre garanzie",
+        "heading_tag": "h2",
+        "heading": "POMODORO, BASILICO E SALE",
+        "text": "<p>Pomodoro, basilico e sale: la lista è corta perché il pomodoro di Maida regge da solo.</p><p>Il pomodoro ha una stagione stretta, poche settimane tra luglio e agosto in cui vale la pena raccoglierlo. Maida rispetta quella finestra. Quello che entra nel barattolo in estate è quello che apri a gennaio: lo stesso pomodoro.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "banner_MNxpfC": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_conserve": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/maida_08_1.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo": "shopify://shop_images/ChatGPT_Image_Jul_12_2026_10_24_17_PM.png",
+        "producer_logo_width_mobile": 74,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Pomodoro biologico a Capaccio Paestum",
+        "heading_tag": "h2",
+        "heading": "",
+        "text": "<p>Francesco Vastola ha fondato l'azienda agricola Maida a Capaccio Paestum, nella piana fertile a due passi dai templi greci, e oggi la porta avanti insieme al figlio Fabrizio. È stato il primo a rimpiantare in zona il pomodoro giallo di Capaccio, una varietà quasi abbandonata che ha fatto inserire nel Registro Regionale delle Risorse Genetiche.</p><p>I suoi pomodori biologici vengono lavorati nelle ore subito dopo la raccolta, senza correttori né conservanti. In barattolo ci sono solo pomodoro, basilico e sale.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "m",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_JThMkV": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_bottom.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gallery_maida_01_1.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "La filiera",
+            "heading": "FRANCESCO VASTOLA, DAL CAMPO AL BARATTOLO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Tutto nasce nello stesso campo biologico di Capaccio Paestum, dove Francesco Vastola coltiva, raccoglie e trasforma i suoi pomodori, senza che passino di mano.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_5.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come si usa",
+            "heading": "LA BASE DI OGNI SUGO ITALIANO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il pelato si schiaccia a mano direttamente sulla pizza cruda o si spezza nel tegame con l'olio. La passata parte da un soffritto leggero e in un quarto d'ora è pronta: il pomodoro buono cucina in fretta. Il risultato è un piatto che sa da dove viene.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gallery_maida_19_1.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il territorio",
+            "heading": "LA PIANA DEL SELE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Capaccio Paestum, in provincia di Salerno, vive all'ombra dei templi greci. Intorno si apre la Piana del Sele, una delle pianure agricole più fertili del Sud: una terra alluvionale che dà un pomodoro dolce e denso.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "1",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pasta-fusilli-cilento",
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "pane-biscottato"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "IL POMODORO DI MAIDA, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Dal sugo al piatto completo",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa c'è dentro: ingredienti completi",
+            "heading_tag": "h2",
+            "description": "<p>Pelato: pomodoro, succo di pomodoro, basilico e sale, 100% pomodoro italiano biologico. Passata: pomodoro, basilico e sale. Senza coloranti, aromi né conservanti.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa distingue il pelato di Maida",
+            "heading_tag": "h2",
+            "description": "<p>Certificazione biologica su tutta la filiera, dal campo al barattolo. Un produttore unico e identificabile, Francesco Vastola, Capaccio Paestum, con nome e cognome sulla produzione. I pomodori crescono nei sei ettari dell'azienda e si lavorano nelle ore subito dopo la raccolta.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si usa la passata",
+            "heading_tag": "h2",
+            "description": "<p>Soffritto leggero con olio EVO e aglio, poi la passata. Dieci, quindici minuti a fuoco medio. Basilico a fine cottura. Il pomodoro di Maida è già dolce: cuoce in poco tempo e l'acidità si bilancia da sola.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Il pelato sulla pizza",
+            "heading_tag": "h2",
+            "description": "<p>Schiaccia il pelato a mano direttamente sulla base cruda: pezzi irregolari, succo che si rilascia lentamente in cottura. La pizza resta asciutta. È il metodo delle pizzerie napoletane serie, e funziona perché il pomodoro è buono.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Quanto durano",
+            "heading_tag": "h2",
+            "description": "<p>Controlla la scadenza riportata in etichetta. Conserva i barattoli in un luogo fresco e asciutto, lontano dal sole. Una volta aperti: conserva in frigorifero e consuma entro una settimana, come indica Maida direttamente sul prodotto.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Allergeni",
+            "heading_tag": "h2",
+            "description": "<p>Pomodoro, basilico, sale. Gli unici ingredienti dichiarati.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUL POMODORO DI MAIDA",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/maida-passata-pomodoro-bio.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/pizzeria-modus.png",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "products_grid_yp98c9",
+    "image_with_text_Nh4pWr",
+    "banner_MNxpfC",
+    "produttore_conserve",
+    "banner_JThMkV",
+    "practical",
+    "popular_products_3gNtni",
+    "faqs",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

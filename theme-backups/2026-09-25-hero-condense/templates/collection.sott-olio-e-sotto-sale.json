@@ -1,0 +1,784 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Da Palinuro, Pisciotta e Salento",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "TONNO, ALICI E OLIVE DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Pisciotta Vittorio Rambaldo esce ancora a pescare alici con la menaica, come gli ha insegnato suo padre Vincenzo, e Donatella Marino le mette sotto sale. A Palinuro Luca Cella, figlio di una famiglia di pescatori, conserva il tonno sott'olio con le ricette delle donne di casa. A Salento le olive Salella si raccolgono a fine settembre e si ammaccano una a una.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_tonno",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/images_23_0c8f2399-8454-460c-a464-3c9c72064a99.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/675418de-e55c-11eb-b02e-abf05f14a13d_6bf19247-df95-4946-aa1c-9211d4087b58.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Come lavorano",
+        "heading_tag": "h2",
+        "heading": "FATTO A MANO",
+        "text": "<p>Il tonno di Aura viene invasettato a mano in olio EVO cilentano. Le alici di Menaica si lavorano dal fresco e maturano almeno tre mesi sotto sale. Le olive Salella si ammaccano una a una, si snocciolano e si conservano in olio EVO biologico di Salella.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_tonno": {
+      "type": "products-grid",
+      "name": "Tonno di Palinuro",
+      "settings": {
+        "collection": "sott-olio-e-sotto-sale",
+        "product_list": [
+          "tonno-di-palinuro-rosso",
+          "tonno-di-palinuro-ala-lunga"
+        ],
+        "anchor_id": "products_grid_tonno",
+        "subheading": "Dal laboratorio di Palinuro",
+        "heading": "IL TONNO DI PALINURO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Luca Cella distingue ogni tonno per nome, perché ognuno ha una carne diversa. Il tonno rosso ha carne compatta e sapore deciso. L'alalunga ha carni più chiare e un gusto più delicato. Entrambi in olio EVO cilentano.</p>",
+        "alignment": "left",
+        "columns_per_row": 2,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "products_grid_alici": {
+      "type": "products-grid",
+      "name": "Alici di Menaica",
+      "settings": {
+        "collection": "sott-olio-e-sotto-sale",
+        "product_list": [
+          "alici-di-menaica",
+          "alici-di-menaica-sotto-sale",
+          "colatura-di-alici-di-menaica"
+        ],
+        "anchor_id": "",
+        "subheading": "Le conserve di Donatella Marino",
+        "heading": "LE ALICI DI MENAICA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Le alici di Menaica sono Presidio Slow Food. Donatella le lavora dal fresco e le lascia maturare almeno tre mesi nel sale: poi diventano alici sott'olio, alici sotto sale e colatura, il liquido ambrato che affiora durante la maturazione.</p>",
+        "alignment": "left",
+        "columns_per_row": 3,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_product_8wRMCx": {
+      "type": "featured-product",
+      "blocks": {
+        "tags_w7NVen": {
+          "type": "tags",
+          "settings": {}
+        },
+        "title_DqDEcL": {
+          "type": "title",
+          "settings": {}
+        },
+        "price_3CqaW4": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_9yfAte": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons_gpmKC7": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": true,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "tags_w7NVen",
+        "title_DqDEcL",
+        "price_3CqaW4",
+        "variant_picker_9yfAte",
+        "buy_buttons_gpmKC7"
+      ],
+      "name": "t:sections.featured-product.name",
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "olive-ammaccate",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "s",
+        "margin_bottom": "m"
+      }
+    },
+    "products_grid_olive": {
+      "type": "products-grid",
+      "disabled": true,
+      "name": "Olive ammaccate",
+      "settings": {
+        "collection": "sott-olio-e-sotto-sale",
+        "product_list": [
+          "olive-ammaccate"
+        ],
+        "anchor_id": "",
+        "subheading": "Salella, Salento",
+        "heading": "OLIVE AMMACCATE",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Cultivar Salella biologica, raccolta nell'ultima decade di settembre. Ammaccate una a una, snocciolate e conservate in olio EVO biologico di Salella, con alloro, origano e finocchietto selvatico. Presidio Slow Food.</p>",
+        "alignment": "left",
+        "columns_per_row": 1,
+        "products_per_page": 2,
+        "sort": "alphabetical",
+        "show_two_cards": false,
+        "mobile_slider": false,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "landscape",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_sottolio_top": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "simple_slider_produttori": {
+      "type": "simple-slider",
+      "blocks": {
+        "item_aura": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images_1.png",
+            "subheading": "Tra il mare e la terra",
+            "heading": "AURA",
+            "description": "<p>Luca Cella è cresciuto tra il mare della famiglia di sua madre, pescatori da generazioni, e la terra di suo padre Mario. Dopo anni nella ristorazione e all'estero, nel 2015 ha aperto a Palinuro il suo laboratorio, accanto al punto vendita. Usa solo olio extravergine cilentano e le ricette del tonno sott'olio che le donne del posto fanno in casa da sempre.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "item_marino": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Alici-di-Menaica-in-olio-extravergine-di-Oliva-Presidio-Slow-Food-2.jpg",
+            "subheading": "La pesca con la menaica",
+            "heading": "MARINO",
+            "description": "<p>Donatella Marino e Vittorio Rambaldo, moglie e marito, avevano un ristorante a Pisciotta. Negli anni '90 Vittorio torna a pescare con la menaica, la tecnica imparata da bambino dal padre Vincenzo, e Donatella comincia a trasformare le alici in conserve. Oggi il laboratorio è a San Marco di Castellabate e in azienda lavorano anche i figli Serena e Marco.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "item_salella": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/logo-salella.png",
+            "subheading": "Gli olivi di Osvaldo De Iorio",
+            "heading": "SALELLA",
+            "description": "<p>Azienda agricola biologica di Osvaldo De Iorio nel comune di Salento, nel Parco Nazionale del Cilento, attiva dalla prima metà dell'Ottocento. Su circa 12 ettari coltiva oltre 3.000 olivi, soprattutto della cultivar Salella, e segue tutta la lavorazione, dalla raccolta all'invasettamento, senza conservanti. È tra i produttori del Presidio Slow Food dell'oliva salella ammaccata del Cilento.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "item_aura",
+        "item_marino",
+        "item_salella"
+      ],
+      "name": "I produttori",
+      "settings": {
+        "color_variant": "orange",
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "section_header_type": "type2",
+        "heading": "I NOSTRI PRODUTTORI",
+        "heading_tag": "h2",
+        "subheading": "Chi fa le nostre conserve",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "auto_per_row": true,
+        "per_row": 1,
+        "mobile_slider": true,
+        "is_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "square",
+        "image_width_desktop": 55,
+        "image_width_mobile": 50,
+        "margin_top": "s",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_sottolio_bottom": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_bottom.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/menaica-alici-sotto-sale-marino.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Antipasto e aperitivo",
+            "heading": "SUL PANE, CON L’OLIO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il tonno si sfalda sul pane con un filo d'olio e un po' di cipolla. Le alici sott'olio vanno su bruschette e crostini. Le olive ammaccate si portano in tavola direttamente dal vasetto, con formaggi e salumi.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/COLATURA_DI_ALICI_Art.601.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "In cucina",
+            "heading": "PASTA, CONDIMENTI, BASI DI SUGO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Le alici sotto sale si risciacquano e si sciolgono nell'olio caldo: sono la base della pasta aglio, olio e alici. La colatura si aggiunge a fine cottura al posto del sale, su spaghetti, paccheri e linguine. Il tonno va in insalata, nella pasta fredda o su una pizza bianca.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/menaica-pescatore-rete-marino.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Presidi Slow Food",
+            "heading": "ALICI DI MENAICA E OLIVA SALELLA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Le alici di Menaica sono state il primo Presidio Slow Food della Campania. Anche l'oliva Salella ammaccata è Presidio Slow Food. La pesca con la menaica è faticosa e oggi la praticano pochissimi pescatori a Pisciotta.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Pronti all'uso",
+        "heading": "DAL VASETTO ALLA TAVOLA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "l",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_product_sottolio": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "Selezionato da Modus",
+        "heading": "IL TONNO DELLA SELEZIONE",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "<p>Il tonno alalunga è il più delicato della selezione. Carni chiare, gusto pulito.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "tonno-di-palinuro-ala-lunga",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra alici sott’olio e sotto sale",
+            "heading_tag": "h2",
+            "description": "<p>Le alici sott'olio sono pronte da mangiare e hanno un sapore più delicato. Quelle sotto sale vanno sciacquate sotto acqua fredda prima dell'uso, hanno un sapore più intenso e si conservano più a lungo. Arrivano dalla stessa pesca con la menaica.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si usa la colatura di alici",
+            "heading_tag": "h2",
+            "description": "<p>Poche gocce a crudo su spaghetti al dente con olio EVO e prezzemolo, su verdure grigliate o su crostini. Si aggiunge a fine preparazione, al posto del sale: ne basta un cucchiaino a porzione.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos’è la rete menaica",
+            "heading_tag": "h2",
+            "description": "<p>È una rete a maglie larghe, una tecnica di pesca antichissima arrivata nel Mediterraneo con i Greci. Trattiene solo le alici adulte e lascia passare le più piccole, così la specie si rinnova. È un lavoro faticoso, e a Pisciotta lo fanno ancora pochissimi pescatori.</p>"
+          }
+        },
+        "faq-7": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si fanno le olive ammaccate",
+            "heading_tag": "h2",
+            "description": "<p>Si scelgono sulla pianta le olive più polpose, prima che inizino a maturare. Si ammaccano una a una con una pietra di mare o un martelletto di legno, si snocciolano e restano qualche giorno in acqua, cambiata mattina e sera. Poi passano in salamoia con acqua, sale, alloro e finocchietto selvatico, si pressano per far uscire l'acqua e si mettono sott'olio. Le olive raccolte si lavorano in giornata, da fine settembre a novembre.</p><p>Il Presidio Slow Food chiede di conservarle nell'olio extravergine della stessa varietà: Salella usa il proprio olio di Salella. Nel Cilento questa varietà si chiama anche lioi, licinella, monticedda o salentina.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra tonno rosso e alalunga",
+            "heading_tag": "h2",
+            "description": "<p>Il tonno rosso (Thunnus thynnus) ha carne più scura, compatta e dal sapore deciso. L’alalunga (Thunnus alalunga) ha carni più chiare e un gusto più delicato. Aura li conserva entrambi in olio EVO cilentano.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conservano dopo l’apertura",
+            "heading_tag": "h2",
+            "description": "<p>Tonno, alici sott'olio e olive: in frigorifero, sempre coperti d'olio, e da consumare in poche settimane. Alici sotto sale: in frigorifero, ben coperte di sale. Controlla sempre le indicazioni in etichetta.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Abbinamento vino",
+            "heading_tag": "h2",
+            "description": "<p>Con tonno e alici sott’olio, un bianco campano fresco e sapido, come un Fiano. Con la pasta alla colatura, un bianco leggero.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-7",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/images_22_0855df06-13ae-457a-ad0a-d2c4e3755a31.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pasta-fusilli-cilento",
+          "olio-evo-madonna",
+          "pasta-paccheri",
+          "pane-biscottato"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "IL MARE E LA TERRA, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Pasta, olio, pane",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": false,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/pizzeria-modus.png",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "image_with_text_Nh4pWr",
+    "products_grid_tonno",
+    "products_grid_alici",
+    "featured_product_8wRMCx",
+    "products_grid_olive",
+    "banner_sottolio_top",
+    "simple_slider_produttori",
+    "banner_sottolio_bottom",
+    "practical",
+    "featured_product_sottolio",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

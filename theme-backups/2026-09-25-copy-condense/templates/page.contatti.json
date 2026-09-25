@@ -1,0 +1,313 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Parla con noi",
+        "subheading_tag": "p",
+        "subheading_color": "",
+        "heading": "OGNI MODO\nPER TROVARCI",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Milano ci trovi in due pizzerie e tre gastronomie, e ovunque tu sia nel negozio online. Scrivici, chiamaci o passa a trovarci.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-paolo-de-simone.jpg",
+        "hide_image_mobile": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "trova-header": {
+      "type": "rich-text-cta",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "subheading": "Dove siamo",
+        "heading": "I LOCALI MODUS A MILANO",
+        "text": "<p>Da via Maffei a corso Magenta, da via Cesare Battisti e corso Italia fino a Portanuova. Qui trovi indirizzi, orari e numeri diretti di ogni locale: scegli quello più vicino e vieni a sederti alla nostra tavola.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "s"
+      }
+    },
+    "store_map_dKp4Lm": {
+      "type": "store-map",
+      "blocks": {
+        "pin1": {
+          "type": "pin",
+          "settings": {
+            "subheading": "Pizzeria",
+            "name": "Via Andrea Maffei, 12",
+            "address": "20135 Milano",
+            "phone": "+39 02 8286 0060",
+            "hours": "Tutti i giorni, dalle 12.30 alle 14.30 e dalle 19.00 alle 23.30",
+            "latitude": "45.4523",
+            "longitude": "9.2042",
+            "button_label": "Prenota",
+            "button_link": "https://www.quandoo.co.uk/checkout-widget/widget?aid=2&merchantId=99943"
+          }
+        },
+        "pin2": {
+          "type": "pin",
+          "settings": {
+            "subheading": "Pizzeria",
+            "name": "Corso Magenta, 25",
+            "address": "20123 Milano",
+            "phone": "+39 02 828 60326",
+            "hours": "Tutti i giorni, dalle 12.30 alle 14.30 e dalle 19.00 alle 23.30",
+            "latitude": "45.4655",
+            "longitude": "9.1750",
+            "button_label": "Prenota",
+            "button_link": "https://reservations-guest.teamsystem.cloud/moduscorsomagenta"
+          }
+        },
+        "pin3": {
+          "type": "pin",
+          "settings": {
+            "subheading": "Gastronomia",
+            "name": "Via Cesare Battisti, 23",
+            "address": "20122 Milano",
+            "phone": "+39 02 8286 0060",
+            "hours": "Da lunedì a venerdì, dalle 8.00 alle 18.00. Sabato dalle 8.00 alle 15.00. Domenica chiuso",
+            "latitude": "45.4632",
+            "longitude": "9.1942",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "pin4": {
+          "type": "pin",
+          "settings": {
+            "subheading": "Gastronomia",
+            "name": "Corso Italia, 42",
+            "address": "20122 Milano",
+            "phone": "+39 02 8286 0257",
+            "hours": "Da lunedì a sabato, dalle 7.30 alle 20.00. Domenica chiuso",
+            "latitude": "45.4580",
+            "longitude": "9.1880",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "pin5": {
+          "type": "pin",
+          "settings": {
+            "subheading": "Gastronomia",
+            "name": "Via Giovanni Battista Pirelli, 35",
+            "address": "20124 Milano",
+            "phone": "+39 02 8286 1526",
+            "hours": "Tutti i giorni, dalle 7.30 alle 20.00",
+            "latitude": "45.4850",
+            "longitude": "9.2050",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "pin1",
+        "pin2",
+        "pin3",
+        "pin4",
+        "pin5"
+      ],
+      "name": "Store map",
+      "settings": {
+        "color_scheme": "background-1",
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "map_height": 460,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_cta_ymTeNj": {
+      "type": "rich-text-cta",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "full_width": true,
+        "subheading": "Scrivici direttamente",
+        "heading": "IL CANALE GIUSTO",
+        "text": "<p>Stampa, eventi privati, lavoro o collaborazioni: per ogni richiesta c'è un indirizzo dedicato e una persona che la segue. Li trovi qui sotto.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "xs"
+      }
+    },
+    "canali": {
+      "type": "multicolumn",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "subheading": "STAMPA & PR",
+            "heading": "info@modusmilano.it",
+            "heading_size": "h4",
+            "text": "<p>Cartelle stampa, immagini, interviste.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "c2": {
+          "type": "column",
+          "settings": {
+            "subheading": "EVENTI PRIVATI",
+            "heading": "eventi@modusmilano.it",
+            "heading_size": "h4",
+            "text": "<p>Cene, privatizzazioni, masterclass.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "c3": {
+          "type": "column",
+          "settings": {
+            "subheading": "LAVORA CON NOI",
+            "heading": "talenti@modusmilano.it",
+            "heading_size": "h4",
+            "text": "<p>Forno, sala, gastronomia, catering.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "c4": {
+          "type": "column",
+          "settings": {
+            "subheading": "COLLABORAZIONI",
+            "heading": "info@modusmilano.it",
+            "heading_size": "h4",
+            "text": "<p>Produttori, retailer, progetti culturali.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "multicolumn_to_show": 4,
+        "buton_show": "left",
+        "img_size": "small",
+        "swipe_on_mobile": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Hai una domanda?",
+        "heading_tag": "h2",
+        "description": "<p>Per quello che non rientra nei canali sopra, scrivici qui: rispondiamo entro 24 ore.</p>",
+        "enable_border_top": false,
+        "form_heading": "",
+        "form_heading_tag": "h3",
+        "form_desc": "",
+        "additional_text": "<p>Modus tratterà i dati solo per rispondere alla richiesta. Ho letto e accetto la <a href=\"/policies/privacy-policy\">privacy policy</a>.</p>",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "cta-banner": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_color": "#faf1e4",
+        "heading_tag": "h2",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/gastronomia.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "hp-hero",
+    "trova-header",
+    "store_map_dKp4Lm",
+    "rich_text_cta_ymTeNj",
+    "canali",
+    "contact-form",
+    "cta-banner"
+  ]
+}

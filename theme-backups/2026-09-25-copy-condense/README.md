@@ -1,0 +1,1 @@
+Exact copies of 21 draft-theme templates before the sitewide copy condense on 2026-09-25: 151 text fields cut or rephrased, plus the index heading 'AUTENTICA' fix. ToV rules applied: no comparisons, no 'senza' unless the producer's own wording, no practical info in story sections. Restore by uploading over the draft.

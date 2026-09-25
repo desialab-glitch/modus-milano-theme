@@ -1,0 +1,1 @@
+descriptionHtml of 14 products before the ToV rules added on 2026-09-25: no comparisons between products, no negative 'senza…' claims, and no practical info such as storage, cooking times or prep in descriptions. Conserve rewritten from Maida's own site and CiboToday.

@@ -1,0 +1,1 @@
+Exact copy of the draft theme's templates/collection.olio.json immediately before adding Il Magnifico 2025 to the Fattoria Ambrosio products-grid description (2026-09-25). Restore by uploading it over the draft.

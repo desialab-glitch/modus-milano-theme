@@ -1,0 +1,484 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": "",
+            "heading_tag": "h3"
+          }
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_variant_name": false,
+            "show_size_guide": false,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "",
+            "heading": "",
+            "heading_tag": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "text_bottom": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant-picker",
+        "buy-buttons",
+        "inventory"
+      ],
+      "settings": {
+        "image_gallery_collage": "grid",
+        "desktop_alignment": "left",
+        "mobile_alignment": "left",
+        "image_fit": "cover",
+        "enable_autoheight": false,
+        "content_centered": false,
+        "variant_media_display": "show_all",
+        "padding_top": "m",
+        "padding_bottom": "l"
+      }
+    },
+    "pdp-dropdowns": {
+      "type": "collapsible-content",
+      "blocks": {
+        "drop-ingredients": {
+          "type": "text-block",
+          "settings": {
+            "heading": "CARATTERISTICHE",
+            "heading_tag": "h2",
+            "description": "<p>Produttore: Theodora, Centola (SA)<br/>Ingrediente principale: erba luisa (Lippia citriodora), pianta degli orti del Cilento<br/>Lavorazione: imbottigliato a Centola<br/>Profilo: sentore agrumato con note erbacee<br/>Gradazione: vedi etichetta<br/>Formato: vedi variante</p>"
+          }
+        },
+        "drop-nutrition": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Informazioni nutrizionali",
+            "heading_tag": "h2",
+            "description": "<p>Liquore. Contiene alcol. Vedi etichetta per gradazione e valori nutrizionali.<br/>Consumare con moderazione. Vietato ai minori di 18 anni.</p>"
+          }
+        },
+        "drop-shipping": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Spedizioni e resi",
+            "heading_tag": "h2",
+            "description": "<p>Spedizione in 48 ore lavorative in tutta Italia. Gratuita sopra €57. Resi entro 14 giorni per prodotti integri e non aperti.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "drop-ingredients",
+        "drop-nutrition",
+        "drop-shipping"
+      ],
+      "settings": {
+        "faqs_heading": "",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "pdp-cards-carousel": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_3fK7gt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#F9F9F9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_3fK7gt"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "pdp-banner-grid": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_0": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "La pianta",
+            "heading": "ERBA LUISA NEGLI ORTI DEL CILENTO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Ogni orto del Cilento aveva la sua pianta di erba luisa (Lippia citriodora), raccolta per il digestivo di fine pasto.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_1": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "Il profilo",
+            "heading": "AGRUMATO ED ERBACEO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>L’erba luisa ha un sentore agrumato con note erbacee. Il liquore si serve freddo, a fine pasto.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_2": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "L’azienda",
+            "heading": "THEODORA, CENTOLA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Theodora imbottiglia l’erba luisa a Centola, nel Cilento meridionale. Le altre materie prime dei suoi liquori sono limoni e fichi Dottato.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "banner_0",
+        "banner_1",
+        "banner_2"
+      ],
+      "settings": {
+        "columns": 3,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Il produttore",
+        "heading": "LA FILIERA IN DETTAGLIO",
+        "heading_tag": "h2",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "xs",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "image_with_text_2_NPTGKA": {
+      "type": "image-with-text-2",
+      "blocks": {
+        "stat_0": {
+          "type": "column",
+          "settings": {
+            "heading": "Centola, Cilento",
+            "heading_tag": "h5"
+          }
+        },
+        "stat_1": {
+          "type": "column",
+          "settings": {
+            "heading": "Lippia citriodora",
+            "heading_tag": "h5"
+          }
+        },
+        "stat_2": {
+          "type": "column",
+          "settings": {
+            "heading": "liquore artigianale",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "stat_0",
+        "stat_1",
+        "stat_2"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type1",
+        "image_position": "image_left",
+        "color_scheme": "",
+        "image_ratio": "landscape",
+        "subheading_secondary": "Il produttore",
+        "heading": "",
+        "heading_tag": "h2",
+        "text": "<p>Theodora produce liquori artigianali a Centola, nel Cilento meridionale. Le materie prime sono locali: limoni, fichi Dottato ed erba luisa.</p>",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s",
+        "image_first": "shopify://shop_images/pexels-photo-30816582.jpg",
+        "producer_logo": "shopify://shop_images/ChatGPT_Image_Jun_30_2026_11_14_54_AM.png",
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 20
+      }
+    },
+    "pdp-completa": {
+      "type": "product-recommendations",
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type2",
+        "subheading": "Fine pasto",
+        "heading": "DA ABBINARE",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-ricetta": {
+      "type": "image-with-text",
+      "blocks": {
+        "recipe-img": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "recipe-img"
+      ],
+      "settings": {
+        "blocks_type": "text",
+        "image_position": "left",
+        "color_scheme": "background-2",
+        "image_ratio": "square",
+        "subheading_secondary": "Come servirlo",
+        "heading": "Freddo, a fine pasto.",
+        "heading_tag": "h2",
+        "text": "<p>Tieni il liquore in freezer o in frigorifero e versalo freddo in un bicchierino piccolo dopo il pasto. Si può anche allungare con acqua frizzante fredda e una fettina di limone, oppure usarlo a gocce su un sorbetto al limone.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "m",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "pdp-related": {
+      "type": "product-recommendations",
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type1",
+        "subheading": "",
+        "heading": "POTREBBE PIACERTI.",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "VEDI TUTTI I PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "pfaq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come avviene la spedizione?",
+            "heading_tag": "h2",
+            "description": "<p>Spediamo in tutta Italia con corriere espresso in 48 ore lavorative dalla conferma dell’ordine. La spedizione è gratuita per ordini superiori a €57; al di sotto si applica un contributo calcolato al checkout.</p>"
+          }
+        },
+        "pfaq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Qual è la differenza tra erba luisa e limoncello?",
+            "heading_tag": "h2",
+            "description": "<p>Il limoncello è a base di limoni. Il liquore all’erba luisa è a base della pianta Lippia citriodora, con un profilo agrumato ed erbaceo.</p>"
+          }
+        },
+        "pfaq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conserva?",
+            "heading_tag": "h2",
+            "description": "<p>Al riparo dalla luce diretta, a temperatura ambiente oppure in frigorifero o freezer. Vedi le indicazioni in etichetta.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pfaq-2",
+        "pfaq-4",
+        "pfaq-1"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-dropdowns",
+    "pdp-cards-carousel",
+    "pdp-banner-grid",
+    "image_with_text_2_NPTGKA",
+    "pdp-completa",
+    "pdp-ricetta",
+    "pdp-related",
+    "pdp-faqs"
+  ]
+}

@@ -1,0 +1,515 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Le nostre gastronomie",
+        "subheading_tag": "p",
+        "subheading_color": "",
+        "heading": "IL CILENTO A TAVOLA,\nNEL CUORE DI MILANO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Ogni giorno il Cilento arriva al nostro banco: verdure dell'orto, legumi, grani antichi ed erbe spontanee del Parco, in ricette che cambiano con le stagioni.</p>",
+        "button_label": "VISITACI IN GASTRONOMIA",
+        "button_link": "#i-nostri-locali",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "SCOPRI IL MENU SETTIMANALE",
+        "button_link_2": "shopify://collections",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": true,
+        "image": "shopify://shop_images/gastronomia.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "slider_with_info_Uh69zG": {
+      "type": "slider-with-info",
+      "blocks": {
+        "image_block_Xjf46r": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/gastronomia-piatto.jpg"
+          }
+        },
+        "image_block_CRF8Cf": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/modus-milano-cucina-italiana-unesco.jpg"
+          }
+        },
+        "image_block_RH69MT": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/images_34.jpg"
+          }
+        },
+        "heading_block_DTNqVt": {
+          "type": "heading_block",
+          "settings": {
+            "heading": "RICETTE CHE SEGUONO LE STAGIONI",
+            "heading_tag": "h2",
+            "description": "<p>Ogni ricetta segue la stagione e il territorio, compreso il pesce del giorno. Al banco potresti trovare una parmigiana appena sfornata con l'ortaggio cilentano, il pomodoro di Maida e il fior di latte.</p>",
+            "subheading": "La nostra filosofia",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_Xjf46r",
+        "image_block_CRF8Cf",
+        "image_block_RH69MT",
+        "heading_block_DTNqVt"
+      ],
+      "name": "t:sections.slider-with-info.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "is_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "landscape",
+        "margin_top": "no-indent",
+        "margin_bottom": "s",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "video_terra_dispensa": {
+      "type": "video-with-text",
+      "settings": {
+        "video_position": "video_right",
+        "color_scheme": "background-1",
+        "video_url": "",
+        "video": "shopify://files/videos/2_22 aprile.mp4",
+        "video_ratio": "portrait",
+        "video_loop": true,
+        "show_video_controls": true,
+        "video_autoplay": true,
+        "subheading": "Con Paolo",
+        "heading": "LA TERRA È LA NOSTRA DISPENSA",
+        "heading_tag": "h2",
+        "text": "<p>Celebriamo la Giornata della Terra ogni giorno: nell'orto si pianta a rotazione, così quando finisce una coltura l'altra è già pronta. Il rispetto della natura è il primo ingrediente di ogni preparazione.</p>",
+        "button_label": "",
+        "button_style": "primary",
+        "button_link": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "grid_banner_YVRnyK": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_E6L4JA": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/modus14.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "MODUS CESARE BATTISTI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Via Cesare Battisti, 23 · 20122 Milano</p>",
+            "text_2": "<p>Da lunedì a venerdì, dalle 8.00 alle 18.00. Sabato dalle 8.00 alle 15.00. Domenica chiuso</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "https://www.google.com/maps/search/?api=1&query=Via%20Cesare%20Battisti%2C%2023%2C%2020122%20Milano",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_RdHeec": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/modus-gastronomia-12.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "MODUS CORSO ITALIA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Corso Italia, 42 · 20122 Milano</p>",
+            "text_2": "<p>Da lunedì a sabato, dalle 7.30 alle 20.00. Domenica chiuso</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "https://www.google.com/maps/search/?api=1&query=Corso%20Italia%2C%2042%2C%2020122%20Milano",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_4zqhJG": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "MODUS PIRELLI 35",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Via G.B. Pirelli 35, 20124 Milano</p>",
+            "text_2": "<p>Tutti i giorni, dalle 7.30 alle 20.00</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "https://www.google.com/maps/search/?api=1&query=Via%20Giovanni%20Battista%20Pirelli%2C%2035%2C%2020124%20Milano",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_E6L4JA",
+        "column_RdHeec",
+        "column_4zqhJG"
+      ],
+      "name": "t:sections.cards-grid.name",
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Dove siamo",
+        "heading": "LE NOSTRE GASTRONOMIE",
+        "heading_tag": "h2",
+        "description": "<p>Ci trovi in via Cesare Battisti, in corso Italia e in via Pirelli: al banco le ricette di stagione di Paolo, per un pranzo veloce, una cena leggera o da portare a casa.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "slideshow_KVxyNj": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow_item_79bXzL": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": false,
+            "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-gastronomia_b5cb67ac-204f-4202-8db6-8a5f713e3910.jpg",
+            "color_scheme": "background-dark",
+            "subheading": "Questa settimana",
+            "heading": "PRODOTTI FRESCHI",
+            "heading_tag": "h1",
+            "text": "<p><em>Ordina online · ritiro in gastronomia · ogni settimana. </em></p><p><strong>12 pasti freschi </strong>ogni settimana.</p><p>Ordini aperti fino a venerdì 18:00</p>",
+            "button_label": "MENU SETTIMANALE",
+            "button_link": "shopify://collections",
+            "button_style": "primary",
+            "button_arrow": true,
+            "overlay_opacity": 60,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_item_79bXzL"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": false,
+        "show_pagination": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "prodotti-freschi": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "background-2",
+        "image_first": "shopify://shop_images/gastronomia-piatto.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Questa settimana",
+        "heading_tag": "h2",
+        "heading": "PRODOTTI FRESCHI",
+        "text": "<p><em>Ordina online · ritiro in gastronomia · ogni settimana. </em></p><p><strong>12 pasti freschi </strong>ogni settimana.</p><p>Ordini aperti fino a venerdì 18:00</p>",
+        "cta_1_label": "MENU SETTIMANALE",
+        "cta_1_link": "/pages/menu",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_text_grid_pIzPmM": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pasta-fusilli-cilento",
+          "cacioricotta-di-capra",
+          "ceci-di-cicerale",
+          "olio-evo-madonna"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type1",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "PORTA LA CUCINA DI MODUS A CASA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Prodotti dal Cilento",
+        "description": "<p>I fusilli di Terra Dura, il cacioricotta di capra di Tenuta Principe Mazzacane, i ceci di Cicerale, l'olio EVO di Madonna dell'Olivo: ordinali online, arrivano in 48 ore in tutta Italia.</p>",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_collection_name": true,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "blog-preview": {
+      "type": "rich-text-cta",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "background-3",
+        "full_width": true,
+        "subheading": "Modus Gastronomie",
+        "heading": "IL MENÙ COMPLETO È QUI",
+        "text": "<p>Cambiano le stagioni, cambia quello che troviamo in cucina. Guarda cosa c’è questa settimana.</p>",
+        "button_label": "VEDI IL MENÙ",
+        "button_link": "/blogs/journal",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_blogs_EaD4Xr": {
+      "type": "featured-blogs",
+      "blocks": {
+        "article_block_kN6bzh": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/gastronomia-cilento-milano-modus"
+          }
+        },
+        "article_block_DhGEez": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/gastronomie-modus-milano-location"
+          }
+        },
+        "article_block_6F3AUV": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/pranzo-domenica-cilento-modus"
+          }
+        },
+        "article_block_H6yPAR": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/prodotti-cilentani-gastronomia-modus"
+          }
+        }
+      },
+      "block_order": [
+        "article_block_kN6bzh",
+        "article_block_DhGEez",
+        "article_block_6F3AUV",
+        "article_block_H6yPAR"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-blogs.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "blog": "journal",
+        "dynamic_articles_count": 4,
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "enable_border_top": true,
+        "subheading": "Modus Gastronomie",
+        "heading": "LETTURE SULLA CUCINA MODUS",
+        "heading_tag": "h2",
+        "description": "<p>Punto di riferimento per la panificazione e la filiera cilentana, che arriva ogni giorno nelle gastronomie, nelle pizzerie e nello shop online.</p>",
+        "button_label": "Leggi tutti gli articoli",
+        "button_link": "/blogs/journal",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "default",
+        "slider_per_row": 4,
+        "mobile_columns_2": true,
+        "is_autoplay": false,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "card_type": "default",
+        "hover_effect": "zoom",
+        "show_image": true,
+        "show_tags": false,
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": true,
+        "show_btn": true,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "margin_top": "m",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "cta-banner": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "#faf1e4",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/gastronomia.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "heading_tag": "h1"
+      }
+    }
+  },
+  "order": [
+    "hp-hero",
+    "slider_with_info_Uh69zG",
+    "video_terra_dispensa",
+    "grid_banner_YVRnyK",
+    "slideshow_KVxyNj",
+    "prodotti-freschi",
+    "image_text_grid_pIzPmM",
+    "blog-preview",
+    "featured_blogs_EaD4Xr",
+    "cta-banner",
+    "main"
+  ]
+}

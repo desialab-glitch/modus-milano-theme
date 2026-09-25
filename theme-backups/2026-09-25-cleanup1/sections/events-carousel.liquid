@@ -1,0 +1,635 @@
+{{ 'section-collection-grid.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collection-grid.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+	#shopify-section-{{ section.id }} .collection-grid .have-overlay {
+		--overlay-alpha : {{ section.settings.overlay_opacity }}%;
+	}
+	{% render 'section-margin' %}
+	{% render 'section-padding' %}
+
+	/* This section's title-item gap is intentionally reset to 0 (guards
+	   against the base theme's own flex-gap doubling with the heading's
+	   own margin-bottom, if any). The accompanying "margin-bottom: .8rem"
+	   that used to sit here (attempting a tighter heading->description gap
+	   than the sitewide default) never actually took effect: modus-design-
+	   system.css's ".section-header__title-item .section-header__title {
+	   margin: 0 0 var(--modus-space-xs) !important }" always wins over a
+	   non-!important declaration regardless of specificity or wrapper, so
+	   this section's heading->description gap has always matched every
+	   other section's (var(--modus-space-xs), currently 1.2rem) -- removed
+	   the inert line (2026-09-07) rather than leave code that implies
+	   otherwise. */
+	#shopify-section-{{ section.id }} .section-header__title-item {
+		gap: 0;
+	}
+
+	#shopify-section-{{ section.id }} .section-header__heading,
+	#shopify-section-{{ section.id }} .section-header__subheading,
+	#shopify-section-{{ section.id }} .section-header__desc {
+		text-align: {{ section.settings.section_heading_align }};
+	}
+	/* Mobile: always left-align the section header (eyebrow/heading/description),
+	   regardless of the "Section heading alignment" setting above, which is a
+	   desktop-oriented center/left choice. Requested directly — mobile should
+	   never show this centered even when desktop is set to center. */
+	@media screen and (max-width: 749px) {
+		#shopify-section-{{ section.id }} .section-header__heading,
+		#shopify-section-{{ section.id }} .section-header__subheading,
+		#shopify-section-{{ section.id }} .section-header__desc {
+			text-align: left !important;
+		}
+		#shopify-section-{{ section.id }} .section-header__title-item {
+			align-items: flex-start !important;
+		}
+	}
+	#shopify-section-{{ section.id }} .section-header__heading {
+		font-family: 'Antonio', sans-serif;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 1;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+	#shopify-section-{{ section.id }} .section-header__subheading,
+	#shopify-section-{{ section.id }} .section-header__subheading.subtitle {
+		font-family: 'Lora', serif !important;
+		font-style: italic !important;
+		font-size: 14px !important;
+		line-height: 26px !important;
+		letter-spacing: 0 !important;
+		color: #4d4d4d !important;
+		text-transform: none !important;
+	}
+	#shopify-section-{{ section.id }} .section-header__desc {
+		font-family: 'Lora', serif;
+		font-style: normal;
+		font-size: 16px;
+		line-height: 25px;
+		letter-spacing: 0;
+		color: rgb(var(--color-foreground)) !important;
+	}
+
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__img-wrapper {
+		position: relative;
+		overflow: hidden;
+	}
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__img-btn {
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		display: flex;
+		justify-content: flex-start;
+		opacity: 0;
+		transform: translateY(8px);
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		z-index: 2;
+	}
+	#shopify-section-{{ section.id }} .collection-card-overlay-below:hover .collection-card__img-btn {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	/* Image -> title gap for this card variant: matches the sitewide
+	   image<->text stacked-layout token (var(--modus-space-s), currently
+	   1.6rem) instead of a separate hardcoded value. */
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__below-content {
+		padding-top: var(--modus-space-s);
+	}
+
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__img {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: var(--image-size);
+	}
+
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__img img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	#shopify-section-{{ section.id }} .collection-card-overlay-below .collection-card__img svg.placeholder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* Event date: now rendered above the event name/heading, styled to match
+	   the sitewide subheading/eyebrow treatment (Lora italic 15px, see the
+	   .subtitle / [class*="subheading"] rule in modus-design-system.css) so
+	   it reads as an eyebrow line above the title rather than a caption below
+	   the description. Replaces the previous uppercase/letter-spaced/faded
+	   treatment. */
+	#shopify-section-{{ section.id }} .event-card__date {
+		font-family: 'Lora', serif !important;
+		font-style: italic !important;
+		font-size: 15px !important;
+		line-height: 26px !important;
+		letter-spacing: 0 !important;
+		color: rgba(61, 61, 61, 0.6) !important;
+		text-transform: none !important;
+		margin-bottom: 0.4rem;
+	}
+	#shopify-section-{{ section.id }} .collection-card-overlay .event-card__date {
+		color: rgba(255, 255, 255, 0.75) !important;
+	}
+
+	/* Swiper's default behaviour stretches every slide in a row to match the
+	   height of the tallest one (align-items: stretch on .swiper-wrapper), so
+	   a card with a short description was left with a large empty gap below
+	   its text — nothing inside the card grows to fill that extra height.
+	   Overriding both the wrapper's cross-axis alignment and the slide height
+	   here lets each card size to its own content instead, so the visible
+	   whitespace below each card actually reflects its own text length. */
+	#shopify-section-{{ section.id }} .swiper-wrapper {
+		align-items: flex-start;
+	}
+	#shopify-section-{{ section.id }} .swiper-slide {
+		height: auto;
+	}
+
+	@media screen and (max-width: 749px) {
+		#shopify-section-{{ section.id }} .section-header_btn {
+			padding-left: var(--main-padding, 1.6rem);
+			padding-right: var(--main-padding, 1.6rem);
+			margin-top: 0.8rem;
+		}
+	}
+{%- endstyle -%}
+
+{% liquid
+	if section.settings.show_arrows
+		assign show_arrows = true
+	else
+		assign show_arrows = false
+	endif
+
+	case section.settings.blocks_spacing
+		when 'no-indent'
+			assign sectio_gap = '0'
+		when 'xs'
+			assign sectio_gap = '0.1rem'
+		when 's'
+			assign sectio_gap = '0.4rem'
+		when 'm'
+			assign sectio_gap = '1.6rem'
+		when 'l'
+			assign sectio_gap = '2.4rem'
+		else
+			assign sectio_gap = '1.6rem'
+	endcase
+%}
+
+<div
+	class="collection-grid color-{{ section.settings.color_scheme }} background section-{{ section.id }}-padding"
+	style="--gap: {{ sectio_gap }}"
+	data-id="shopify-section-{{ section.id }}"
+	data-autoplay="{{ section.settings.is_autoplay }}"
+	data-speed="{{ section.settings.slider_speed }}"
+	data-delay="{{ section.settings.slider_delay }}"
+	data-per_row="{{ section.settings.slider_per_row }}"
+	data-mobile-columns="{{ section.settings.mobile_columns_2 }}"
+>
+	{% render 'section-header', show_arrows: show_arrows %}
+	<div class="container">
+		<div class="swiper">
+			<div class="swiper-wrapper">
+				{%- for block in section.blocks -%}
+					{% assign image_index = forloop.index | modulo: 6 | plus: 1 %}
+					<div class="collection-grid__cards-slider swiper-slide" {{ block.shopify_attributes }}>
+						{%
+							render 'event-card',
+							media_size: section.settings.image_ratio,
+							event_name: block.settings.event_name,
+							event_date: block.settings.event_date,
+							event_description: block.settings.event_description,
+							event_image: block.settings.event_image,
+							show_event_desc: section.settings.show_event_desc,
+							card_type: section.settings.card_type,
+							show_event_button: section.settings.show_event_button,
+							btn_label: block.settings.button_label,
+							btn_link: block.settings.button_link,
+							enable_arrow: block.settings.button_arrow,
+							text_align: section.settings.text_horizontal,
+							heading_size: section.settings.heading_size,
+							desc_size: section.settings.desc_size,
+							hover_effect: section.settings.hover_effect,
+							text_animation: section.settings.text_animation,
+							image_index: image_index
+						%}
+					</div>
+				{%- endfor -%}
+			</div>
+			{% if show_arrows %}
+				<div class="swiper-pagination swiper-pagination-default"></div>
+			{% endif %}
+		</div>
+
+		{% if section.settings.section_header_type == 'type1'
+			and section.settings.button_label != blank
+		%}
+			<div class="section-header_btn">
+				{% render 'button', layout: section %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Events Carousel",
+	"class": "spaced-section collection-grid-section",
+	"tag": "section",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"default": "background-1",
+			"label": "t:sections.all.color_scheme.label"
+		},
+		{
+			"type": "select",
+			"id": "section_header_type",
+			"label": "t:sections.all.section_header.header.content",
+			"default": "type1",
+			"options": [
+				{ "value": "type1", "label": "t:sections.all.section_header.options.options__1.label" },
+				{ "value": "type2", "label": "t:sections.all.section_header.options.options__2.label" }
+			]
+		},
+		{
+			"type": "checkbox",
+			"id": "show_arrows",
+			"default": true,
+			"label": "t:sections.all.slider_options.navigation.label"
+		},
+		{
+			"type": "select",
+			"id": "section_heading_align",
+			"label": "Section heading alignment",
+			"default": "center",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" }
+			]
+		},
+		{
+			"type": "text",
+			"id": "subheading",
+			"default": "Eventi",
+			"label": "t:sections.all.subheading.label"
+		},
+		{
+			"type": "inline_richtext",
+			"id": "heading",
+			"default": "I nostri eventi",
+			"label": "t:sections.all.heading.label"
+		},
+		{
+			"type": "select",
+			"id": "heading_tag",
+			"label": "t:sections.all.heading.tag.label",
+			"info": "t:sections.all.heading.tag.info",
+			"options": [
+				{ "value": "h1", "label": "t:sections.all.heading.tag.options.h1.label" },
+				{ "value": "h2", "label": "t:sections.all.heading.tag.options.h2.label" },
+				{ "value": "h3", "label": "t:sections.all.heading.tag.options.h3.label" },
+				{ "value": "h4", "label": "t:sections.all.heading.tag.options.h4.label" },
+				{ "value": "h5", "label": "t:sections.all.heading.tag.options.h5.label" },
+				{ "value": "h6", "label": "t:sections.all.heading.tag.options.h6.label" },
+				{ "value": "div", "label": "t:sections.all.heading.tag.options.div.label" },
+				{ "value": "span", "label": "t:sections.all.heading.tag.options.span.label" },
+				{ "value": "p", "label": "t:sections.all.heading.tag.options.p.label" }
+			],
+			"default": "h2"
+		},
+		{
+			"type": "richtext",
+			"id": "description",
+			"default": "<p>Scopri i prossimi eventi e le serate speciali da Modus.</p>",
+			"label": "t:sections.all.description.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.all.button.header.content"
+		},
+		{
+			"type": "text",
+			"id": "button_label",
+			"default": "Scopri tutti gli eventi",
+			"label": "t:sections.all.button.label.label",
+			"info": "t:sections.all.button.label.info"
+		},
+		{
+			"type": "url",
+			"id": "button_link",
+			"label": "t:sections.all.button.link.label"
+		},
+		{
+			"type": "select",
+			"id": "button_style",
+			"options": [
+				{ "value": "primary", "label": "t:sections.all.button.style.options__1.label" },
+				{ "value": "secondary", "label": "t:sections.all.button.style.options__2.label" },
+				{ "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" }
+			],
+			"default": "primary",
+			"label": "t:sections.all.button.style.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "button_arrow",
+			"default": false,
+			"label": "t:sections.all.button.arrow.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.collection-grid.settings.slider_options.content"
+		},
+		{
+			"type": "checkbox",
+			"id": "is_autoplay",
+			"default": true,
+			"label": "t:sections.all.slider_options.slider_is_autoplay.label"
+		},
+		{
+			"type": "range",
+			"id": "slider_per_row",
+			"min": 1,
+			"max": 4,
+			"step": 1,
+			"default": 2,
+			"label": "t:sections.collection-grid.settings.slider_per_row.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "mobile_columns_2",
+			"default": false,
+			"label": "Mobile: show 2 events per row",
+			"info": "Shows 2 event cards side by side on mobile instead of 1, with pagination dots below to page through the rest."
+		},
+		{
+			"type": "range",
+			"id": "slider_speed",
+			"min": 0,
+			"max": 6,
+			"step": 0.1,
+			"default": 1.1,
+			"unit": "s",
+			"label": "t:sections.all.slider_options.speed.label"
+		},
+		{
+			"type": "range",
+			"id": "slider_delay",
+			"min": 0,
+			"max": 8,
+			"step": 0.1,
+			"default": 3,
+			"unit": "s",
+			"label": "t:sections.all.slider_options.delay.label"
+		},
+		{
+			"type": "select",
+			"id": "blocks_spacing",
+			"default": "m",
+			"label": "t:sections.collection-grid.settings.blocks_spacing.label",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.collection-grid.settings.blocks_spacing.options__1.label" },
+				{ "value": "xs", "label": "t:sections.collection-grid.settings.blocks_spacing.options__2.label" },
+				{ "value": "s", "label": "t:sections.collection-grid.settings.blocks_spacing.options__3.label" },
+				{ "value": "m", "label": "t:sections.collection-grid.settings.blocks_spacing.options__4.label" },
+				{ "value": "l", "label": "t:sections.collection-grid.settings.blocks_spacing.options__5.label" }
+			]
+		},
+		{
+			"type": "header",
+			"content": "Card"
+		},
+		{
+			"type": "select",
+			"id": "image_ratio",
+			"options": [
+				{ "value": "landscape", "label": "t:sections.all.image.ratio.options__1.label" },
+				{ "value": "portrait", "label": "t:sections.all.image.ratio.options__2.label" },
+				{ "value": "square", "label": "t:sections.all.image.ratio.options__3.label" }
+			],
+			"default": "square",
+			"label": "t:sections.all.image.ratio.label"
+		},
+		{
+			"type": "select",
+			"id": "card_type",
+			"default": "overlay",
+			"label": "t:sections.all.collection.card_type.label",
+			"options": [
+				{ "value": "standart", "label": "t:sections.all.collection.card_type.options.option_1" },
+				{ "value": "overlay", "label": "t:sections.all.collection.card_type.options.option_2" }
+			]
+		},
+		{
+			"type": "select",
+			"id": "hover_effect",
+			"label": "t:sections.all.hover_effect.label",
+			"default": "zoom",
+			"options": [
+				{ "value": "blur", "label": "t:sections.all.hover_effect.options.option_1" },
+				{ "value": "zoom", "label": "t:sections.all.hover_effect.options.option_2" },
+				{ "value": "shrink", "label": "t:sections.all.hover_effect.options.option_3" }
+			]
+		},
+		{
+			"type": "select",
+			"id": "text_horizontal",
+			"options": [
+				{ "value": "left", "label": "t:sections.all.text.text__alignment.horizontal.options__1.label" },
+				{ "value": "center", "label": "t:sections.all.text.text__alignment.horizontal.options__2.label" }
+			],
+			"default": "center",
+			"label": "t:sections.all.text.text__alignment.horizontal.label_full"
+		},
+		{
+			"type": "range",
+			"id": "overlay_opacity",
+			"min": 0,
+			"max": 100,
+			"default": 20,
+			"unit": "%",
+			"label": "t:sections.all.overlay_opacity.label"
+		},
+		{
+			"type": "select",
+			"id": "heading_size",
+			"options": [
+				{ "value": "h4", "label": "t:sections.all.heading.size.options__1.label" },
+				{ "value": "h3", "label": "t:sections.all.heading.size.options__2.label" },
+				{ "value": "h2", "label": "t:sections.all.heading.size.options__3.label" },
+				{ "value": "h1", "label": "t:sections.all.heading.size.options__4.label" }
+			],
+			"default": "h3",
+			"label": "t:sections.all.collection.heading_size"
+		},
+		{
+			"type": "select",
+			"id": "desc_size",
+			"options": [
+				{ "value": "small-font", "label": "t:sections.all.heading.size.options__1.label" },
+				{ "value": "medium-font", "label": "t:sections.all.heading.size.options__2.label" },
+				{ "value": "", "label": "t:sections.all.heading.size.options__3.label" },
+				{ "value": "large-font", "label": "t:sections.all.heading.size.options__4.label" }
+			],
+			"default": "medium-font",
+			"label": "t:sections.all.collection.description_size"
+		},
+		{
+			"type": "checkbox",
+			"id": "text_animation",
+			"default": true,
+			"label": "t:sections.all.animations.label"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_event_desc",
+			"default": true,
+			"label": "Show event description"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_event_button",
+			"default": true,
+			"label": "Show event button"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.all.section-margin.header.content"
+		},
+		{
+			"type": "select",
+			"id": "margin_top",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			],
+			"default": "no-indent",
+			"label": "t:sections.all.section-margin.margin_top.label"
+		},
+		{
+			"type": "select",
+			"id": "margin_bottom",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			],
+			"default": "no-indent",
+			"label": "t:sections.all.section-margin.margin_bottom.label"
+		},
+		{
+			"type": "header",
+			"content": "t:sections.all.section-padding.header.content"
+		},
+		{
+			"type": "select",
+			"id": "padding_top",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-padding.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-padding.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-padding.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-padding.options__5.label" }
+			],
+			"default": "s",
+			"label": "t:sections.all.section-padding.padding_top.label"
+		},
+		{
+			"type": "select",
+			"id": "padding_bottom",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-padding.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-padding.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-padding.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-padding.options__5.label" }
+			],
+			"default": "m",
+			"label": "t:sections.all.section-padding.padding_bottom.label"
+		}
+	],
+	"blocks": [
+		{
+			"type": "event",
+			"name": "Event",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "event_image",
+					"label": "Event image"
+				},
+				{
+					"type": "text",
+					"id": "event_name",
+					"label": "Event name",
+					"default": "Event name"
+				},
+				{
+					"type": "text",
+					"id": "event_date",
+					"label": "Event date (optional)",
+					"info": "e.g. 21 Settembre 2026"
+				},
+				{
+					"type": "richtext",
+					"id": "event_description",
+					"label": "Event description",
+					"default": "<p>Describe the event here.</p>"
+				},
+				{
+					"type": "header",
+					"content": "t:sections.all.button.header.content"
+				},
+				{
+					"type": "text",
+					"id": "button_label",
+					"label": "t:sections.all.button.label.label",
+					"info": "t:sections.all.button.label.info"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": "t:sections.all.button.link.label"
+				},
+				{
+					"type": "checkbox",
+					"id": "button_arrow",
+					"default": true,
+					"label": "t:sections.all.button.arrow.label"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Events Carousel",
+			"blocks": [
+				{ "type": "event" },
+				{ "type": "event" },
+				{ "type": "event" }
+			]
+		}
+	]
+}
+{% endschema %}

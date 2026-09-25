@@ -36,7 +36,7 @@
 5. Typography: eyebrow = Lora italic 15px, grey rgba(61,61,61,0.6) on light schemes; H2 Antonio gold (29px mobile); body paragraphs 16px / line-height 1.6 via the sitewide paragraph rule. No text below 13px on mobile (open exception: the product-card collection badge, 10px uppercase, pending a size decision). Any text that can wrap to two lines needs a line-height of at least 1.4 (small labels/badges included).
 6. CTAs: carry `button--cta` (automatic via snippets/button.liquid with `layout:`); on mobile they're full width, 48px tall, square. If the CTA doesn't fill the width, fix the shrink-wrapping wrapper in the shared rule, not per section.
 7. Empty elements (e.g. a CTA wrapper with no button) must not add space.
-8. Color scheme overrides (e.g. the orange scheme's beige text) still win — section rules must not use higher specificity than the scheme rules.
+8. Color scheme overrides still win. On the orange scheme (`scheme-orange-bg-01473e-cta`) ALL text is beige #faf1e4: headings, paragraphs, and eyebrows/subheadings/badges/product tags. The eyebrow override uses a weighted `:is(.color-scheme-orange-bg-01473e-cta, #modus-scheme-weight#modus-scheme-weight)` selector so it beats any section's own eyebrow color; don't add section eyebrow colors with two IDs or inline styles.
 9. After any theme push: no userErrors, and checksums on the draft match the local files.
 
 ## Known sitewide CSS fixes already applied (don't reintroduce these bugs)
@@ -44,7 +44,7 @@
 - Multicolumn side padding: removed via `.multicolumn .multicolumn-card__wrapper { padding-left: 0 !important; padding-right: 0 !important; }` (top/bottom untouched)
 - Inter-card divider lines (.border-item .multicolumn-card::before / .border-item::after): already fixed separately, don't confuse with the outer-border fix above
 - Mobile CTAs (≤749px), sitewide via `.button--cta` in modus-design-system.css: full width, 48px min-height, no radius, centered (the Rich Text + CTA look). snippets/button.liquid adds the class whenever rendered with `layout:`; hand-written section CTAs carry it in markup. New sections with their own `<a class="button">` CTA must add `button--cta`; don't write per-section mobile button-width CSS. If a wrapper shrink-wraps the button, add it to the wrapper list in the same rule.
-- Product-card collection badge (`.card__collection-title`, "show collection name"): styled ONCE in modus-design-system.css (orange Antonio uppercase tag, line-height 1.4). Don't restyle it per section; section-scoped `.subtitle` rules must exclude it with `:not(.card__collection-title)` (it also carries the `subtitle` class).
+- Product badges — product-card collection badge (`.card__collection-title`, "show collection name") AND product tags (`.product-tags__tag`, the Tags block, e.g. "Cilento"): styled ONCE in modus-design-system.css (orange Antonio uppercase tag, line-height 1.4). Don't restyle it per section; section-scoped `.subtitle` rules must exclude it with `:not(.card__collection-title)` (it also carries the `subtitle` class).
 - @import for Antonio Google Font in modus-design-system.css MUST be the literal first rule in the file (CSS spec requirement) — any edit near the top of this file must verify @import still comes first, this broke silently once already
 
 ## Dead/orphaned files (do not edit, don't assume they're live)

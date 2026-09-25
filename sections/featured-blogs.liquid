@@ -1,0 +1,322 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-blogs.css' | asset_url | stylesheet_tag }}
+{{ 'featured-blogs-mobile-btn.css' | asset_url | stylesheet_tag }}
+{{ 'article-card-ratio-fix.css' | asset_url | stylesheet_tag }}
+
+{% if section.settings.section_layout == 'slider' %}
+	<script src="{{ 'blogs-slider.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
+{% style %}
+	{% render 'section-margin' %}
+	{% render 'section-padding' %}
+	/* Card rhythm, matched 1:1 to the Events Carousel card (2026-09-25):
+	     image -> date      2.4rem  (= .collection-card gap in events)
+	     date  -> heading   0.4rem  (= .event-card__date margin-bottom)
+	     heading -> excerpt 1.2rem  (= sitewide h3 margin-bottom token)
+	     excerpt -> CTA     1.2rem  (sitewide rhythm, unchanged)
+	   Previously every step was a flat 1.2rem, so the date floated halfway
+	   between image and heading instead of reading as the heading's eyebrow.
+	   The 0.4rem date->heading gap only applies when the date/tags block is
+	   actually rendered (:has), otherwise image->heading keeps 2.4rem. */
+	#shopify-section-{{ section.id }} .article-card-default .artcile-card_wrapper,
+	#shopify-section-{{ section.id }} .article-card-reverse .artcile-card_wrapper {
+		gap: var(--modus-space-m) !important;
+	}
+	#shopify-section-{{ section.id }} .article-card-default .artcile-card_wrapper:has(.article-card__block),
+	#shopify-section-{{ section.id }} .article-card-reverse .artcile-card_wrapper:has(.article-card__block) {
+		gap: 0.4rem !important;
+	}
+	#shopify-section-{{ section.id }} .article-card-default .article-card__block,
+	#shopify-section-{{ section.id }} .article-card-reverse .article-card__block {
+		padding-top: var(--modus-space-m) !important;
+		margin-bottom: 0 !important;
+	}
+	/* Date: same eyebrow treatment as .event-card__date in the Events
+	   Carousel (Lora italic 15px / 26px, rgba(61,61,61,.6)) instead of the
+	   smaller 13px #7a7a7a set in modus-design-system.css. */
+	#shopify-section-{{ section.id }} .article-card__date,
+	#shopify-section-{{ section.id }} .article-card__date time {
+		font-family: 'Lora', serif !important;
+		font-style: italic !important;
+		font-weight: 400 !important;
+		font-size: 15px !important;
+		line-height: 26px !important;
+		letter-spacing: 0 !important;
+		color: rgba(61, 61, 61, 0.6) !important;
+		text-transform: none !important;
+	}
+	/* Excerpt: sitewide paragraph rule (body font, --modus-paragraph-size,
+	   line-height 1.6, foreground colour), same as the event description.
+	   modus-design-system.css styles .article-card__excerpt as 14px #7a7a7a
+	   secondary text, and the global paragraph selectors never reach it
+	   (it sits in .article-card_content-top, single underscore). */
+	#shopify-section-{{ section.id }} .article-card__excerpt {
+		font-family: var(--font-body-family) !important;
+		font-style: var(--font-body-style) !important;
+		font-weight: var(--font-body-weight) !important;
+		font-size: var(--modus-paragraph-size) !important;
+		line-height: 1.6 !important;
+		letter-spacing: 0 !important;
+		color: rgb(var(--color-foreground)) !important;
+		margin-top: var(--modus-space-xs) !important;
+	}
+	#shopify-section-{{ section.id }} .article-card_content {
+		gap: 1.2rem !important;
+		justify-content: flex-start !important;
+		margin-top: 0 !important;
+	}
+	/* modus-design-system.css sets ".article-card-default .article-card_content-top"
+	   to flex:1, meant for a different layout, but here it makes that block (title +
+	   excerpt) grow to fill all the leftover vertical height in the card, inserting
+	   invisible empty space AFTER the excerpt and pushing the CTA button down --
+	   this is the actual cause of the oversized description-to-CTA gap. Turning
+	   growth off lets content-top size to its own text and sit directly the fixed
+	   gap (set above) away from the CTA below it, same as every other gap
+	   in this card. */
+	#shopify-section-{{ section.id }} .article-card-default .article-card_content-top {
+		flex: 0 1 auto !important;
+	}
+	/* SECOND, SEPARATE cause of the same oversized excerpt->CTA gap
+	   (2026-08-30, take 2): even after zeroing content-top's flex-grow above,
+	   the gap stayed doubled versus every other gap in the card. Root cause:
+	   modus-design-system.css's ".article-card-default .article-card_content-bottom"
+	   rule ALSO sets its own "margin-top" -- that stacks on top of the flex
+	   "gap" already set on the parent .article-card_content above, since
+	   content-bottom is a direct flex child of content, giving gap + margin-top
+	   = double every other step in the card. Zeroing content-bottom's own
+	   margin-top here lets the parent's flex gap be the ONLY source of this
+	   spacing, same as the others. */
+	#shopify-section-{{ section.id }} .article-card-default .article-card_content-bottom {
+		margin-top: 0 !important;
+	}
+	/* Tags: solid orange badge to match the button--primary look */
+	#shopify-section-{{ section.id }} .article-card__tags .badge {
+		display: inline-block !important;
+		padding: 0.4rem 1.2rem !important;
+		border-radius: 2px !important;
+		border: none !important;
+		background-color: #D16A14 !important;
+		color: #ffffff !important;
+		font-family: 'Antonio', sans-serif !important;
+		font-weight: 700 !important;
+		font-style: normal !important;
+		font-size: 1.1rem !important;
+		letter-spacing: 0.15em !important;
+		text-transform: uppercase !important;
+		text-decoration: none !important;
+		transition: none !important;
+		margin: 0 !important;
+	}
+	#shopify-section-{{ section.id }} .article-card__tags .badge:hover {
+		background-color: #01473E !important;
+		color: #ffffff !important;
+	}
+
+	/* No gap between subheading and heading — heading keeps its own bottom
+	   margin only, matching the sitewide 1.2rem eyebrow -> heading gap
+	   (same value now used by rich-text-cta). */
+	#shopify-section-{{ section.id }} .section-header__title-item {
+		gap: 0;
+	}
+	#shopify-section-{{ section.id }} .section-header__title {
+		margin-bottom: 1.2rem;
+	}
+
+	/* Mobile: 2 cards per row in the carousel, editable via the "Mobile: show
+	   2 cards per row" setting. When enabled, each slide is ~50% wide below
+	   576px so two cards sit side by side, with the pagination dots (always
+	   rendered in the markup below; hidden on desktop via base.css, and
+	   auto-hidden by Swiper itself when nothing needs paging) as the way to
+	   page through the rest. blogs-slider.js reads the data-mobile-columns
+	   attribute below to set slidesPerView accordingly. */
+	{% if section.settings.section_layout == 'slider' and section.settings.mobile_columns_2 %}
+	@media screen and (max-width: 575px) {
+		#shopify-section-{{ section.id }} .swiper-pagination {
+			margin-top: 0.8rem;
+		}
+	}
+	{% endif %}
+{% endstyle %}
+
+{% liquid
+	assign source_blog = section.settings.blog
+	assign dynamic_count = section.settings.dynamic_articles_count
+
+	if source_blog != blank
+		assign use_dynamic = true
+		assign articles_count = dynamic_count
+	else
+		assign use_dynamic = false
+		assign articles_count = section.blocks.size
+	endif
+
+	if section.settings.card_type == 'horizontal' or section.settings.card_type == 'split'
+		assign slider_per_row = 2
+		assign mobile_slider_per_row = true
+	else
+		assign slider_per_row = section.settings.slider_per_row
+		assign mobile_slider_per_row = false
+	endif
+
+	if section.settings.show_arrows and section.settings.section_layout == 'slider' and articles_count > slider_per_row
+		assign show_arrows = true
+	else
+		assign show_arrows = false
+	endif
+
+	if section.settings.mobile_columns_2
+		assign mobile_base_slides = 2
+	else
+		assign mobile_base_slides = 1
+	endif
+	if section.settings.section_layout == 'slider' and articles_count > mobile_base_slides
+		assign show_pagination = true
+	else
+		assign show_pagination = false
+	endif
+%}
+
+<div
+	data-id="shopify-section-{{ section.id }}"
+	data-autoplay="{{ section.settings.is_autoplay }}"
+	data-speed="{{ section.settings.slider_speed }}"
+	data-delay="{{ section.settings.slider_delay }}"
+	data-per_row="{{ slider_per_row }}"
+	data-mobile-slider-per-row="{{ mobile_slider_per_row }}"
+	data-mobile-columns="{{ section.settings.mobile_columns_2 }}"
+	class="featured-blogs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background"
+>
+	{% render 'section-header', show_arrows: show_arrows %}
+	<div class="container">
+		{% case section.settings.section_layout %}
+
+			{% when 'default' %}
+				<div class="blog__box blog__box-default">
+					<div class="blog__posts articles-wrapper blog__posts-{% if section.settings.card_type == 'horizontal' or section.settings.card_type == 'split' %}row-2{% else %}row-4{% endif %}">
+						{%- if use_dynamic -%}
+							{%- for article in source_blog.articles limit: dynamic_count -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article">
+									{%- render 'article-card', article: article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- else -%}
+							{%- for block in section.blocks -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article">
+									{%- render 'article-card', article: block.settings.article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- endif -%}
+					</div>
+				</div>
+
+			{% when 'slider' %}
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						{%- if use_dynamic -%}
+							{%- for article in source_blog.articles limit: dynamic_count -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article swiper-slide">
+									{%- render 'article-card', article: article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- else -%}
+							{%- for block in section.blocks -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article swiper-slide">
+									{%- render 'article-card', article: block.settings.article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- endif -%}
+					</div>
+					{% if show_pagination %}
+						<div class="swiper-pagination swiper-pagination-default"></div>
+					{% endif %}
+				</div>
+
+			{% when 'grid' %}
+				<div class="blog__box blog__box-grid">
+					<div class="blog__posts articles-wrapper">
+						{%- if use_dynamic -%}
+							{%- for article in source_blog.articles limit: dynamic_count -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article">
+									{%- render 'article-card', article: article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- else -%}
+							{%- for block in section.blocks -%}
+								{%- assign image_index = forloop.index | modulo: 6 | plus: 1 -%}
+								<div class="blog__post article">
+									{%- render 'article-card', article: block.settings.article, show_image: section.settings.show_image, show_tags: section.settings.show_tags, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: section.settings.show_excerpt, image_ratio: section.settings.image_ratio, image_fit: section.settings.image_fit, card_type: section.settings.card_type, heading_size: 'h3', placeholder: true, show_btn: section.settings.show_btn, hover_effect: section.settings.hover_effect, image_index: image_index -%}
+								</div>
+							{%- endfor -%}
+						{%- endif -%}
+					</div>
+				</div>
+
+		{% endcase %}
+
+		{% if section.settings.section_header_type == 'type1' and section.settings.button_label != blank %}
+			<div class="section-header_btn">
+				{% render 'button', layout: section %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "t:sections.featured-blogs.name",
+	"tag": "section",
+	"class": "spaced-section section-featured-blogs",
+	"enabled_on": { "templates": ["*"] },
+	"settings": [
+		{ "type": "color_scheme", "id": "color_scheme", "default": "background-1", "label": "t:sections.all.color_scheme.label" },
+		{ "type": "header", "content": "Dynamic source (overrides article blocks)" },
+		{ "type": "blog", "id": "blog", "label": "Blog (auto-fetches most recent articles)" },
+		{ "type": "range", "id": "dynamic_articles_count", "label": "Number of articles to show", "min": 1, "max": 12, "step": 1, "default": 4 },
+		{ "type": "select", "id": "section_header_type", "label": "t:sections.all.section_header.header.content", "default": "type1", "options": [ { "value": "type1", "label": "t:sections.all.section_header.options.options__1.label" }, { "value": "type2", "label": "t:sections.all.section_header.options.options__2.label" } ] },
+		{ "type": "checkbox", "id": "show_arrows", "default": true, "label": "t:sections.all.slider_options.navigation.label" },
+		{ "type": "checkbox", "id": "enable_border_top", "default": true, "label": "t:sections.all.section_header.border" },
+		{ "type": "text", "id": "subheading", "default": "t:sections.featured-blogs.settings.subheading.default", "label": "t:sections.all.subheading.label" },
+		{ "type": "inline_richtext", "id": "heading", "default": "t:sections.featured-blogs.settings.heading.default", "label": "t:sections.all.heading.label" },
+		{ "type": "select", "id": "heading_tag", "label": "t:sections.all.heading.tag.label", "info": "t:sections.all.heading.tag.info", "options": [ { "value": "h1", "label": "t:sections.all.heading.tag.options.h1.label" }, { "value": "h2", "label": "t:sections.all.heading.tag.options.h2.label" }, { "value": "h3", "label": "t:sections.all.heading.tag.options.h3.label" }, { "value": "h4", "label": "t:sections.all.heading.tag.options.h4.label" }, { "value": "h5", "label": "t:sections.all.heading.tag.options.h5.label" }, { "value": "h6", "label": "t:sections.all.heading.tag.options.h6.label" }, { "value": "div", "label": "t:sections.all.heading.tag.options.div.label" }, { "value": "span", "label": "t:sections.all.heading.tag.options.span.label" }, { "value": "p", "label": "t:sections.all.heading.tag.options.p.label" } ], "default": "h2" },
+		{ "type": "richtext", "id": "description", "default": "t:sections.featured-blogs.settings.description.default", "label": "t:sections.all.description.label" },
+		{ "type": "header", "content": "t:sections.all.button.header.content" },
+		{ "type": "text", "id": "button_label", "default": "t:sections.featured-blogs.settings.button_label.default", "label": "t:sections.all.button.label.label", "info": "t:sections.all.button.label.info" },
+		{ "type": "url", "id": "button_link", "label": "t:sections.all.button.link.label" },
+		{ "type": "select", "id": "button_style", "options": [ { "value": "primary", "label": "t:sections.all.button.style.options__1.label" }, { "value": "secondary", "label": "t:sections.all.button.style.options__2.label" }, { "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" } ], "default": "primary", "label": "t:sections.all.button.style.label" },
+		{ "type": "checkbox", "id": "button_arrow", "default": false, "label": "t:sections.all.button.arrow.label" },
+		{ "type": "select", "id": "section_layout", "label": "t:sections.featured-blogs.settings.section_layout.label", "default": "slider", "options": [ { "value": "default", "label": "t:sections.featured-blogs.settings.section_layout.options__1.label" }, { "value": "slider", "label": "t:sections.featured-blogs.settings.section_layout.options__2.label" }, { "value": "grid", "label": "t:sections.featured-blogs.settings.section_layout.options__3.label" } ] },
+		{ "type": "range", "id": "slider_per_row", "min": 1, "max": 4, "step": 1, "default": 4, "label": "t:sections.featured-blogs.settings.slider_per_row.label", "info": "t:sections.featured-blogs.settings.slider_per_row.info" },
+		{ "type": "checkbox", "id": "mobile_columns_2", "default": true, "label": "Mobile: show 2 cards per row", "info": "When the layout is Carousel, shows 2 cards side by side on mobile instead of 1, with pagination dots below to page through the rest." },
+		{ "type": "checkbox", "id": "is_autoplay", "default": true, "label": "t:sections.all.slider_options.slider_is_autoplay.label" },
+		{ "type": "range", "id": "slider_speed", "min": 0, "max": 6, "step": 0.1, "default": 1.1, "unit": "s", "label": "t:sections.all.slider_options.speed.label" },
+		{ "type": "range", "id": "slider_delay", "min": 0, "max": 8, "step": 0.1, "default": 3, "unit": "s", "label": "t:sections.all.slider_options.delay.label" },
+		{ "type": "header", "content": "t:sections.all.article_card.header.content" },
+		{ "type": "select", "id": "card_type", "label": "t:sections.all.article_card.card_type.label", "default": "default", "options": [ { "value": "default", "label": "t:sections.all.article_card.card_type.options.option__1" }, { "value": "reverse", "label": "t:sections.all.article_card.card_type.options.option__5" }, { "value": "overlay", "label": "t:sections.all.article_card.card_type.options.option__2" }, { "value": "horizontal", "label": "t:sections.all.article_card.card_type.options.option__3" }, { "value": "split", "label": "t:sections.all.article_card.card_type.options.option__4" } ] },
+		{ "type": "select", "id": "hover_effect", "label": "t:sections.all.hover_effect.label", "default": "zoom", "options": [ { "value": "blur", "label": "t:sections.all.hover_effect.options.option_1" }, { "value": "zoom", "label": "t:sections.all.hover_effect.options.option_2" }, { "value": "shrink", "label": "t:sections.all.hover_effect.options.option_3" } ] },
+		{ "type": "checkbox", "id": "show_image", "default": true, "label": "t:sections.all.article_card.show_image.label", "info": "t:sections.all.article_card.show_image.info" },
+		{ "type": "checkbox", "id": "show_tags", "default": true, "label": "t:sections.all.article_card.show_tags.label" },
+		{ "type": "checkbox", "id": "show_date", "default": true, "label": "t:sections.all.article_card.show_date.label" },
+		{ "type": "checkbox", "id": "show_author", "default": false, "label": "t:sections.all.article_card.show_author.label" },
+		{ "type": "checkbox", "id": "show_excerpt", "default": true, "label": "t:sections.all.article_card.show_excerpt.label" },
+		{ "type": "checkbox", "id": "show_btn", "default": true, "label": "t:sections.all.article_card.show_button.label" },
+		{ "type": "select", "id": "image_ratio", "options": [ { "value": "landscape", "label": "t:sections.all.image.ratio.options__1.label" }, { "value": "portrait", "label": "t:sections.all.image.ratio.options__2.label" }, { "value": "square", "label": "t:sections.all.image.ratio.options__3.label" } ], "default": "portrait", "label": "t:sections.all.image.ratio.label" },
+		{ "type": "select", "id": "image_fit", "label": "t:sections.all.image.fit.label", "default": "cover", "options": [ { "value": "contain", "label": "t:sections.all.image.fit.options__1.label" }, { "value": "cover", "label": "t:sections.all.image.fit.options__2.label" } ] },
+		{ "type": "header", "content": "t:sections.all.section-margin.header.content" },
+		{ "type": "select", "id": "margin_top", "options": [ { "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" }, { "value": "xs", "label": "t:sections.all.section-margin.options__2.label" }, { "value": "s", "label": "t:sections.all.section-margin.options__3.label" }, { "value": "m", "label": "t:sections.all.section-margin.options__4.label" }, { "value": "l", "label": "t:sections.all.section-margin.options__5.label" } ], "default": "no-indent", "label": "t:sections.all.section-margin.margin_top.label" },
+		{ "type": "select", "id": "margin_bottom", "options": [ { "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" }, { "value": "xs", "label": "t:sections.all.section-margin.options__2.label" }, { "value": "s", "label": "t:sections.all.section-margin.options__3.label" }, { "value": "m", "label": "t:sections.all.section-margin.options__4.label" }, { "value": "l", "label": "t:sections.all.section-margin.options__5.label" } ], "default": "l", "label": "t:sections.all.section-margin.margin_bottom.label" },
+		{ "type": "header", "content": "t:sections.all.section-padding.header.content" },
+		{ "type": "select", "id": "padding_top", "options": [ { "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" }, { "value": "xs", "label": "t:sections.all.section-padding.options__2.label" }, { "value": "s", "label": "t:sections.all.section-padding.options__3.label" }, { "value": "m", "label": "t:sections.all.section-padding.options__4.label" }, { "value": "l", "label": "t:sections.all.section-padding.options__5.label" } ], "default": "no-indent", "label": "t:sections.all.section-padding.padding_top.label" },
+		{ "type": "select", "id": "padding_bottom", "options": [ { "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" }, { "value": "xs", "label": "t:sections.all.section-padding.options__2.label" }, { "value": "s", "label": "t:sections.all.section-padding.options__3.label" }, { "value": "m", "label": "t:sections.all.section-padding.options__4.label" }, { "value": "l", "label": "t:sections.all.section-padding.options__5.label" } ], "default": "l", "label": "t:sections.all.section-padding.padding_bottom.label" }
+	],
+	"blocks": [
+		{ "type": "article_block", "name": "t:sections.featured-blogs.block.name", "limit": 12, "settings": [ { "type": "article", "id": "article", "label": "t:sections.all.article_card.label" } ] }
+	],
+	"presets": [ { "name": "t:sections.featured-blogs.presets.name", "blocks": [ { "type": "article_block" }, { "type": "article_block" }, { "type": "article_block" }, { "type": "article_block" } ] } ]
+}
+{% endschema %}

@@ -25,7 +25,7 @@ No design decision needed; each restores the documented rule.
 ## Tier 1b — hardcoded section spacing → editor settings (values chosen to match today as closely as possible)
 Editor padding/margin settings silently do nothing or don't exist here.
 
-- [~] (all done except the product page, pending client) Timeline (64px), Awards (64px), Ambasciatore (40/24), SDP bridge (72/48), Slideshow (60/80px, padding settings dead), product page `[id^="MainProduct-"]` (40/60px, settings ignored), gallery block ID rule (24px + 30px), newsletter block (60/36px), fornitori filter (32/24), main-page title/body (20px + 32/64px), cart (32/68px), 404 (40px), hero-section content padding.
+- [x] (product page: forced 40/60px CSS removed, all 80 product templates now use editor settings M top / L bottom — client, 2026-09-25) Timeline (64px), Awards (64px), Ambasciatore (40/24), SDP bridge (72/48), Slideshow (60/80px, padding settings dead), product page `[id^="MainProduct-"]` (40/60px, settings ignored), gallery block ID rule (24px + 30px), newsletter block (60/36px), fornitori filter (32/24), main-page title/body (20px + 32/64px), cart (32/68px), 404 (40px), hero-section content padding.
 - [ ] AI blocks: add top/bottom spacing selects using the same tokens; replace colour pickers with the page colour scheme.
 
 ## Tier 2 — design decisions for the client

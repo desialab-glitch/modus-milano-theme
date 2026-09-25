@@ -1,0 +1,231 @@
+{%- style -%}
+  {% render 'section-margin' %}
+  {% render 'section-padding' %}
+
+  .amb-section-{{ section.id }} {
+    background: #faf8f5;
+  }
+
+  .amb-inner-{{ section.id }} {
+    display: flex;
+    gap: var(--modus-space-column);
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 24px;
+  }
+
+  /* ── Quote Column ── */
+  .amb-quote-{{ section.id }} {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .amb-quotemark-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 80px;
+    color: #c28342;
+    opacity: 0.3;
+    line-height: 1;
+    margin-top: -10px;
+    margin-bottom: -40px;
+    display: block;
+  }
+
+  .amb-quote-text-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 30px;
+    color: #4d4d4d;
+    /* Paragraph -> image (signature) gap: tokenized to the sitewide
+       var(--modus-space-xs) eyebrow/heading/paragraph rhythm
+       (2026-09-07, was hardcoded 1.2rem). */
+    margin: 0 0 var(--modus-space-xs);
+    white-space: pre-line;
+  }
+
+  .amb-signature-{{ section.id }} {
+    display: block;
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  /* ── Context Column ── */
+  .amb-context-{{ section.id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .amb-eyebrow-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #4d4d4d;
+    /* Tokenized to var(--modus-space-xs) (2026-09-07, was hardcoded
+       1.2rem) -- same value modus-design-system.css's [class*="eyebrow"]
+       rule would otherwise force anyway, now sharing one source. */
+    margin: 0 0 var(--modus-space-xs);
+  }
+
+  .amb-heading-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #c28342;
+    text-transform: uppercase;
+    /* Tokenized to var(--modus-space-xs) (2026-09-07, was hardcoded 1.2rem). */
+    margin-bottom: var(--modus-space-xs) !important;
+    letter-spacing: 0.5px;
+  }
+
+  .amb-box-{{ section.id }} {
+    background: #f5f0e8;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: var(--modus-space-xs);
+  }
+
+  .amb-box-{{ section.id }} p {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #d16a14;
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .amb-body-{{ section.id }} {
+    font-family: 'Lora', serif;
+    font-size: var(--modus-paragraph-size);
+    line-height: 1.6;
+    color: rgb(var(--color-foreground));
+    margin: 0 0 var(--modus-space-xs);
+  }
+  .amb-body-{{ section.id }}:last-child {
+    margin-bottom: 0;
+  }
+
+  .amb-source-{{ section.id }} {
+    font-family: 'Antonio', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    color: #d16a14;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .amb-source-{{ section.id }}:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 989px) {
+    .amb-inner-{{ section.id }} {
+      flex-direction: column;
+      gap: var(--modus-space-s);
+      padding-top: 28px;
+      padding-bottom: 16px;
+    }
+    .amb-quote-{{ section.id }} {
+      flex: unset;
+      width: 100%;
+    }
+    .amb-context-{{ section.id }} {
+      width: 100%;
+    }
+  }
+{%- endstyle -%}
+
+<div class="amb-section-{{ section.id }} section-{{ section.id }}-padding">
+  <div class="container">
+    <div class="amb-inner-{{ section.id }}">
+
+      <!-- QUOTE COLUMN -->
+      <div class="amb-quote-{{ section.id }}">
+        <span class="amb-quotemark-{{ section.id }}">&ldquo;</span>
+
+        {%- if section.settings.quote != blank -%}
+          <p class="amb-quote-text-{{ section.id }}">{{ section.settings.quote }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.signature != blank -%}
+          {%- assign amb_sig_class = 'amb-signature-' | append: section.id -%}
+          {{
+            section.settings.signature
+            | image_url: width: 300
+            | image_tag:
+              loading: 'lazy',
+              class: amb_sig_class
+          }}
+        {%- endif -%}
+      </div>
+
+      <!-- CONTEXT COLUMN -->
+      <div class="amb-context-{{ section.id }}">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="amb-eyebrow-{{ section.id }}">{{ section.settings.eyebrow }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.heading != blank -%}
+          <h2 class="amb-heading-{{ section.id }}">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.box_text != blank -%}
+          <div class="amb-box-{{ section.id }}">
+            <p>{{ section.settings.box_text }}</p>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.body != blank -%}
+          <p class="amb-body-{{ section.id }}">{{ section.settings.body }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.source_label != blank -%}
+          {%- if section.settings.source_link != blank -%}
+            <a href="{{ section.settings.source_link }}" class="amb-source-{{ section.id }}">{{ section.settings.source_label }}</a>
+          {%- else -%}
+            <span class="amb-source-{{ section.id }}">{{ section.settings.source_label }}</span>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ambasciatore",
+  "tag": "section",
+  "class": "spaced-section ambasciatore-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [
+    {"type": "header", "content": "Quote (left column)"},
+    {"type": "textarea", "id": "quote", "label": "Quote text", "default": "La dieta mediterranea è molto più di un modello alimentare: è un equilibrio tra natura e cultura, una celebrazione della qualità e del rispetto per le stagioni e i territori. Portare i prodotti autentici del Cilento a Milano significa raccontare la mia terra, le sue tradizioni e la bellezza di una semplicità che emoziona."},
+    {"type": "image_picker", "id": "signature", "label": "Firma autografa (immagine)"},
+    {"type": "header", "content": "Context (right column)"},
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Il riconoscimento"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "UN TITOLO CHE VIENE DALLA TERRA"},
+    {"type": "textarea", "id": "box_text", "label": "Box text (highlighted)", "default": "Paolo De Simone è stato insignito del titolo di Ambasciatore della Dieta Mediterranea del Cilento nel Mondo dal Museo Vivente della Dieta Mediterranea, in collaborazione con il Comune di Pollica e Legambiente."},
+    {"type": "textarea", "id": "body", "label": "Body text", "default": "Artigiano del gusto e fondatore di Storie di Pane e Modus, De Simone si distingue per il suo impegno nella valorizzazione delle radici culturali e culinarie mediterranee."},
+    {"type": "text", "id": "source_label", "label": "Source label", "default": "Museo Vivente Ancel Keys · Pollica · Legambiente"},
+    {"type": "url", "id": "source_link", "label": "Source link"},
+    {"type": "header", "content": "Spacing"},
+    {"type": "select", "id": "margin_top", "default": "no-indent", "label": "Margin top", "options": [{"value": "no-indent", "label": "None"},{"value": "xs", "label": "XS"},{"value": "s", "label": "S"},{"value": "m", "label": "M"},{"value": "l", "label": "L"}]},
+    {"type": "select", "id": "margin_bottom", "default": "no-indent", "label": "Margin bottom", "options": [{"value": "no-indent", "label": "None"},{"value": "xs", "label": "XS"},{"value": "s", "label": "S"},{"value": "m", "label": "M"},{"value": "l", "label": "L"}]},
+    {"type": "select", "id": "padding_top", "default": "no-indent", "label": "Padding top", "options": [{"value": "no-indent", "label": "None"},{"value": "xs", "label": "XS"},{"value": "s", "label": "S"},{"value": "m", "label": "M"},{"value": "l", "label": "L"}]},
+    {"type": "select", "id": "padding_bottom", "default": "no-indent", "label": "Padding bottom", "options": [{"value": "no-indent", "label": "None"},{"value": "xs", "label": "XS"},{"value": "s", "label": "S"},{"value": "m", "label": "M"},{"value": "l", "label": "L"}]}
+  ],
+  "presets": [{"name": "Ambasciatore", "settings": {"eyebrow": "Il riconoscimento", "heading": "UN TITOLO CHE VIENE DALLA TERRA", "source_label": "Museo Vivente Ancel Keys · Pollica · Legambiente"}}]
+}
+{% endschema %}

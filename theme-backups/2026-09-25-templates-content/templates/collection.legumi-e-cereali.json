@@ -1,0 +1,621 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "I legumi di Controne e Cicerale",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "LEGUMI E CEREALI",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Controne i fagioli si seminano a luglio e si raccolgono a novembre, come nel Cinquecento. A Cicerale lo stemma dice «terra quae cicera alit», la terra che nutre i ceci.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_legumi",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/cece-di-cicireale-1200x675.avif",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "products_grid_legumi": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "legumi-e-cereali",
+        "product_list": [],
+        "anchor_id": "products_grid_legumi",
+        "subheading": "Dalla dispensa contadina",
+        "heading": "I LEGUMI DEL CILENTO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>I fagioli di Controne per la pasta e fagioli, i ceci di Cicerale per le lagane e ceci, i cicci maritati per la zuppa delle sere d'inverno, il farro per le minestre e le insalate. Ognuno ha il suo piatto.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/9.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il pasto di tutti i giorni",
+        "heading_tag": "h2",
+        "heading": "LA CARNE DEI POVERI",
+        "text": "<p>Nel Cilento i legumi erano il pasto di ogni giorno. La carne dei poveri, la chiamavano. I ceci di Cicerale e i fagioli di Controne sono Presidio Slow Food perché pochi produttori hanno scelto di continuare a coltivarli come una volta.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "banner_legumi_top": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "produttore_legumi": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/slider-ferrante-2.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "I produttori che li coltivano",
+        "heading_tag": "h2",
+        "heading": "I PRODUTTORI",
+        "text": "<p>Michele Ferrante coltiva a Controne, alle pendici degli Alburni, dove ha recuperato varietà locali ormai in disuso. I fagioli di Controne arrivano da Antonio Cavalieri. Il farro decorticato viene dall'Azienda Agricola San Felice, a Cicerale.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "s"
+      }
+    },
+    "banner_legumi_bottom": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_bottom.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "banner_grid_mFwcNg": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jcr_content.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Le varietà locali di Controne",
+            "heading": "MICHELE FERRANTE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Negli anni '80 Michele Ferrante ha cominciato a recuperare a Controne le varietà locali che si stavano perdendo: fagioli, ceci, cicerchie, farro. Oggi lavora con i tre figli e fa quasi tutto a mano, dalla semina alla raccolta. Da lui arrivano i cicci maritati e i ceci.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pexels-photo-221115.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "I fagioli di Controne",
+            "heading": "ANTONIO CAVALIERI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Da Antonio Cavalieri arrivano i fagioli di Controne: piccoli, bianchissimi, con la buccia sottile che li fa cuocere in fretta. Crescono nei terreni freschi e ricchi di sorgenti della valle del Calore, alle pendici degli Alburni.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_16.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il farro di Cicerale",
+            "heading": "SAN FELICE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Anna Astone è la referente dell'Azienda Agricola San Felice, a Cicerale: i suoi terreni si trovano a 450 metri di altitudine. Da qui arriva il farro decorticato: un cereale antico dal sapore nocciolato, per le zuppe, le insalate fredde e le cotture lente.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Chi li coltiva",
+        "heading": "I NOSTRI PRODUTTORI",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/slider-ferrante-2.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il fagiolo",
+            "heading": "DAI MONACI BENEDETTINI AL PRESIDIO SLOW FOOD",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>È arrivato nella valle del Calore nella prima metà del Cinquecento e lo coltivavano i monaci dell'abbazia di San Nicola di Controne. Piccolo, rotondo, bianchissimo, con la buccia quasi impalpabile: si cuoce in fretta e si spacca poco.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/472053632_481403331642850_3212889407417743711_n.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il cece",
+            "heading": "TERRA QUAE CICERA ALIT. TERRA CHE NUTRE I CECI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Lo stemma di Cicerale lo recita dal Medioevo. Il cece di Cicerale è piccolo e dorato, cresce senza irrigazione su terreni difficili e si raccoglie a fine luglio. In cottura si ingrossa molto.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/legumi-il-cilentano.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "I cicci maritati",
+            "heading": "LO SPOSALIZIO DELLA DISPENSA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>In dialetto cilentano «maritare» vuol dire sposare. Un tempo si mettevano insieme i legumi rimasti in casa e nasceva una zuppa completa. Quelli di Ferrante uniscono farro integrale, fagiolo di Controne, fagiolo dall'occhio, ceci e cicerchie.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Fagioli di Controne, perché la cottura è rapida",
+            "heading_tag": "h2",
+            "description": "<p>La buccia sottilissima è la caratteristica che li distingue. Basta un breve ammollo e i tempi di cottura sono molto più brevi di quelli dei fagioli comuni. Per questo sono anche molto digeribili.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si cucinano le lagane e ceci",
+            "heading_tag": "h2",
+            "description": "<p>Ceci in acqua dalla sera prima. Cottura lenta due ore. Soffritto di aglio e olio EVO, qualche pomodoro. Le lagane si cuociono nel brodo dei ceci nell'ultimo quarto d'ora. Il piatto è asciutto.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "I cicci maritati, come si preparano",
+            "heading_tag": "h2",
+            "description": "<p>Ammollo di una notte, poi cottura lenta e lunga, finché tutti i legumi sono morbidi. Soffritto di aglio e peperoncino, un po' di pomodoro e un filo di olio EVO a crudo. Si serve con pane casereccio abbrustolito.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si usa il farro decorticato",
+            "heading_tag": "h2",
+            "description": "<p>In zuppa con verdure e olio EVO. In insalata fredda con pomodori, olive e cacioricotta. Come alternativa al riso in cotture lente. Ammollo di 30 minuti, cottura tra 25 e 30 minuti.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conservano i legumi secchi",
+            "heading_tag": "h2",
+            "description": "<p>In luogo fresco e asciutto, in barattolo di vetro ermetico. Durano tra 1 e 2 anni. Meglio consumarli entro un anno dal raccolto per la buccia più tenera.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Ceci di Cicerale e ceci comuni in cottura",
+            "heading_tag": "h2",
+            "description": "<p>Più piccoli, più dorati, sapore più intenso. In cottura si ingrossano molto. Basso contenuto di umidità al raccolto: si conservano a lungo e sono molto saporiti in zuppa.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUI LEGUMI DEL CILENTO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/Lagane-e-ceci.webp",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pasta-lagane",
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "cacioricotta-di-capra"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "I LEGUMI, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "La tavola contadina del Cilento",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/gastronomia-piatto.jpg",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "products_grid_legumi",
+    "image_with_text_Nh4pWr",
+    "banner_legumi_top",
+    "produttore_legumi",
+    "banner_legumi_bottom",
+    "banner_grid_mFwcNg",
+    "practical",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

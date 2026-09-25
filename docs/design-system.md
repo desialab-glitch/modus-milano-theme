@@ -1,6 +1,8 @@
 # Modus Milano — Design System
 
 ## Typography
+- Heading colours (client rule): H3 is ALWAYS orange #D16A14; on the orange colour scheme every heading is beige #faf1e4. H2 gold. Hero headings (Hero, Hero Split) are 44px desktop / 35px mobile.
+- One orange only: #D16A14 (brand orange). Orange backgrounds use the orange colour scheme, not hardcoded section variants.
 - H1/H2 font: Antonio Bold (NOT Bebas Neue — this has been a repeated mistake, double check)
 - H3 sitewide: brand orange #D16A14
 - H2: gold #c28342
@@ -32,8 +34,9 @@
 1. Section top/bottom spacing comes from the editor settings → `--modus-section-space-*` tokens. No hardcoded section padding/margin.
 2. Side gutter = the theme `.container` / `var(--main-padding)` (20px mobile, 80px ≥1150px), same on both sides. Nothing extra on top of it (no inner side padding that pushes text in further than other sections).
 3. Eyebrow → heading → text → CTA gaps = `var(--modus-space-xs)` (12px), applied once (element margin OR flex gap, never both). Stacked media ↔ text gap = `var(--modus-space-s)` (16px). Desktop side-by-side gutter = `var(--modus-space-column)`.
-4. Alignment: left-aligned text for editorial/content sections on mobile. Centered only for short overlay/banner moments (hero over image, one-line CTA).
-5. Typography: eyebrow = Lora italic 15px, grey rgba(61,61,61,0.6) on light schemes; H2 Antonio gold (29px mobile); body paragraphs 16px / line-height 1.6 via the sitewide paragraph rule. No text below 13px on mobile (open exception: the product-card collection badge, 10px uppercase, pending a size decision). Any text that can wrap to two lines needs a line-height of at least 1.4 (small labels/badges included).
+4. Alignment: NEVER centred text (client rule, 2026-09-25) — every text element is left-aligned at every breakpoint, including text over images (hero, slideshow, banners), section titles and page titles. Only the label inside a button stays centred within the button.
+4b. Media on mobile / stacked layouts: content images and videos fill the full content width — exactly between the 20px side gutters, aligned with the text edges (never narrower/centred, never inset further than the text).
+5. Typography: eyebrow = Lora italic 15px, grey rgba(61,61,61,0.6) on light schemes; H2 Antonio gold (29px mobile); body paragraphs 16px / line-height 1.6 via the sitewide paragraph rule. No text below 13px on mobile (documented exception: the product badges — collection badge and product tags — are 12px uppercase). Any text that can wrap to two lines needs a line-height of at least 1.4 (small labels/badges included).
 6. CTAs: carry `button--cta` (automatic via snippets/button.liquid with `layout:`); on mobile they're full width, 48px tall, square. If the CTA doesn't fill the width, fix the shrink-wrapping wrapper in the shared rule, not per section.
 7. Empty elements (e.g. a CTA wrapper with no button) must not add space.
 8. Color scheme overrides still win. On the orange scheme (`scheme-orange-bg-01473e-cta`) ALL text is beige #faf1e4: headings, paragraphs, and eyebrows/subheadings/badges/product tags. The eyebrow override uses a weighted `:is(.color-scheme-orange-bg-01473e-cta, #modus-scheme-weight#modus-scheme-weight)` selector so it beats any section's own eyebrow color; don't add section eyebrow colors with two IDs or inline styles.

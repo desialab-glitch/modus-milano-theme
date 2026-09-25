@@ -29,16 +29,16 @@ Editor padding/margin settings silently do nothing or don't exist here.
 - [ ] AI blocks: add top/bottom spacing selects using the same tokens; replace colour pickers with the page colour scheme.
 
 ## Tier 2 — design decisions for the client
-- [ ] D1 Footer menu columns are hidden below 1150px (only logo + store info on mobile/tablet). Show them? (verify in browser first) → DECIDED: show the footer menus on mobile/tablet.
+- [x] D1 Footer menu columns are hidden below 1150px (only logo + store info on mobile/tablet). Show them? (verify in browser first) → DECIDED: show the footer menus on mobile/tablet.
 - [ ] D2 Long centered text on mobile → left: IWT-2 "type1" on 21 PDPs (whole block centered), collection.json hero paragraph (311 chars), type1 section headers on mobile, basic page titles. → DECIDED: never centred text — left-aligned everywhere, including text over images (hero, slideshow, banners) and section titles. Only button labels stay centred inside the button.
-- [ ] D3 FAQ: title tracking 0.12em and questions 23px → standard H2/H3 styles? → DECIDED: FAQ uses the standard heading styles (questions = standard H3).
-- [ ] D4 Hero section heading 58px vs Hero Split 44px on desktop — which? → DECIDED: all hero headings use the homepage hero size on desktop.
+- [x] D3 FAQ: title tracking 0.12em and questions 23px → standard H2/H3 styles? → DECIDED: FAQ uses the standard heading styles (questions = standard H3).
+- [x] D4 Hero section heading 58px vs Hero Split 44px on desktop — which? → DECIDED: all hero headings use the homepage hero size on desktop.
 - [ ] D5 Headings using H3 (orange) where a section title H2 (gold) is expected: collection carousel, partner logos, timeline, slider with info (2 pages), newsletter popup, basic page title. → DECIDED: keep H3 tags. Rule: H3 is always orange; on the orange scheme always beige.
-- [ ] D6 Product badges/tags size (10px, below the 13px floor): 12px, 13px, or keep. → DECIDED: 12px (documented exception to the 13px floor, uppercase badge).
+- [x] D6 Product badges/tags size (10px, below the 13px floor): 12px, 13px, or keep. → DECIDED: 12px (documented exception to the 13px floor, uppercase badge).
 - [ ] D7 Orange Image with Text (11 collections): image inset an extra 32px each side (framed look) → align to gutter? → DECIDED: align the orange Image with Text image to the gutter (no extra frame).
 - [ ] D8 Video with Text on desktop: text centered and spread over the full video height → left-aligned, vertically centered like Image with Text? → DECIDED: Video with Text always left-aligned and vertically centred like Image with Text. Mobile: images/videos fill the full content width (between the 20px margins, aligned with the text), text too.
-- [ ] D9 Product description: italic or normal? (today <p> normal, lists italic — inconsistent) → DECIDED: normal (not italic).
-- [ ] D10 Blog "load more" button: make it a standard button (full width on mobile)? → DECIDED: standard site button (secondary), full width on mobile.
+- [x] D9 Product description: italic or normal? (today <p> normal, lists italic — inconsistent) → DECIDED: normal (not italic).
+- [x] D10 Blog "load more" button: make it a standard button (full width on mobile)? → DECIDED: standard site button (secondary), full width on mobile.
 - [?] D11 (explained to client, awaiting answer) Two logo tickers look different (full-bleed with fades vs inset, no fades) → pick one.
 - [ ] D12 Hardcoded "orange" variants (Simple Slider, Image with Text) → replace with the orange colour scheme so there's one orange look. → DECIDED: one orange only — hardcoded orange variants replaced by the orange colour scheme.
 

@@ -1,0 +1,25 @@
+.products-grid .section-header__line{padding:0 0 4rem}.products-grid .section-header__line .container{padding:0}
+
+/* Force section header description full width */
+.products-grid .section-header__title__block{display:block !important}
+.products-grid .section-header__item,
+.products-grid .section-header__title-item,
+.products-grid .section-header__title__block,
+.products-grid .section-header__desc,
+.products-grid .section-header__desc p,
+.products-grid .richtext__content{
+  max-width:100% !important;
+  width:100% !important;
+  overflow:visible !important;
+}
+
+/* Product card description: full width, no clip */
+.products-grid .card__description{
+  max-width:100% !important;
+  width:100% !important;
+  display:block !important;
+  overflow:visible !important;
+  white-space:normal !important;
+  font-size:1.5rem !important;
+  line-height:1.6 !important;
+}

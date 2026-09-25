@@ -1,0 +1,380 @@
+{%- style -%}
+	{% render 'section-margin' %}
+	{% render 'section-padding' %}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__wrapper {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+		flex-wrap: wrap;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__heading-block {
+		flex: 1 1 280px;
+		max-width: 400px;
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__heading,
+	#shopify-section-{{ section.id }} .partner-logos-grid__text {
+		margin: 0;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__logos {
+		flex: 2 1 480px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3.2rem 4rem;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__logo-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__logo-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__logo-image {
+		width: {{ section.settings.logo_width_mobile | default: 75 }}%;
+		height: auto;
+		display: block;
+		object-fit: contain;
+	}
+
+	@media screen and (min-width: 750px) {
+		#shopify-section-{{ section.id }} .partner-logos-grid__logo-image {
+			width: {{ section.settings.logo_width_desktop | default: 65 }}%;
+		}
+	}
+
+	/* Mobile ticker (loop) — hidden by default, switched on below 750px
+	   only when the "Scroll logos in a loop on mobile" setting is on. */
+	#shopify-section-{{ section.id }} .partner-logos-grid__ticker {
+		display: none;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__ticker-track {
+		display: flex;
+		width: max-content;
+		animation: partner-logos-grid-scroll {{ section.settings.mobile_ticker_speed | default: 18 }}s linear infinite;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__ticker-set {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+		padding-right: 2.4rem;
+		flex-shrink: 0;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__ticker-item {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#shopify-section-{{ section.id }} .partner-logos-grid__ticker-image {
+		height: 40px;
+		width: auto;
+		max-width: none;
+		object-fit: contain;
+		display: block;
+	}
+
+	@keyframes partner-logos-grid-scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@media screen and (max-width: 749px) {
+		#shopify-section-{{ section.id }} .partner-logos-grid__wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1.6rem;
+		}
+
+		/* The desktop flex-basis (280px) becomes a min-HEIGHT once the
+		   wrapper switches to flex-direction: column above — that was
+		   the empty gap under the heading on mobile. Reset it here. */
+		#shopify-section-{{ section.id }} .partner-logos-grid__heading-block {
+			flex: 0 0 auto;
+			max-width: 100%;
+		}
+
+		{% if section.settings.mobile_ticker_enabled %}
+			#shopify-section-{{ section.id }} .partner-logos-grid__logos {
+				display: none;
+			}
+			#shopify-section-{{ section.id }} .partner-logos-grid__ticker {
+				display: block;
+			}
+		{% else %}
+			#shopify-section-{{ section.id }} .partner-logos-grid__logos {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.6rem 2rem;
+				width: 100%;
+			}
+		{% endif %}
+	}
+{%- endstyle -%}
+
+<div class="partner-logos-grid section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
+	<div class="container">
+		<div class="partner-logos-grid__wrapper">
+			<div class="partner-logos-grid__heading-block">
+				{% if section.settings.heading != blank %}
+					{% capture partner_logos_grid_heading_inner %}{{ section.settings.heading }}{% endcapture %}
+					{% render 'heading-element', tag: section.settings.heading_tag, default_tag: 'h3', class: 'partner-logos-grid__heading h3', content: partner_logos_grid_heading_inner %}
+				{% endif %}
+				{% if section.settings.text != blank %}
+					<div class="partner-logos-grid__text">{{ section.settings.text }}</div>
+				{% endif %}
+			</div>
+
+			<div class="partner-logos-grid__logos">
+				{% for block in section.blocks %}
+					<div class="partner-logos-grid__logo-item" {{ block.shopify_attributes }}>
+						<a
+							class="partner-logos-grid__logo-link"
+							aria-label="brand"
+							{% if block.settings.link != blank %}href="{{ block.settings.link }}"{% endif %}
+						>
+							{% if block.settings.image != blank %}
+								{{ block.settings.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'partner-logos-grid__logo-image' }}
+							{% else %}
+								<span class="brands__placeholder large-font">{{ 'general.brand.title' | t }}</span>
+							{% endif %}
+						</a>
+					</div>
+				{% endfor %}
+			</div>
+
+			{% if section.settings.mobile_ticker_enabled and section.blocks.size > 0 %}
+				<div class="partner-logos-grid__ticker">
+					<div class="partner-logos-grid__ticker-track">
+						{% assign partner_logos_grid_ticker_sets = '1,2' | split: ',' %}
+						{% for set in partner_logos_grid_ticker_sets %}
+							<div class="partner-logos-grid__ticker-set" aria-hidden="{% if forloop.index == 2 %}true{% else %}false{% endif %}">
+								{% for block in section.blocks %}
+									<div class="partner-logos-grid__ticker-item" {{ block.shopify_attributes }}>
+										<a
+											class="partner-logos-grid__logo-link"
+											aria-label="brand"
+											{% if block.settings.link != blank %}href="{{ block.settings.link }}"{% endif %}
+										>
+											{% if block.settings.image != blank %}
+												{{ block.settings.image | image_url: width: 300 | image_tag: loading: 'lazy', class: 'partner-logos-grid__ticker-image' }}
+											{% else %}
+												<span class="brands__placeholder large-font">{{ 'general.brand.title' | t }}</span>
+											{% endif %}
+										</a>
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Partner Logos Grid",
+	"class": "spaced-section partner-logos-grid-section",
+	"tag": "section",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"default": "background-1",
+			"label": "Color scheme"
+		},
+		{
+			"type": "inline_richtext",
+			"id": "heading",
+			"default": "Alcuni dei partner con cui abbiamo collaborato",
+			"label": "Heading"
+		},
+		{
+			"type": "select",
+			"id": "heading_tag",
+			"label": "Heading tag",
+			"default": "h3",
+			"options": [
+				{ "value": "h1", "label": "H1" },
+				{ "value": "h2", "label": "H2" },
+				{ "value": "h3", "label": "H3" },
+				{ "value": "h4", "label": "H4" },
+				{ "value": "h5", "label": "H5" },
+				{ "value": "h6", "label": "H6" },
+				{ "value": "div", "label": "Paragraph (div)" },
+				{ "value": "span", "label": "Paragraph (span)" },
+				{ "value": "p", "label": "Paragraph (p)" }
+			]
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Text"
+		},
+		{
+			"type": "header",
+			"content": "Logo size"
+		},
+		{
+			"type": "range",
+			"id": "logo_width_desktop",
+			"min": 20,
+			"max": 100,
+			"step": 5,
+			"unit": "%",
+			"default": 65,
+			"label": "Logo width (desktop)"
+		},
+		{
+			"type": "range",
+			"id": "logo_width_mobile",
+			"min": 20,
+			"max": 100,
+			"step": 5,
+			"unit": "%",
+			"default": 75,
+			"label": "Logo width (mobile)"
+		},
+		{
+			"type": "header",
+			"content": "Mobile layout"
+		},
+		{
+			"type": "checkbox",
+			"id": "mobile_ticker_enabled",
+			"label": "Scroll logos in a loop on mobile",
+			"default": true,
+			"info": "Off shows a static 2-column grid on mobile instead."
+		},
+		{
+			"type": "range",
+			"id": "mobile_ticker_speed",
+			"min": 5,
+			"max": 60,
+			"step": 1,
+			"default": 18,
+			"unit": "s",
+			"label": "Mobile ticker speed",
+			"info": "Only applies when the loop above is enabled."
+		},
+		{
+			"type": "header",
+			"content": "Section margin"
+		},
+		{
+			"type": "select",
+			"id": "margin_top",
+			"options": [
+				{ "value": "no-indent", "label": "No indent" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "Small" },
+				{ "value": "m", "label": "Medium" },
+				{ "value": "l", "label": "Large" }
+			],
+			"default": "no-indent",
+			"label": "Top margin"
+		},
+		{
+			"type": "select",
+			"id": "margin_bottom",
+			"options": [
+				{ "value": "no-indent", "label": "No indent" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "Small" },
+				{ "value": "m", "label": "Medium" },
+				{ "value": "l", "label": "Large" }
+			],
+			"default": "no-indent",
+			"label": "Bottom margin"
+		},
+		{
+			"type": "header",
+			"content": "Section padding"
+		},
+		{
+			"type": "select",
+			"id": "padding_top",
+			"options": [
+				{ "value": "no-indent", "label": "No indent" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "Small" },
+				{ "value": "m", "label": "Medium" },
+				{ "value": "l", "label": "Large" }
+			],
+			"default": "s",
+			"label": "Top padding"
+		},
+		{
+			"type": "select",
+			"id": "padding_bottom",
+			"options": [
+				{ "value": "no-indent", "label": "No indent" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "Small" },
+				{ "value": "m", "label": "Medium" },
+				{ "value": "l", "label": "Large" }
+			],
+			"default": "s",
+			"label": "Bottom padding"
+		}
+	],
+	"blocks": [
+		{
+			"type": "logo",
+			"name": "Logo",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Logo image"
+				},
+				{
+					"type": "url",
+					"id": "link",
+					"label": "Logo link"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Partner Logos Grid",
+			"blocks": [
+				{ "type": "logo" },
+				{ "type": "logo" },
+				{ "type": "logo" },
+				{ "type": "logo" },
+				{ "type": "logo" },
+				{ "type": "logo" }
+			]
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,1106 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Pizzerie, gastronomie e negozio online",
+        "subheading_tag": "p",
+        "subheading_color": "",
+        "heading": "L'ESSENZA PIU' AUTENTICA DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Dal 2010 il forno a legna di Storie di Pane, a Vallo della Lucania, lavora i grani antichi del Cilento. Paolo De Simone porta a Milano i prodotti di chi coltiva quella terra.</p>",
+        "button_label": "SCOPRI I LOCALI A MILANO",
+        "button_link": "shopify://pages/contatti",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "VISITA IL NEGOZIO ONLINE",
+        "button_link_2": "shopify://collections",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": true,
+        "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-paolo-de-simone.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "awards-strip": {
+      "type": "brands",
+      "blocks": {
+        "b1": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/logo-pdo.png",
+            "brand_link": ""
+          }
+        },
+        "logo_nNYmyy": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_May_4_2026_10_10_41_AM.png",
+            "brand_link": ""
+          }
+        },
+        "logo_NbHt99": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/eu_organic_logo.png",
+            "brand_link": ""
+          }
+        },
+        "logo_zUxn93": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/50_Top_Pizza.png",
+            "brand_link": ""
+          }
+        },
+        "logo_j74Km3": {
+          "type": "logo",
+          "settings": {
+            "image_2": "shopify://shop_images/identita_golose_transparent.png",
+            "brand_link": ""
+          }
+        },
+        "logo_NCUMcG": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/Museo_Dieta_Med..png",
+            "brand_link": ""
+          }
+        },
+        "logo_CGLnqK": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/pizza_awards_transparent.png",
+            "brand_link": ""
+          }
+        },
+        "b2": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/eccellenze-italian.png",
+            "brand_link": ""
+          }
+        },
+        "b3": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/elementi.jpg",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "logo_nNYmyy",
+        "logo_NbHt99",
+        "logo_zUxn93",
+        "logo_j74Km3",
+        "logo_NCUMcG",
+        "logo_CGLnqK",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "ticker_enabled": true,
+        "ticker_speed": 30,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "image_with_text_R3AcxQ": {
+      "type": "image-with-text",
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/img67-1-749x1024.jpg",
+        "video": "shopify://files/videos/5_10 lug MODUS.mp4",
+        "image_ratio": "portrait",
+        "enable_dual_media": true,
+        "secondary_image": "shopify://shop_images/paolo.png",
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "La storia di Modus",
+        "heading_tag": "h2",
+        "heading": "TUTTO PARTE DAL CILENTO",
+        "text": "<p>Tutto comincia a Vallo della Lucania nel 2010, quando Paolo De Simone apre Storie di Pane: panificio, bottega, forno a legna. È lì che impara il tempo della sua terra: quando raccogliere, come tagliare, quanto salare.</p><p>Nel 2022 quel tempo arriva a Milano e prende il nome di Modus. Pizzerie, gastronomie e negozio online nascono dalla stessa idea, <strong>Semplice Mangiare</strong>: la cucina di casa del Cilento, con gli stessi grani, le stesse erbe e gli stessi produttori, ogni giorno.</p>",
+        "cta_1_label": "Scopri la nostra storia",
+        "cta_1_link": "shopify://pages/chi-siamo",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "grid_banner_LqKzFm": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_krTqTt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/pizza.png",
+            "image_ratio": "square",
+            "overlay_opacity": 20,
+            "subheading": "01",
+            "heading": "MODUS PIZZERIE",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>Il forno a pietra è lo stesso per la pizza cilentana e per la napoletana rivisitata. L'impasto nasce dal lievito madre e dalle farine di grani antichi macinate a pietra, poi riposa tra 36 e 48 ore.&nbsp;<br/><strong>Digestible by Design</strong>: la lievitazione lenta che rende ogni fetta più leggera.</p>",
+            "text_2": "",
+            "button_label": "SCOPRI LE PIZZERIE",
+            "button_link": "shopify://pages/pizzerie",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_UpX94h": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/modus-gastronomia-12.jpg",
+            "image_ratio": "square",
+            "overlay_opacity": 0,
+            "subheading": "02",
+            "heading": "MODUS GASTRONOMIE",
+            "heading_size": "h3",
+            "heading_tag": "h2",
+            "text": "<p>Dietro il banco trovi le verdure dell'orto, i legumi, i grani antichi e le erbe spontanee del Cilento, in ricette che cambiano con le stagioni, come a casa. Stessa filiera, stessa cura, per un pranzo veloce, una cena leggera o da portare via.</p>",
+            "text_2": "",
+            "button_label": "SCOPRI LE GASTRONOMIE",
+            "button_link": "shopify://pages/gastronomie",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_krTqTt",
+        "column_UpX94h"
+      ],
+      "name": "t:sections.cards-grid.name",
+      "settings": {
+        "columns": 2,
+        "auto_layout": true,
+        "mobile_slider": false,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 30,
+        "image_below_cta_mobile": true,
+        "enable_divider_line": false,
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "A tavola a Milano o a casa tua",
+        "heading": "TRE MODI DI VIVERE MODUS",
+        "heading_tag": "h2",
+        "description": "<p>Seduti nelle pizzerie e nelle gastronomie di Milano, oppure a casa tua con il negozio online: ovunque ci incontri, dietro ogni piatto c'è la stessa filiera del Cilento.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "landscape",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "s"
+      }
+    },
+    "collection_carousel_8PnmCM": {
+      "type": "collection-carousel",
+      "blocks": {
+        "categories_7icqKG": {
+          "type": "categories",
+          "settings": {
+            "collection": "conserve",
+            "collection_image": "shopify://shop_images/maida-passata-pomodoro-bio_b7bb2cdb-54c1-4051-b977-2604ebfbdb1e.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/conserve",
+            "button_arrow": true
+          }
+        },
+        "categories_Cnh3dq": {
+          "type": "categories",
+          "settings": {
+            "collection": "erbe",
+            "collection_image": "shopify://shop_images/ERBECILENTOstill-63-scaled.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/erbe",
+            "button_arrow": true
+          }
+        },
+        "categories_iVeNm8": {
+          "type": "categories",
+          "settings": {
+            "collection": "fichi",
+            "collection_image": "shopify://shop_images/infilatella-di-fichi-infornati-allalloro.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/fichi",
+            "button_arrow": true
+          }
+        },
+        "categories_HfWPCK": {
+          "type": "categories",
+          "settings": {
+            "collection": "formaggi",
+            "collection_image": "shopify://shop_images/PHOTO-2020-04-17-17-31-07.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/formaggi",
+            "button_arrow": true
+          }
+        },
+        "categories_jFcKDA": {
+          "type": "categories",
+          "settings": {
+            "collection": "legumi-e-cereali",
+            "collection_image": "shopify://shop_images/Farro_decorticato.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/legumi-e-cereali",
+            "button_arrow": true
+          }
+        },
+        "categories_JGPigU": {
+          "type": "categories",
+          "settings": {
+            "collection": "liquori",
+            "collection_image": "shopify://shop_images/liquore-di-fichi.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/liquori",
+            "button_arrow": true
+          }
+        },
+        "categories_eABXKJ": {
+          "type": "categories",
+          "settings": {
+            "collection": "olio",
+            "collection_image": "shopify://shop_images/olio-extra-vergine-fattoria-ambrosio-riserva_f4fe1bcc-9a95-4088-8c79-eee3d92c88ba.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/olio",
+            "button_arrow": true
+          }
+        },
+        "categories_JyRTMx": {
+          "type": "categories",
+          "settings": {
+            "collection": "pasta",
+            "collection_image": "shopify://shop_images/27510e_1ac302aa7148430cb4ff8eb354e4021e_mv2.png",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/pasta",
+            "button_arrow": true
+          }
+        },
+        "categories_6xVVCE": {
+          "type": "categories",
+          "settings": {
+            "collection": "prodotti-da-forno",
+            "collection_image": "shopify://shop_images/Pane_biscottato_HD.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/prodotti-da-forno",
+            "button_arrow": true
+          }
+        },
+        "categories_nTyrzD": {
+          "type": "categories",
+          "settings": {
+            "collection": "sott-olio-e-sotto-sale",
+            "collection_image": "shopify://shop_images/menaica-alici-sotto-sale-marino_37ef6fc0-3810-4375-9147-c24db621eb32.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/sott-olio-e-sotto-sale",
+            "button_arrow": true
+          }
+        },
+        "categories_mALNEp": {
+          "type": "categories",
+          "settings": {
+            "collection": "salumi",
+            "collection_image": "shopify://shop_images/soppressata-ttre-scaled_c72fd890-60d3-4de0-9542-934186eda3ac.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/salumi",
+            "button_arrow": true
+          }
+        },
+        "categories_tWiH8i": {
+          "type": "categories",
+          "settings": {
+            "collection": "vini",
+            "collection_image": "shopify://shop_images/Le-Ghiandaie-aglianico-Alfonso-Rotolo-600x600.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/vini",
+            "button_arrow": true
+          }
+        },
+        "categories_miele": {
+          "type": "categories",
+          "settings": {
+            "collection": "miele",
+            "collection_image": "shopify://shop_images/Castagno-500.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/miele",
+            "button_arrow": true
+          }
+        },
+        "categories_farine": {
+          "type": "categories",
+          "settings": {
+            "collection": "farine",
+            "collection_image": "shopify://shop_images/cammarano-grano-sacco-juta.jpg",
+            "button_label": "Scopri",
+            "button_link": "shopify://collections/farine",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "categories_7icqKG",
+        "categories_Cnh3dq",
+        "categories_iVeNm8",
+        "categories_HfWPCK",
+        "categories_jFcKDA",
+        "categories_JGPigU",
+        "categories_eABXKJ",
+        "categories_JyRTMx",
+        "categories_6xVVCE",
+        "categories_nTyrzD",
+        "categories_mALNEp",
+        "categories_tWiH8i",
+        "categories_miele",
+        "categories_farine"
+      ],
+      "name": "Collection Carousel",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "section_heading_align": "left",
+        "subheading": "03",
+        "heading": "NEGOZIO ONLINE",
+        "heading_tag": "h3",
+        "description": "<p>Dagli stessi produttori che ogni giorno riforniscono le nostre cucine arrivano anche a casa tua l'olio, il miele, le farine, i fichi e tutto il meglio del Cilento, in 48 ore in tutta Italia.</p>",
+        "button_label": "Esplora lo shop",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "is_autoplay": false,
+        "slider_per_row": 4,
+        "mobile_columns_2": true,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "blocks_spacing": "xs",
+        "image_ratio": "portrait",
+        "card_type": "standart",
+        "hover_effect": "zoom",
+        "text_horizontal": "left",
+        "overlay_opacity": 20,
+        "heading_size": "h3",
+        "desc_size": "medium-font",
+        "text_animation": false,
+        "show_collection_desc": true,
+        "show_collection_button": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "rich_text_cta_8DLjC7": {
+      "type": "rich-text-cta",
+      "name": "Rich Text + CTA",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "subheading": "L'eleganza della sostanza",
+        "heading": "OLTRE IL PIATTO",
+        "text": "<p>Ogni giorno raccontiamo quello che succede prima che un piatto arrivi in tavola: i fiori di zucca raccolti al mattino, le erbe spontanee cercate con Nicola e Riccardo, il Viccio che Paolo ha sfornato nell'antico forno di Anna a Casalbuono, e molto altro.</p>",
+        "button_label": "Seguici su Instagram",
+        "button_link": "https://www.instagram.com/modus_milano/",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "s",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "17783252284dbcc058": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_8R8pET": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 31,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_8R8pET"
+      ],
+      "settings": {
+        "include_margins": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "tabs_by7GQx": {
+      "type": "tabs",
+      "blocks": {
+        "tab_QBKGHy": {
+          "type": "tab",
+          "settings": {
+            "heading": "Storie di Pane",
+            "image": "shopify://shop_images/modu2.jpg",
+            "subheading": "A Vallo della Lucania dal 2010",
+            "description": "Dal 2010 Storie di Pane è panificio, bottega ed enoteca nel cuore del Cilento. Nel forno a legna si cuoce il pane di grani antichi, macinati a pietra e integrali al 100%: la stessa farina che arriva nelle pizze di Modus.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_RgTxqQ": {
+          "type": "tab",
+          "settings": {
+            "heading": "PRODUTTORI CONOSCIUTI",
+            "image": "shopify://shop_images/gastronomia-piatto.jpg",
+            "subheading": "Scelti, visitati, conosciuti da Paolo",
+            "description": "Coltivatori custodi dei grani antichi, frantoi di famiglia, pastifici e cantine: più di 20 produttori del Cilento che Paolo ha scelto e visitato di persona. Da loro arrivano ogni giorno le materie prime delle nostre cucine.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_bW88CF": {
+          "type": "tab",
+          "settings": {
+            "heading": "CONSEGNA OGNI MATTINA",
+            "image": "shopify://shop_images/modus3.jpg",
+            "subheading": "Dal Cilento a Milano, ogni giorno",
+            "description": "Ogni giorno la logistica ideata da Paolo porta i prodotti del Cilento fino a Milano: dal produttore alle pizzerie, alle gastronomie e al negozio online.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_QBKGHy",
+        "tab_RgTxqQ",
+        "tab_bW88CF"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Filiera",
+        "heading": "IL CILENTO A MILANO",
+        "heading_tag": "h2",
+        "description": "<p>Il pane parte da Vallo della Lucania, gli ingredienti da una rete di più di 20 produttori del Cilento che Paolo conosce uno per uno. Ogni mattina arrivano insieme nelle cucine di Milano.</p>",
+        "button_label": "scopri la filiera",
+        "button_link": "shopify://pages/filiera",
+        "button_style": "primary",
+        "button_arrow": false,
+        "blocks_type": "type1",
+        "is_autoplay": true,
+        "slider_speed": 3,
+        "slider_delay": 6,
+        "slide_effects": "fade",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "events_carousel_ak3fy6": {
+      "type": "events-carousel",
+      "blocks": {
+        "event_yamamoto01": {
+          "type": "event",
+          "settings": {
+            "event_image": "shopify://shop_images/Modus_x_Yamamoto_Save_the_Date_e_Menu_v2_AqalaAkzidenz_7.png",
+            "event_name": "Modus x Yamamoto gastronomia",
+            "event_date": "1 Ottobre 2026",
+            "event_description": "<p>Il Cilento incontra il Giappone in una collaborazione con Gastronomia Yamamoto, la casa milanese della cucina giapponese e una delle prime a portare in Italia il katsu sando.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_arrow": true
+          }
+        },
+        "event_i8chqk": {
+          "type": "event",
+          "settings": {
+            "event_image": "shopify://shop_images/drymilano-lorenzo-sirabella-chef-manager-667x1000.webp",
+            "event_name": "Modus x Pizzeria Dry",
+            "event_date": "21 Settembre 2026",
+            "event_description": "<p>Due pizzerie milanesi si incontrano per una serata: Modus e Dry Milano, l'insegna che ha unito pizza napoletana e cocktail d'autore in un ambiente ricercato e conviviale.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_arrow": true
+          }
+        },
+        "event_d9BWcj": {
+          "type": "event",
+          "settings": {
+            "event_image": "shopify://shop_images/world-pizza-day-milano-620x340.jpg",
+            "event_name": "Cilento Duet: Pizza Week Edition",
+            "event_date": "Dal 13 al 19 Luglio 2026",
+            "event_description": "<p>Paolo De Simone e Geppino Croce insieme per una cena a quattro mani che racconta il Cilento in un'unica serata, durante la Pizza Week.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_arrow": true
+          }
+        },
+        "event_VAGmyk": {
+          "type": "event",
+          "settings": {
+            "event_image": "shopify://shop_images/pizza.png",
+            "event_name": "Pizza Village",
+            "event_date": "Dal 7 al 12 Luglio 2026 · Pozzuoli (NA)",
+            "event_description": "<p>Per sei giorni la pizza cilentana di Modus arriva a Pozzuoli, al Pizza Village, il festival che riunisce pizzerie da tutta Italia.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_arrow": true
+          }
+        },
+        "event_battisti01": {
+          "type": "event",
+          "settings": {
+            "event_name": "Territori & Contaminazioni",
+            "event_date": "8 Luglio 2025 · Pizza Week Milano",
+            "event_description": "<p>Un dialogo a quattro mani tra Paolo De Simone e Cesare Battisti del Ratanà, chiuso dal dessert del Maestro Pasticcere Giuseppe Manilia.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "event_yamamoto01",
+        "event_i8chqk",
+        "event_d9BWcj",
+        "event_VAGmyk",
+        "event_battisti01"
+      ],
+      "name": "Events Carousel",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "section_heading_align": "left",
+        "subheading": "Eventi",
+        "heading": "I nostri eventi",
+        "heading_tag": "h2",
+        "description": "<p>Cene a quattro mani con altri chef e pizzaioli, collaborazioni con le insegne di Milano, festival in giro per l'Italia: le occasioni in cui il Cilento di Paolo si siede a tavola insieme ad altre cucine.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "is_autoplay": false,
+        "slider_per_row": 4,
+        "mobile_columns_2": true,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "blocks_spacing": "m",
+        "image_ratio": "portrait",
+        "card_type": "standart",
+        "hover_effect": "zoom",
+        "text_horizontal": "left",
+        "overlay_opacity": 20,
+        "heading_size": "h3",
+        "desc_size": "medium-font",
+        "text_animation": false,
+        "show_event_desc": true,
+        "show_event_button": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "partner_events_logos": {
+      "type": "brands",
+      "blocks": {
+        "partner_scala": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_18_54_PM.png",
+            "brand_link": ""
+          }
+        },
+        "partner_luxottica": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/Luxottica_logo-700x199.png",
+            "brand_link": ""
+          }
+        },
+        "partner_cisalpina": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/logo_cisa_doc.png",
+            "brand_link": ""
+          }
+        },
+        "partner_bcd": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/BCD_Logo-FC.webp",
+            "brand_link": ""
+          }
+        },
+        "partner_biogen": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_32_33_PM.png",
+            "brand_link": ""
+          }
+        },
+        "logo_kJeY3q": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_20_40_PM.png",
+            "brand_link": ""
+          }
+        },
+        "partner_weroad": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/my-shop-logo-1656343470.png",
+            "brand_link": ""
+          }
+        },
+        "partner_enovis": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_31_13_PM.png",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "partner_scala",
+        "partner_luxottica",
+        "partner_cisalpina",
+        "partner_bcd",
+        "partner_biogen",
+        "logo_kJeY3q",
+        "partner_weroad",
+        "partner_enovis"
+      ],
+      "disabled": true,
+      "name": "Partner Eventi",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "ticker_enabled": true,
+        "ticker_speed": 30,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "partner_logos_grid_2VtRqM": {
+      "type": "partner-logos-grid",
+      "blocks": {
+        "grid_partner_scala": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_18_54_PM.png",
+            "link": ""
+          }
+        },
+        "grid_partner_luxottica": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Luxottica_logo-700x199.png",
+            "link": ""
+          }
+        },
+        "grid_partner_cisalpina": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo_cisa_doc.png",
+            "link": ""
+          }
+        },
+        "grid_partner_bcd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/BCD_Logo-FC.webp",
+            "link": ""
+          }
+        },
+        "grid_partner_biogen": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_32_33_PM.png",
+            "link": ""
+          }
+        },
+        "grid_logo_kJeY3q": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_20_40_PM.png",
+            "link": ""
+          }
+        },
+        "grid_partner_weroad": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/my-shop-logo-1656343470.png",
+            "link": ""
+          }
+        },
+        "grid_partner_enovis": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Aug_30_2026_12_31_13_PM.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "grid_partner_scala",
+        "grid_partner_luxottica",
+        "grid_partner_cisalpina",
+        "grid_partner_bcd",
+        "grid_partner_biogen",
+        "grid_logo_kJeY3q",
+        "grid_partner_weroad",
+        "grid_partner_enovis"
+      ],
+      "name": "Partner Logos Grid",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "heading": "AZIENDE CHE HANNO SCELTO MODUS PER I PROPRI EVENTI",
+        "heading_tag": "h3",
+        "text": "",
+        "logo_width_desktop": 65,
+        "logo_width_mobile": 75,
+        "mobile_ticker_enabled": true,
+        "mobile_ticker_speed": 30,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "featured_blogs_Le9iRB": {
+      "type": "featured-blogs",
+      "blocks": {
+        "article_block_mmLfbL": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/pizza-village-masterclass-modus"
+          }
+        },
+        "article_block_D7XqeH": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/ambasciatori-dieta-mediterranea-modus"
+          }
+        },
+        "article_block_tBVkat": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/territori-contaminazioni-evento-modus"
+          }
+        },
+        "article_block_W7W3Xz": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/anniversario-dieta-mediterranea-unesco"
+          }
+        }
+      },
+      "block_order": [
+        "article_block_mmLfbL",
+        "article_block_D7XqeH",
+        "article_block_tBVkat",
+        "article_block_W7W3Xz"
+      ],
+      "name": "t:sections.featured-blogs.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "blog": "",
+        "dynamic_articles_count": 4,
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "enable_border_top": false,
+        "subheading": "Media",
+        "heading": "MODUS NELLA STAMPA",
+        "heading_tag": "h2",
+        "description": "<p>Da Vallo della Lucania a Milano, il viaggio di Paolo e di Modus raccontato dalle guide e dalle testate che lo hanno seguito.</p>",
+        "button_label": "tutta la rassegna",
+        "button_link": "shopify://blogs/journal",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "slider",
+        "slider_per_row": 4,
+        "mobile_columns_2": true,
+        "is_autoplay": false,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "card_type": "default",
+        "hover_effect": "zoom",
+        "show_image": true,
+        "show_tags": false,
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": true,
+        "show_btn": true,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "slideshow_rbgHeE": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow_item_CHwWYi": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": false,
+            "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-22.jpg",
+            "color_scheme": "background-dark",
+            "subheading": "Gift Card",
+            "heading": "Regala il Cilento",
+            "heading_tag": "h2",
+            "text": "<p>Per chi ama il Cilento e per chi deve ancora scoprirlo: una gift card Modus nel valore che scegli, con un tuo messaggio per chi la riceve.</p>",
+            "button_label": "Acquista una gift card",
+            "button_link": "/products/gift-card",
+            "button_style": "tertiary",
+            "button_arrow": false,
+            "overlay_opacity": 53,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_item_CHwWYi"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "flex-end",
+        "container_size": "small",
+        "transition_effect": "slide",
+        "is_autoplay": false,
+        "show_pagination": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_8fjC9g": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5e19610_FKn6hn": {
+          "type": "ai_gen_block_5e19610",
+          "name": "Banner",
+          "disabled": true,
+          "settings": {
+            "banner_image": "shopify://shop_images/Vector_13_1_027745fa-e18f-4bf2-94a4-369d4d06afa7.png",
+            "image_fit": "contain",
+            "image_position": "top center",
+            "placeholder_color": "#f5e8d5",
+            "banner_height": 150,
+            "banner_height_mobile": 400,
+            "show_overlay": false,
+            "overlay_color": "#01473e",
+            "overlay_opacity": 0.3,
+            "heading": "",
+            "heading_size": 48,
+            "heading_color": "#faf1e4",
+            "text": "",
+            "text_size": 16,
+            "text_color": "#faf1e4",
+            "text_alignment": "center",
+            "content_vertical_alignment": "center",
+            "content_horizontal_alignment": "center",
+            "button_text": "Shop now",
+            "button_link": "",
+            "button_text_size": 16,
+            "button_background": "#c28342",
+            "button_background_hover": "#a86f2e",
+            "button_text_color": "#faf8f5",
+            "button_border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5e19610_FKn6hn"
+      ],
+      "settings": {}
+    },
+    "blocks_xtcgHx": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_rxM8Ra": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Newsletter Modus",
+            "title": "Storie dal Cilento",
+            "description": "Le storie dei nostri produttori, i nuovi arrivi, le ricette di stagione e gli eventi nei nostri locali, raccontati con una mail ogni tanto, quando c'è qualcosa che vale la pena leggere.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href=\"/pages/terms\">termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-milano-pizza-scaled.jpg",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_rxM8Ra"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_rjFdWA": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Il progetto dietro i prodotti",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "LA SOSTANZA DI UNA TERRA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Le radici di Paolo affondano nel Cilento, la terra che ha dato vita alla dieta mediterranea. Da lì arrivano ogni giorno i grani antichi, le erbe spontanee e i prodotti di chi coltiva quella terra, fino alle nostre cucine e al negozio online. Il risultato è un piatto che sa da dove viene.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-paolo-de-simone.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "hp-hero",
+    "awards-strip",
+    "image_with_text_R3AcxQ",
+    "grid_banner_LqKzFm",
+    "collection_carousel_8PnmCM",
+    "rich_text_cta_8DLjC7",
+    "17783252284dbcc058",
+    "tabs_by7GQx",
+    "events_carousel_ak3fy6",
+    "partner_events_logos",
+    "partner_logos_grid_2VtRqM",
+    "featured_blogs_Le9iRB",
+    "slideshow_rbgHeE",
+    "blocks_8fjC9g",
+    "blocks_xtcgHx",
+    "hero_section_rjFdWA"
+  ]
+}

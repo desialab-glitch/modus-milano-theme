@@ -1,0 +1,900 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collections-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Prodotti d’origine",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL SAPORE DI UNA TRADIZIONE CHE SI TRAMANDA",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Ogni prodotto che trovi qui arriva dal Cilento. <br/>Paolo De Simone conosce ogni produttore per nome. Visita i luoghi. Sceglie direttamente alla fonte.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/modus1.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "rich_text_cta_aUdfDx": {
+      "type": "rich-text-cta",
+      "disabled": true,
+      "name": "Rich Text + CTA",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "subheading": "Semplice Mangiare",
+        "heading": "Una filiera reale, costruita viaggio dopo viaggio",
+        "text": "<p>Il Cilento è Patrimonio UNESCO e culla della Dieta Mediterranea. <br/>Ogni categoria di prodotto nasce da un territorio preciso e da una persona che lo custodisce.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "m",
+        "margin_bottom": "s",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "slider_with_info_YVf7ng": {
+      "type": "slider-with-info",
+      "blocks": {
+        "image_block_bPwBUx": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/modu2.jpg"
+          }
+        },
+        "image_block_NNbeq9": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/M3_04687.jpg"
+          }
+        },
+        "image_block_6qfC7W": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/M3_05464.jpg"
+          }
+        },
+        "heading_block_ed6wdb": {
+          "type": "heading_block",
+          "settings": {
+            "heading": "LA NOSTRA FILIERA",
+            "heading_tag": "h3",
+            "description": "<p>Scegliere questi ingredienti per Modus è un atto di rispetto verso chi siede alla nostra tavola. Significa portare a Milano una materia viva, con la forza della sua terra e la trasparenza di una filiera reale.</p><p>Ogni produttore è stato visitato di persona. Conosciamo i loro metodi, i loro nomi.</p>",
+            "subheading": "Produttori visitati di persona",
+            "cta_label": "scopri la filiera",
+            "cta_link": "shopify://pages/filiera",
+            "cta_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_bPwBUx",
+        "image_block_NNbeq9",
+        "image_block_6qfC7W",
+        "heading_block_ed6wdb"
+      ],
+      "name": "t:sections.slider-with-info.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "is_autoplay": true,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "landscape",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "xs",
+        "padding_bottom": "s"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "section_header_type": "type2",
+        "subheading": "Le proposte Modus",
+        "heading": "PRODOTTI D’ORIGINE",
+        "heading_tag": "h2",
+        "description": "<p>Ogni categoria custodisce una storia precisa: un produttore, un territorio, una stagione. <br/>Paolo De Simone li conosce tutti per nome.</p>",
+        "enable_border_top": false,
+        "collection_per_page": 23,
+        "per_row": 4,
+        "mobile_layout": "2",
+        "sort": "alphabetical",
+        "image_ratio": "portrait",
+        "card_type": "standart",
+        "hover_effect": "zoom",
+        "text_horizontal": "left",
+        "overlay_opacity": 10,
+        "heading_size": "h3",
+        "desc_size": "small-font",
+        "text_animation": false,
+        "show_collection_desc": false,
+        "show_collection_button": true,
+        "button_arrow": true,
+        "margin_top": "s",
+        "margin_bottom": "s"
+      }
+    },
+    "collection_grid_DFxMWY": {
+      "type": "collection-grid",
+      "blocks": {
+        "categories_3iHcKT": {
+          "type": "categories",
+          "settings": {
+            "collection": "vini",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_pntPht": {
+          "type": "categories",
+          "settings": {
+            "collection": "salumi",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 2,
+            "row_start": "1",
+            "row_end": "unset"
+          }
+        },
+        "categories_rPDhba": {
+          "type": "categories",
+          "settings": {
+            "collection": "sott-olio-e-sotto-sale",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_EE9Xgi": {
+          "type": "categories",
+          "settings": {
+            "collection": "prodotti-da-forno",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_myx9P9": {
+          "type": "categories",
+          "settings": {
+            "collection": "pasta",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_yV9hkk": {
+          "type": "categories",
+          "settings": {
+            "collection": "olio",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "3",
+            "row_end": "unset"
+          }
+        },
+        "categories_MjzUAw": {
+          "type": "categories",
+          "settings": {
+            "collection": "liquori",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "2",
+            "row_end": "unset"
+          }
+        },
+        "categories_MU6x3J": {
+          "type": "categories",
+          "settings": {
+            "collection": "legumi-e-cereali",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "2",
+            "row_end": "unset"
+          }
+        },
+        "categories_fyfPet": {
+          "type": "categories",
+          "settings": {
+            "collection": "fichi",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_DPAHqq": {
+          "type": "categories",
+          "settings": {
+            "collection": "formaggi",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_z8ahhe": {
+          "type": "categories",
+          "settings": {
+            "collection": "conserve",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "4",
+            "row_end": "unset"
+          }
+        },
+        "categories_CJMURE": {
+          "type": "categories",
+          "settings": {
+            "collection": "erbe",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "4",
+            "row_end": "unset"
+          }
+        },
+        "categories_miele": {
+          "type": "categories",
+          "settings": {
+            "collection": "miele",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "categories_farine": {
+          "type": "categories",
+          "settings": {
+            "collection": "farine",
+            "button_label": "Scopri",
+            "button_link": "",
+            "button_arrow": true,
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "categories_3iHcKT",
+        "categories_pntPht",
+        "categories_rPDhba",
+        "categories_EE9Xgi",
+        "categories_myx9P9",
+        "categories_yV9hkk",
+        "categories_MjzUAw",
+        "categories_MU6x3J",
+        "categories_fyfPet",
+        "categories_DPAHqq",
+        "categories_z8ahhe",
+        "categories_CJMURE",
+        "categories_miele",
+        "categories_farine"
+      ],
+      "disabled": true,
+      "name": "t:sections.collection-grid.presets.name",
+      "settings": {
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "enable_border_top": true,
+        "subheading": "I nostri prodotti",
+        "heading": "PRODOTTI D’ORIGINE",
+        "heading_tag": "h2",
+        "description": "<p>Ogni sapore arriva da una tradizione tramandata nel tempo. Ogni categoria nasce da produttori che Paolo De Simone conosce per nome.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "grid",
+        "is_autoplay": false,
+        "slider_per_row": 2,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "columns": 3,
+        "blocks_spacing": "m",
+        "image_ratio": "square",
+        "card_type": "standart",
+        "hover_effect": "zoom",
+        "text_horizontal": "center",
+        "overlay_opacity": 20,
+        "heading_size": "h3",
+        "desc_size": "medium-font",
+        "text_animation": false,
+        "show_collection_desc": false,
+        "show_collection_button": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_t9RELQ": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "xs",
+        "margin_bottom": "xs"
+      }
+    },
+    "rich_text_cta_RqAM6V": {
+      "type": "rich-text-cta",
+      "name": "Rich Text + CTA",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "subheading": "Come funziona",
+        "heading": "IN TRE PASSI",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "s",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "multicolumn_cKgkyF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_afXy9q": {
+          "type": "column",
+          "settings": {
+            "subheading": "01",
+            "heading": "SCEGLI",
+            "heading_size": "h3",
+            "text": "<p>Naviga le categorie. Ogni scheda racconta il produttore, il territorio e le certificazioni.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "column_kaJrWy": {
+          "type": "column",
+          "settings": {
+            "subheading": "02",
+            "heading": "ORDINA",
+            "heading_size": "h3",
+            "text": "<p>Aggiungi al carrello, porta il Cilento a casa tua. Spedizione 48h ovunque in Italia.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "column_HTk3cR": {
+          "type": "column",
+          "settings": {
+            "subheading": "03",
+            "heading": "RICEVI",
+            "heading_size": "h3",
+            "text": "<p>Il prodotto arriva direttamente dal Cilento, selezionato alla fonte. La qualità si sente al primo assaggio.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "column_afXy9q",
+        "column_kaJrWy",
+        "column_HTk3cR"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "color_scheme": "",
+        "multicolumn_to_show": 3,
+        "buton_show": "left",
+        "img_size": "small",
+        "swipe_on_mobile": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "s"
+      }
+    },
+    "slideshow_KVxyNj": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow_item_79bXzL": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": false,
+            "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-gastronomia_b5cb67ac-204f-4202-8db6-8a5f713e3910.jpg",
+            "color_scheme": "background-dark",
+            "subheading": "Da ritirare in gastronomia",
+            "heading": "PRODOTTI FRESCHI",
+            "heading_tag": "h1",
+            "text": "<p><strong>12 pasti freschi </strong>ogni settimana. Ordini aperti<strong> fino a venerdì 18:00.</strong></p>",
+            "button_label": "MENU SETTIMANALE",
+            "button_link": "shopify://pages/gastronomie",
+            "button_style": "primary",
+            "button_arrow": false,
+            "overlay_opacity": 60,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slideshow_item_79bXzL"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": false,
+        "show_pagination": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "banner_yeUHck": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_KtMnEW": {
+      "type": "image-with-text",
+      "blocks": {
+        "column_N7i7Vp": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        },
+        "column_drUKWg": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        },
+        "column_bcwXgX": {
+          "type": "column",
+          "settings": {
+            "heading": "Visual Impact",
+            "heading_tag": "h5"
+          }
+        }
+      },
+      "block_order": [
+        "column_N7i7Vp",
+        "column_drUKWg",
+        "column_bcwXgX"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/gastronomia.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Da ritirare in gastronomia",
+        "heading_tag": "h2",
+        "heading": "PRODOTTI FRESCHI",
+        "text": "<p>12 pasti freschi ogni settimana.<br/>Ordini aperti fino a venerdì ore 18:00.</p>",
+        "cta_1_label": "scopri il menu",
+        "cta_1_link": "shopify://pages/gastronomie",
+        "cta_1_style": "secondary",
+        "cta_2_label": "i nostri locali",
+        "cta_2_link": "shopify://pages/contatti",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "how-it-works": {
+      "type": "steps",
+      "blocks": {
+        "step-1": {
+          "type": "text_block",
+          "settings": {
+            "subheading": "01",
+            "heading": "SCEGLI",
+            "description": "<p>Naviga le categorie. Ogni scheda racconta il produttore, il territorio e le certificazioni.</p>"
+          }
+        },
+        "step-2": {
+          "type": "text_block",
+          "settings": {
+            "subheading": "02",
+            "heading": "ORDINA",
+            "description": "<p>Aggiungi al carrello. Spedizione 48h ovunque in Italia o ritiro gratuito nelle gastronomie a Milano.</p>"
+          }
+        },
+        "step-3": {
+          "type": "text_block",
+          "settings": {
+            "subheading": "03",
+            "heading": "RICEVI",
+            "description": "<p>Il prodotto arriva direttamente dal Cilento, selezionato alla fonte. La qualità si sente al primo assaggio.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step-1",
+        "step-2",
+        "step-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/img6.jpg",
+        "subheading": "Come funziona",
+        "heading": "Come funziona",
+        "text_animation": false,
+        "description": "<p>Come funziona</p>",
+        "color_scheme": "background-1",
+        "heading_modal": "",
+        "description_modal": "",
+        "button_label": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "ticker_text": "PASTA · DAL MARE · OLIO EVO · CONSERVE · PANETTERIA · VINI & LIQUORI · LEGUMI · SALUMI & FORMAGGI · DOLCE & NATURA",
+        "color_scheme_ticker": "background-dark",
+        "ticker_speed": 20,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come avviene la spedizione?",
+            "heading_tag": "h2",
+            "description": "<p>Spediamo in tutta Italia con corriere espresso in 48h lavorative. Per ordini superiori a €57 la spedizione è gratuita. Ritiro gratuito disponibile in tutte le gastronomie e pizzerie Modus a Milano.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "I prodotti vengono davvero dal Cilento?",
+            "heading_tag": "h2",
+            "description": "<p>Sì. Ogni prodotto è selezionato direttamente da produttori del Cilento che Paolo De Simone visita di persona. Nessun intermediario, solo la terra e il momento giusto.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Posso ritirare l’ordine in pizzeria o gastronomia?",
+            "heading_tag": "h2",
+            "description": "<p>Sì, offriamo il ritiro gratuito presso tutte le sedi milanesi: Pizzeria Via Maffei, Pizzeria Corso Magenta, Gastronomia Corso Italia, Gastronomia Via Battisti, Gastronomia Via Pirelli.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa significa Presidio Slow Food?",
+            "heading_tag": "h2",
+            "description": "<p>Il marchio Presidio Slow Food certifica produzioni artigianali legate a territori specifici, praticate secondo metodi tradizionali. Le Alici di Menaica e la Soppressata di Gioi che trovi nel nostro shop sono entrambi Presidi Slow Food.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Posso modificare o annullare il mio ordine?",
+            "heading_tag": "h2",
+            "description": "<p>Puoi richiedere modifiche o cancellazioni entro 2 ore dall’acquisto scrivendo a info@modusmilano.it. Dopo tale termine l’ordine entra in lavorazione.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "margin_top": "m",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "banner_9cFfGm": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "hp-trust": {
+      "type": "multicolumn",
+      "blocks": {
+        "trust-1": {
+          "type": "column",
+          "settings": {
+            "subheading": "Spedizione 48h",
+            "heading": "In tutta Italia",
+            "heading_size": "h3",
+            "text": "<p>Consegna in 48h lavorative con corriere espresso, gratuita sopra i €57.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "trust-2": {
+          "type": "column",
+          "settings": {
+            "subheading": "Spedizione UE",
+            "heading": "Consegna in Europa",
+            "heading_size": "h3",
+            "text": "<p>Spediamo in tutta Europa, il Cilento arriva anche fuori dall’Italia.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "trust-3": {
+          "type": "column",
+          "settings": {
+            "subheading": "Con Stripe, PayPal e Apple Pay",
+            "heading": "Pagamenti sicuri",
+            "heading_size": "h3",
+            "text": "<p>Crittografia SSL e certificazione PCI DSS.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "trust-1",
+        "trust-2",
+        "trust-3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "multicolumn_to_show": 3,
+        "buton_show": "none",
+        "img_size": "adapt",
+        "swipe_on_mobile": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "blocks_AGn67W": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_aMabhY": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Non perderti nulla",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href=\"/pages/terms\">termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/pizzeria-modus.png",
+            "desktop_width_percent": 100,
+            "disclaimer_size": 14,
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_aMabhY"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_tcjPdU": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Come selezioniamo i prodotti",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO, SCELTO PRODUTTORE PER PRODUTTORE",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Ogni produttore del Cilento che trovi qui è stato visitato di persona. Conosciamo i loro metodi, i loro territori, i loro nomi.</p>",
+        "button_label": "Vieni a scoprire l'originale",
+        "button_link": "shopify://pages/chi-siamo",
+        "button_style": "primary",
+        "button_arrow": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/modus1.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "collections-hero",
+    "rich_text_cta_aUdfDx",
+    "slider_with_info_YVf7ng",
+    "main",
+    "collection_grid_DFxMWY",
+    "banner_t9RELQ",
+    "rich_text_cta_RqAM6V",
+    "multicolumn_cKgkyF",
+    "slideshow_KVxyNj",
+    "banner_yeUHck",
+    "image_with_text_KtMnEW",
+    "how-it-works",
+    "faqs",
+    "banner_9cFfGm",
+    "hp-trust",
+    "blocks_AGn67W",
+    "hero_section_tcjPdU"
+  ]
+}

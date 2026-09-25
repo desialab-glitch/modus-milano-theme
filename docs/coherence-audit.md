@@ -17,15 +17,15 @@ No design decision needed; each restores the documented rule.
 - [~] T1.8 (all shared-CSS labels, blog pills, contact consent, article date, fornitori pills/CTA/filter, ambasciatore body done; product badge 10px = D6) Text below 13px on mobile: tag pills 11px (blog cards, article), breadcrumb 11px, footer links 12px + copyright 11px, blog filter pills 10.5px, contact consent 12px, article date 12px, fornitori pills 10.6px + CTA 11px, fornitori filter name 12.25px desktop, ambasciatore body 13px, timeline/awards descriptions 13px, store-map lines 13px, popup disclaimer.
 - [x] T1.9 Slideshow description text dark grey on orange/photo slides (scheme "background-2" doesn't exist → falls back to light scheme). → cream text on slides.
 - [x] T1.10 Two-button gaps: 1rem / 8px / 0 → `--modus-space-xs`; grid-banner 2-button cards stack full width on mobile (Pizzerie, dove-ritiri).
-- [ ] T1.11 Side gutters not from `--main-padding`: fornitori-filter (40/16px), fornitori-list text (56/24px), related articles (20px on desktop), divider block (50px), article header (+24/32px inset), slideshow tablet (30/60px), CTA wrappers outside `.container` (product recommendations, popular products, simple slider, grid-banner type1).
-- [ ] T1.12 Desktop side-by-side gutters → `--modus-space-column` (40px): hero-split 32, featured-product 32, FAQ image layout 32, slider-with-info 58–98, sdp-bridge 108, ambasciatore 48, awards 152, video-with-text 32.
+- [x] T1.11 Side gutters not from `--main-padding`: fornitori-filter (40/16px), fornitori-list text (56/24px), related articles (20px on desktop), divider block (50px), article header (+24/32px inset), slideshow tablet (30/60px), CTA wrappers outside `.container` (product recommendations, popular products, simple slider, grid-banner type1).
+- [x] T1.12 Desktop side-by-side gutters → `--modus-space-column` (40px): hero-split 32, featured-product 32, FAQ image layout 32, slider-with-info 58–98, sdp-bridge 108, ambasciatore 48, awards 152, video-with-text 32.
 - [x] T1.13 `[class*="badge"]` 12px margin hitting inline pills (article meta, article cards, cart subtitles).
 - [x] T1.14 Logo tickers pulled wider than the screen (brands, gallery block): fade edges half off-screen.
 
 ## Tier 1b — hardcoded section spacing → editor settings (values chosen to match today as closely as possible)
 Editor padding/margin settings silently do nothing or don't exist here.
 
-- [ ] Timeline (64px), Awards (64px), Ambasciatore (40/24), SDP bridge (72/48), Slideshow (60/80px, padding settings dead), product page `[id^="MainProduct-"]` (40/60px, settings ignored), gallery block ID rule (24px + 30px), newsletter block (60/36px), fornitori filter (32/24), main-page title/body (20px + 32/64px), cart (32/68px), 404 (40px), hero-section content padding.
+- [~] (all done except the product page, pending client) Timeline (64px), Awards (64px), Ambasciatore (40/24), SDP bridge (72/48), Slideshow (60/80px, padding settings dead), product page `[id^="MainProduct-"]` (40/60px, settings ignored), gallery block ID rule (24px + 30px), newsletter block (60/36px), fornitori filter (32/24), main-page title/body (20px + 32/64px), cart (32/68px), 404 (40px), hero-section content padding.
 - [ ] AI blocks: add top/bottom spacing selects using the same tokens; replace colour pickers with the page colour scheme.
 
 ## Tier 2 — design decisions for the client

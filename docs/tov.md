@@ -16,7 +16,8 @@
 - "ricercato"
 
 ## Standing content rules
-- Subheadings: short natural phrase (a few words), never a "Nome · Comune · Regione" tag list
+- Subheadings (every `subheading` / `subheading_secondary` field, sitewide): short natural phrase, a few words, max ~40 characters, no full stop, never more than one clause. Never a tag list: no "Nome · Comune · Regione", no "Luogo, Presidio Slow Food", no "Nome, Luogo", no "A / B". Never carry facts or story in the subheading — dates, numbers, history belong in the description/text field below it. If a subheading reads like a sentence, move it into the description and write a new short phrase.
+- Producer cards shown side by side (tabs, sliders, grid columns): the description field is always filled (never story-in-subheading with an empty description), and all producers in the same section have descriptions of roughly the same length — target 250–300 characters each, within about ±30 of each other. Balance by trimming the longest (secondary details like soil type, name etymology, trellising can go to FAQ); never pad the shorter one with unsourced claims.
 - Every factual claim needs a source (producer site, Slow Food, campaniamediterranea.it, or web research) — if unsupported, remove it, don't invent
 - No "ritiro in gastronomia" / pickup option anywhere except Prodotti Freschi
 - Gastronomie location cards: Mappa button only, never Prenota (that's Pizzerie-only, real Quandoo links)

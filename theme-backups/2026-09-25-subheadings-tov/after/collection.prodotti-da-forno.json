@@ -1,0 +1,543 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Dal forno di Storie di Pane",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "PRODOTTI DA FORNO DI VALLO DELLA LUCANIA",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Paolo De Simone è cresciuto nel Cilento tra i profumi del forno e ha imparato dalla nonna i segreti della lievitazione naturale. Nel 2010 ha aperto Storie di Pane a Vallo della Lucania, e da quel forno escono ancora oggi il pane biscottato e i biscotti che arrivano a casa tua, fatti con le ricette di famiglia.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_forno",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/storie-di-panetre-laboratori-per-conoscere-le-eccellenze-del-cilento-248469.jpg",
+        "hide_image_mobile": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "products_grid_forno": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "prodotti-da-forno",
+        "product_list": [],
+        "anchor_id": "products_grid_forno",
+        "subheading": "Le ricette di casa di Paolo",
+        "heading": "DAL FORNO DI PAOLO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Il pane biscottato per l'acquasale d'estate, i malfatti e i biscotti al miele per la colazione, i cantucci per il fine pasto. Sono le ricette di casa di Paolo, fatte a Vallo della Lucania.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 8,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "produttore_forno": {
+      "type": "image-with-text",
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/img67-1-749x1024.jpg",
+        "video": "shopify://files/videos/13 maggio STORIE DI PANE.mp4",
+        "image_ratio": "portrait",
+        "enable_dual_media": true,
+        "secondary_image": "shopify://shop_images/img67-1-749x1024.jpg",
+        "producer_logo": "shopify://shop_images/sdp_logo_transparent.png",
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 20,
+        "subheading_secondary": "Artigiani del cibo a Vallo della Lucania",
+        "heading": "",
+        "heading_tag": "h2",
+        "text": "<p>Storie di Pane nasce nel 2010 a Vallo della Lucania: panificio, bottega, rosticceria, bar ed enoteca in un unico spazio. Il cuore è il forno a legna a vista costruito dal maestro Stefano Ferrara.</p><p>Qui si fa anche il pane ai grani antichi con il marchio del Parco Nazionale del Cilento. Le ricette dei dolci sono quelle di famiglia, che la mamma di Paolo spiega, insegna e prepara ancora oggi.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "banner_forno_bottom": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_bottom.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/storie-di-pane-forno-e-pane.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il prodotto di punta",
+        "heading": "IL VISCUOTTO, CROCCANTE",
+        "heading_tag": "h2",
+        "text": "<p>Il <em>viscuotto</em> è il pane biscottato cilentano, cotto due volte. Nel Cilento si ammorbidisce in acqua e si condisce con pomodoro, olio EVO e sale: è l'acquasale.</p>",
+        "cta_1_label": "scopri il pane biscottato",
+        "cta_1_link": "shopify://products/pane-biscottato",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "divider": {
+      "type": "_blocks",
+      "blocks": {
+        "div": {
+          "type": "ai_gen_block_a1b887d",
+          "settings": {
+            "divider_height": "1",
+            "divider_color": "#c28342"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "div"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "collection-products": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "product_card_heading_tag": "h3",
+        "show_two_cards": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_tags": false,
+        "show_desc": false,
+        "show_color_swatch": false,
+        "show_variants": false,
+        "product_variant_type": "color",
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "color_scheme": "background-1",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_per_row_button": true,
+        "default_per_row": "small",
+        "enable_sorting": true,
+        "image_filter_ratio": "4/5",
+        "image_filter_fit": "cover",
+        "image_filter_columns": 3,
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "banner_forno_top": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cilento-national-park-04.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il territorio",
+            "heading": "VALLO DELLA LUCANIA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Vallo della Lucania è nel cuore del Parco Nazionale del Cilento, la terra della dieta mediterranea. Storie di Pane lavora molti prodotti dei piccoli produttori della zona.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/storie-di-pane-forno-e-pane.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il pane biscottato",
+            "heading": "COTTO DUE VOLTE",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il pane biscottato si cuoce due volte, finché diventa secco e croccante. È il pane che nelle case cilentane non manca mai: d'estate si bagna e si condisce con pomodoro, olio e sale.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img6.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "La mano",
+            "heading": "FORMATI A MANO, UNO PER UNO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>I biscotti malfatti escono tutti diversi, come dice il nome. È il segno di una lavorazione a mano: ogni pezzo ha la sua forma.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "l",
+        "padding_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si prepara l’acquasale",
+            "heading_tag": "h2",
+            "description": "<p>Bagna il pane biscottato in acqua fredda per qualche secondo, finché si ammorbidisce ma resta intero. Condisci con pomodori freschi, olio EVO, sale e origano.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "I prodotti da forno contengono glutine",
+            "heading_tag": "h2",
+            "description": "<p>Sì, sono fatti con farina di grano e contengono glutine: vanno evitati in caso di celiachia. La lista completa degli ingredienti è in etichetta.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Con cosa abbinare i cantucci",
+            "heading_tag": "h2",
+            "description": "<p>Il cantuccio si intinge in un vino dolce, come un passito. Funziona anche da solo, a colazione. I biscotti al miele stanno bene con il miele di castagno di Cavalieri, che trovi nel negozio online.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa significa lievitazione naturale",
+            "heading_tag": "h2",
+            "description": "<p>È la lievitazione con lievito madre, quella che Paolo ha imparato dalla nonna. I tempi sono più lunghi e l'impasto sviluppa più sapore.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-3",
+        "faq-4",
+        "faq-5"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUI PRODOTTI DA FORNO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "show_image_content": true,
+        "image": "shopify://shop_images/storie-di-panetre-laboratori-per-conoscere-le-eccellenze-del-cilento-248469.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "cacioricotta-di-capra",
+          "miele-di-castagno"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "IL PANE, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Per la colazione e per l'acquasale",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/postcardfrom-guida-luoghi-storie-di-pane-vallo-della-lucania-paolo-de-simone.jpg",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent",
+        "hide_image_desktop": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "products_grid_forno",
+    "produttore_forno",
+    "banner_forno_bottom",
+    "image_with_text_Nh4pWr",
+    "divider",
+    "collection-products",
+    "banner_forno_top",
+    "practical",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

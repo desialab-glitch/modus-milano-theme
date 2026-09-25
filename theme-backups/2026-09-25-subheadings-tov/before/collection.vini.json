@@ -1,0 +1,696 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Le cantine del Cilento",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "I VINI DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Nel 1938 il nonno di Alfonso Rotolo pianta la prima vigna a Rutino. Negli anni '70 il padre di Luigi Maffini fa lo stesso sulle colline di Castellabate, e nel 1996 Luigi imbottiglia il suo primo Fiano. A Vallo della Lucania i vigneti di Cobellis guardano verso Velia, dove Parmenide fondò la scuola eleatica. L'enologo toscano Lorenzo Scotto ha accompagnato il rinnovamento dei vigneti e il primo imbottigliamento nel 2006; dal 2021 il progetto enologico è affidato ad Angelo Puglia. Da queste famiglie arrivano il Fiano e l'Aglianico che trovi qui.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_vini_rossi",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/Vini-del-Cilento-vitigni-1.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il territorio",
+        "heading_tag": "h2",
+        "heading": "LA DOC CILENTO",
+        "text": "<p>La DOC Cilento è nata nel 1989 e copre la zona del Parco Nazionale del Cilento, in provincia di Salerno. Sulla stessa area c'è anche l'IGP Paestum. Fiano e Aglianico sono i vitigni che meglio raccontano questo territorio.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_vini_rossi": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "vini",
+        "product_list": [
+          "vino-kleos-aglianico",
+          "vino-piscriddi",
+          "vino-le-ghiandaie"
+        ],
+        "anchor_id": "products_grid_vini_rossi",
+        "subheading": "Aglianico e blend rossi",
+        "heading": "I VINI ROSSI",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Kleos e Le Ghiandaie sono Aglianico. Piscriddi unisce Barbera, Sangiovese e Aglianico ed è il più morbido dei tre, da bere giovane con i piatti di tutti i giorni.</p>",
+        "alignment": "left",
+        "columns_per_row": 3,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "divider": {
+      "type": "_blocks",
+      "blocks": {
+        "div": {
+          "type": "ai_gen_block_a1b887d",
+          "settings": {
+            "divider_height": "1",
+            "divider_color": "#c28342"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "div"
+      ],
+      "settings": {}
+    },
+    "products_grid_vini_bianchi": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "vini",
+        "product_list": [
+          "vino-kratos",
+          "vino-valentina",
+          "vino-thumos"
+        ],
+        "anchor_id": "",
+        "subheading": "Fiano e Greco",
+        "heading": "I VINI BIANCHI",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Kratos e Valentina sono Fiano, il bianco simbolo del Cilento. Thumos è Greco in purezza, dalla vigna delle Starze di Cobellis.</p>",
+        "alignment": "left",
+        "columns_per_row": 3,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_vini_top": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "banner_wCRYy8": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "tabs_NVABg8": {
+      "type": "tabs",
+      "blocks": {
+        "tab_WaGMPi": {
+          "type": "tab",
+          "settings": {
+            "heading": "maffini",
+            "image": "shopify://shop_images/vigneti-maffini-e-castellabate-e-640x480.jpg",
+            "subheading": "Negli anni '70 il padre di Luigi Maffini pianta le prime viti. Nel 1996 Luigi e la moglie Raffaella imbottigliano il primo Kratos.",
+            "description": "Oggi i vigneti sono due: quello storico di Castellabate, vicino al mare, e quello di Giungano, in collina, su terreni argillosi e calcarei tra la macchia mediterranea. L'agricoltura è biologica.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_HMFPaM": {
+          "type": "tab",
+          "settings": {
+            "heading": "cobellis",
+            "image": "shopify://shop_images/tenuta-cobellis-cilento-e1587231644123_49c0dd66-cae2-47c9-83cd-a0878da8a648.jpg",
+            "subheading": "A Vallo della Lucania la famiglia Cobellis ha circa 300 ettari tra olivi, allevamenti e vigne, divisi in cinque tenute.",
+            "description": "Massimo Cobellis ha dedicato alla vite una parte dei terreni comprati dal padre negli anni '70, e la prima annata è del 2004. Il Piscriddi nasce nella Vigna dei Russi, il Thumos nella Vigna delle Starze. Thumos viene da una parola greca che indica le emozioni.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_V3HDNc": {
+          "type": "tab",
+          "settings": {
+            "heading": "rotolo",
+            "image": "shopify://shop_images/images_21_06900501-d439-40e9-95f8-d9bea5b16af7.jpg",
+            "subheading": "Tre generazioni a Rutino. Il nonno di Alfonso Rotolo piantò la prima vigna nel 1938.",
+            "description": "Rutino è, con Agropoli, il comune più vitato del Cilento. Qui Alfonso Rotolo lavora Fiano e Aglianico in circa dieci ettari di vigneti allevati a guyot. Negli anni '90 è stato tra i primi, con Maffini, a fare del Fiano il bianco del territorio.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_WaGMPi",
+        "tab_HMFPaM",
+        "tab_V3HDNc"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Chi fa i nostri vini",
+        "heading": "I PRODUTTORI",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "blocks_type": "type1",
+        "is_autoplay": false,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "slide_effects": "fade",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "banner_94eBfb": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "s",
+        "margin_bottom": "s"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/maffini-vigneto-a-giungano-e1416559469140.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "I vitigni",
+            "heading": "FIANO E AGLIANICO",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Dalla metà degli anni '90 il Fiano è diventato il bianco del Cilento. Qui, in un clima più caldo di quello dell'Irpinia, porta profumi floreali e di frutta. L'Aglianico dà rossi strutturati, che migliorano con il tempo.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Tagliatelle-al-ragu-recipe-22-1200.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come si abbinano",
+            "heading": "LA TAVOLA CILENTANA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>I rossi (Kleos, Le Ghiandaie, Piscriddi) con la pasta al ragù, i fusilli al sugo di carne, i formaggi stagionati e i salumi di Gioi. I bianchi (Kratos, Valentina, Thumos) con il pesce alla brace, le alici di Menaica e il cacioricotta fresco.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-22.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Lo stesso vitigno",
+            "heading": "L'AGLIANICO DEL CILENTO E IL TAURASI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Il Taurasi è Aglianico in Irpinia: grande struttura e lunghi affinamenti. L'Aglianico del Cilento cresce su colline che guardano il Tirreno e dà vini con più frutto, piacevoli anche da giovani.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_product_vini": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "Selezionato da Modus",
+        "heading": "IL ROSSO DELLA SELEZIONE",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "<p>Le Ghiandaie è l'Aglianico di Alfonso Rotolo, da Rutino.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "vino-le-ghiandaie",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos'è la DOC Cilento",
+            "heading_tag": "h2",
+            "description": "<p>È la denominazione dei vini del Cilento, nata nel 1989, che copre l'area del Parco Nazionale del Cilento. Sulla stessa zona c'è anche l'IGP Paestum, usata per blend e vitigni diversi. La denominazione di ogni vino è indicata in etichetta.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra Kleos, Le Ghiandaie e Piscriddi",
+            "heading_tag": "h2",
+            "description": "<p>Kleos (Maffini) è Aglianico, affinato in barrique di rovere. Le Ghiandaie (Rotolo) è l'Aglianico di Rutino. Piscriddi (Cobellis) unisce Barbera, Sangiovese e Aglianico, affina dieci mesi in acciaio ed è il più morbido dei tre.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra Kratos e Valentina",
+            "heading_tag": "h2",
+            "description": "<p>Kratos è il Fiano di Maffini, il primo vino che Luigi ha imbottigliato nel 1996: fresco e sapido, con note di ginestra e mandorla. Valentina è il Fiano di Alfonso Rotolo, da Rutino.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos'è il Thumos di Cobellis",
+            "heading_tag": "h2",
+            "description": "<p>È Greco in purezza, dalla Vigna delle Starze a Vallo della Lucania, affinato sei mesi in acciaio. Ha profumi di fiori bianchi, pesca gialla e albicocca, ed è sapido e fresco in bocca. Il nome viene da una parola greca che indica le emozioni.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Temperature di servizio",
+            "heading_tag": "h2",
+            "description": "<p>Bianchi (Kratos, Valentina, Thumos): tra 8 e 12°C. Rosso giovane (Piscriddi): tra 16 e 18°C. Rossi strutturati (Kleos, Le Ghiandaie): intorno ai 18°C, fuori dal frigo almeno 30 minuti prima di servire.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conservano",
+            "heading_tag": "h2",
+            "description": "<p>Bottiglie coricate, al riparo dalla luce e dal calore, tra 14 e 18°C. I bianchi e i rossi più giovani si bevono nei primi anni, per godere di freschezza e frutto.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SUI VINI DEL CILENTO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/14-luigi-maffini-big_0055a904-6882-4061-9b29-af3d80786a4e.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "soppressata-di-gioi",
+          "alici-di-menaica",
+          "cacioricotta-di-capra",
+          "pane-biscottato"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "I VINI, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Per un tagliere cilentano",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/modus-milano-pizza-scaled.jpg",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "image_with_text_Nh4pWr",
+    "products_grid_vini_rossi",
+    "divider",
+    "products_grid_vini_bianchi",
+    "banner_vini_top",
+    "banner_wCRYy8",
+    "tabs_NVABg8",
+    "banner_94eBfb",
+    "practical",
+    "featured_product_vini",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

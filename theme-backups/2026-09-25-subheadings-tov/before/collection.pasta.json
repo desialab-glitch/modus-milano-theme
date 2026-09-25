@@ -1,0 +1,733 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Due modi di lavorare il grano",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "PASTA DI GRAGNANO E DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>A Gragnano, nella Valle dei Mulini, il vento dei Monti Lattari e quello della penisola sorrentina si incontrano nella gola del torrente: per secoli è stato il posto giusto per asciugare la pasta. Qui il Pastificio Gentile la essicca ancora lentamente, in tre o quattro giorni, con il metodo Cirillo. Dal Cilento arrivano invece i formati della cucina contadina di Terra Dura: fusilli, cavatelli, lagane e pasta di carrube.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_cilento",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/petrilli-pasta.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/10-920x500.png",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Come si fa la pasta",
+        "heading_tag": "h2",
+        "heading": "BRONZO E GRANO",
+        "text": "<p>La trafila al bronzo lascia la superficie ruvida, quella che trattiene il sugo. L'essiccazione lenta dà alla pasta una struttura che regge la cottura.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "products_grid_cilento": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "pasta",
+        "product_list": [
+          "pasta-cavatelli",
+          "pasta-di-carrube",
+          "pasta-fusilli-cilento",
+          "pasta-lagane"
+        ],
+        "anchor_id": "products_grid_cilento",
+        "subheading": "Terra Dura",
+        "heading": "DAL CILENTO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>I formati della cucina di casa cilentana: i fusilli per il ragù della domenica, i cavatelli per i legumi, le lagane per la zuppa di ceci. La pasta di carrube unisce al grano duro la farina di carruba, dal colore scuro e dal sapore leggermente dolce.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 4,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "divider": {
+      "type": "_blocks",
+      "blocks": {
+        "div": {
+          "type": "ai_gen_block_a1b887d",
+          "settings": {
+            "divider_height": "1",
+            "divider_color": "#c28342"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "div"
+      ],
+      "settings": {}
+    },
+    "products_grid_gragnano": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "pasta",
+        "product_list": [
+          "pasta-mista-corta",
+          "pasta-penne",
+          "pasta-paccheri",
+          "pasta-candele-corte",
+          "pasta-bucatini",
+          "pasta-spaghettone",
+          "pasta-ziti-lunghi",
+          "pasta-fusilli-lavorati-a-mano",
+          "pasta-candele-lunghe",
+          "pasta-paccheri-rigati",
+          "pasta-tubettoni"
+        ],
+        "anchor_id": "",
+        "subheading": "Pastificio Gentile, Gragnano",
+        "heading": "DA GRAGNANO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Il marchio Gentile nasce a Gragnano nel 1876. Negli anni '80 lo rileva la famiglia Zampino: il pastaio Natale Zampino comincia dai fusilli lavorati a mano, una tagliatella arrotolata con un ferro da calza, e poi allarga la produzione agli altri formati. Oggi l'azienda è guidata dal figlio Alberto. Tutti i formati sono Pasta di Gragnano IGP, trafilati al bronzo ed essiccati lentamente con il metodo Cirillo.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 12,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "show_arrows": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 12,
+        "product_card_heading_tag": "h3",
+        "show_two_cards": false,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_tags": false,
+        "show_desc": false,
+        "show_color_swatch": false,
+        "show_variants": false,
+        "product_variant_type": "color",
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "color_scheme": "background-1",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_per_row_button": true,
+        "default_per_row": "small",
+        "enable_sorting": true,
+        "image_filter_ratio": "4/5",
+        "image_filter_fit": "cover",
+        "image_filter_columns": 3,
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "produttore_pasta": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "Il produttore",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_right",
+        "color_variant": "orange",
+        "color_scheme": "background-1",
+        "image_first": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "I due pastifici",
+        "heading_tag": "h2",
+        "heading": "I PASTIFICI",
+        "text": "<p>Terra Dura fa la pasta della tradizione cilentana. Il Pastificio Gentile lavora a Gragnano, nella Valle dei Mulini, dove è nata la pasta secca.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "banner_pasta_top": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_top_sublte.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "simple_slider_mFwcNg": {
+      "type": "simple-slider",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/pasta.jpg",
+            "subheading": "Cilento",
+            "heading": "TERRA DURA",
+            "description": "<p>Dal Cilento arrivano i formati di Terra Dura: fusilli, cavatelli, lagane e pasta di carrube, i formati che nelle case cilentane accompagnano ragù, legumi e minestre.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Lavorazione-manuale-pasta.webp",
+            "subheading": "Gragnano, Valle dei Mulini",
+            "heading": "GENTILE",
+            "description": "<p>Il marchio Gentile risale al 1876 e dagli anni '80 appartiene alla famiglia Zampino. Il pastificio ha sede nell'Opificio «Il 1650», nella Valle dei Mulini, dove la famiglia ha lavorato per recuperare i vecchi mulini. La pasta essicca lentamente, in tre o quattro giorni, con il metodo Cirillo, e si confeziona a mano.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2"
+      ],
+      "name": "t:sections.simple-slider.presets.name",
+      "settings": {
+        "color_variant": "orange",
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "heading": "I NOSTRI PRODUTTORI",
+        "heading_tag": "h2",
+        "subheading": "Chi fa la nostra pasta",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "auto_per_row": true,
+        "per_row": 1,
+        "mobile_slider": true,
+        "is_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "landscape",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_pasta_bottom": {
+      "type": "banner",
+      "disabled": true,
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_bottom.png",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Lagane-e-ceci.webp",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Con legumi e brodi",
+            "heading": "PER LE MINESTRE E I LEGUMI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Lagane e ceci è un piatto antichissimo: ne parla già Orazio nelle Satire. Il formato largo trattiene il brodo dei ceci di Cicerale. I cavatelli vanno con i fagioli di Controne, i tubettoni con la pasta e fagioli.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/fusilli-al-castrato-1.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Con ragù e sughi lunghi",
+            "heading": "PER I CONDIMENTI IMPORTANTI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Paccheri e candele sono formati per i sughi che cuociono a lungo: ragù di carne, pomodoro, provola affumicata. I fusilli lavorati a mano di Gentile, arrotolati uno per uno con il ferro, raccolgono il condimento in ogni spirale.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/images_26.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Condimenti semplici",
+            "heading": "PER QUANDO LA PASTA È PROTAGONISTA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Bucatini, spaghettone e mista corta si esprimono con condimenti semplici: olio buono, aglio, alici di Menaica o un pomodoro in stagione. Qui la pasta è il centro del piatto.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Scegli il formato giusto",
+        "heading": "PER LA CENA DI STASERA",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "l",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_product_pasta": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "Selezionato da Modus",
+        "heading": "IL NOSTRO FORMATO",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "<p>Tra tutti i formati Gentile, lo Spaghettone è quello che si sente di più nel piatto: superficie ruvida e spessore generoso, per i condimenti semplici.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "pasta-spaghettone",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Lagane e ceci: il piatto tradizionale del Cilento",
+            "heading_tag": "h2",
+            "description": "<p>È un piatto antichissimo: già Orazio, nelle Satire, racconta di tornare a casa per una ciotola di porri, ceci e lagane. Il formato largo e piatto trattiene il brodo dei ceci di Cicerale.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Perché i fusilli lavorati a mano costano di più",
+            "heading_tag": "h2",
+            "description": "<p>Al Pastificio Gentile le «fusillare» arrotolano ancora oggi ogni tagliatella attorno a un ferro da calza, con un gesto deciso dell'avambraccio. È il formato con cui è cominciata la storia della famiglia Zampino. Costa di più perché ogni pezzo richiede tempo e mani esperte.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si usano le candele",
+            "heading_tag": "h2",
+            "description": "<p>Le candele lunghe si spezzano a mano prima di cuocerle e si condiscono con ragù e provola affumicata. Le candele corte sono più versatili e reggono sughi rustici con carne o salsiccia.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos’è la pasta di carrube",
+            "heading_tag": "h2",
+            "description": "<p>È pasta di grano duro con farina di carruba. Il risultato è un formato dal colore scuro, con un sapore leggermente dolce e aromatico.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos’è il metodo Cirillo",
+            "heading_tag": "h2",
+            "description": "<p>È il sistema di essiccazione ideato dall'ingegnere Cirillo di Torre Annunziata. A Gragnano la pasta si stendeva al sole lungo l'attuale via Roma, la «strada dei maccheroni». Cirillo ha ricreato quel processo in celle dove l'aria calda e le ventole fanno il lavoro del sole e del vento. Il Pastificio Gentile essicca così la sua pasta, lentamente, in tre o quattro giorni.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-5",
+        "faq-4"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SULLA PASTA",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/images_26_876d3cfb-4fc1-4a45-ac41-5caf647a4f48.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "ceci-di-cicerale",
+          "cacioricotta-di-capra"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "LA PASTA, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Dal formato al condimento",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_wave_line": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/pizzeria-modus.png",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "image_with_text_Nh4pWr",
+    "products_grid_cilento",
+    "divider",
+    "products_grid_gragnano",
+    "collection-products",
+    "produttore_pasta",
+    "banner_pasta_top",
+    "simple_slider_mFwcNg",
+    "banner_pasta_bottom",
+    "practical",
+    "featured_product_pasta",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_wave_line",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}

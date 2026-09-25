@@ -411,6 +411,17 @@ burger-drawer .burger_menu a, burger-drawer .burger_menu span,
   }
 }
 
+/* Awards section (sections/awards-modus.liquid, e.g. Chi siamo): award
+   source names (ELEMENTI, 50 TOP PIZZA...) and years were set to a fixed
+   letter-spacing: 4px at 22px (~0.18em), more than double every other
+   heading. Brought in line with the h3 ratio (0.08em) so the tracking
+   scales with the font size. (0,2,0) specificity beats the section's own
+   single-class !important rules. */
+.awards-section [class^="awards-source-"],
+.awards-section [class^="awards-year-"] {
+  letter-spacing: 0.08em !important;
+}
+
 /* Footer */
 .shopify-section-group-footer-group footer,
 .shopify-section-group-footer-group .footer,

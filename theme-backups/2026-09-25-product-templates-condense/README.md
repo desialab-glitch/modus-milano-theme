@@ -1,0 +1,1 @@
+Exact copies of 77 draft-theme product templates before the copy condense on 2026-09-25: 322 texts cut or rephrased; 20 comparison FAQs hidden (disabled, not deleted); section headings fixed where they no longer matched the text or were comparisons; the unverified claim that Aura fishes the tuna removed. Restore by uploading over the draft.

@@ -1,0 +1,517 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "description_heading": "",
+            "heading_tag": "h3"
+          }
+        },
+        "variant-picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_variant_name": false,
+            "show_size_guide": false,
+            "size_guide_header": "Header",
+            "size_guide_decription": "",
+            "size_guide_text": "Size Guide",
+            "page": "",
+            "enable_linked_products": false,
+            "linked_products_label": "Color"
+          }
+        },
+        "buy-buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_quantity": true,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "",
+            "heading": "",
+            "heading_tag": "h4",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "text_bottom": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "variant-picker",
+        "buy-buttons",
+        "inventory"
+      ],
+      "settings": {
+        "image_gallery_collage": "grid",
+        "desktop_alignment": "left",
+        "mobile_alignment": "left",
+        "image_fit": "cover",
+        "enable_autoheight": false,
+        "content_centered": false,
+        "variant_media_display": "show_all",
+        "padding_top": "m",
+        "padding_bottom": "l"
+      }
+    },
+    "pdp-dropdowns": {
+      "type": "collapsible-content",
+      "blocks": {
+        "drop-ingredients": {
+          "type": "text-block",
+          "settings": {
+            "heading": "CARATTERISTICHE",
+            "heading_tag": "h2",
+            "description": "<p>Produttore: Famiglia Marino, Pisciotta (SA)<br/>Specie: alice (<em>Engraulis encrasicolus</em>)<br/>Tecnica di pesca: rete menaica, con maglie larghe che trattengono gli esemplari adulti<br/>Lavorazione: immediata a Pisciotta dopo il ritorno in porto<br/>Conservazione: sott'olio extravergine di oliva<br/>Certificazione: Presidio Slow Food<br/>Formato: vasetto 120 g</p>"
+          }
+        },
+        "drop-nutrition": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Informazioni nutrizionali",
+            "heading_tag": "h2",
+            "description": "<p>Le alici sott'olio sono una fonte di proteine e di acidi grassi omega-3. Contiene: pesce. Allergeni: pesce. Vedi etichetta per valori nutrizionali completi.</p>"
+          }
+        },
+        "drop-shipping": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Spedizioni e resi",
+            "heading_tag": "h2",
+            "description": "<p>Spedizione in 48 ore lavorative in tutta Italia. Gratuita sopra €57. Resi entro 14 giorni per prodotti integri e non aperti.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "drop-ingredients",
+        "drop-nutrition",
+        "drop-shipping"
+      ],
+      "settings": {
+        "faqs_heading": "",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "pdp-cards-carousel": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_3fK7gt": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true,
+            "rating_display": "default"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_3fK7gt"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "pdp-banner-grid": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_0": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "La tecnica",
+            "heading": "LA RETE MENAICA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>La rete menaica ha maglie larghe. Trattiene le alici adulte, le più grandi, e lascia passare i giovani esemplari.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_1": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "Il Presidio",
+            "heading": "PRESIDIO SLOW FOOD",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Le alici di Menaica sono un Presidio Slow Food. Il riconoscimento tutela la tecnica di pesca, la lavorazione immediata a Pisciotta e la famiglia Marino come custode di questa tradizione.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "banner_2": {
+          "type": "column",
+          "settings": {
+            "overlay_opacity": 0,
+            "subheading": "La lavorazione",
+            "heading": "IMMEDIATA, A PISCIOTTA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Le alici vengono lavorate subito al ritorno in porto, ancora fresche. La carne è compatta e il sapore delicato.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "banner_0",
+        "banner_1",
+        "banner_2"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Il produttore",
+        "heading": "LA FILIERA IN DETTAGLIO",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "xs",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "image_with_text_2_NPTGKA": {
+      "type": "image-with-text-2",
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_scheme": "",
+        "image_ratio": "landscape",
+        "subheading_secondary": "Il produttore",
+        "heading": "",
+        "heading_tag": "h2",
+        "text": "<p>La famiglia Marino pesca a Pisciotta con la rete menaica da generazioni. La tecnica è documentata nel Cilento almeno dal XVI secolo. Il Presidio Slow Food certifica sia la tecnica di pesca che la lavorazione artigianale.</p>",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s",
+        "image_first": "shopify://shop_images/pexels-photo-8287401_b8658f81-a97f-4609-b220-b24999aeafad.jpg",
+        "producer_logo": "shopify://shop_images/donatella_marino_1024x1024_eb76b13a-0c81-4d4d-9a76-76e28bece1b5.webp",
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30
+      }
+    },
+    "product_picks_3dytDc": {
+      "type": "product-picks",
+      "name": "Product Picks",
+      "settings": {
+        "product_handles": "pasta-spaghettone, olio-evo-madonna, ceci-di-cicerale, vino-kratos",
+        "per_row": 4,
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "Il mare del Cilento",
+        "heading": "COMPLETA IL PIATTO",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-completa": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type2",
+        "subheading": "Il mare del Cilento",
+        "heading": "COMPLETA IL PIATTO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": true,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_ricetta": {
+          "type": "slideshow_item",
+          "settings": {
+            "slide_alignment": "left",
+            "use_bg_color": true,
+            "color_scheme": "background-2",
+            "subheading": "Una ricetta da fare",
+            "heading": "Spaghetti alle alici di Menaica.",
+            "heading_tag": "h2",
+            "text": "<p><strong>Il soffritto:</strong> in una padella ampia, scalda due cucchiai di olio ALFA con uno spicchio d’aglio schiacciato. Quando l’aglio è dorato, toglilo e abbassa il fuoco.<br/><br/><strong>Le alici:</strong> apri il vasetto e sgocciola le alici dall’olio (tieni da parte l’olio di conserva, è buono). Aggiungi le alici in padella e mescola: si disfano in pochi secondi nel calore. Aggiungi qualche cucchiaio di acqua di cottura della pasta.<br/><br/><strong>La pasta:</strong> scola gli spaghetti al dente e maneca in padella con un filo dell’olio di conserva. Finisci con prezzemolo fresco. La delicatezza delle alici di Menaica sta bene con ingredienti semplici.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false,
+            "overlay_opacity": 0,
+            "article": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_ricetta"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "section_header_type": "type1",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "full",
+        "section_alignment": "left",
+        "vertical_alignment": "center",
+        "container_size": "small",
+        "transition_effect": "stretch",
+        "is_autoplay": false,
+        "show_pagination": false,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "pdp-related": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "products_to_show": 4,
+        "per_row": 4,
+        "section_header_type": "type1",
+        "subheading": "",
+        "heading": "POTREBBE PIACERTI.",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "",
+        "enable_border_top": true,
+        "button_label": "VEDI TUTTI I PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "tertiary",
+        "button_arrow": true,
+        "show_two_cards": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 4,
+        "slideshow_delay": 5,
+        "image_ratio": "square",
+        "image_fit": "cover",
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": false,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "pdp-faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "pfaq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come avviene la spedizione?",
+            "heading_tag": "h2",
+            "description": "<p>Spediamo in tutta Italia con corriere espresso in 48 ore lavorative dalla conferma dell’ordine. La spedizione è gratuita per ordini superiori a €57; al di sotto si applica un contributo calcolato al checkout.</p>"
+          }
+        },
+        "pfaq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come vengono pescate le alici di Menaica?",
+            "heading_tag": "h2",
+            "description": "<p>Con la rete menaica, una rete a maglie larghe. La lavorazione è immediata e manuale, e la quantità prodotta è limitata.</p>"
+          }
+        },
+        "pfaq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conservano dopo l'apertura?",
+            "heading_tag": "h2",
+            "description": "<p>Una volta aperto il vasetto, copri le alici rimaste con un filo d'olio extravergine, conserva in frigorifero e consuma in pochi giorni.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "pfaq-2",
+        "pfaq-4",
+        "pfaq-1"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "show_image_content": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pdp-dropdowns",
+    "pdp-cards-carousel",
+    "pdp-banner-grid",
+    "image_with_text_2_NPTGKA",
+    "product_picks_3dytDc",
+    "pdp-completa",
+    "pdp-slideshow",
+    "pdp-related",
+    "pdp-faqs"
+  ]
+}

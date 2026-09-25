@@ -422,6 +422,21 @@ burger-drawer .burger_menu a, burger-drawer .burger_menu span,
   letter-spacing: 0.08em !important;
 }
 
+/* Store map (sections/store-map.liquid, e.g. Contatti): map pins styled
+   like the numbered badges on the location cards below the map (green
+   #01473e, white text, no ring) instead of gold with a white border.
+   Pins keep their 2.8rem size (tap target) and a soft shadow so they
+   stay readable over the map tiles. The selected pin still turns orange
+   (#d16a14), same as the selected card's badge. */
+.store-map-section .store-map__pin-num {
+  background: #01473e !important;
+  color: #fff !important;
+  border: none !important;
+}
+.store-map-section .store-map__pin-num.is-active {
+  background: #d16a14 !important;
+}
+
 /* Footer */
 .shopify-section-group-footer-group footer,
 .shopify-section-group-footer-group .footer,

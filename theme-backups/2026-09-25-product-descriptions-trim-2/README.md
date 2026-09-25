@@ -1,0 +1,1 @@
+Original descriptionHtml of 34 products before a second trim to 118-150 characters (2026-09-25; the client still found the product cards uneven, with FUSILLI at 118 characters as the reference). Store-wide data. Restore with productUpdate(product: {id, descriptionHtml}).

@@ -1,0 +1,699 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hp-hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Le nostre pizzerie",
+        "subheading_tag": "p",
+        "subheading_color": "",
+        "heading": "LA PIZZA SECONDO PAOLO DE SIMONE",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>La pizza di Modus nasce dal pane. Paolo ha imparato dalla nonna i segreti della lievitazione naturale e li ha portati prima a Storie di Pane, a Vallo della Lucania, poi nei forni di Milano: lievito madre, farine di grani antichi macinate a pietra e un impasto che riposa tra 36 e 48 ore.</p>",
+        "button_label": "PRENOTA UN TAVOLO",
+        "button_link": "/pages/contatti",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "SCOPRI IL NOSTRO MENU",
+        "button_link_2": "https://www.moduspizzeriemilano.it/wp-content/uploads/2025/10/modus_menu_it.pdf",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": true,
+        "image": "shopify://shop_images/modus-pizzeria.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "awards-strip": {
+      "type": "brands",
+      "blocks": {
+        "b1": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/logo-pdo.png",
+            "brand_link": ""
+          }
+        },
+        "logo_zUxn93": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/50_Top_Pizza.png",
+            "brand_link": ""
+          }
+        },
+        "logo_j74Km3": {
+          "type": "logo",
+          "settings": {
+            "image_2": "shopify://shop_images/identita_golose_transparent.png",
+            "brand_link": ""
+          }
+        },
+        "logo_NCUMcG": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/Museo_Dieta_Med..png",
+            "brand_link": ""
+          }
+        },
+        "logo_CGLnqK": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/pizza_awards_transparent.png",
+            "brand_link": ""
+          }
+        },
+        "b2": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/eccellenze-italian.png",
+            "brand_link": ""
+          }
+        },
+        "b3": {
+          "type": "logo",
+          "settings": {
+            "image_1": "shopify://shop_images/elementi.jpg",
+            "brand_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "logo_zUxn93",
+        "logo_j74Km3",
+        "logo_NCUMcG",
+        "logo_CGLnqK",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "ticker_enabled": true,
+        "ticker_speed": 30,
+        "margin_top": "xs",
+        "margin_bottom": "xs",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "grid_banner_VmcTeY": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_pje4kn": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "MODUS VIA MAFFEI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Via Andrea Maffei, 12 · 20135 Milano</p>",
+            "text_2": "<p>Tutti i giorni, dalle 12.30 alle 14.30 e dalle 19.00 alle 23.30</p>",
+            "button_label": "PRENOTA",
+            "button_link": "https://www.quandoo.co.uk/checkout-widget/widget?aid=2&merchantId=99943",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "https://www.google.com/maps/search/?api=1&query=Via%20Andrea%20Maffei%2C%2012%2C%2020135%20Milano",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_fqkNWD": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "MODUS CORSO MAGENTA",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Corso Magenta, 25 · 20123 Milano</p>",
+            "text_2": "<p>Tutti i giorni, dalle 12.30 alle 14.30 e dalle 19.00 alle 23.30</p>",
+            "button_label": "PRENOTA",
+            "button_link": "https://reservations-guest.teamsystem.cloud/moduscorsomagenta",
+            "button_style": "primary",
+            "button_label_2": "MAPPA",
+            "button_link_2": "https://www.google.com/maps/search/?api=1&query=Corso%20Magenta%2C%2025%2C%2020123%20Milano",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_pje4kn",
+        "column_fqkNWD"
+      ],
+      "name": "t:sections.cards-grid.name",
+      "settings": {
+        "columns": 2,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Dove siamo",
+        "heading": "I NOSTRI LOCALI A MILANO",
+        "heading_tag": "h2",
+        "description": "<p>Le nostre pizzerie sono in via Maffei e in corso Magenta. In entrambe trovi un forno a pietra e la stessa filiera che ogni giorno arriva dal Cilento: ci si siede come a casa, e ogni ingrediente nel piatto ha il nome di un produttore che Paolo conosce di persona.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "landscape",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "rich_text_cta_cFtE4t": {
+      "type": "rich-text-cta",
+      "name": "Rich Text + CTA",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "full_width": true,
+        "subheading": "La nostra filosofia",
+        "heading": "COSA RENDE UNA PIZZA MODUS",
+        "text": "<p>Tutto comincia dalla farina di grani antichi, macinata a pietra, e da un impasto che si prende il suo tempo. Poi arrivano gli ingredienti del Cilento, dal pomodoro all'olio EVO, dalle alici di menaica alla soppressata di Gioi, e infine la cottura su pietra.</p>",
+        "button_label": "scopri la filiera",
+        "button_link": "shopify://pages/filiera",
+        "button_style": "primary",
+        "button_arrow": true,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "slider_with_info_4E8wWn": {
+      "type": "slider-with-info",
+      "blocks": {
+        "heading_block_hKxJQ6": {
+          "type": "heading_block",
+          "settings": {
+            "heading": "GLI IMPASTI DI PAOLO SEGUONO IL TEMPO",
+            "heading_tag": "h3",
+            "description": "<p>Ogni impasto riposa tra 36 e 48 ore prima di entrare in forno. È il tempo che serve al lievito madre per lavorare la farina di grani antichi e dare una pizza leggera, digeribile e piena di gusto: la lievitazione lenta che chiamiamo Digestible by Design.</p><p>È lo stesso tempo che insegna il Cilento, la terra di Paolo, dove si impara quando raccogliere, come tagliare, quanto salare. Ogni ingrediente sulla pizza arriva da quella terra e da un produttore che Paolo conosce di persona.</p>",
+            "subheading": "",
+            "cta_label": "",
+            "cta_link": "",
+            "cta_style": "primary"
+          }
+        },
+        "image_block_idyRyt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/modus-milano-cucina-italiana-unesco.jpg"
+          }
+        },
+        "image_block_qtA8aA": {
+          "type": "image_block",
+          "settings": {}
+        },
+        "image_block_By6PNw": {
+          "type": "image_block",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_block_hKxJQ6",
+        "image_block_idyRyt",
+        "image_block_qtA8aA",
+        "image_block_By6PNw"
+      ],
+      "name": "t:sections.slider-with-info.presets.name",
+      "settings": {
+        "color_scheme": "scheme-9b76b628-0bf4-4be5-ba4c-c0465cb73265",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "",
+        "heading": "",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "is_autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "landscape",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "m"
+      }
+    },
+    "video_filiera_grani": {
+      "type": "video-with-text",
+      "settings": {
+        "video_position": "video_left",
+        "color_scheme": "background-1",
+        "video_url": "",
+        "video": "shopify://files/videos/La Filiera - EP 1 - Grani Antichi - farine collection (anche pizzerie page).mp4",
+        "video_ratio": "portrait",
+        "video_loop": true,
+        "show_video_controls": true,
+        "video_autoplay": true,
+        "subheading": "La Filiera",
+        "heading": "GRANI ANTICHI",
+        "heading_tag": "h2",
+        "text": "<p>Insieme ai Coltivatori Custodi del Parco Nazionale del Cilento, Vallo di Diano e Alburni, Riserva della Biosfera UNESCO, proteggiamo un grano vivo. Lo maciniamo a pietra e lo lasciamo integrale al 100%, con il germe e la fibra: così un chilo di grano diventa un chilo di farina, la stessa delle nostre pizze e del pane di Storie di Pane.</p>",
+        "button_label": "",
+        "button_style": "primary",
+        "button_link": "",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "due-pizzerie": {
+      "type": "simple-slider",
+      "blocks": {
+        "item1": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/modus-pizzeria.jpg",
+            "subheading": "Rustica, contadina, di famiglia",
+            "heading": "PIZZA CILENTANA",
+            "description": "<p>Un ritorno alle radici: l'impasto ricorda il pane che le famiglie contadine del Cilento facevano in casa. Una pizza rustica e semplice, ricca di storia, proposta in quattro varianti che mettono al centro le materie prime.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": false
+          }
+        },
+        "item2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/gastronomia.jpg",
+            "subheading": "Soffice, leggera, mediterranea",
+            "heading": "PIZZA NAPOLETANA RIVISITATA",
+            "description": "<p>Soffice e leggera, con il cornicione alto della tradizione napoletana e sopra i sapori del Cilento: verdure di stagione, latticini freschi e prodotti locali che raccontano la dieta mediterranea.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "item1",
+        "item2"
+      ],
+      "settings": {
+        "color_variant": "basic",
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "heading": "Le due anime della pizza secondo Paolo",
+        "heading_tag": "h2",
+        "subheading": "Pizza cilentana e napoletana",
+        "description": "<p>Dal forno di Modus escono due pizze con storie diverse: quella contadina del Cilento e quella napoletana, riletta con i prodotti della nostra terra. Entrambe partono dalla stessa materia prima.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "auto_per_row": true,
+        "per_row": 2,
+        "mobile_slider": true,
+        "is_autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 0,
+        "slideshow_delay": 0,
+        "image_ratio": "landscape",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "grid_banner_7aw3Y7": {
+      "type": "grid-banner",
+      "blocks": {
+        "column_rnY4yG": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "Azienda Agricola Cammarano Lucia",
+            "heading": "Farine",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>La scelta di partenza. Farina di grano duro e farina integrale di grano duro per impasti che reggono la lunga lievitazione senza perdere leggerezza.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_A7Dk8k": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "Paestum",
+            "heading": "Mozzarella di Bufala",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Allevamenti tracciati, consegna ogni mattina. Quella che Paolo porta a Milano è la stessa che conosce dal Cilento.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_9DjmEV": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "AGROSARNESE-NOCERINO",
+            "heading": "Pomodoro DOP",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Raccolto a mano, maturato al sole campano. Il pomodoro che non ha bisogno di correzioni perché è già esatto.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "column_FG3erU": {
+          "type": "column",
+          "settings": {
+            "image_ratio": "portrait",
+            "overlay_opacity": 20,
+            "subheading": "MARE DEL CILENTO",
+            "heading": "Pesce azzurro",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Alici di Pisciotta, pescate con la rete menaica e lavorate entro poche ore. Il mare del Cilento sulla pizza.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "column_rnY4yG",
+        "column_A7Dk8k",
+        "column_9DjmEV",
+        "column_FG3erU"
+      ],
+      "disabled": true,
+      "name": "t:sections.cards-grid.name",
+      "settings": {
+        "columns": 4,
+        "auto_layout": true,
+        "mobile_slider": false,
+        "mobile_slider_columns": "2",
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "I prodotti",
+        "heading": "OGNI INGREDIENTE È UNA STORIA",
+        "heading_tag": "h2",
+        "description": "<p>Il 90% degli ingredienti arriva dal Cilento. Ognuno ha un nome, un posto, una stagione.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "portrait",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "m"
+      }
+    },
+    "image_text_grid_t6QaP4": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "pomodoro-pelato-biologico",
+          "olio-evo-madonna",
+          "alici-di-menaica",
+          "soppressata-di-gioi"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "PORTA IL FORNO DI MODUS A CASA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Prodotti dal Cilento",
+        "description": "<p>Gli stessi ingredienti che usiamo in pizzeria ogni sera: pomodoro, olio EVO, alici di Menaica, soppressata di Gioi. Ordinali online e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "enable_border_top": false,
+        "button_label": "VISITA IL NEGOZIO ONLINE",
+        "button_link": "/collections/all",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": true,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_collection_name": true,
+        "show_color_swatch": false,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "17875679694956bfb7": {
+      "type": "apps",
+      "blocks": {
+        "google_reviews_trust_badges_hp_google_reviews_widget_nTj3wW": {
+          "type": "shopify://apps/google-reviews-trust-badges-hp/blocks/google_reviews_widget/7f0cbed4-3c3f-4f98-833e-b8cfbec52b31",
+          "settings": {
+            "layout_type": "carousel",
+            "grid_layout": "grid_layout_1",
+            "carousel_layout": "carousel_layout_1",
+            "masonry_layout": "masonry_layout_1",
+            "list_layout": "list_layout_1",
+            "padding_top": 80,
+            "padding_bottom": 80
+          }
+        }
+      },
+      "block_order": [
+        "google_reviews_trust_badges_hp_google_reviews_widget_nTj3wW"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true,
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "featured_blogs_kkkgN6": {
+      "type": "featured-blogs",
+      "blocks": {
+        "article_block_bxVHRa": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/pizze-cilentane-modus-milano"
+          }
+        },
+        "article_block_GRcKXN": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/pizza-cilentana-eccellenza-milano"
+          }
+        },
+        "article_block_XXGmM7": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/location-modus-milano-pizzeria"
+          }
+        },
+        "article_block_UatGr3": {
+          "type": "article_block",
+          "settings": {
+            "article": "journal/pizza-village-masterclass-modus"
+          }
+        }
+      },
+      "block_order": [
+        "article_block_bxVHRa",
+        "article_block_GRcKXN",
+        "article_block_XXGmM7",
+        "article_block_UatGr3"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-blogs.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "blog": "journal",
+        "dynamic_articles_count": 4,
+        "section_header_type": "type2",
+        "show_arrows": true,
+        "enable_border_top": true,
+        "subheading": "Modus Pizzerie",
+        "heading": "LETTURE SULLA PIZZA MODUS",
+        "heading_tag": "h2",
+        "description": "<p>Punto di riferimento per la panificazione e la filiera cilentana, che arriva ogni giorno nelle gastronomie, nelle pizzerie e nello shop online.</p>",
+        "button_label": "Leggi tutti gli articoli",
+        "button_link": "/blogs/journal",
+        "button_style": "primary",
+        "button_arrow": false,
+        "section_layout": "slider",
+        "slider_per_row": 4,
+        "mobile_columns_2": true,
+        "is_autoplay": true,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "card_type": "default",
+        "hover_effect": "zoom",
+        "show_image": true,
+        "show_tags": false,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": true,
+        "show_btn": true,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "margin_top": "no-indent",
+        "margin_bottom": "l",
+        "padding_top": "no-indent",
+        "padding_bottom": "l"
+      }
+    },
+    "cta-banner": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "#faf1e4",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "/collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/gastronomia.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent",
+        "heading_tag": "h1"
+      }
+    }
+  },
+  "order": [
+    "hp-hero",
+    "awards-strip",
+    "grid_banner_VmcTeY",
+    "rich_text_cta_cFtE4t",
+    "slider_with_info_4E8wWn",
+    "video_filiera_grani",
+    "due-pizzerie",
+    "grid_banner_7aw3Y7",
+    "image_text_grid_t6QaP4",
+    "17875679694956bfb7",
+    "featured_blogs_kkkgN6",
+    "cta-banner",
+    "main"
+  ]
+}

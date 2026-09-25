@@ -1,0 +1,1 @@
+Exact copies of the draft theme's templates immediately before the hero texts were cut to about half their length (2026-09-25; client feedback: too much text). Only the hero section's text setting changed in each file. Restore by uploading these files over the draft.

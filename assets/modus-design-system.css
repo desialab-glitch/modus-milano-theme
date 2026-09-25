@@ -425,13 +425,20 @@ burger-drawer .burger_menu a, burger-drawer .burger_menu span,
 /* Store map (sections/store-map.liquid, e.g. Contatti): map pins styled
    like the numbered badges on the location cards below the map (green
    #01473e, white text, no ring) instead of gold with a white border.
-   Pins keep their 2.8rem size (tap target) and a soft shadow so they
-   stay readable over the map tiles. The selected pin still turns orange
+   Identical to the badge: 2rem circle, 1.1rem number, no shadow. The
+   Leaflet icon box is still 28x28 with its anchor at the centre (set in
+   the section JS), so the 0.4rem margin keeps the smaller circle centred
+   on the exact map coordinate. The selected pin still turns orange
    (#d16a14), same as the selected card's badge. */
 .store-map-section .store-map__pin-num {
   background: #01473e !important;
   color: #fff !important;
   border: none !important;
+  box-shadow: none !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  margin: 0.4rem !important;
+  font-size: 1.1rem !important;
 }
 .store-map-section .store-map__pin-num.is-active {
   background: #d16a14 !important;

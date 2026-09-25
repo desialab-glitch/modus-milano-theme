@@ -62,3 +62,41 @@ Editor padding/margin settings silently do nothing or don't exist here.
 - [x] Batch 1: per-section `.section-header__title-item { gap: 0 }` in collection-carousel, events-carousel, tabs, simple-slider (duplicates the sitewide `!important` rule; every title-item comes from snippets/section-header.liquid inside `.section-header__line`); list-collections' `gap: var(--modus-space-xs)` (always lost to that rule); tabs' mobile `.section-header__btn-top` margin (identical to the sitewide rule).
 - [x] Batch 2 (modus-design-system.css): selectors whose classes exist in no Liquid file and no JS asset — `.tabs__tab`, `.footer__heading`/`.footer__block-heading` rule, `.footer__inner`, `.footer__divider`, `.footer__copyright-content`, `.footer__heading-link` (rule entry only; the `:not()` guard stays), `.footer__block--store-info` entries, `.breadcrumb__sep`, `.product__submit`, `.product-form__payment-info`, `.product__trust-row`, `.rich-text-section .rich-text__content/.rich-text__cta`. Selector-list entries removed only; the remaining selectors in each list are unchanged.
 - Kept on purpose (not provably dead): popular-products mobile header margin patch (also zeroes top/bottom margins), products-grid header padding (its padding-top 0 still applies), product-picks mobile CTA move (deliberate behaviour).
+
+## Final verification, one section at a time (2026-09-25)
+Static check of all 46 section types in use + the 3 AI blocks against the 9-point checklist at mobile / tablet / desktop (code + real template settings; the storefront could not be rendered from this environment, so the "visual check" items still need a look in the browser). `[v]` = passes the checklist (after fixes where noted), `[!]` = open, needs a decision or content.
+
+**Fixed in this pass** (all uploaded to the draft, checksums verified):
+- grid-banner: text-only cards (231 blocks incl. all 80 PDP "La filiera in dettaglio" grids, prodotti-freschi, dove-ritiri) no longer render a placeholder image box.
+- image-with-text-2: no placeholder when a PDP has no producer image (17 PDPs) — text uses the full width; logo → heading 24 → 12px; text → stats 28 → 12px; type1 image block gap 32 → 16px at every width.
+- popular-products: renders nothing on the storefront when no products are picked (cart page showed 2 placeholder cards); card descriptions 15 → 16px (also products-grid).
+- collapsible-content: no placeholder in the image column; header → FAQ list no extra 32px in image layout; question → answer 12px once (was 22px + 12px under closed rows).
+- collection + event cards image → title 24 → 16px; event date → title 4 → 12px.
+- partner-logos-grid: heading margin no longer stacks on the gaps (28/52/24px → 16/16/12px); desktop gutter token.
+- tabs: tab titles (H3) orange (were gold); eyebrow → title 16 → 12px; no empty 12px under the text.
+- slideshow: eyebrow line-height 1 → 26px; orange slides: eyebrow full beige, description beige #faf1e4.
+- hero-split: tablet column gap 30 → 40px; orange-scheme eyebrow full beige (was 80%).
+- simple-slider eyebrow 14 → 15px. multicolumn / slider-with-info: no trailing empty margin. Contatti channel H3s orange (were green via the .h4 size class).
+- featured-product: description → price 8 → 12px, add to cart → "Vedi di più" 24 → 12px.
+- store-map: button gap 20 → 12px, card eyebrow standard grey; contact-form: no stray divider/padding under the form.
+- fornitori-list: mobile image no longer overflows the right gutter; section/gutter/gap tokens (desktop outer gutter = main padding, image side = column gutter, 12px rhythm). fornitori-filter: no 1400px cap, wrap mode left-aligned.
+- awards: heading → logos 24 → 12px. sdp-bridge body 15px/1.73 → 16px/1.6. modus-related-articles: header rhythm (18/36 → 12/24px), CTA left, empty subheading/heading guarded.
+- main-article header: title → excerpt and excerpt → meta 16/20 → 12px; share links 12.6 → 13px. Search + 404 inputs 12 → 14px; search result labels in eyebrow grey.
+- product page: title → price 20 → 12px; stacked media → info 32 → 16px (<990). Header: cart icon no longer 14px further in than the gutter (<1150). Menu drawer account links 12 → 13px.
+- type1 header CTAs ("VEDI TUTTI I PRODOTTI" under product recommendations, grid-banner, popular products) left-aligned instead of centred.
+- cart: max-width 1200 cap removed (aligns with the gutters); empty-cart rhythm 12px; discount + error lines 12 → 13px. Popup small print now actually 13px italic grey (the sitewide paragraph rule used to win).
+
+**Result per section** — [v] ambasciatore · awards-modus · banner · brands · collapsible-content · collection-carousel · contact-form · events-carousel · featured-blogs · featured-product · fornitori-filter · fornitori-list · footer · grid-banner · header · hero-section · hero-split · image-with-text · image-with-text-2 · main-404 · main-blog · main-cart · main-list-collections · main-page · main-product · main-search · modus-related-articles · multicolumn · partner-logos-grid · popular-products · popup · product-picks · product-recommendations · products-grid · rich-text-cta · sdp-bridge · simple-slider · slider-with-info · slideshow · store-map · tabs · timeline-modus · video-with-text · AI newsletter · AI gallery ticker · AI divider. (main-article: [v] except the desktop item below.)
+
+**Open — needs a decision or a browser check** (not changed):
+- [!] main-article (desktop, article with image): image → title gap is 0 and the title starts 32px left of the body column. Needs a visual check before changing the layout.
+- [!] main-product (desktop): the buy column is centred inside its half (max 412px) → ~160px between media and text at 1440px. Moving it next to the media (40px gutter) changes the PDP layout noticeably — client decision.
+- [!] main-blog / search / related articles: blog listing cards use 14px grey excerpts + 13px dates, while the homepage "Featured blogs" cards use 16px/1.6 + standard eyebrow date. Unify on the homepage style? (design decision)
+- [!] collection list page: cards sit with no horizontal gap between them (template-collection-list.css sets none) — check in the browser.
+- [!] newsletter AI block on mobile: ends flush with its image (no bottom padding), next section starts 12px later — intended?
+- [!] fornitori-list "Scopri" link is a text link, not a full-width CTA on mobile; location line uses line-height 1.1 (can wrap on mobile) — keep as design details or standardise?
+- [!] ambasciatore highlight box text 14px (callout, below the 16px body size); awards mobile marquee uses its own 32px fade instead of the shared ticker fade (D11).
+- [!] products-grid / popular-products card descriptions now 16px (were 15px) — confirm visually on the collection grids.
+- [!] slider-with-info pagination may be a 10px number counter (JS not inspectable here); simple-slider on sott-olio uses a 55% image width on desktop (looks deliberate).
+- [!] rich-text-cta "In tre passi" (no text/button): 12px under the heading may be doing the job of the gap to the next section — check before removing.
+- [!] Content: 17 PDPs have no producer image in the Image with Text 2 section (now text-only instead of a placeholder); cart "Altri prodotti dal Cilento" needs products picked (hidden until then); collection.json FAQ image layout has no image; cart empty-state text in it.json ("Non perdere le migliori offerte!…") is generic marketing copy.

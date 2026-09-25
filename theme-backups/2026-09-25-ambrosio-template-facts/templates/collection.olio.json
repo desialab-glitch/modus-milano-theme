@@ -1,0 +1,653 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "collection_list": [],
+        "heading_tag": "h1",
+        "add_word": "Collection",
+        "show_word": false,
+        "show_collection_description": false,
+        "description_products": "",
+        "image_size": "landscape",
+        "show_collection_image": false
+      }
+    },
+    "hero": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "background-dark",
+        "subheading": "Tre frantoi del Cilento",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "L'OLIO DEL CILENTO",
+        "heading_tag": "h1",
+        "heading_color": "",
+        "text": "<p>Nel Cilento l'olio è una storia di famiglie. A Salento Massimo Ambrosio lavora trenta ettari divisi in campi monovarietali. A Ceraso la famiglia Iannicelli raccoglie da ulivi di circa quattrocento anni. A Serre Antonino Mennella porta le olive al frantoio entro quattro ore dalla raccolta e le frange senza il nocciolo.</p>",
+        "button_label": "SCOPRI I PRODOTTI ↓",
+        "button_link": "#products_grid_yp98c9",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/images_28.jpg",
+        "hide_image_mobile": false,
+        "hide_image_desktop": false,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent"
+      }
+    },
+    "products_grid_yp98c9": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "olio",
+        "product_list": [
+          "olio-alfa",
+          "olio-crux",
+          "olio-riserva",
+          "olio-idra"
+        ],
+        "anchor_id": "products_grid_yp98c9",
+        "subheading": "A Salento dal 1938",
+        "heading": "FATTORIA AMBROSIO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Massimo Ambrosio, terza generazione, cura ogni fase dall'oliveto al frantoio, con rese volutamente basse, tra l'8 e il 14%. Nel 2025 Flos Olei ha nominato Fattoria Ambrosio Azienda dell'Anno, con una menzione speciale per CRUX, il biologico da olive Coratina. RISERVA ha vinto il Leone d'Oro Blend Italia 2020 e, nel 2025, Il Magnifico come miglior olio extravergine d'Europa, il Sol d'Oro nella categoria fruttato intenso e le Tre Foglie del Gambero Rosso.</p>",
+        "alignment": "left",
+        "columns_per_row": 4,
+        "products_per_page": 8,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "image_with_text_Nh4pWr": {
+      "type": "image-with-text",
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "blocks_type": "type2",
+        "image_position": "image_left",
+        "color_variant": "basic",
+        "color_scheme": "",
+        "image_first": "shopify://shop_images/133405956-0af9755f-fb93-477a-8dd6-4206322871c0.jpg",
+        "image_ratio": "landscape",
+        "enable_dual_media": false,
+        "producer_logo_width_mobile": 35,
+        "producer_logo_width_desktop": 30,
+        "subheading_secondary": "Il territorio",
+        "heading": "UNA TERRA DI OLIVI",
+        "heading_tag": "h2",
+        "text": "<p>Nel Cilento l'olivo si coltiva da millenni, dall'epoca della Magna Grecia. La cultivar più antica del territorio è la Pisciottana, con alberi secolari dalle chiome così alte che la raccolta resta impegnativa.</p>",
+        "cta_1_label": "",
+        "cta_1_link": "",
+        "cta_1_style": "primary",
+        "cta_2_label": "",
+        "cta_2_link": "",
+        "cta_2_style": "secondary",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "s",
+        "padding_bottom": "s"
+      }
+    },
+    "1778587389177a84d9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a1b887d_AgeziX": {
+          "type": "ai_gen_block_a1b887d",
+          "settings": {
+            "divider_height": "1",
+            "divider_color": "#c28342"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a1b887d_AgeziX"
+      ],
+      "settings": {}
+    },
+    "products_grid_eKL7m7": {
+      "type": "products-grid",
+      "name": "t:sections.products-grid.name",
+      "settings": {
+        "collection": "olio",
+        "product_list": [
+          "olio-progress",
+          "olio-avanzamento",
+          "olio-evo-madonna"
+        ],
+        "anchor_id": "",
+        "subheading": "Ceraso e Serre",
+        "heading": "IANNICELLI E MADONNA DELL'OLIVO",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "description": "<p>Oggi alla quinta generazione, la famiglia Iannicelli coltiva olivi a Ceraso. Già nell'Ottocento Enrico Iannicelli esportava l'olio di famiglia fino in Sud America, con i marchi Progresso e Avanzamento che oggi tornano sulle bottiglie biologiche della famiglia. Progresso è un monocultivar di Pisciottana. A Serre Antonino Mennella, con la moglie Annamaria e il figlio Giovanni, lavora oltre duemila piante su sei ettari e porta le olive al frantoio aziendale entro poche ore dalla raccolta.</p>",
+        "alignment": "left",
+        "columns_per_row": 3,
+        "products_per_page": 8,
+        "sort": "alphabetical",
+        "show_two_cards": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "show_secondary_image": true,
+        "show_sku": false,
+        "show_vendor": true,
+        "show_desc": true,
+        "show_color_swatch": false,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "tabs_GU4jNT": {
+      "type": "tabs",
+      "blocks": {
+        "tab_MPzh9w": {
+          "type": "tab",
+          "settings": {
+            "heading": "Fattoria ambrosio",
+            "image": "shopify://shop_images/FattoriaAmbrosio-06110.jpg",
+            "subheading": "Il frantoio di famiglia a Salento",
+            "description": "Massimo Ambrosio lavora trenta ettari di oliveti divisi in campi monovarietali, attorno a una torretta dell'Ottocento e al frantoio di famiglia. Tra le varietà c'è anche la Coratina pugliese, da cui nasce CRUX. Nel 2025 Flos Olei ha nominato Fattoria Ambrosio Azienda dell'Anno.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_9UyBYA": {
+          "type": "tab",
+          "settings": {
+            "heading": "alberta iannicelli",
+            "image": "shopify://shop_images/470339381_18044927603141501_4778293296025489368_nfull.webp",
+            "subheading": "Cinque generazioni a Ceraso",
+            "description": "La famiglia Iannicelli coltiva olivi a Ceraso dal 1898, nel Biodistretto del Cilento, in biologico certificato. Già nell'Ottocento Enrico Iannicelli esportava l'olio in Sud America con i marchi Progresso e Avanzamento. Oggi Progresso è un monocultivar di Pisciottana, da piante fino a 400 anni.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        },
+        "tab_kFRXVi": {
+          "type": "tab",
+          "settings": {
+            "heading": "madonna dell'olivo",
+            "image": "shopify://shop_images/images_30.jpg",
+            "subheading": "Sulle colline verso Paestum",
+            "description": "A Serre Antonino Mennella, con la moglie Annamaria e il figlio Giovanni, coltiva oltre 2.000 piante su 6 ettari. Porta le olive al frantoio aziendale entro quattro ore dalla raccolta, lavora ogni varietà a parte e le frange senza il nocciolo. Poi conserva l'olio in contenitori sotto azoto.",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "tab_MPzh9w",
+        "tab_9UyBYA",
+        "tab_kFRXVi"
+      ],
+      "name": "t:sections.tabs.name",
+      "settings": {
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "I produttori del Cilento",
+        "heading": "i produttori",
+        "heading_tag": "h2",
+        "description": "<p>Famiglie che seguono l'oliva dall'albero alla bottiglia, nei loro oliveti e nei loro frantoi.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "blocks_type": "type1",
+        "is_autoplay": false,
+        "slider_speed": 1.1,
+        "slider_delay": 3,
+        "slide_effects": "fade",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "no-indent",
+        "padding_bottom": "s"
+      }
+    },
+    "practical": {
+      "type": "grid-banner",
+      "blocks": {
+        "p1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/olio-extravergine-benefici.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come si usa",
+            "heading": "TUTTI I GIORNI O SUI PIATTI IMPORTANTI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>ALFA è versatile: primi leggeri e carni delicate. IDRA, con le sue note di erba e pomodoro verde, sta bene su pesce, uova e bolliti. RISERVA dà il meglio sui piatti caldi, dalla pasta al forno ai fusilli al sugo, fino al pesce alla griglia.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 1,
+            "column_end": 2,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Olio-oliva_jpg.webp",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Come scegliere",
+            "heading": "UNA CULTIVAR O PIÙ CULTIVAR",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Un monocultivar racconta una sola oliva: CRUX la Coratina, Progresso la Pisciottana. Madonna dell'Olivo lavora ogni varietà a parte e frange le olive senza il nocciolo, per lasciare in primo piano i profumi di ciascuna cultivar.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 2,
+            "column_end": 3,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        },
+        "p3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Olio-del-cilento-olive_1.jpg",
+            "image_ratio": "portrait",
+            "overlay_opacity": 0,
+            "subheading": "Il territorio",
+            "heading": "DALLA MAGNA GRECIA A OGGI",
+            "heading_size": "h3",
+            "heading_tag": "h3",
+            "text": "<p>Nel Cilento l'olivo arriva con la Magna Grecia e da allora non se n'è più andato. Oggi accanto alle cultivar antiche come la Pisciottana crescono varietà arrivate da altre regioni: Fattoria Ambrosio, per esempio, ha piantato anche la Coratina pugliese.</p>",
+            "text_2": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "column_start": 3,
+            "column_end": 4,
+            "row_start": "unset",
+            "row_end": "unset"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "columns": 3,
+        "auto_layout": true,
+        "mobile_slider": true,
+        "mobile_gap": 10,
+        "image_below_cta_mobile": false,
+        "enable_divider_line": false,
+        "color_scheme": "background-1",
+        "section_header_type": "type2",
+        "enable_border_top": false,
+        "subheading": "Guida all'uso",
+        "heading": "COME SCEGLIERE E COME USARLO",
+        "heading_tag": "h2",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "image_ratio": "square",
+        "text_horizontal": "left",
+        "margin_top": "no-indent",
+        "margin_bottom": "no-indent",
+        "padding_top": "m",
+        "padding_bottom": "m"
+      }
+    },
+    "featured_product_olio": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "product_variant_type": "color",
+            "show_size_guide": false,
+            "size_guide_header": "",
+            "size_guide_decription": "",
+            "size_guide_text": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_quantity": false,
+            "show_gift_card_recipient": false,
+            "notification_modal": false,
+            "modal_button_label": "Avvisami",
+            "heading": "Ricevi una notifica",
+            "heading_tag": "h4",
+            "text": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label": "Assistenza Clienti",
+            "button_link": "",
+            "text_bottom": "<p>Lascia la tua email per essere avvisato quando questo prodotto sarà di nuovo disponibile.</p>",
+            "button_label_2": "Vedi Prodotti Simili",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_header_type": "type2",
+        "enable_border_top": true,
+        "subheading": "Selezionato da Modus",
+        "heading": "L'EXTRAVERGINE DI PUNTA",
+        "heading_tag": "h2",
+        "heading_tag_second": "h2",
+        "description": "<p>Progresso è il monocultivar di Pisciottana della famiglia Iannicelli: fruttato medio, note di cardo e carciofo, amaro e piccante decisi.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "product": "olio-progress",
+        "image_ratio": "portrait",
+        "show_three": true,
+        "swipe_on_mobile": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "faqs": {
+      "type": "collapsible-content",
+      "blocks": {
+        "faq-1": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cos'è la Pisciottana",
+            "heading_tag": "h2",
+            "description": "<p>È la varietà di olivo simbolo del Basso Cilento, diffusa lungo la costa da Agropoli a Sapri. Prende il nome da Pisciotta, dove è l'unica varietà coltivata, e la tradizione vuole che l'abbiano portata i coloni greci. Gli alberi sono vigorosi, possono superare i 15 metri e resistono bene ai venti salmastri del mare.</p><p>A Ceraso la famiglia Iannicelli ha piante di Pisciottana che arrivano fino a 400 anni e la usa in purezza per Progresso: fruttato medio, note di cardo e carciofo, amaro e piccante sostenuti. Nel 2025 questo olio ha vinto il Bicchiere d'Oro al Milan International Olive Oil Award.</p>"
+          }
+        },
+        "faq-2": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Differenza tra RISERVA e IDRA",
+            "heading_tag": "h2",
+            "description": "<p>RISERVA ha un fruttato intenso di erba, foglia di pomodoro e carciofo, con amaro deciso e finale piccante: è pensato per i piatti caldi. IDRA, monovarietale Itrana, ha un fruttato medio, con pomodoro verde, erba tagliata e mandorla fresca: è più delicato in bocca e sta bene su pesce, uova e bolliti.</p>"
+          }
+        },
+        "faq-3": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa significa spremitura a freddo",
+            "heading_tag": "h2",
+            "description": "<p>Nella spremitura a freddo la temperatura resta bassa durante l'estrazione. Si ottiene meno olio, ma profumi e polifenoli restano più integri.</p>"
+          }
+        },
+        "faq-4": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Cosa sono i polifenoli e perché contano",
+            "heading_tag": "h2",
+            "description": "<p>I polifenoli sono composti antiossidanti naturalmente presenti nell'oliva. Nell'olio EVO danno il carattere amaro e piccante e contribuiscono a conservarlo. La Coratina, la cultivar di CRUX, è tra le più ricche di polifenoli.</p>"
+          }
+        },
+        "faq-5": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si conserva dopo l'apertura",
+            "heading_tag": "h2",
+            "description": "<p>Al riparo dalla luce e lontano da fonti di calore, ben tappato dopo ogni uso. Una bottiglia da 500 ml aperta si mantiene bene per 4 o 6 settimane. Il nemico è l'ossigeno: per questo Madonna dell'Olivo conserva l'olio in contenitori sotto azoto.</p>"
+          }
+        },
+        "faq-6": {
+          "type": "text-block",
+          "settings": {
+            "heading": "Come si assaggia un olio EVO",
+            "heading_tag": "h2",
+            "description": "<p>Scalda un cucchiaio di olio tra i palmi e annusa: fruttato, note erbacee, mandorla. Assaggia e aspira aria mentre tieni l'olio sul palato. Amaro e piccante in retrogusto indicano polifenoli e freschezza. Un olio piatto e senza profumo è un olio vecchio.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6"
+      ],
+      "settings": {
+        "faqs_heading": "DOMANDE FREQUENTI SULL'OLIO DEL CILENTO",
+        "heading_tag": "h2",
+        "faqs_desc": "",
+        "color_scheme": "background-1",
+        "show_image_content": true,
+        "image": "shopify://shop_images/images_27.jpg",
+        "subheading": "",
+        "heading": "",
+        "heading_tag_second": "h2",
+        "text_animation": false,
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "tertiary",
+        "button_arrow": false,
+        "margin_top": "m",
+        "margin_bottom": "m",
+        "padding_top": "no-indent",
+        "padding_bottom": "no-indent"
+      }
+    },
+    "popular_products_3gNtni": {
+      "type": "popular-products",
+      "name": "t:sections.popular-products.presets.name",
+      "settings": {
+        "product_list": [
+          "alici-di-menaica",
+          "pasta-fusilli-cilento",
+          "ceci-di-cicerale",
+          "pane-biscottato"
+        ],
+        "per_row": 4,
+        "color_scheme": "",
+        "section_header_type": "type2",
+        "mobile_slider_grid_layout": "slider",
+        "heading": "L'OLIO, IN BUONA COMPAGNIA",
+        "heading_tag": "h2",
+        "product_card_heading_tag": "h3",
+        "subheading": "Per condire ogni piatto",
+        "description": "",
+        "enable_border_top": false,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "button_arrow": false,
+        "autoplay": false,
+        "stop_autoplay": false,
+        "show_arrows": true,
+        "slideshow_speed": 1.1,
+        "slideshow_delay": 3,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "show_two_cards": true,
+        "show_sku": false,
+        "show_vendor": false,
+        "show_collection_name": true,
+        "show_color_swatch": true,
+        "product_variant_type": "color",
+        "show_desc": true,
+        "margin_top": "m",
+        "margin_bottom": "m"
+      }
+    },
+    "banner_yxm9f3": {
+      "type": "banner",
+      "name": "t:sections.banner.label",
+      "settings": {
+        "full_width": true,
+        "image": "shopify://shop_images/modus_wave_line_v3.svg",
+        "image_size": "adapt",
+        "overlay_opacity": 0,
+        "margin_top": "no-indent",
+        "margin_bottom": "xs"
+      }
+    },
+    "blocks_N3UE8i": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_5d63f6c_TE4xda": {
+          "type": "ai_gen_block_5d63f6c",
+          "settings": {
+            "subheading": "Resta aggiornato",
+            "title": "Novità dal Cilento",
+            "description": "Nuovi arrivi, produttori cilentani, stagioni e storie. Direttamente nella tua casella di posta.",
+            "input_placeholder": "La tua email",
+            "button_text": "Iscriviti",
+            "disclaimer": "<p>Iscrivendoti accetti i nostri <a href='/pages/terms'>termini e condizioni</a></p>",
+            "success_message": "Grazie per esserti iscritto!",
+            "image": "shopify://shop_images/pizzeria-modus.png",
+            "desktop_width_percent": 100,
+            "content_padding": 60,
+            "spacing_between_elements": 20,
+            "title_size": 36,
+            "description_size": 16,
+            "disclaimer_size": 14,
+            "content_background_color": "#faf8f5",
+            "subheading_color": "#c28342",
+            "title_color": "#01473e",
+            "description_color": "#3d3d3d",
+            "disclaimer_color": "#3d3d3d",
+            "disclaimer_link_color": "#c28342",
+            "input_background_color": "#ffffff",
+            "input_text_color": "#3d3d3d",
+            "input_placeholder_color": "#999999",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border_color": "#c28342",
+            "input_border_radius": 4,
+            "success_color": "#008060",
+            "error_color": "#d82c0d"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_5d63f6c_TE4xda"
+      ],
+      "name": "Newsletter signup",
+      "settings": {}
+    },
+    "hero_section_pgYEb4": {
+      "type": "hero-split",
+      "settings": {
+        "color_scheme": "scheme-orange-bg-01473e-cta",
+        "subheading": "Dalla nostra cucina alla tua",
+        "subheading_tag": "span",
+        "subheading_color": "",
+        "heading": "IL CILENTO A CASA TUA, OVUNQUE TU SIA",
+        "heading_tag": "h2",
+        "heading_color": "",
+        "text": "<p>Quello che Paolo porta ogni giorno dal Cilento a Milano ora puoi trovarlo direttamente sulla tua tavola. Nel negozio online ci sono i prodotti dei nostri produttori, con le loro storie, e arrivano a casa tua in 48 ore, in tutta Italia.</p>",
+        "button_label": "SCOPRI I NOSTRI PRODOTTI",
+        "button_link": "shopify://collections",
+        "button_style": "primary",
+        "button_arrow": false,
+        "button_label_2": "",
+        "button_link_2": "",
+        "button_style_2": "secondary",
+        "button_arrow_2": false,
+        "buttons_full_width": false,
+        "image": "shopify://shop_images/Alla-scoperta-dellAglianicone.-Il-nuovo-vino-bandiera-del-Cilento-in-6-assaggi-2.jpg",
+        "hide_image_mobile": true,
+        "hide_image_desktop": true,
+        "padding_top": "m",
+        "padding_bottom": "m",
+        "column_gap": "s",
+        "column_gap_px": 0,
+        "content_gap": "xs",
+        "mobile_alignment": "left",
+        "margin_top": "xs",
+        "margin_bottom": "no-indent"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "hero",
+    "products_grid_yp98c9",
+    "image_with_text_Nh4pWr",
+    "1778587389177a84d9",
+    "products_grid_eKL7m7",
+    "tabs_GU4jNT",
+    "practical",
+    "featured_product_olio",
+    "faqs",
+    "popular_products_3gNtni",
+    "banner_yxm9f3",
+    "blocks_N3UE8i",
+    "hero_section_pgYEb4"
+  ]
+}
+

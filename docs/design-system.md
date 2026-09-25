@@ -2,7 +2,7 @@
 
 ## Typography
 - Heading colours (client rule): H3 is ALWAYS orange #D16A14 on light backgrounds; on the orange colour scheme AND the dark green scheme all text (headings included) is beige #faf1e4 for contrast. H2 gold. Hero headings (Hero, Hero Split) are 44px desktop / 35px mobile. Mobile heading sizes: H1 35px, H2 29px, H3 21px (desktop H3 25px).
-- One orange only: #D16A14 (brand orange). Orange backgrounds use the orange colour scheme, not hardcoded section variants.
+- One orange only: #D16A14 (brand orange). Orange backgrounds use the orange colour scheme, not hardcoded section variants. The legacy "Color variant: Orange" (Image with Text, Image Text Grid, Simple Slider) and the Slideshow "Orange background" checkbox only switch to that scheme; don't add per-section orange CSS back.
 - H1/H2 font: Antonio Bold (NOT Bebas Neue — this has been a repeated mistake, double check)
 - H3 sitewide: brand orange #D16A14
 - H2: gold #c28342
@@ -39,7 +39,7 @@
 4b. Media on mobile / stacked layouts: content images and videos fill the full content width — exactly between the 20px side gutters, aligned with the text edges (never narrower/centred, never inset further than the text).
 5. Typography: eyebrow = Lora italic 15px, grey rgba(61,61,61,0.6) on light schemes; H2 Antonio gold (29px mobile); body paragraphs 16px / line-height 1.6 via the sitewide paragraph rule. No text below 13px on mobile (documented exception: the product badges — collection badge and product tags — are 12px uppercase). Any text that can wrap to two lines needs a line-height of at least 1.4 (small labels/badges included).
 6. CTAs: carry `button--cta` (automatic via snippets/button.liquid with `layout:`); on mobile they're full width, 48px tall, square. If the CTA doesn't fill the width, fix the shrink-wrapping wrapper in the shared rule, not per section.
-7. Empty elements (e.g. a CTA wrapper with no button) must not add space.
+7. Empty elements (e.g. a CTA wrapper with no button) must not add space. Missing media never shows a placeholder illustration on the storefront: cards/sections without an image render text-only (grid-banner, Image with Text 2, FAQ image column), product sliders with no products picked render nothing.
 8. Color scheme overrides still win. On the orange scheme (`scheme-orange-bg-01473e-cta`) ALL text is beige #faf1e4: headings, paragraphs, and eyebrows/subheadings/badges/product tags. The eyebrow override uses a weighted `:is(.color-scheme-orange-bg-01473e-cta, #modus-scheme-weight#modus-scheme-weight)` selector so it beats any section's own eyebrow color; don't add section eyebrow colors with two IDs or inline styles.
 9. After any theme push: no userErrors, and checksums on the draft match the local files.
 

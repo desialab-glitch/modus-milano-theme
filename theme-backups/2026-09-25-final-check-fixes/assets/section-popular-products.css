@@ -1,0 +1,74 @@
+.popular-products{position:relative}.popular-products .popular-products__wrapper{position:relative}.popular-products .popular-products__wrapper .collection-popular-card--placeholder{margin-right:1.6rem}.popular-products .popular-products__wrapper .product-parameters{margin-bottom:0}.popular-products .popular-products__wrapper .card__title{font-weight:600}.popular-products .popular-products__wrapper .collection-product-card{width:calc(100% - 2.4rem)}@media screen and (min-width: 576px){.popular-products .popular-products__wrapper .collection-product-card{width:calc(50% - 2.4rem)}}@media screen and (min-width: 990px){.popular-products .popular-products__wrapper .collection-product-card{width:calc(25% - 2.4rem)}}.popular-products .popular-products_btn{margin-top:8rem}.popular-products .popular-products_btn .button{margin:0 auto;display:flex}.popular-products .hide-pagination{display:none}.popular-products .products-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:1.6rem}.no-js .popular-products .popular-products__swiper{display:flex;gap:2.4rem}.no-js .popular-products .collection-product-card{flex:0 0 25%;max-width:25%}
+
+/* Modus DS: price stacked below title */
+.popular-products .card-information-block{flex-direction:column !important;align-items:flex-start !important;gap:4px !important}
+
+/* Modus DS: description size */
+.popular-products .card__description{font-size:1.5rem !important;line-height:1.6 !important}
+
+/* Modus DS: eye/cart button — square, well-padded, anchored to the image area.
+   As of the product-card.liquid markup fix, ".quick-add" (and ".card__add-to-cart"
+   for the quick-buy/icon-cart branch) are now genuine descendants of
+   ".card--product" (position:relative;overflow:hidden), nested inside
+   ".card__inner" alongside the media — not siblings anchored to the whole card
+   (image + title + price + vendor). This rule has higher specificity than the
+   site-wide fallback in modus-iwt-spacing-fix.css, so it is the source of truth
+   for sizing on this section — kept in sync with that file's dimensions. */
+.popular-products .card--product .quick-add,
+.popular-products .card--product .card__add-to-cart{
+  position:absolute !important;
+  left:1.2rem !important;
+  bottom:1.2rem !important;
+  right:auto !important;
+  top:auto !important;
+  z-index:13 !important;
+  opacity:1 !important;
+  pointer-events:all !important;
+  display:flex !important;
+  margin:0 !important;
+}
+.popular-products .card--product .quick-add .card__link,
+.popular-products .card--product .card__add-to-cart .card__link{
+  position:static !important;
+  opacity:1 !important;
+  transform:none !important;
+  width:48px !important;
+  height:48px !important;
+  min-width:unset !important;
+  min-height:unset !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  bottom:unset !important;
+  left:unset !important;
+  pointer-events:all !important;
+}
+
+/* Modus DS: quick-view modal — first CTA orange, both hover dark green */
+.quick-add-modal button[name="add"],
+.quick-add-modal .product-form__submit {
+  background-color: #D16A14 !important;
+  background: #D16A14 !important;
+  color: #faf1e4 !important;
+  border-color: #D16A14 !important;
+}
+.quick-add-modal button[name="add"]:hover,
+.quick-add-modal .product-form__submit:hover {
+  background-color: #01473e !important;
+  background: #01473e !important;
+  border-color: #01473e !important;
+  color: #faf1e4 !important;
+}
+.quick-add-modal .shopify-payment-button__button:hover,
+.quick-add-modal [data-shopify="payment-button"] button:hover {
+  background-color: #01473e !important;
+  background: #01473e !important;
+  border-color: #01473e !important;
+  color: #faf1e4 !important;
+}
+.quick-add-modal .shopify-payment-button__button--unbranded:hover {
+  background-color: #01473e !important;
+  background: #01473e !important;
+}

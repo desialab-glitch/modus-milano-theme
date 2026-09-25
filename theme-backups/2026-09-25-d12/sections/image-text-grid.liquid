@@ -1,0 +1,409 @@
+{{ 'section-image-with-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+	{% render 'section-padding' %}
+	{% render 'section-margin' %}
+{%- endstyle -%}
+
+{%- style -%}
+	#shopify-section-{{ section.id }} .image-text-grid__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__wrapper.image_right {
+		grid-template-areas: "content grid";
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__wrapper.image_right .image-text-grid__content {
+		grid-area: content;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__wrapper.image_right .image-text-grid__grid-wrap {
+		grid-area: grid;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 1.2rem;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__subtitle,
+	#shopify-section-{{ section.id }} .image-text-grid__heading,
+	#shopify-section-{{ section.id }} .image-text-grid__text,
+	#shopify-section-{{ section.id }} .image-text-grid__footnote {
+		margin: 0;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__ctas {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1.6rem;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.6rem;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__item-image {
+		aspect-ratio: 1 / 1;
+		overflow: hidden;
+		border-radius: var(--border-radius);
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__item-image img,
+	#shopify-section-{{ section.id }} .image-text-grid__item-image svg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__item-caption {
+		margin-top: 0.8rem;
+		font-family: var(--font-body-family);
+		font-size: 1.1rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		opacity: 0.85;
+	}
+
+	#shopify-section-{{ section.id }} .image-text-grid__footnote {
+		margin-top: 1.6rem;
+		font-family: var(--font-body-family);
+		font-style: italic;
+		font-size: 1.2rem;
+		opacity: 0.7;
+	}
+
+	@media screen and (max-width: 989px) {
+		#shopify-section-{{ section.id }} .image-text-grid__wrapper,
+		#shopify-section-{{ section.id }} .image-text-grid__wrapper.image_right {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 2.4rem;
+		}
+		#shopify-section-{{ section.id }} .image-text-grid__content {
+			order: 1;
+			width: 100%;
+			/* Mobile content alignment (default: left) — see the "Mobile layout"
+			   setting below. Mirrors the same left/center pattern used by
+			   Hero Split's "Content alignment on mobile" setting, via a CSS
+			   custom property set on the section wrapper further down. */
+			align-items: var(--itg-mobile-align, flex-start);
+			text-align: var(--itg-mobile-text-align, left);
+		}
+		#shopify-section-{{ section.id }} .image-text-grid__ctas {
+			justify-content: var(--itg-mobile-align, flex-start);
+		}
+		#shopify-section-{{ section.id }} .image-text-grid__grid-wrap {
+			order: 2;
+			width: 100%;
+		}
+	}
+
+	{% if section.settings.color_variant == 'orange' %}
+	#shopify-section-{{ section.id }} .image-text-grid {
+		background: #D16A14 !important;
+		background-color: #D16A14 !important;
+	}
+	#shopify-section-{{ section.id }} h1,
+	#shopify-section-{{ section.id }} h2,
+	#shopify-section-{{ section.id }} h3,
+	#shopify-section-{{ section.id }} h4,
+	#shopify-section-{{ section.id }} h5,
+	#shopify-section-{{ section.id }} h6,
+	#shopify-section-{{ section.id }} .image-text-grid__heading {
+		color: #faf1e4 !important;
+	}
+	#shopify-section-{{ section.id }} .image-text-grid__text,
+	#shopify-section-{{ section.id }} .image-text-grid__text p,
+	#shopify-section-{{ section.id }} p {
+		color: #faf1e4 !important;
+	}
+	#shopify-section-{{ section.id }} .image-text-grid__subtitle,
+	#shopify-section-{{ section.id }} .image-text-grid__item-caption,
+	#shopify-section-{{ section.id }} .image-text-grid__footnote {
+		color: rgba(250, 241, 228, 0.7) !important;
+	}
+	#shopify-section-{{ section.id }} .button--tertiary,
+	#shopify-section-{{ section.id }} .button--simple {
+		color: #faf1e4 !important;
+	}
+	{% endif %}
+{%- endstyle -%}
+
+{%- capture image_text_grid_mobile_align_style -%}
+	{% if section.settings.mobile_alignment == 'center' %}
+		--itg-mobile-align: center; --itg-mobile-text-align: center;
+	{% else %}
+		--itg-mobile-align: flex-start; --itg-mobile-text-align: left;
+	{% endif %}
+{%- endcapture -%}
+
+{%- if section.settings.color_variant == 'orange' -%}
+	<div class="image-text-grid" style="{{ image_text_grid_mobile_align_style }}">
+{%- else -%}
+	<div class="image-text-grid color-{{ section.settings.color_scheme }} background" style="{{ image_text_grid_mobile_align_style }}">
+{%- endif -%}
+	<div class="container">
+		<div class="section-{{ section.id }}-padding">
+			<div class="image-text-grid__wrapper {% if section.settings.image_position == 'image_right' %}image_right{% endif %}">
+				<div class="image-text-grid__content">
+					{%- if section.settings.subheading != blank -%}
+						<div class="image-text-grid__subtitle subtitle">
+							{{ section.settings.subheading }}
+						</div>
+					{%- endif -%}
+					{%- if section.settings.heading != blank -%}
+						{% capture image_text_grid_heading_inner %}
+							{{ section.settings.heading }}
+						{% endcapture %}
+						{% render 'heading-element',
+							tag: section.settings.heading_tag,
+							default_tag: 'h2',
+							class: 'image-text-grid__heading h2',
+							content: image_text_grid_heading_inner
+						%}
+					{%- endif -%}
+					{%- if section.settings.text != blank -%}
+						<div class="image-text-grid__text richtext__content">
+							{{ section.settings.text }}
+						</div>
+					{%- endif -%}
+					{%- if section.settings.cta_1_label != blank or section.settings.cta_2_label != blank -%}
+						<div class="image-text-grid__ctas">
+							{%- if section.settings.cta_1_label != blank -%}
+								<a{% if section.settings.cta_1_link != blank %} href="{{ section.settings.cta_1_link }}"{% endif %} class="button button--{{ section.settings.cta_1_style }} button--cta"{% if section.settings.cta_1_link == blank %} aria-disabled="true"{% endif %}><span class="button-label">{{ section.settings.cta_1_label | strip }}</span></a>
+							{%- endif -%}
+							{%- if section.settings.cta_2_label != blank -%}
+								<a{% if section.settings.cta_2_link != blank %} href="{{ section.settings.cta_2_link }}"{% endif %} class="button button--{{ section.settings.cta_2_style }} button--cta"{% if section.settings.cta_2_link == blank %} aria-disabled="true"{% endif %}><span class="button-label">{{ section.settings.cta_2_label | strip }}</span></a>
+							{%- endif -%}
+						</div>
+					{%- endif -%}
+				</div>
+				<div class="image-text-grid__grid-wrap">
+					<div class="image-text-grid__grid">
+						{%- for block in section.blocks -%}
+							<div class="image-text-grid__item" {{ block.shopify_attributes }}>
+								<div class="image-text-grid__item-image">
+									{%- if block.settings.image != blank -%}
+										{% assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio %}
+										{{
+											block.settings.image
+											| image_url: width: 1200
+											| image_tag:
+												loading: 'lazy',
+												width: block.settings.image.width,
+												height: image_height,
+												sizes: '(min-width: 990px) 25vw, 50vw',
+												widths: '275, 375, 550, 750, 1100'
+										}}
+									{%- else -%}
+										{% assign image_index = forloop.index | modulo: 6 | plus: 1 %}
+										{{ 'collection-' | append: image_index | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+									{%- endif -%}
+								</div>
+								{%- if block.settings.caption != blank -%}
+									<div class="image-text-grid__item-caption">{{ block.settings.caption }}</div>
+								{%- endif -%}
+							</div>
+						{%- endfor -%}
+					</div>
+					{%- if section.settings.footnote != blank -%}
+						<div class="image-text-grid__footnote">{{ section.settings.footnote }}</div>
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "Image grid with text",
+	"tag": "section",
+	"class": "image-text-grid-section spaced-section",
+	"enabled_on": {
+		"templates": ["*"]
+	},
+	"settings": [
+		{
+			"type": "select",
+			"id": "image_position",
+			"label": "t:sections.all.content_position.label",
+			"default": "image_right",
+			"options": [
+				{ "value": "image_left", "label": "t:sections.all.image.image_left" },
+				{ "value": "image_right", "label": "t:sections.all.image.image_right" }
+			]
+		},
+		{
+			"type": "select",
+			"id": "color_variant",
+			"label": "Color variant",
+			"options": [
+				{ "value": "basic", "label": "Basic (scheme colors)" },
+				{ "value": "orange", "label": "Orange" }
+			],
+			"default": "basic"
+		},
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"default": "background-1",
+			"label": "t:sections.all.color_scheme.label"
+		},
+		{
+			"type": "text",
+			"id": "subheading",
+			"label": "t:sections.all.subheading.label"
+		},
+		{
+			"type": "inline_richtext",
+			"id": "heading",
+			"default": "Porta il forno di Modus a casa",
+			"label": "t:sections.all.heading.label"
+		},
+		{
+			"type": "select",
+			"id": "heading_tag",
+			"label": "t:sections.all.heading.tag.label",
+			"info": "t:sections.all.heading.tag.info",
+			"options": [
+				{ "value": "h1", "label": "t:sections.all.heading.tag.options.h1.label" },
+				{ "value": "h2", "label": "t:sections.all.heading.tag.options.h2.label" },
+				{ "value": "h3", "label": "t:sections.all.heading.tag.options.h3.label" },
+				{ "value": "h4", "label": "t:sections.all.heading.tag.options.h4.label" },
+				{ "value": "h5", "label": "t:sections.all.heading.tag.options.h5.label" },
+				{ "value": "h6", "label": "t:sections.all.heading.tag.options.h6.label" },
+				{ "value": "div", "label": "t:sections.all.heading.tag.options.div.label" },
+				{ "value": "span", "label": "t:sections.all.heading.tag.options.span.label" },
+				{ "value": "p", "label": "t:sections.all.heading.tag.options.p.label" }
+			],
+			"default": "h2"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "t:sections.all.description.label"
+		},
+		{ "type": "header", "content": "CTA 1" },
+		{ "type": "text", "id": "cta_1_label", "label": "t:sections.all.button.label.label", "info": "t:sections.all.button.label.info" },
+		{ "type": "url", "id": "cta_1_link", "label": "t:sections.all.button.link.label" },
+		{
+			"type": "select", "id": "cta_1_style", "label": "t:sections.all.button.style.label",
+			"options": [
+				{ "value": "primary", "label": "t:sections.all.button.style.options__1.label" },
+				{ "value": "secondary", "label": "t:sections.all.button.style.options__2.label" },
+				{ "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" }
+			],
+			"default": "primary"
+		},
+		{ "type": "header", "content": "CTA 2" },
+		{ "type": "text", "id": "cta_2_label", "label": "t:sections.all.button.label.label", "info": "t:sections.all.button.label.info" },
+		{ "type": "url", "id": "cta_2_link", "label": "t:sections.all.button.link.label" },
+		{
+			"type": "select", "id": "cta_2_style", "label": "t:sections.all.button.style.label",
+			"options": [
+				{ "value": "primary", "label": "t:sections.all.button.style.options__1.label" },
+				{ "value": "secondary", "label": "t:sections.all.button.style.options__2.label" },
+				{ "value": "tertiary", "label": "t:sections.all.button.style.options__3.label" }
+			],
+			"default": "secondary"
+		},
+		{
+			"type": "text",
+			"id": "footnote",
+			"label": "Footnote below the grid",
+			"info": "Optional small italic line below the image grid, e.g. \"Spedizioni · Resi · Confezioni regalo\"."
+		},
+		{ "type": "header", "content": "Mobile layout" },
+		{
+			"type": "select",
+			"id": "mobile_alignment",
+			"label": "Content alignment on mobile",
+			"default": "left",
+			"options": [
+				{ "value": "left", "label": "Left" },
+				{ "value": "center", "label": "Center" }
+			]
+		},
+		{ "type": "header", "content": "t:sections.all.section-margin.header.content" },
+		{
+			"type": "select", "id": "margin_top", "label": "t:sections.all.section-margin.margin_top.label", "default": "no-indent",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			]
+		},
+		{
+			"type": "select", "id": "margin_bottom", "label": "t:sections.all.section-margin.margin_bottom.label", "default": "no-indent",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-margin.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-margin.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-margin.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-margin.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-margin.options__5.label" }
+			]
+		},
+		{ "type": "header", "content": "t:sections.all.section-padding.header.content" },
+		{
+			"type": "select", "id": "padding_top", "label": "t:sections.all.section-padding.padding_top.label", "default": "m",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-padding.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-padding.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-padding.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-padding.options__5.label" }
+			]
+		},
+		{
+			"type": "select", "id": "padding_bottom", "label": "t:sections.all.section-padding.padding_bottom.label", "default": "m",
+			"options": [
+				{ "value": "no-indent", "label": "t:sections.all.section-padding.options__1.label" },
+				{ "value": "xs", "label": "t:sections.all.section-padding.options__2.label" },
+				{ "value": "s", "label": "t:sections.all.section-padding.options__3.label" },
+				{ "value": "m", "label": "t:sections.all.section-padding.options__4.label" },
+				{ "value": "l", "label": "t:sections.all.section-padding.options__5.label" }
+			]
+		}
+	],
+	"blocks": [
+		{
+			"type": "image_item",
+			"name": "Image",
+			"limit": 4,
+			"settings": [
+				{ "type": "image_picker", "id": "image", "label": "t:sections.all.image.label" },
+				{ "type": "text", "id": "caption", "label": "Caption", "info": "Small label shown below the image, e.g. \"FARINA MULINO CAPUTO\"." }
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Image grid with text",
+			"blocks": [
+				{ "type": "image_item" },
+				{ "type": "image_item" },
+				{ "type": "image_item" },
+				{ "type": "image_item" }
+			]
+		}
+	]
+}
+{% endschema %}

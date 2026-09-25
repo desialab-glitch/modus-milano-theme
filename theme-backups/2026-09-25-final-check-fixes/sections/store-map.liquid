@@ -1,0 +1,399 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+{% liquid
+	assign store_map_block_count = section.blocks.size
+	assign store_map_columns = store_map_block_count | at_most: 5
+	if store_map_columns < 1
+		assign store_map_columns = 1
+	endif
+%}
+
+{%- style -%}
+	{% render 'section-margin' %}
+	{% render 'section-padding' %}
+
+	#shopify-section-{{ section.id }} .store-map__header {
+		margin-bottom: 2.4rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__canvas {
+		width: 100%;
+		height: {{ section.settings.map_height }}px;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		border: 1px solid rgba(var(--color-border));
+		margin-bottom: 3.2rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__canvas .leaflet-popup-content-wrapper {
+		border-radius: 4px;
+		font-family: var(--font-body-family);
+	}
+
+	#shopify-section-{{ section.id }} .store-map__popup-title {
+		font-family: var(--font-heading-family);
+		font-weight: 600;
+		color: #c28342;
+		margin: 0 0 .3rem;
+		font-size: 1.4rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__popup-address {
+		margin: 0;
+		font-size: 1.3rem; /* 13px floor */
+		line-height: 1.4;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__pin-num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.8rem;
+		height: 2.8rem;
+		border-radius: 50%;
+		background: #c28342;
+		color: #fff;
+		font-family: var(--font-heading-family);
+		font-weight: 700;
+		font-size: 1.3rem;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+		border: 2px solid #fff;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__list {
+		display: grid;
+		grid-template-columns: repeat({{ store_map_columns }}, 1fr);
+		gap: 2.4rem 2rem;
+	}
+
+	@media screen and (max-width: 989px) {
+		#shopify-section-{{ section.id }} .store-map__list {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media screen and (max-width: 599px) {
+		#shopify-section-{{ section.id }} .store-map__list {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card {
+		cursor: pointer;
+		transition: opacity var(--duration-default) ease;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card:hover {
+		opacity: 0.75;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		margin-bottom: 1.6rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		background: #01473e;
+		color: #fff;
+		font-family: var(--font-heading-family);
+		font-weight: 700;
+		font-size: 1.1rem;
+		flex: none;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-subtitle {
+		font-size: 1.3rem; /* 13px floor */
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		opacity: 0.65;
+		font-family: var(--font-body-family);
+	}
+
+	/* 2026-09-06: was #c28342 (gold) — this renders as an actual <h3>
+	   tag below, and every h3 on the site must be the brand ORANGE
+	   (#D16A14), never gold (that's h2's color). Same fix as
+	   timeline-modus.liquid's heading. */
+	#shopify-section-{{ section.id }} .store-map__card-name {
+		font-family: var(--font-heading-family);
+		color: #D16A14;
+		font-size: 1.9rem;
+		margin: 0 0 2.8rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-line {
+		font-size: 1.3rem;
+		line-height: 1.6;
+		margin: 0 0 0.8rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-hours {
+		font-style: italic;
+		opacity: 0.75;
+		margin-bottom: 0;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card-line:last-of-type {
+		margin-bottom: 0;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__card .button {
+		margin-top: 2rem;
+	}
+
+	#shopify-section-{{ section.id }} .store-map__pin-num.is-active,
+	#shopify-section-{{ section.id }} .store-map__card.is-active .store-map__card-num {
+		background: #d16a14;
+	}
+{%- endstyle -%}
+
+<div class="store-map section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
+	<div class="container">
+		{%- if section.settings.subheading != blank or section.settings.heading != blank or section.settings.description != blank -%}
+			<div class="store-map__header">
+				{%- if section.settings.subheading != blank -%}
+					<div class="subtitle">{{ section.settings.subheading }}</div>
+				{%- endif -%}
+				{%- if section.settings.heading != blank -%}
+					{% capture store_map_heading_inner %}{{ section.settings.heading }}{% endcapture %}
+					{% render 'heading-element', tag: section.settings.heading_tag, default_tag: 'h2', class: 'h2', content: store_map_heading_inner %}
+				{%- endif -%}
+				{%- if section.settings.description != blank -%}
+					<div class="richtext__content">{{ section.settings.description }}</div>
+				{%- endif -%}
+			</div>
+		{%- endif -%}
+
+		<div id="store-map-{{ section.id }}" class="store-map__canvas"></div>
+
+		{%- if section.blocks.size > 0 -%}
+			<div class="store-map__list">
+				{%- for block in section.blocks -%}
+					<div class="store-map__card" data-store-map-card="{{ forloop.index }}" {{ block.shopify_attributes }}>
+						<div class="store-map__card-badge">
+							<span class="store-map__card-num">{{ forloop.index }}</span>
+							{%- if block.settings.subheading != blank -%}
+								<span class="store-map__card-subtitle">{{ block.settings.subheading }}</span>
+							{%- endif -%}
+						</div>
+						{%- if block.settings.name != blank -%}
+							<h3 class="store-map__card-name">{{ block.settings.name }}</h3>
+						{%- endif -%}
+						{%- if block.settings.address != blank -%}
+							<p class="store-map__card-line">{{ block.settings.address }}</p>
+						{%- endif -%}
+						{%- if block.settings.phone != blank -%}
+							<p class="store-map__card-line">{{ block.settings.phone }}</p>
+						{%- endif -%}
+						{%- if block.settings.hours != blank -%}
+							<p class="store-map__card-line store-map__card-hours">{{ block.settings.hours }}</p>
+						{%- endif -%}
+						{%- if block.settings.button_label != blank -%}
+							<a href="{{ block.settings.button_link }}" class="button button--primary button--cta">{{ block.settings.button_label }}</a>
+						{%- endif -%}
+					</div>
+				{%- endfor -%}
+			</div>
+		{%- endif -%}
+	</div>
+</div>
+
+<script>
+(function() {
+	var locations = [
+		{%- for block in section.blocks -%}
+			{
+				lat: {{ block.settings.latitude }},
+				lng: {{ block.settings.longitude }},
+				num: {{ forloop.index }},
+				name: {{ block.settings.name | json }},
+				address: {{ block.settings.address | json }}
+			}{% unless forloop.last %},{% endunless %}
+		{%- endfor -%}
+	];
+
+	function initStoreMap{{ section.id | replace: '-', '_' }}() {
+		var el = document.getElementById('store-map-{{ section.id }}');
+		if (!el || el.dataset.initialized === 'true' || typeof L === 'undefined' || locations.length === 0) {
+			if (typeof L === 'undefined') { setTimeout(initStoreMap{{ section.id | replace: '-', '_' }}, 150); }
+			return;
+		}
+		el.dataset.initialized = 'true';
+
+		var map = L.map(el, { scrollWheelZoom: false });
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			maxZoom: 19
+		}).addTo(map);
+
+		var bounds = [];
+		var markersByNum = {};
+		var root = document.querySelector('#shopify-section-{{ section.id }}');
+
+		function setActive(num) {
+			if (!root) return;
+			root.querySelectorAll('.store-map__pin-num').forEach(function(n) { n.classList.remove('is-active'); });
+			root.querySelectorAll('.store-map__card').forEach(function(c) { c.classList.remove('is-active'); });
+			var pinEl = root.querySelector('.store-map__pin-num[data-num="' + num + '"]');
+			if (pinEl) pinEl.classList.add('is-active');
+			var cardEl = root.querySelector('.store-map__card[data-store-map-card="' + num + '"]');
+			if (cardEl) cardEl.classList.add('is-active');
+		}
+
+		locations.forEach(function(loc) {
+			var icon = L.divIcon({
+				className: '',
+				html: '<div class="store-map__pin-num" data-num="' + loc.num + '">' + loc.num + '</div>',
+				iconSize: [28, 28],
+				iconAnchor: [14, 14]
+			});
+			var marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(map);
+			var popupHtml = '<div class="store-map__popup-title">' + loc.name + '</div><p class="store-map__popup-address">' + loc.address + '</p>';
+			marker.bindPopup(popupHtml);
+			marker.on('click', function() { setActive(loc.num); });
+			markersByNum[loc.num] = marker;
+			bounds.push([loc.lat, loc.lng]);
+		});
+
+		if (bounds.length > 1) {
+			map.fitBounds(bounds, { padding: [40, 40] });
+		} else if (bounds.length === 1) {
+			map.setView(bounds[0], 15);
+		}
+
+		if (root) {
+			root.querySelectorAll('.store-map__card').forEach(function(card) {
+				card.addEventListener('click', function() {
+					var num = card.getAttribute('data-store-map-card');
+					var marker = markersByNum[num];
+					if (marker) {
+						map.setView(marker.getLatLng(), 16, { animate: true });
+						marker.openPopup();
+						setActive(num);
+					}
+				});
+			});
+		}
+
+		setTimeout(function() { map.invalidateSize(); }, 200);
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initStoreMap{{ section.id | replace: '-', '_' }});
+	} else {
+		initStoreMap{{ section.id | replace: '-', '_' }}();
+	}
+	document.addEventListener('shopify:section:load', function(evt) {
+		if (evt.target.querySelector && evt.target.querySelector('#store-map-{{ section.id }}')) {
+			initStoreMap{{ section.id | replace: '-', '_' }}();
+		}
+	});
+})();
+</script>
+
+{% schema %}
+{
+	"name": "Store map",
+	"tag": "section",
+	"class": "spaced-section store-map-section",
+	"enabled_on": { "templates": ["*"] },
+	"settings": [
+		{ "type": "color_scheme", "id": "color_scheme", "default": "background-1", "label": "Color scheme" },
+		{ "type": "text", "id": "subheading", "label": "Subheading" },
+		{ "type": "inline_richtext", "id": "heading", "label": "Heading" },
+		{
+			"type": "select",
+			"id": "heading_tag",
+			"label": "Heading tag",
+			"default": "h2",
+			"options": [
+				{ "value": "h1", "label": "H1" },
+				{ "value": "h2", "label": "H2" },
+				{ "value": "h3", "label": "H3" },
+				{ "value": "div", "label": "Div (no heading)" }
+			]
+		},
+		{ "type": "richtext", "id": "description", "label": "Description" },
+		{ "type": "range", "id": "map_height", "min": 300, "max": 700, "step": 20, "default": 460, "unit": "px", "label": "Map height" },
+		{ "type": "header", "content": "Spacing" },
+		{
+			"type": "select", "id": "margin_top", "label": "Margin top", "default": "no-indent",
+			"options": [
+				{ "value": "no-indent", "label": "None" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "S" },
+				{ "value": "m", "label": "M" },
+				{ "value": "l", "label": "L" }
+			]
+		},
+		{
+			"type": "select", "id": "margin_bottom", "label": "Margin bottom", "default": "no-indent",
+			"options": [
+				{ "value": "no-indent", "label": "None" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "S" },
+				{ "value": "m", "label": "M" },
+				{ "value": "l", "label": "L" }
+			]
+		},
+		{
+			"type": "select", "id": "padding_top", "label": "Padding top", "default": "m",
+			"options": [
+				{ "value": "no-indent", "label": "None" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "S" },
+				{ "value": "m", "label": "M" },
+				{ "value": "l", "label": "L" }
+			]
+		},
+		{
+			"type": "select", "id": "padding_bottom", "label": "Padding bottom", "default": "m",
+			"options": [
+				{ "value": "no-indent", "label": "None" },
+				{ "value": "xs", "label": "XS" },
+				{ "value": "s", "label": "S" },
+				{ "value": "m", "label": "M" },
+				{ "value": "l", "label": "L" }
+			]
+		}
+	],
+	"blocks": [
+		{
+			"type": "pin",
+			"name": "Location",
+			"settings": [
+				{ "type": "text", "id": "subheading", "label": "Subheading", "info": "e.g. \"Pizzeria · Porta Romana\"" },
+				{ "type": "text", "id": "name", "label": "Name" },
+				{ "type": "text", "id": "address", "label": "Address" },
+				{ "type": "text", "id": "phone", "label": "Phone" },
+				{ "type": "text", "id": "hours", "label": "Hours" },
+				{ "type": "text", "id": "latitude", "label": "Latitude", "info": "e.g. 45.4523" },
+				{ "type": "text", "id": "longitude", "label": "Longitude", "info": "e.g. 9.2042" },
+				{ "type": "header", "content": "Button (optional)" },
+				{ "type": "text", "id": "button_label", "label": "Label", "info": "Leave blank to hide" },
+				{ "type": "url", "id": "button_link", "label": "Link" }
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Store map",
+			"blocks": [
+				{ "type": "pin" },
+				{ "type": "pin" }
+			]
+		}
+	]
+}
+{% endschema %}

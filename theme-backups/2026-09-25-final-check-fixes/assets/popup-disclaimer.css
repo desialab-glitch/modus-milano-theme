@@ -1,0 +1,22 @@
+/* ─── Popup disclaimer (small Text block below subscribe form) ─── */
+.popup-desc--small,
+.popup-desc--small p {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important; /* 13px floor */
+  font-style: italic !important;
+  color: rgba(61, 61, 61, 0.55) !important;
+  line-height: 1.5 !important;
+  margin-top: 0.8rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Also keep old rule for additional_text fallback */
+.popup-newsletter .popup-text,
+.popup-newsletter .popup-text p {
+  font-family: 'Lora', serif !important;
+  font-size: 1.3rem !important; /* 13px floor */
+  font-style: italic !important;
+  color: rgba(61, 61, 61, 0.55) !important;
+  line-height: 1.5 !important;
+  margin-top: 0.8rem !important;
+}

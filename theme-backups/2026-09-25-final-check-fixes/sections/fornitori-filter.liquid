@@ -1,0 +1,235 @@
+<style>
+  .ff-{{ section.id }} {
+    background: rgb(var(--color-background));
+    padding: var(--modus-section-space-s) var(--main-padding);
+    border-top: 1px solid rgba(var(--color-foreground), 0.1);
+    border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+  }
+  .ff-{{ section.id }} .ff__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* WRAP MODE (default) */
+  .ff-{{ section.id }} .ff__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 1.6rem;
+    justify-content: center;
+  }
+
+  /* CAROUSEL MODE */
+  .ff-{{ section.id }}.ff--carousel .ff__grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1.2rem;
+    padding-bottom: 4px;
+  }
+  .ff-{{ section.id }}.ff--carousel .ff__grid::-webkit-scrollbar { display: none; }
+  .ff-{{ section.id }}.ff--carousel .ff__item { flex-shrink: 0; }
+
+  /* Carousel arrows */
+  .ff-{{ section.id }} .ff__arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid rgba(var(--color-foreground), 0.25);
+    color: rgb(var(--color-foreground));
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .ff-{{ section.id }} .ff__arrow:hover {
+    background: rgba(var(--color-foreground), 0.06);
+    border-color: var(--modus-orange, #D16A14);
+  }
+  .ff-{{ section.id }} .ff__arrow svg {
+    width: 16px; height: 16px;
+    stroke: rgb(var(--color-foreground)); fill: none; stroke-width: 2;
+  }
+  .ff-{{ section.id }} .ff__arrow--prev { left: -44px; }
+  .ff-{{ section.id }} .ff__arrow--next { right: -44px; }
+  .ff-{{ section.id }}.ff--carousel .ff__arrow { display: flex; }
+  /* Below 1150px the side gutter is only 20px, so the arrows (placed
+     44px outside the chip row) would sit off-screen: swipe instead. */
+  @media screen and (max-width: 1149px) {
+    .ff-{{ section.id }} .ff__arrow { display: none !important; }
+  }
+
+  /* Cards */
+  .ff-{{ section.id }} .ff__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    border: 3px solid #D16A14;
+    padding: 1.05rem 1.7rem;
+    min-width: 141px;
+    text-align: center;
+    transition: border-color 0.15s, background 0.15s;
+    cursor: pointer;
+    background: transparent;
+  }
+  .ff-{{ section.id }} .ff__item:hover,
+  .ff-{{ section.id }} .ff__item.is-active {
+    border-color: #D16A14;
+    background: #D16A14;
+  }
+  .ff-{{ section.id }} .ff__item:hover .ff__name,
+  .ff-{{ section.id }} .ff__item.is-active .ff__name,
+  .ff-{{ section.id }} .ff__item:hover .ff__products,
+  .ff-{{ section.id }} .ff__item.is-active .ff__products {
+    color: #f5e8d5;
+  }
+
+  /* Name — Antonio uppercase, brand orange */
+  .ff-{{ section.id }} .ff__name {
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #D16A14;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.15s;
+  }
+
+  /* Products — Lora, NOT italic, grey body text */
+  .ff-{{ section.id }} .ff__products {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-size: 1.325rem;
+    color: rgba(61,61,61,0.65);
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.15s;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ff-{{ section.id }} .ff__item { min-width: 121px; padding: 0.85rem 1.25rem; }
+    .ff-{{ section.id }} .ff__products { font-size: 1.3rem; }
+    .ff-{{ section.id }} .ff__arrow { display: none !important; }
+  }
+</style>
+
+<div class="ff-{{ section.id }} color-{{ section.settings.color_scheme }} background{% if section.settings.carousel_mode %} ff--carousel{% endif %}">
+  <div class="ff__inner">
+    {%- if section.settings.carousel_mode -%}
+      <button class="ff__arrow ff__arrow--prev" aria-label="Precedente">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+    {%- endif -%}
+
+    <div class="ff__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'fornitore_link' -%}
+          {%- assign clean_name = block.settings.name
+            | replace: 'à', 'a' | replace: 'á', 'a' | replace: 'â', 'a' | replace: 'ä', 'a'
+            | replace: 'è', 'e' | replace: 'é', 'e' | replace: 'ê', 'e' | replace: 'ë', 'e'
+            | replace: 'ì', 'i' | replace: 'í', 'i' | replace: 'î', 'i' | replace: 'ï', 'i'
+            | replace: 'ò', 'o' | replace: 'ó', 'o' | replace: 'ô', 'o' | replace: 'ö', 'o'
+            | replace: 'ù', 'u' | replace: 'ú', 'u' | replace: 'û', 'u' | replace: 'ü', 'u'
+            | replace: 'ñ', 'n' | replace: 'ç', 'c'
+            | replace: '–', '-' | replace: '—', '-' | replace: '’', "'" | replace: "‘", "'"
+          -%}
+          {%- assign anchor_id = clean_name | handleize -%}
+          <a href="#fornitore-{{ anchor_id }}" class="ff__item" {{ block.shopify_attributes }}>
+            <p class="ff__name">{{ block.settings.name }}</p>
+            {%- if block.settings.products != blank -%}
+              <p class="ff__products">{{ block.settings.products }}</p>
+            {%- endif -%}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.carousel_mode -%}
+      <button class="ff__arrow ff__arrow--next" aria-label="Successivo">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (function() {
+    var section = document.querySelector('.ff-{{ section.id }}');
+    if (!section) return;
+    var grid = section.querySelector('.ff__grid');
+    var items = section.querySelectorAll('.ff__item');
+    var prevBtn = section.querySelector('.ff__arrow--prev');
+    var nextBtn = section.querySelector('.ff__arrow--next');
+
+    items.forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          var offset = 80;
+          var top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          items.forEach(function(i) { i.classList.remove('is-active'); });
+          this.classList.add('is-active');
+        }
+      });
+    });
+
+    if (prevBtn && nextBtn && grid) {
+      var step = 240;
+      prevBtn.addEventListener('click', function() {
+        grid.scrollBy({ left: -step * 3, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', function() {
+        grid.scrollBy({ left: step * 3, behavior: 'smooth' });
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Fornitori filter",
+  "tag": "section",
+  "class": "fornitori-filter-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_mode",
+      "label": "Modalità carousel (una riga)",
+      "default": false,
+      "info": "Se attivo, i fornitori scorrono in orizzontale su una sola riga."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "fornitore_link",
+      "name": "Fornitore",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Nome fornitore (deve corrispondere all'heading)", "placeholder": "Aura" },
+        { "type": "text", "id": "products", "label": "Prodotti (breve)", "placeholder": "Tonno rosso, Alalunga" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Fornitori filter" } ]
+}
+{% endschema %}

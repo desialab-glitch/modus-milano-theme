@@ -53,5 +53,15 @@
     "id": "gid://shopify/Product/9345203175638",
     "title": "Spaghettone",
     "descriptionHtml": "<p>Uno dei formati simbolo del Pastificio Gentile: 2,7 mm di diametro, lo stesso spessore di un bucatino, pieno. La trafila al bronzo lascia la superficie ruvida. Lo scegli quando la pasta è la cosa principale del piatto.</p>"
+  },
+  {
+    "id": "gid://shopify/Product/9345204289750",
+    "title": "ALFA",
+    "descriptionHtml": "<p>Blend di Frantoio, Favolosa e Cammarotana. Fruttato medio con note di erba e mandorla fresca, un amaro leggero e un gusto netto di cardo. Versatile: primi leggeri e carni delicate. Fattoria Ambrosio, Salento.</p>"
+  },
+  {
+    "id": "gid://shopify/Product/9345204388054",
+    "title": "IDRA",
+    "descriptionHtml": "<p>Monovarietale Itrana. Fruttato medio con pomodoro verde, erba tagliata e mandorla fresca, amaro leggero e finale piccante delicato. Su pesce, uova e bolliti. Fattoria Ambrosio, Salento.</p>"
   }
 ]

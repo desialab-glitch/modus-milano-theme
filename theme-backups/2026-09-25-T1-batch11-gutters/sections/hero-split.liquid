@@ -1,0 +1,727 @@
+{%- style -%}
+  {% render 'section-margin' %}
+  {% render 'section-padding' %}
+
+  {% liquid
+    case section.settings.column_gap
+      when 'no-indent'
+        assign col_gap_base = '0'
+      when 'xs'
+        assign col_gap_base = '1.2rem'
+      when 'm'
+        assign col_gap_base = '4rem'
+      when 'l'
+        assign col_gap_base = '6rem'
+      else
+        assign col_gap_base = '3rem'
+    endcase
+    case section.settings.column_gap
+      when 'no-indent'
+        assign col_gap_tablet = '0'
+      when 'xs'
+        assign col_gap_tablet = '1.2rem'
+      when 'm'
+        assign col_gap_tablet = '5.2rem'
+      when 'l'
+        assign col_gap_tablet = '8rem'
+      else
+        assign col_gap_tablet = '3.2rem'
+    endcase
+    case section.settings.column_gap
+      when 'no-indent'
+        assign col_gap_desktop = '0'
+      when 'xs'
+        assign col_gap_desktop = '1.2rem'
+      when 'm'
+        assign col_gap_desktop = '6.4rem'
+      when 'l'
+        assign col_gap_desktop = '10rem'
+      else
+        assign col_gap_desktop = '3.2rem'
+    endcase
+
+    # Custom pixel override (2026-08-30): the presets above only offer five
+    # coarse token widths (None/XS/S/M/L). When set to a value greater than 0,
+    # "Custom gap between columns (px)" replaces all three breakpoint values
+    # with this single exact pixel figure, so the merchant can dial in a
+    # precise horizontal gap between the heading and text columns instead of
+    # picking the nearest preset. Left at 0, the token-based presets above are
+    # used unchanged.
+    if section.settings.column_gap_px > 0
+      assign col_gap_px_value = section.settings.column_gap_px | append: 'px'
+      assign col_gap_base = col_gap_px_value
+      assign col_gap_tablet = col_gap_px_value
+      assign col_gap_desktop = col_gap_px_value
+    endif
+
+    case section.settings.content_gap
+      when 'no-indent'
+        assign content_gap_base = '0'
+      when 'xs'
+        assign content_gap_base = '1.2rem'
+      when 'm'
+        assign content_gap_base = '4rem'
+      when 'l'
+        assign content_gap_base = '6rem'
+      else
+        assign content_gap_base = '3rem'
+    endcase
+    case section.settings.content_gap
+      when 'no-indent'
+        assign content_gap_tablet = '0'
+      when 'xs'
+        assign content_gap_tablet = '1.2rem'
+      when 'm'
+        assign content_gap_tablet = '5.2rem'
+      when 'l'
+        assign content_gap_tablet = '8rem'
+      else
+        assign content_gap_tablet = '3.2rem'
+    endcase
+    case section.settings.content_gap
+      when 'no-indent'
+        assign content_gap_desktop = '0'
+      when 'xs'
+        assign content_gap_desktop = '1.2rem'
+      when 'm'
+        assign content_gap_desktop = '6.4rem'
+      when 'l'
+        assign content_gap_desktop = '10rem'
+      else
+        assign content_gap_desktop = '3.2rem'
+    endcase
+  %}
+
+  #shopify-section-{{ section.id }} .split-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    --split-hero-col-gap: {{ col_gap_base }};
+    --split-hero-content-gap: {{ content_gap_base }};
+  }
+  @media screen and (min-width: 990px) {
+    #shopify-section-{{ section.id }} .split-hero {
+      --split-hero-col-gap: {{ col_gap_tablet }};
+      --split-hero-content-gap: {{ content_gap_tablet }};
+    }
+  }
+  @media screen and (min-width: 1150px) {
+    #shopify-section-{{ section.id }} .split-hero {
+      --split-hero-col-gap: {{ col_gap_desktop }};
+      --split-hero-content-gap: {{ content_gap_desktop }};
+    }
+  }
+
+  #shopify-section-{{ section.id }} .split-hero__text-row-wrapper {
+    flex: 0 0 auto;
+  }
+  #shopify-section-{{ section.id }} .split-hero__text-row {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    gap: var(--split-hero-col-gap);
+  }
+  #shopify-section-{{ section.id }} .split-hero__heading-col,
+  #shopify-section-{{ section.id }} .split-hero__content-col {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+  }
+  #shopify-section-{{ section.id }} .split-hero__heading-col {
+    text-align: left;
+  }
+  #shopify-section-{{ section.id }} .split-hero__subheading {
+    display: block;
+    margin: 0 0 var(--split-hero-content-gap);
+  }
+  #shopify-section-{{ section.id }} .split-hero__content-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  #shopify-section-{{ section.id }} .split-hero__text {
+    margin-bottom: var(--split-hero-content-gap);
+  }
+  #shopify-section-{{ section.id }} .split-hero__text > *:last-child {
+    margin-bottom: 0;
+  }
+  #shopify-section-{{ section.id }} .split-hero__heading-col > *:last-child {
+    margin-bottom: 0;
+  }
+  #shopify-section-{{ section.id }} .split-hero__content-col > *:last-child {
+    margin-bottom: 0;
+  }
+  #shopify-section-{{ section.id }} .split-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--modus-space-xs);
+  }
+  {% if section.settings.buttons_full_width %}
+    /* "Make buttons full width" (2026-08-30, updated 2026-09-05 twice):
+       opt-in only via this checkbox setting (no more "section.id contains
+       'hp-hero'" auto-apply hack -- see prior comment history). Buttons
+       share the full width of the content column dynamically via flex-grow
+       (flex-basis 0), splitting it evenly between them when they fit side
+       by side on one row, same gap as always. Internal button padding is
+       untouched -- only how much each button stretches changes. When the
+       labels are too long to fit on one row, the base flex-wrap rule above
+       wraps the second button onto its own row, where flex-grow then makes
+       it (and the first) fill the full row width individually, giving the
+       same full-width look stacked vertically instead. */
+    #shopify-section-{{ section.id }} .split-hero__buttons {
+      width: 100%;
+    }
+    #shopify-section-{{ section.id }} .split-hero__buttons .button {
+      flex: 1 1 0%;
+    }
+  {% endif %}
+  #shopify-section-{{ section.id }} .split-hero__image-row {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 22rem;
+    overflow: hidden;
+  }
+  #shopify-section-{{ section.id }} .split-hero__image,
+  #shopify-section-{{ section.id }} .split-hero__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  #shopify-section-{{ section.id }} .split-hero__placeholder {
+    color: currentColor;
+  }
+  #shopify-section-{{ section.id }} .split-hero__image--mobile {
+    display: none;
+  }
+
+  /* Heading line height on every screen size. The global h1 rule in
+     modus-design-system.css sets line-height: 1 with !important, which
+     packs the two-line uppercase heading too tightly. This scoped rule uses
+     the theme heading line height x 1.15 at all widths (it used to apply on
+     mobile only, inside the max-width 749px block below). */
+  #shopify-section-{{ section.id }} .split-hero__heading {
+    line-height: calc(var(--font-heading-line-height) * 1.15) !important;
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .split-hero__image--desktop {
+      display: none;
+    }
+    #shopify-section-{{ section.id }} .split-hero__image--mobile {
+      display: block;
+    }
+    #shopify-section-{{ section.id }} .split-hero {
+      min-height: 100vh;
+    }
+    #shopify-section-{{ section.id }} .split-hero__text-row {
+      flex-direction: column;
+      align-items: var(--split-hero-mobile-align, flex-start);
+      gap: var(--split-hero-content-gap);
+    }
+    #shopify-section-{{ section.id }} .split-hero__heading-col,
+    #shopify-section-{{ section.id }} .split-hero__content-col {
+      max-width: 100%;
+      text-align: var(--split-hero-mobile-text-align, left);
+    }
+    #shopify-section-{{ section.id }} .split-hero__content-col {
+      align-items: var(--split-hero-mobile-align, flex-start);
+    }
+    #shopify-section-{{ section.id }} .split-hero__buttons {
+      justify-content: var(--split-hero-mobile-align, flex-start);
+    }
+    #shopify-section-{{ section.id }} .split-hero__image-row {
+      min-height: 30vh;
+    }
+    {% if section.settings.hide_image_mobile %}
+      /* "Hide image on mobile" (2026-08-30): drop the image row entirely
+         below 750px and let the section shrink to fit its text content
+         instead of forcing the full-viewport-height layout meant to make
+         room for the (now hidden) image. */
+      #shopify-section-{{ section.id }} .split-hero__image-row {
+        display: none;
+      }
+      #shopify-section-{{ section.id }} .split-hero {
+        min-height: 0;
+      }
+    {% endif %}
+  }
+
+  {% if section.settings.hide_image_desktop %}
+    /* "Hide image on desktop" (2026-09-08): mirrors "Hide image on mobile"
+       above, but scoped to 750px and up so it never touches the mobile
+       layout independently. Drops the image row entirely and lets the
+       section shrink to fit its text content instead of forcing the
+       full-viewport-height layout meant to make room for the (now hidden)
+       image. */
+    @media screen and (min-width: 750px) {
+      #shopify-section-{{ section.id }} .split-hero__image-row {
+        display: none;
+      }
+      #shopify-section-{{ section.id }} .split-hero {
+        min-height: 0;
+      }
+    }
+  {% endif %}
+{%- endstyle -%}
+
+<div
+  class="split-hero color-{{ section.settings.color_scheme }} background"
+  style="
+    {% if section.settings.mobile_alignment == 'center' %}
+      --split-hero-mobile-align: center;
+      --split-hero-mobile-text-align: center;
+    {% else %}
+      --split-hero-mobile-align: flex-start;
+      --split-hero-mobile-text-align: left;
+    {% endif %}
+  "
+>
+  <div class="split-hero__text-row-wrapper section-{{ section.id }}-padding">
+    <div class="container">
+      <div class="split-hero__text-row">
+        <div class="split-hero__heading-col">
+          {%- if section.settings.subheading != blank -%}
+            {% capture split_hero_subheading_inner %}{{ section.settings.subheading | newline_to_br }}{% endcapture %}
+            {% capture split_hero_subheading_attrs %}{% if section.settings.subheading_color != blank %}style="color: {{ section.settings.subheading_color }};"{% endif %}{% endcapture %}
+            {% render 'heading-element',
+              tag: section.settings.subheading_tag,
+              default_tag: 'p',
+              class: 'split-hero__subheading',
+              attributes: split_hero_subheading_attrs,
+              content: split_hero_subheading_inner
+            %}
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            {% capture split_hero_heading_inner %}{{ section.settings.heading | newline_to_br }}{% endcapture %}
+            {% capture split_hero_heading_attrs %}{% if section.settings.heading_color != blank %}style="color: {{ section.settings.heading_color }};"{% endif %}{% endcapture %}
+            {% render 'heading-element',
+              tag: section.settings.heading_tag,
+              default_tag: 'h1',
+              class: 'split-hero__heading',
+              attributes: split_hero_heading_attrs,
+              content: split_hero_heading_inner
+            %}
+          {%- endif -%}
+        </div>
+        <div class="split-hero__content-col">
+          {%- if section.settings.text != blank -%}
+            <div class="split-hero__text">{{ section.settings.text }}</div>
+          {%- endif -%}
+          {%- if section.settings.button_label != blank or section.settings.button_label_2 != blank -%}
+            <div class="split-hero__buttons">
+              {% render 'button', layout: section %}
+              {%- if section.settings.button_label_2 != blank -%}
+                {% render 'button', layout: section, index: 2 %}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="split-hero__image-row">
+    {%- if section.settings.image != blank -%}
+      {%- if section.settings.mobile_image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 3840
+          | image_tag:
+            loading: 'eager',
+            class: 'split-hero__image split-hero__image--desktop',
+            sizes: '100vw',
+            widths: '750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
+        {{
+          section.settings.mobile_image
+          | image_url: width: 1500
+          | image_tag:
+            loading: 'eager',
+            class: 'split-hero__image split-hero__image--mobile',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500'
+        }}
+      {%- else -%}
+        {{
+          section.settings.image
+          | image_url: width: 3840
+          | image_tag:
+            loading: 'eager',
+            class: 'split-hero__image split-hero__image--desktop',
+            sizes: '100vw',
+            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+        }}
+        {%- comment -%}
+          Auto-generated mobile crop (2026-08-30, FIX 2026-08-30 take 2 --
+          upscale guard). When no manual "Mobile image" is uploaded, request a
+          centered crop of the SAME photo directly from Shopify's CDN instead
+          of relying on object-fit:cover to stretch the landscape desktop
+          image into the taller mobile viewport box.
+          ROOT CAUSE of the first version of this fix (still) looking soft on
+          some photos: it targeted a fixed ~1:2.05 portrait ratio ("generously
+          tall") without checking whether the source photo actually HAS that
+          much vertical resolution. Shopify's crop mode scales the whole
+          source up until it's large enough to cover the requested box, then
+          crops the overflow -- if the requested height exceeds the photo's
+          native height, that scale-up is itself an UPSCALE, reintroducing
+          the exact same blur this fix exists to remove, just via a
+          different path. A 1200x687 landscape photo, for example, cannot
+          supply 1500px+ of real vertical detail no matter how the crop box
+          is shaped.
+          Fix: clamp both the requested width AND height to the source
+          image's own native width/height at every breakpoint
+          (`| at_most: src_w` / `| at_most: src_h`) before requesting the
+          crop. This guarantees the crop never asks Shopify's CDN for more
+          pixels than the photo actually has in either dimension, so it can
+          never trigger an upscale: a genuinely tall/high-res photo still
+          gets the full ~1:2.05 portrait crop, while a landscape or
+          lower-resolution photo automatically gets a less extreme (closer
+          to square) crop instead -- the tallest one it can supply at full
+          native resolution, always sharp, never blurred.
+        {%- endcomment -%}
+        {% liquid
+          assign mobile_crop_widths = '375,550,750,1100' | split: ','
+          assign mobile_crop_ratio = 2.05
+          assign src_w = section.settings.image.width
+          assign src_h = section.settings.image.height
+          assign mobile_crop_srcset = ''
+          for w in mobile_crop_widths
+            assign w_num = w | plus: 0
+            assign ideal_h = w_num | times: mobile_crop_ratio
+            assign safe_w = w_num | at_most: src_w
+            assign safe_h = ideal_h | at_most: src_h | round
+            assign entry = section.settings.image | image_url: width: safe_w, height: safe_h, crop: 'center'
+            assign entry = entry | append: ' ' | append: w | append: 'w'
+            if forloop.first
+              assign mobile_crop_srcset = entry
+            else
+              assign mobile_crop_srcset = mobile_crop_srcset | append: ', ' | append: entry
+            endif
+          endfor
+          assign fallback_ideal_h = 750 | times: mobile_crop_ratio
+          assign fallback_w = 750 | at_most: src_w
+          assign fallback_h = fallback_ideal_h | at_most: src_h | round
+        %}
+        <img
+          src="{{ section.settings.image | image_url: width: fallback_w, height: fallback_h, crop: 'center' }}"
+          srcset="{{ mobile_crop_srcset }}"
+          sizes="100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="eager"
+          width="{{ fallback_w }}"
+          height="{{ fallback_h }}"
+          class="split-hero__image split-hero__image--mobile"
+        >
+      {%- endif -%}
+    {%- else -%}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg split-hero__placeholder' }}
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero Split (full height)",
+  "tag": "section",
+  "class": "hero-split-section spaced-section",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "info": "Press Enter to break onto a new line."
+    },
+    {
+      "type": "select",
+      "id": "subheading_tag",
+      "label": "Subheading tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "div", "label": "Div (no heading tag)" },
+        { "value": "span", "label": "Span (no heading tag)" },
+        { "value": "p", "label": "Paragraph" }
+      ],
+      "default": "p"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "info": "Leave blank to use the color scheme's default text color."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "default": "Where atmosphere\nmeets intention.",
+      "label": "Heading",
+      "info": "Press Enter to break the heading onto a new line."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" },
+        { "value": "div", "label": "Div (no heading tag)" },
+        { "value": "span", "label": "Span (no heading tag)" },
+        { "value": "p", "label": "Paragraph" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "info": "Leave blank to use the color scheme's default heading color."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Lighting and spatial design crafted to enhance mood, depth, and architectural expression.</p>",
+      "label": "Paragraph text"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button 1 label",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button 1 style",
+      "default": "primary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "tertiary", "label": "Tertiary" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "button_arrow",
+      "default": false,
+      "label": "Show arrow"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Button 2 label",
+      "info": "Leave blank to hide the second button"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "select",
+      "id": "button_style_2",
+      "label": "Button 2 style",
+      "default": "secondary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "tertiary", "label": "Tertiary" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "button_arrow_2",
+      "default": false,
+      "label": "Show arrow"
+    },
+    {
+      "type": "checkbox",
+      "id": "buttons_full_width",
+      "default": false,
+      "label": "Make buttons full width",
+      "info": "Stacks the buttons and stretches each one to fill the full width of the content column."
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Fills the remaining screen height below the text. Used on all screen sizes unless a mobile image is set below."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "Optional. Replaces the image above on mobile screens. Leave blank to use the same image everywhere."
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_image_mobile",
+      "default": false,
+      "label": "Hide image on mobile",
+      "info": "Hides the image entirely on mobile screens and lets the section shrink to fit the text instead of filling the full screen height."
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_image_desktop",
+      "default": false,
+      "label": "Hide image on desktop",
+      "info": "Hides the image entirely on desktop screens and lets the section shrink to fit the text instead of filling the full screen height."
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "default": "m",
+      "label": "Padding top",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "default": "m",
+      "label": "Padding bottom",
+      "info": "Space between the buttons and the image below.",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "column_gap",
+      "default": "s",
+      "label": "Gap between heading and text columns",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "column_gap_px",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 0,
+      "label": "Custom gap between columns (px)",
+      "info": "Sets the horizontal spacing between the heading and text columns to an exact pixel value on every screen size, overriding the preset above. Leave at 0 to use the preset instead."
+    },
+    {
+      "type": "select",
+      "id": "content_gap",
+      "default": "xs",
+      "label": "Gap between paragraph and buttons",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Mobile layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_alignment",
+      "label": "Content alignment on mobile",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "default": "no-indent",
+      "label": "Margin top",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "default": "no-indent",
+      "label": "Margin bottom",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Split (full height)"
+    }
+  ]
+}
+{% endschema %}

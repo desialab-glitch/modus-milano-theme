@@ -1,0 +1,256 @@
+{%- style -%}
+  {% render 'section-margin' %}
+  {% render 'section-padding' %}
+
+  /* Rich Text CTA — layout */
+  .section-{{ section.id }}-padding .rt-cta__row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    gap: var(--modus-space-column);
+  }
+  .section-{{ section.id }}-padding .rt-cta__left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  /* This heading is an h2, and the sitewide "h1,h2,h3,h4,h5,h6 { margin-
+     bottom: var(--modus-space-xs) !important }" rule in modus-design-system
+     .css already matches any heading tag unconditionally — it doesn't need
+     the .section-header__title-item wrapper class to apply. The explicit
+     rule that used to sit here (margin: 0 0 1.2rem, no !important, on the
+     theory that it was needed because this heading isn't wrapped in that
+     class) was therefore always redundant with that sitewide value, never
+     changing the rendered gap. Removed (2026-09-07) as dead code — eyebrow's
+     own margin-bottom is still forced to the same rhythm token sitewide via
+     the [class*="subheading"] rule either way. */
+  {%- if section.settings.button_label == blank and section.settings.button_label_2 == blank -%}
+  .section-{{ section.id }}-padding .rt-cta__left {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  {%- endif -%}
+  .section-{{ section.id }}-padding .rt-cta__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding .rt-cta__row {
+      flex-direction: column;
+      /* Matches the sitewide eyebrow/heading/paragraph/cta rhythm. */
+      gap: var(--modus-space-xs);
+    }
+    .section-{{ section.id }}-padding .rt-cta__right {
+      flex: unset;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+{%- endstyle -%}
+
+<div class="rich-text{% if section.settings.full_width %} rich-text--full-width{% else %} container{% endif %}">
+  <div class="rich-text__blocks section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} background">
+    <div class="container">
+      <div class="section-header__title__block">
+        <div class="rt-cta__row">
+
+          <!-- LEFT: eyebrow + heading + text -->
+          <div class="rt-cta__left">
+            {%- if section.settings.subheading != blank -%}
+              <div class="subtitle section-header__subheading">{{ section.settings.subheading }}</div>
+            {%- endif -%}
+            {%- if section.settings.heading != blank -%}
+              <h2 class="section-header__title">{{ section.settings.heading }}</h2>
+            {%- endif -%}
+            {%- if section.settings.text != blank -%}
+              <div class="section-header__desc richtext__content">{{ section.settings.text }}</div>
+            {%- endif -%}
+          </div>
+
+          <!-- RIGHT: CTA -->
+          {%- if section.settings.button_label != blank or section.settings.button_label_2 != blank -%}
+            <div class="rt-cta__right">
+              {%- if section.settings.button_label != blank -%}
+                {% render 'button', layout: section %}
+              {%- endif -%}
+              {%- if section.settings.button_label_2 != blank -%}
+                {% render 'button',
+                  button_label: section.settings.button_label_2,
+                  button_link: section.settings.button_link_2,
+                  button_style: section.settings.button_style_2,
+                  button_arrow: section.settings.button_arrow
+                %}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Rich Text + CTA",
+  "tag": "section",
+  "class": "spaced-section rich-text-cta-section",
+  "enabled_on": { "templates": ["*"] },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full width"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Eyebrow",
+      "placeholder": "e.g. Oltre lo shop"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Il tuo titolo qui"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Body text",
+      "default": "<p>Descrizione della sezione.</p>"
+    },
+    {
+      "type": "header",
+      "content": "CTA"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "Button style",
+      "default": "tertiary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "tertiary", "label": "Tertiary" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "button_arrow",
+      "default": true,
+      "label": "Show arrow"
+    },
+    {
+      "type": "header",
+      "content": "CTA 2 (optional)"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Button 2 label",
+      "info": "Leave blank to hide"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "select",
+      "id": "button_style_2",
+      "label": "Button 2 style",
+      "default": "secondary",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" },
+        { "value": "tertiary", "label": "Tertiary" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "margin_top",
+      "default": "no-indent",
+      "label": "Margin top",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "default": "l",
+      "label": "Margin bottom",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "default": "no-indent",
+      "label": "Padding top",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "default": "no-indent",
+      "label": "Padding bottom",
+      "options": [
+        { "value": "no-indent", "label": "None" },
+        { "value": "xs", "label": "XS" },
+        { "value": "s", "label": "S" },
+        { "value": "m", "label": "M" },
+        { "value": "l", "label": "L" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich Text + CTA"
+    }
+  ]
+}
+{% endschema %}

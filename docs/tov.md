@@ -5,6 +5,9 @@
 - "Autentico" / "autentica" as an empty superlative — banned everywhere, has required repeated sweeps to catch, check every new paragraph for it
 - "Eccezionali"
 - "Intatto"
+- Negative claims ("senza coloranti, aromi né conservanti", "senza pesticidi", "non X") — banned. Say what the product IS and what's in it, never what it lacks. Same family as the negation-framing ban above.
+- Comparisons between products — banned in any product or card text: "stesso pomodoro del pelato", "più delicato del tonno rosso", "la variante rigata del pacchero", "le stesse erbe del cofanetto", "la versione integrale della farina X". Each text talks about its own product only.
+- Product descriptions (and product cards) are for story and value only: who makes it, where, how, why it matters. Short and concise. Never obvious practical info there — storage ("dopo l'apertura in frigo…"), cooking times ("al dente in 11 minuti"), prep ("da sciacquare"), ingredient percentages. Practical data goes in the product page dropdowns/FAQ, never in the description.
 - Hyphenated number ranges — always write "tra X e Y", never "X-Y"
 - The "tre X, tre Y" / numeric-parallelism formula (e.g. "Tre liquori, tre occasioni") — revoked, overused
 - "Nessun intermediario, solo la terra e il momento giusto" — revoked, overused

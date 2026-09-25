@@ -2,7 +2,7 @@
 
 ## Typography
 - Heading colours (client rule): H3 is ALWAYS orange #D16A14 on light backgrounds; on the orange colour scheme AND the dark green scheme all text (headings included) is beige #faf1e4 for contrast. H2 gold. Hero headings (Hero, Hero Split) are 44px desktop / 35px mobile. Mobile heading sizes: H1 35px, H2 29px, H3 21px (desktop H3 25px).
-- One orange only: #D16A14 (brand orange). Orange backgrounds use the orange colour scheme, not hardcoded section variants.
+- One orange only: #D16A14 (brand orange). Orange backgrounds use the orange colour scheme, not hardcoded section variants. The legacy "Color variant: Orange" (Image with Text, Image Text Grid, Simple Slider) and the Slideshow "Orange background" checkbox only switch to that scheme; don't add per-section orange CSS back.
 - H1/H2 font: Antonio Bold (NOT Bebas Neue — this has been a repeated mistake, double check)
 - H3 sitewide: brand orange #D16A14
 - H2: gold #c28342

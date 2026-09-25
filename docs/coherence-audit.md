@@ -1,21 +1,21 @@
 # Section coherence audit — 2026-09-25
 
-Read-only audit of all 54 section types in use + the 4 AI blocks on the draft theme "Modus Final" (160332644566), against the per-section checklist in docs/design-system.md. Findings below are grouped by how they get fixed. Each fix is applied on the draft only, with a backup in theme-backups/ first. Status: `[ ]` open, `[x]` done, `[?]` needs decision, `[v]` verified in the final pass.
+Read-only audit of all 54 section types in use + the 4 AI blocks on the draft theme "Modus Final" (160332644566), against the per-section checklist in docs/design-system.md. Findings below are grouped by how they get fixed. Each fix is applied on the draft only, with a backup in theme-backups/ first. Status: `[ ]` open, `[~]` partly done, `[x]` done, `[?]` needs decision, `[v]` verified in the final pass.
 
 Already fixed during the audit (2026-09-25): mobile CTAs full width (`.button--cta`), section spacing tokens, collection badge line-height + single rule, product tags as badges, orange-scheme eyebrows beige everywhere, Video with Text mobile layout, newsletter block mobile gutter, Fornitori filter mobile text size.
 
 ## Tier 1 — shared fixes that bring sections in line with the approved checklist
 No design decision needed; each restores the documented rule.
 
-- [ ] T1.1 Section header (snippets/section-header.liquid, used by ~15 section types): eyebrow→heading→description is 18px (base flex gap 0.6rem + 12px margins), 24px in list-collections. → `.section-header__title-item{gap:0}` sitewide; remove list-collections' own gap.
-- [ ] T1.2 Section header → content gap: hardcoded 20px + heading margin = 32px without description, 20px with. → one token (`--modus-space-m`, 24px) and last child margin 0. Simple Slider's own 36px override removed.
-- [ ] T1.3 Type2 header CTA on mobile/tablet: description touches the button (0 gap) e.g. Popular Products on Pizzerie; Featured Blogs uses 24px. → `--modus-space-xs` everywhere (<990).
-- [ ] T1.4 Image with Text + Image with Text 2 (<990): image↔text gap doubled to 32px (56 PDPs) and eyebrow→heading→text 16px. → gap `--modus-space-s` once, text rhythm `--modus-space-xs`.
+- [x] T1.1 Section header (snippets/section-header.liquid, used by ~15 section types): eyebrow→heading→description is 18px (base flex gap 0.6rem + 12px margins), 24px in list-collections. → `.section-header__title-item{gap:0}` sitewide; remove list-collections' own gap.
+- [x] T1.2 Section header → content gap: hardcoded 20px + heading margin = 32px without description, 20px with. → one token (`--modus-space-m`, 24px) and last child margin 0. Simple Slider's own 36px override removed.
+- [x] T1.3 Type2 header CTA on mobile/tablet: description touches the button (0 gap) e.g. Popular Products on Pizzerie; Featured Blogs uses 24px. → `--modus-space-xs` everywhere (<990).
+- [x] T1.4 Image with Text + Image with Text 2 (<990): image↔text gap doubled to 32px (56 PDPs) and eyebrow→heading→text 16px. → gap `--modus-space-s` once, text rhythm `--modus-space-xs`.
 - [ ] T1.5 Empty wrappers adding space: IWT-2 empty stats block (+28–32px, ~40 PDPs), slideshow button div with no button (+64px on mobile, PDP recipes), grid-banner cards without buttons (+12px), empty `.section-header_btn` (+32px), Slider with Info empty text block, FAQ last item (+24px), product popup empty image div.
-- [ ] T1.6 Eyebrow colour: generic rule sets no colour, so some eyebrows render full dark; others hardcode #4d4d4d / opacity .8 / .5 / .7. → sitewide default rgba(61,61,61,.6) on light schemes (dark + orange schemes keep their overrides); remove per-section eyebrow colours.
-- [ ] T1.7 Body paragraphs at line-height 1.6: IWT (23px), Simple Slider items (23px), section-header description (23px), Hero section (1.4), main-page body (14px/1.75), featured-product description (14px/1.4), 404 intro.
+- [~] T1.6 (shared rule done; popular-products + products-grid section files pending) Eyebrow colour: generic rule sets no colour, so some eyebrows render full dark; others hardcode #4d4d4d / opacity .8 / .5 / .7. → sitewide default rgba(61,61,61,.6) on light schemes (dark + orange schemes keep their overrides); remove per-section eyebrow colours.
+- [~] T1.7 (IWT, IWT eyebrow 26px, section-header desc, simple-slider desc done; hero-section, main-page, featured-product, 404 pending) Body paragraphs at line-height 1.6: IWT (23px), Simple Slider items (23px), section-header description (23px), Hero section (1.4), main-page body (14px/1.75), featured-product description (14px/1.4), 404 intro.
 - [ ] T1.8 Text below 13px on mobile: tag pills 11px (blog cards, article), breadcrumb 11px, footer links 12px + copyright 11px, blog filter pills 10.5px, contact consent 12px, article date 12px, fornitori pills 10.6px + CTA 11px, fornitori filter name 12.25px desktop, ambasciatore body 13px, timeline/awards descriptions 13px, store-map lines 13px, popup disclaimer.
-- [ ] T1.9 Slideshow description text dark grey on orange/photo slides (scheme "background-2" doesn't exist → falls back to light scheme). → cream text on slides.
+- [x] T1.9 Slideshow description text dark grey on orange/photo slides (scheme "background-2" doesn't exist → falls back to light scheme). → cream text on slides.
 - [ ] T1.10 Two-button gaps: 1rem / 8px / 0 → `--modus-space-xs`; grid-banner 2-button cards stack full width on mobile (Pizzerie, dove-ritiri).
 - [ ] T1.11 Side gutters not from `--main-padding`: fornitori-filter (40/16px), fornitori-list text (56/24px), related articles (20px on desktop), divider block (50px), article header (+24/32px inset), slideshow tablet (30/60px), CTA wrappers outside `.container` (product recommendations, popular products, simple slider, grid-banner type1).
 - [ ] T1.12 Desktop side-by-side gutters → `--modus-space-column` (40px): hero-split 32, featured-product 32, FAQ image layout 32, slider-with-info 58–98, sdp-bridge 108, ambasciatore 48, awards 152, video-with-text 32.
